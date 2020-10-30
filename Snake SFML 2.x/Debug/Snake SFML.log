@@ -1,4 +1,310 @@
-﻿  Menu.cpp
+﻿  Aplikacja.cpp
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\limits.h(69,5): warning C4668: "__STDC_WANT_SECURE_LIB__" nie jest zdefiniowany jako preprocesor makra, zastępowanie za pomocą "0" dla "#if/#elif"
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\xmemory(141,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\xmemory(151,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(146,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(162,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(179,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(245,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4625: „sf::FileInputStream”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4626: „sf::FileInputStream”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4625: „sf::Lock”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4626: „sf::Lock”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4625: „sf::Mutex”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4626: „sf::Mutex”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(36,1): warning C4820: "_timespec64": wypełnienie "4" bajtów zostało dodane po składowa danych "_timespec64::tv_nsec"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(43,5): warning C4820: "timespec": wypełnienie "4" bajtów zostało dodane po składowa danych "timespec::tv_nsec"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4625: „sf::Thread”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4626: „sf::Thread”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4625: „sf::ThreadLocal”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4626: „sf::ThreadLocal”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4625: „sf::GlResource::TransientContextLock”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4626: „sf::GlResource::TransientContextLock”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(83,1): warning C4820: "sf::ContextSettings": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::ContextSettings::sRgbCapable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(153,31): warning C4820: "sf::Context": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4625: „sf::Context”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4626: „sf::Context”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4625: „sf::Cursor”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4626: „sf::Cursor”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(545,29): warning C4820: "sf::Window": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(547,30): warning C4820: "sf::Window": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Window::m_context"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4625: „sf::Window”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4626: „sf::Window”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(325,41): warning C4820: "sf::Transformable": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::Transformable::m_transformNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(327,1): warning C4820: "sf::Transformable": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::Transformable::m_inverseTransformNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Texture.hpp(628,27): warning C4820: "sf::Texture": wypełnienie "6" bajtów zostało dodane po składowa danych "sf::Texture::m_hasMipmap"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(295,33): warning C4820: "sf::Font::Page": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Font::Page::glyphs"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(298,5): warning C4820: "sf::Font::Page": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Font::Page::rows"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\View.hpp(280,1): warning C4820: "sf::View": wypełnienie "2" bajtów zostało dodane po składowa danych "sf::View::m_invTransformUpdated"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(464,32): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "1" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::viewChanged"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(465,32): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::lastBlendMode"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(468,47): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "2" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::useVertexCache"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(469,5): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::vertexCache"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4625: „sf::RenderTarget”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4626: „sf::RenderTarget”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(242,39): warning C4820: "sf::RenderTexture": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTexture::m_impl"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4625: „sf::RenderTexture”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4626: „sf::RenderTexture”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4625: „sf::RenderWindow”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4626: „sf::RenderWindow”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(748,33): warning C4820: "sf::Shader": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4625: „sf::Shader”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4626: „sf::Shader”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Text.hpp(451,40): warning C4820: "sf::Text": wypełnienie "7" bajtów zostało dodane po składowa danych "sf::Text::m_geometryNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(212,36): warning C4820: "sf::InputSoundFile": wypełnienie "7" bajtów zostało dodane po składowa danych "sf::InputSoundFile::m_streamOwned"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(216,1): warning C4625: „sf::InputSoundFile”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(216,1): warning C4626: „sf::InputSoundFile”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(313,41): warning C4820: "sf::SoundStream": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundStream::m_isStreaming"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(318,37): warning C4820: "sf::SoundStream": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundStream::m_loop"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(320,1): warning C4625: „sf::SoundStream”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(320,1): warning C4626: „sf::SoundStream”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(282,34): warning C4820: "sf::Music": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Music::m_mutex"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(283,1): warning C4625: „sf::Music”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(283,1): warning C4626: „sf::Music”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\OutputSoundFile.hpp(97,1): warning C4625: „sf::OutputSoundFile”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\OutputSoundFile.hpp(97,1): warning C4626: „sf::OutputSoundFile”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBuffer.hpp(277,34): warning C4820: "sf::SoundBuffer": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundBuffer::m_samples"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBuffer.hpp(279,1): warning C4820: "sf::SoundBuffer": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundBuffer::m_sounds"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(291,44): warning C4820: "sf::SoundRecorder": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_sampleRate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(293,36): warning C4820: "sf::SoundRecorder": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_isCapturing"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4820: "sf::SoundRecorder": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_channelCount"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4625: „sf::SoundRecorder”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4626: „sf::SoundRecorder”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBufferRecorder.hpp(101,1): warning C4625: „sf::SoundBufferRecorder”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBufferRecorder.hpp(101,1): warning C4626: „sf::SoundBufferRecorder”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(9,19): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::tablicaText"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::Wybor"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4625: „Menu”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4626: „Menu”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C4625: „Aplikacja”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5026: „Aplikacja”: konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C4626: „Aplikacja”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5027: „Aplikacja”: przenoszący operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(290,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(295,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(300,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(305,32): warning C4514: "signbit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(310,32): warning C4514: "signbit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(315,32): warning C4514: "signbit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(320,31): warning C4514: "_fpcomp": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(325,31): warning C4514: "_fpcomp": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(330,31): warning C4514: "_fpcomp": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(808,51): warning C4514: "_chgsignl": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(815,51): warning C4514: "_copysignl": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(869,51): warning C4514: "_hypotl": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(359,17): warning C4514: "abs": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(364,22): warning C4514: "abs": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(369,19): warning C4514: "div": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(374,20): warning C4514: "div": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(311,37): warning C4514: "vfwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(342,41): warning C4514: "vfwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(373,37): warning C4514: "_vfwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(387,37): warning C4514: "_vwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(401,37): warning C4514: "vwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(414,37): warning C4514: "_vwprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(430,41): warning C4514: "vwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(445,37): warning C4514: "_vwprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(459,37): warning C4514: "_vwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(472,37): warning C4514: "_fwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(491,37): warning C4514: "fwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(509,37): warning C4514: "_fwprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(530,41): warning C4514: "fwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(550,37): warning C4514: "_fwprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(569,37): warning C4514: "_fwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(587,37): warning C4514: "_wprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(605,37): warning C4514: "wprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(622,37): warning C4514: "_wprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(642,41): warning C4514: "wprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(661,37): warning C4514: "_wprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(679,37): warning C4514: "_wprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(728,37): warning C4514: "vfwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(761,41): warning C4514: "vfwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(776,37): warning C4514: "_vwscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(790,37): warning C4514: "vwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(803,37): warning C4514: "_vwscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(819,41): warning C4514: "vwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(834,37): warning C4514: "_fwscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(853,37): warning C4514: "fwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(871,37): warning C4514: "_fwscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(892,41): warning C4514: "fwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(912,37): warning C4514: "_wscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(930,37): warning C4514: "wscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(947,37): warning C4514: "_wscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(967,41): warning C4514: "wscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1094,37): warning C4514: "_vsnwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1122,37): warning C4514: "_vsnwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1171,37): warning C4514: "_vswprintf_c": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1223,37): warning C4514: "_vswprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1276,41): warning C4514: "vswprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1323,37): warning C4514: "_vswprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1358,37): warning C4514: "_vscwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1391,37): warning C4514: "_vscwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1405,37): warning C4514: "__swprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1425,37): warning C4514: "_swprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1446,37): warning C4514: "_swprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1465,37): warning C4514: "swprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1508,37): warning C4514: "_swprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1530,41): warning C4710: "int swprintf_s(wchar_t *const ,const size_t,const wchar_t *const ,...)": funkcja nie została umieszczona jako śródwierszowa
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1530): message : zobacz deklarację „swprintf_s”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1559,37): warning C4514: "_swprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1580,37): warning C4514: "_swprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1600,37): warning C4514: "_swprintf_c_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1621,37): warning C4514: "_swprintf_c": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1641,37): warning C4514: "_snwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1667,37): warning C4514: "_snwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1692,37): warning C4514: "_snwprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1714,37): warning C4514: "_snwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1742,37): warning C4514: "_scwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1761,37): warning C4710: "int _scwprintf(const wchar_t *const ,...)": funkcja nie została umieszczona jako śródwierszowa
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1761): message : zobacz deklarację „_scwprintf”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1779,37): warning C4514: "_scwprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1798,37): warning C4514: "_scwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1822,24): warning C4514: "swprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1837,34): warning C4514: "vswprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1848,24): warning C4514: "_swprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1863,34): warning C4514: "_vswprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1921,37): warning C4514: "vswscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1956,41): warning C4514: "vswscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2019,37): warning C4514: "_swscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2039,37): warning C4514: "swscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2058,37): warning C4514: "_swscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2080,41): warning C4514: "swscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2101,37): warning C4514: "_snwscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2127,37): warning C4514: "_snwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2152,37): warning C4514: "_snwscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2173,37): warning C4514: "_snwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(648,37): warning C4514: "vfprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(679,41): warning C4514: "vfprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(710,37): warning C4514: "_vfprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(724,37): warning C4514: "_vprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(738,37): warning C4514: "vprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(751,37): warning C4514: "_vprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(767,41): warning C4514: "vprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(782,37): warning C4514: "_vprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(796,37): warning C4514: "_vprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(809,37): warning C4514: "_fprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(828,37): warning C4514: "fprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(852,37): warning C4514: "_fprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(873,41): warning C4514: "fprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(893,37): warning C4514: "_fprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(912,37): warning C4514: "_fprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(930,37): warning C4514: "_printf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(948,37): warning C4514: "printf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(965,37): warning C4514: "_printf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(985,41): warning C4514: "printf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1004,37): warning C4514: "_printf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1022,37): warning C4514: "_printf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1070,37): warning C4514: "vfscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1104,41): warning C4514: "vfscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1120,37): warning C4514: "_vscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1134,37): warning C4514: "vscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1147,37): warning C4514: "_vscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1163,41): warning C4514: "vscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1178,37): warning C4514: "_fscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1197,37): warning C4514: "fscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1215,37): warning C4514: "_fscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1236,41): warning C4514: "fscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1256,37): warning C4514: "_scanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274,37): warning C4514: "scanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1291,37): warning C4514: "_scanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1311,41): warning C4514: "scanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1469,37): warning C4514: "vsprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1510,41): warning C4514: "vsprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1557,37): warning C4514: "_vsprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1595,37): warning C4514: "_vsnprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1623,41): warning C4514: "vsnprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1668,37): warning C4514: "_vscprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1733,37): warning C4514: "_vsnprintf_c": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1749,37): warning C4514: "_sprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774,37): warning C4514: "sprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1810,37): warning C4514: "_sprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1833,41): warning C4710: "int sprintf_s(char *const ,const size_t,const char *const ,...)": funkcja nie została umieszczona jako śródwierszowa
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1833): message : zobacz deklarację „sprintf_s”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1862,37): warning C4514: "_sprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1883,37): warning C4514: "_sprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1903,37): warning C4514: "_snprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1940,37): warning C4514: "snprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1961,37): warning C4514: "_snprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1991,37): warning C4514: "_snprintf_c_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2012,37): warning C4514: "_snprintf_c": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2032,37): warning C4514: "_snprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2054,37): warning C4514: "_snprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2082,37): warning C4514: "_scprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2100,37): warning C4710: "int _scprintf(const char *const ,...)": funkcja nie została umieszczona jako śródwierszowa
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2100): message : zobacz deklarację „_scprintf”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2117,37): warning C4514: "_scprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2135,37): warning C4514: "_scprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2183,37): warning C4514: "vsscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2244,37): warning C4514: "_sscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263,37): warning C4514: "sscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2281,37): warning C4514: "_sscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2302,41): warning C4514: "sscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2330,37): warning C4514: "_snscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2354,37): warning C4514: "_snscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2378,37): warning C4514: "_snscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2402,37): warning C4514: "_snscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memcpy_s.h(35,44): warning C4514: "memcpy_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memcpy_s.h(64,44): warning C4514: "memmove_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memory.h(100,28): warning C4514: "memchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(166,38): warning C4514: "wcsnlen_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(247,40): warning C4514: "_wcstok": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(261,35): warning C4514: "wcstok": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(539,31): warning C4514: "wcschr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(545,31): warning C4514: "wcspbrk": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(551,31): warning C4514: "wcsrchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(558,31): warning C4514: "wcsstr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(371,38): warning C4514: "strnlen_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(504,28): warning C4514: "strchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(510,28): warning C4514: "strpbrk": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(516,28): warning C4514: "strrchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(522,28): warning C4514: "strstr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(100,37): warning C4514: "_vcwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(127,37): warning C4514: "_vcwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(154,37): warning C4514: "_vcwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(167,37): warning C4514: "_cwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(185,37): warning C4514: "_cwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(202,37): warning C4514: "_cwprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(220,37): warning C4514: "_cwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(237,37): warning C4514: "_cwprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(255,37): warning C4514: "_cwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(303,37): warning C4514: "_vcwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(335,37): warning C4514: "_vcwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(348,37): warning C4514: "_cwscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(371,37): warning C4514: "_cwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(393,37): warning C4514: "_cwscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(411,37): warning C4514: "_cwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wio.h(225,26): warning C4514: "_wopen": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wio.h(238,26): warning C4514: "_wsopen": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wtime.h(185,45): warning C4514: "_wctime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wtime.h(192,43): warning C4514: "_wctime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys\stat.h(234,39): warning C4514: "fstat": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys\stat.h(239,39): warning C4514: "stat": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h(180,28): warning C4514: "fwide": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h(189,28): warning C4514: "mbsinit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h(209,28): warning C4514: "wmemcmp": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h(268,48): warning C4514: "wmemchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(81,24): warning C4514: "__acrt_locale_get_ctype_array_value": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(165,37): warning C4514: "__ascii_iswalpha": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(170,37): warning C4514: "__ascii_iswdigit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(175,37): warning C4514: "__ascii_towlower": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(180,37): warning C4514: "__ascii_towupper": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(234,28): warning C4514: "_ischartype_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(53,5): warning C4514: "sf::NonCopyable::NonCopyable": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(63,6): warning C4514: "sf::NonCopyable::~NonCopyable": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(476,41): warning C4514: "ctime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(487,42): warning C4514: "difftime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(496,46): warning C4514: "gmtime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506,46): warning C4514: "localtime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(517,42): warning C4514: "_mkgmtime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(525,42): warning C4514: "mktime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(532,42): warning C4514: "time": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(540,39): warning C4514: "timespec_get": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(550,47): warning C4514: "ctime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(560,47): warning C4514: "gmtime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(569,47): warning C4514: "localtime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Glyph.hpp(49,5): warning C4514: "sf::Glyph::Glyph": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(274,9): warning C4514: "sf::Font::Row::Row": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+  Menu.cpp
 C:\Visual\VC\Tools\MSVC\14.27.29110\include\limits.h(69,5): warning C4668: "__STDC_WANT_SECURE_LIB__" nie jest zdefiniowany jako preprocesor makra, zastępowanie za pomocą "0" dla "#if/#elif"
 C:\Visual\VC\Tools\MSVC\14.27.29110\include\xmemory(141,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
 C:\Visual\VC\Tools\MSVC\14.27.29110\include\xmemory(151,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
@@ -76,52 +382,87 @@ C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5026: „Aplikacja”: konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C4626: „Aplikacja”: operator przypisania został niejawnie zdefiniowany jako usunięty
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5027: „Aplikacja”: przenoszący operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(16,1): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::kierunekTla"
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::Count" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(9,19): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::tablicaText"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::Wybor"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4625: „Menu”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4626: „Menu”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(126,42): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(127,86): warning C4244: "argument": konwersja z "const T" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+          and
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(127,54): warning C4244: "argument": konwersja z "const T" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+          and
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(141,42): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(142,86): warning C4244: "argument": konwersja z "const T" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+          and
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(142,54): warning C4244: "argument": konwersja z "const T" do "T", możliwa utrata danych
+          with
+          [
+              T=float
+          ]
+          and
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::Count" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::Resized" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::Resized" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::LostFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::LostFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::GainedFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::GainedFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::TextEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::TextEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::KeyPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::KeyReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::KeyReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelScrolled" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelScrolled" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::MouseEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::MouseLeft" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseLeft" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::JoystickMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::JoystickConnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::JoystickDisconnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::TouchBegan" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickConnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::TouchMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickDisconnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::TouchEnded" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::TouchBegan" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::TouchMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::TouchEnded" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::SensorChanged" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(203,13): warning C4062: moduł wyliczający "sf::Event::SensorChanged" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(290,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(295,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
@@ -348,4 +689,327 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(569,47):
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(62,5): warning C4514: "sf::ContextSettings::ContextSettings": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Glyph.hpp(49,5): warning C4514: "sf::Glyph::Glyph": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(274,9): warning C4514: "sf::Font::Row::Row": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+  main.cpp
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\limits.h(69,5): warning C4668: "__STDC_WANT_SECURE_LIB__" nie jest zdefiniowany jako preprocesor makra, zastępowanie za pomocą "0" dla "#if/#elif"
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\xmemory(141,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\xmemory(151,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(146,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(162,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(179,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(245,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4625: „sf::FileInputStream”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4626: „sf::FileInputStream”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4625: „sf::Lock”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4626: „sf::Lock”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4625: „sf::Mutex”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4626: „sf::Mutex”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(36,1): warning C4820: "_timespec64": wypełnienie "4" bajtów zostało dodane po składowa danych "_timespec64::tv_nsec"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(43,5): warning C4820: "timespec": wypełnienie "4" bajtów zostało dodane po składowa danych "timespec::tv_nsec"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4625: „sf::Thread”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4626: „sf::Thread”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4625: „sf::ThreadLocal”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4626: „sf::ThreadLocal”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4625: „sf::GlResource::TransientContextLock”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4626: „sf::GlResource::TransientContextLock”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(83,1): warning C4820: "sf::ContextSettings": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::ContextSettings::sRgbCapable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(153,31): warning C4820: "sf::Context": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4625: „sf::Context”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4626: „sf::Context”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4625: „sf::Cursor”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4626: „sf::Cursor”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(545,29): warning C4820: "sf::Window": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(547,30): warning C4820: "sf::Window": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Window::m_context"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4625: „sf::Window”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4626: „sf::Window”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(325,41): warning C4820: "sf::Transformable": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::Transformable::m_transformNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(327,1): warning C4820: "sf::Transformable": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::Transformable::m_inverseTransformNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Texture.hpp(628,27): warning C4820: "sf::Texture": wypełnienie "6" bajtów zostało dodane po składowa danych "sf::Texture::m_hasMipmap"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(295,33): warning C4820: "sf::Font::Page": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Font::Page::glyphs"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(298,5): warning C4820: "sf::Font::Page": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Font::Page::rows"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\View.hpp(280,1): warning C4820: "sf::View": wypełnienie "2" bajtów zostało dodane po składowa danych "sf::View::m_invTransformUpdated"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(464,32): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "1" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::viewChanged"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(465,32): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::lastBlendMode"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(468,47): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "2" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::useVertexCache"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(469,5): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::vertexCache"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4625: „sf::RenderTarget”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4626: „sf::RenderTarget”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(242,39): warning C4820: "sf::RenderTexture": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTexture::m_impl"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4625: „sf::RenderTexture”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4626: „sf::RenderTexture”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4625: „sf::RenderWindow”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4626: „sf::RenderWindow”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(748,33): warning C4820: "sf::Shader": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4625: „sf::Shader”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4626: „sf::Shader”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Text.hpp(451,40): warning C4820: "sf::Text": wypełnienie "7" bajtów zostało dodane po składowa danych "sf::Text::m_geometryNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(212,36): warning C4820: "sf::InputSoundFile": wypełnienie "7" bajtów zostało dodane po składowa danych "sf::InputSoundFile::m_streamOwned"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(216,1): warning C4625: „sf::InputSoundFile”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(216,1): warning C4626: „sf::InputSoundFile”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(313,41): warning C4820: "sf::SoundStream": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundStream::m_isStreaming"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(318,37): warning C4820: "sf::SoundStream": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundStream::m_loop"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(320,1): warning C4625: „sf::SoundStream”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(320,1): warning C4626: „sf::SoundStream”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(282,34): warning C4820: "sf::Music": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Music::m_mutex"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(283,1): warning C4625: „sf::Music”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(283,1): warning C4626: „sf::Music”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\OutputSoundFile.hpp(97,1): warning C4625: „sf::OutputSoundFile”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\OutputSoundFile.hpp(97,1): warning C4626: „sf::OutputSoundFile”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBuffer.hpp(277,34): warning C4820: "sf::SoundBuffer": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundBuffer::m_samples"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBuffer.hpp(279,1): warning C4820: "sf::SoundBuffer": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundBuffer::m_sounds"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(291,44): warning C4820: "sf::SoundRecorder": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_sampleRate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(293,36): warning C4820: "sf::SoundRecorder": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_isCapturing"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4820: "sf::SoundRecorder": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_channelCount"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4625: „sf::SoundRecorder”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4626: „sf::SoundRecorder”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBufferRecorder.hpp(101,1): warning C4625: „sf::SoundBufferRecorder”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBufferRecorder.hpp(101,1): warning C4626: „sf::SoundBufferRecorder”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(9,19): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::tablicaText"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::Wybor"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4625: „Menu”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(26,1): warning C4626: „Menu”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C4625: „Aplikacja”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5026: „Aplikacja”: konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C4626: „Aplikacja”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5027: „Aplikacja”: przenoszący operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(290,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(295,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(300,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(305,32): warning C4514: "signbit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(310,32): warning C4514: "signbit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(315,32): warning C4514: "signbit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(320,31): warning C4514: "_fpcomp": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(325,31): warning C4514: "_fpcomp": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(330,31): warning C4514: "_fpcomp": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(808,51): warning C4514: "_chgsignl": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(815,51): warning C4514: "_copysignl": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(869,51): warning C4514: "_hypotl": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(359,17): warning C4514: "abs": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(364,22): warning C4514: "abs": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(369,19): warning C4514: "div": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(374,20): warning C4514: "div": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(311,37): warning C4514: "vfwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(342,41): warning C4514: "vfwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(373,37): warning C4514: "_vfwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(387,37): warning C4514: "_vwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(401,37): warning C4514: "vwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(414,37): warning C4514: "_vwprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(430,41): warning C4514: "vwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(445,37): warning C4514: "_vwprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(459,37): warning C4514: "_vwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(472,37): warning C4514: "_fwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(491,37): warning C4514: "fwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(509,37): warning C4514: "_fwprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(530,41): warning C4514: "fwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(550,37): warning C4514: "_fwprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(569,37): warning C4514: "_fwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(587,37): warning C4514: "_wprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(605,37): warning C4514: "wprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(622,37): warning C4514: "_wprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(642,41): warning C4514: "wprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(661,37): warning C4514: "_wprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(679,37): warning C4514: "_wprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(728,37): warning C4514: "vfwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(761,41): warning C4514: "vfwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(776,37): warning C4514: "_vwscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(790,37): warning C4514: "vwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(803,37): warning C4514: "_vwscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(819,41): warning C4514: "vwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(834,37): warning C4514: "_fwscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(853,37): warning C4514: "fwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(871,37): warning C4514: "_fwscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(892,41): warning C4514: "fwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(912,37): warning C4514: "_wscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(930,37): warning C4514: "wscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(947,37): warning C4514: "_wscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(967,41): warning C4514: "wscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1094,37): warning C4514: "_vsnwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1122,37): warning C4514: "_vsnwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1171,37): warning C4514: "_vswprintf_c": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1223,37): warning C4514: "_vswprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1276,41): warning C4514: "vswprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1323,37): warning C4514: "_vswprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1358,37): warning C4514: "_vscwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1391,37): warning C4514: "_vscwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1405,37): warning C4514: "__swprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1425,37): warning C4514: "_swprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1446,37): warning C4514: "_swprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1465,37): warning C4514: "swprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1508,37): warning C4514: "_swprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1530,41): warning C4710: "int swprintf_s(wchar_t *const ,const size_t,const wchar_t *const ,...)": funkcja nie została umieszczona jako śródwierszowa
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1530): message : zobacz deklarację „swprintf_s”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1559,37): warning C4514: "_swprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1580,37): warning C4514: "_swprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1600,37): warning C4514: "_swprintf_c_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1621,37): warning C4514: "_swprintf_c": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1641,37): warning C4514: "_snwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1667,37): warning C4514: "_snwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1692,37): warning C4514: "_snwprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1714,37): warning C4514: "_snwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1742,37): warning C4514: "_scwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1761,37): warning C4710: "int _scwprintf(const wchar_t *const ,...)": funkcja nie została umieszczona jako śródwierszowa
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1761): message : zobacz deklarację „_scwprintf”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1779,37): warning C4514: "_scwprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1798,37): warning C4514: "_scwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1822,24): warning C4514: "swprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1837,34): warning C4514: "vswprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1848,24): warning C4514: "_swprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1863,34): warning C4514: "_vswprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1921,37): warning C4514: "vswscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(1956,41): warning C4514: "vswscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2019,37): warning C4514: "_swscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2039,37): warning C4514: "swscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2058,37): warning C4514: "_swscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2080,41): warning C4514: "swscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2101,37): warning C4514: "_snwscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2127,37): warning C4514: "_snwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2152,37): warning C4514: "_snwscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstdio.h(2173,37): warning C4514: "_snwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(648,37): warning C4514: "vfprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(679,41): warning C4514: "vfprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(710,37): warning C4514: "_vfprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(724,37): warning C4514: "_vprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(738,37): warning C4514: "vprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(751,37): warning C4514: "_vprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(767,41): warning C4514: "vprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(782,37): warning C4514: "_vprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(796,37): warning C4514: "_vprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(809,37): warning C4514: "_fprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(828,37): warning C4514: "fprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(852,37): warning C4514: "_fprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(873,41): warning C4514: "fprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(893,37): warning C4514: "_fprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(912,37): warning C4514: "_fprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(930,37): warning C4514: "_printf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(948,37): warning C4514: "printf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(965,37): warning C4514: "_printf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(985,41): warning C4514: "printf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1004,37): warning C4514: "_printf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1022,37): warning C4514: "_printf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1070,37): warning C4514: "vfscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1104,41): warning C4514: "vfscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1120,37): warning C4514: "_vscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1134,37): warning C4514: "vscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1147,37): warning C4514: "_vscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1163,41): warning C4514: "vscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1178,37): warning C4514: "_fscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1197,37): warning C4514: "fscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1215,37): warning C4514: "_fscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1236,41): warning C4514: "fscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1256,37): warning C4514: "_scanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274,37): warning C4514: "scanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1291,37): warning C4514: "_scanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1311,41): warning C4514: "scanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1469,37): warning C4514: "vsprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1510,41): warning C4514: "vsprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1557,37): warning C4514: "_vsprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1595,37): warning C4514: "_vsnprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1623,41): warning C4514: "vsnprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1668,37): warning C4514: "_vscprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1733,37): warning C4514: "_vsnprintf_c": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1749,37): warning C4514: "_sprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774,37): warning C4514: "sprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1810,37): warning C4514: "_sprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1833,41): warning C4710: "int sprintf_s(char *const ,const size_t,const char *const ,...)": funkcja nie została umieszczona jako śródwierszowa
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1833): message : zobacz deklarację „sprintf_s”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1862,37): warning C4514: "_sprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1883,37): warning C4514: "_sprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1903,37): warning C4514: "_snprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1940,37): warning C4514: "snprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1961,37): warning C4514: "_snprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1991,37): warning C4514: "_snprintf_c_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2012,37): warning C4514: "_snprintf_c": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2032,37): warning C4514: "_snprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2054,37): warning C4514: "_snprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2082,37): warning C4514: "_scprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2100,37): warning C4710: "int _scprintf(const char *const ,...)": funkcja nie została umieszczona jako śródwierszowa
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2100): message : zobacz deklarację „_scprintf”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2117,37): warning C4514: "_scprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2135,37): warning C4514: "_scprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2183,37): warning C4514: "vsscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2244,37): warning C4514: "_sscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2263,37): warning C4514: "sscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2281,37): warning C4514: "_sscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2302,41): warning C4514: "sscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2330,37): warning C4514: "_snscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2354,37): warning C4514: "_snscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2378,37): warning C4514: "_snscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(2402,37): warning C4514: "_snscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memcpy_s.h(35,44): warning C4514: "memcpy_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memcpy_s.h(64,44): warning C4514: "memmove_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_memory.h(100,28): warning C4514: "memchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(166,38): warning C4514: "wcsnlen_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(247,40): warning C4514: "_wcstok": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(261,35): warning C4514: "wcstok": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(539,31): warning C4514: "wcschr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(545,31): warning C4514: "wcspbrk": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(551,31): warning C4514: "wcsrchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wstring.h(558,31): warning C4514: "wcsstr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(371,38): warning C4514: "strnlen_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(504,28): warning C4514: "strchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(510,28): warning C4514: "strpbrk": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(516,28): warning C4514: "strrchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(522,28): warning C4514: "strstr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(100,37): warning C4514: "_vcwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(127,37): warning C4514: "_vcwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(154,37): warning C4514: "_vcwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(167,37): warning C4514: "_cwprintf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(185,37): warning C4514: "_cwprintf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(202,37): warning C4514: "_cwprintf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(220,37): warning C4514: "_cwprintf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(237,37): warning C4514: "_cwprintf_p_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(255,37): warning C4514: "_cwprintf_p": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(303,37): warning C4514: "_vcwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(335,37): warning C4514: "_vcwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(348,37): warning C4514: "_cwscanf_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(371,37): warning C4514: "_cwscanf": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(393,37): warning C4514: "_cwscanf_s_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wconio.h(411,37): warning C4514: "_cwscanf_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wio.h(225,26): warning C4514: "_wopen": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wio.h(238,26): warning C4514: "_wsopen": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wtime.h(185,45): warning C4514: "_wctime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_wtime.h(192,43): warning C4514: "_wctime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys\stat.h(234,39): warning C4514: "fstat": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\sys\stat.h(239,39): warning C4514: "stat": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h(180,28): warning C4514: "fwide": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h(189,28): warning C4514: "mbsinit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h(209,28): warning C4514: "wmemcmp": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\wchar.h(268,48): warning C4514: "wmemchr": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(81,24): warning C4514: "__acrt_locale_get_ctype_array_value": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(165,37): warning C4514: "__ascii_iswalpha": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(170,37): warning C4514: "__ascii_iswdigit": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(175,37): warning C4514: "__ascii_towlower": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(180,37): warning C4514: "__ascii_towupper": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(234,28): warning C4514: "_ischartype_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(53,5): warning C4514: "sf::NonCopyable::NonCopyable": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(63,6): warning C4514: "sf::NonCopyable::~NonCopyable": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(476,41): warning C4514: "ctime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(487,42): warning C4514: "difftime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(496,46): warning C4514: "gmtime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(506,46): warning C4514: "localtime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(517,42): warning C4514: "_mkgmtime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(525,42): warning C4514: "mktime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(532,42): warning C4514: "time": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(540,39): warning C4514: "timespec_get": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(550,47): warning C4514: "ctime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(560,47): warning C4514: "gmtime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(569,47): warning C4514: "localtime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(62,5): warning C4514: "sf::ContextSettings::ContextSettings": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Glyph.hpp(49,5): warning C4514: "sf::Glyph::Glyph": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(274,9): warning C4514: "sf::Font::Row::Row": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+  Generowanie kodu...
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(34): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(30) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(34) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(89): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(87) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(89) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(98): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(96) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(98) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(142): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(138) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(142) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(127): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(123) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(127) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
   Snake SFML.vcxproj -> C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\Debug\Snake SFML.exe
