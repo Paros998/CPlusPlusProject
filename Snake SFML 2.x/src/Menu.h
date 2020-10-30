@@ -22,6 +22,7 @@ private:
 	void rysuj(RenderWindow& okno);
 	void aktualizacjaMenu();
 	void ruchMyszka(int,int);
-	void klikMyszka(int,int);
+	void klikMyszka(int,int, RenderWindow& okno);
+	void enter(int,RenderWindow& okno);
 };
 

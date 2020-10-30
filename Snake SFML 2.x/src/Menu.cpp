@@ -48,7 +48,7 @@ Menu::Menu()
     tablicaText[WYJSCIE].setPosition(860,850);
     
     menuAmbient.openFromFile("data/Muzyka/menuAmbient.ogg");
-    menuAmbient.setVolume(13.0f);
+    menuAmbient.setVolume(15.0f);
     menuAmbient.play();
     menuAmbient.setLoop(true);
 
@@ -58,7 +58,7 @@ Menu::Menu()
 
     bufor2.loadFromFile("data/Muzyka/misc_menu_2.wav");
     menuZatwierdzMenu.setBuffer(bufor2);
-    menuZatwierdzMenu.setVolume(1.0f);
+    menuZatwierdzMenu.setVolume(2.0f);
 
 }
 
@@ -133,7 +133,7 @@ void Menu::ruchMyszka(int x,int y)
     }
 }
 
-void Menu::klikMyszka(int x, int y)
+void Menu::klikMyszka(int x, int y, RenderWindow& okno)
 {
     for (int i = 0; i < 5; i++)
     {
@@ -142,8 +142,27 @@ void Menu::klikMyszka(int x, int y)
         obszar = IntRect(tablicaText[i].getPosition().x, tablicaText[i].getPosition().y, liczbaLiter * 40, 40);
         if (obszar.contains(x, y))
         {
-            menuZatwierdzMenu.play();
+            enter(i, okno);
         }
+    }
+}
+
+void Menu::enter(int opcjaMenu, RenderWindow& okno)
+{   
+    menuZatwierdzMenu.play();
+    switch (opcjaMenu)
+    {
+    case 0:
+        break;
+    case 1:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    case 4:
+        okno.close();
+        break;
     }
 }
 
@@ -183,6 +202,16 @@ bool Menu::start(RenderWindow& okno)
                         aktualizacjaMenu();
                     }
                 }
+                if (zdarzenie.key.code == Keyboard::Escape)
+                {
+                    okno.close();
+                    break;
+                }
+                if (zdarzenie.key.code == Keyboard::Enter)
+                {
+                    enter(Wybor,okno);
+                    break;
+                }
             case Event::MouseMoved:
             {
                 int x, y;
@@ -197,7 +226,8 @@ bool Menu::start(RenderWindow& okno)
                     int x, y;
                     x = zdarzenie.mouseButton.x;
                     y = zdarzenie.mouseButton.y;
-                    klikMyszka(x, y);
+                    klikMyszka(x, y,okno);
+
                 }
             }
             }
