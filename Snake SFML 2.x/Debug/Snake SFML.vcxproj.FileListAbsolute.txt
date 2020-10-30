@@ -1,2 +1,4 @@
 C:\Users\Chomik\Desktop\Projekt\Snake SFML\Debug\Snake SFML.exe
 C:\Users\Chomik\Desktop\Projekt\Snake SFML\Debug\Snake SFML.pdb
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\Debug\Snake SFML.exe
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\Debug\Snake SFML.pdb

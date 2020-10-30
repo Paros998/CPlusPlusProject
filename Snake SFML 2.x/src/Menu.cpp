@@ -4,6 +4,7 @@ Menu::Menu()
 {
     kierunekTla = 0;
     menuTekstura.loadFromFile("data/Obrazy menu/menuSnake.png");
+    menuTekstura.setSmooth(true);
     menuSprite.setTexture(menuTekstura);
     menuSprite.setScale(1.35f, 1.0f);
 }

@@ -1,124 +1,128 @@
 ﻿  Menu.cpp
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\limits.h(69,5): warning C4668: "__STDC_WANT_SECURE_LIB__" nie jest zdefiniowany jako preprocesor makra, zastępowanie za pomocą "0" dla "#if/#elif"
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xmemory(115,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xmemory(125,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4625: „sf::FileInputStream”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4626: „sf::FileInputStream”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4625: „sf::Lock”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4626: „sf::Lock”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4625: „sf::Mutex”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4626: „sf::Mutex”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\limits.h(69,5): warning C4668: "__STDC_WANT_SECURE_LIB__" nie jest zdefiniowany jako preprocesor makra, zastępowanie za pomocą "0" dla "#if/#elif"
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\xmemory(141,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\xmemory(151,5): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(146,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(162,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(179,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Visual\VC\Tools\MSVC\14.27.29110\include\atomic(245,9): warning C4365: "argument": konwersja z "long" do "unsigned int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4625: „sf::FileInputStream”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4626: „sf::FileInputStream”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4625: „sf::Lock”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4626: „sf::Lock”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4625: „sf::Mutex”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4626: „sf::Mutex”: operator przypisania został niejawnie zdefiniowany jako usunięty
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(36,1): warning C4820: "_timespec64": wypełnienie "4" bajtów zostało dodane po składowa danych "_timespec64::tv_nsec"
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(43,5): warning C4820: "timespec": wypełnienie "4" bajtów zostało dodane po składowa danych "timespec::tv_nsec"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4625: „sf::Thread”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4626: „sf::Thread”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4625: „sf::ThreadLocal”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4626: „sf::ThreadLocal”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4625: „sf::GlResource::TransientContextLock”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4626: „sf::GlResource::TransientContextLock”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(83,1): warning C4820: "sf::ContextSettings": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::ContextSettings::sRgbCapable"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Context.hpp(153,31): warning C4820: "sf::Context": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4625: „sf::Context”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4626: „sf::Context”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4625: „sf::Cursor”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4626: „sf::Cursor”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Window.hpp(545,29): warning C4820: "sf::Window": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Window.hpp(547,30): warning C4820: "sf::Window": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Window::m_context"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4625: „sf::Window”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4626: „sf::Window”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(325,41): warning C4820: "sf::Transformable": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::Transformable::m_transformNeedUpdate"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(327,1): warning C4820: "sf::Transformable": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::Transformable::m_inverseTransformNeedUpdate"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Texture.hpp(628,27): warning C4820: "sf::Texture": wypełnienie "6" bajtów zostało dodane po składowa danych "sf::Texture::m_hasMipmap"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Font.hpp(295,33): warning C4820: "sf::Font::Page": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Font::Page::glyphs"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Font.hpp(298,5): warning C4820: "sf::Font::Page": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Font::Page::rows"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\View.hpp(280,1): warning C4820: "sf::View": wypełnienie "2" bajtów zostało dodane po składowa danych "sf::View::m_invTransformUpdated"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(464,32): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "1" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::viewChanged"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(465,32): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::lastBlendMode"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(468,47): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "2" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::useVertexCache"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(469,5): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::vertexCache"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4625: „sf::RenderTarget”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4626: „sf::RenderTarget”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(242,39): warning C4820: "sf::RenderTexture": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTexture::m_impl"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4625: „sf::RenderTexture”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4626: „sf::RenderTexture”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4625: „sf::RenderWindow”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4626: „sf::RenderWindow”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(748,33): warning C4820: "sf::Shader": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4625: „sf::Shader”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4626: „sf::Shader”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Text.hpp(451,40): warning C4820: "sf::Text": wypełnienie "7" bajtów zostało dodane po składowa danych "sf::Text::m_geometryNeedUpdate"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(212,36): warning C4820: "sf::InputSoundFile": wypełnienie "7" bajtów zostało dodane po składowa danych "sf::InputSoundFile::m_streamOwned"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(216,1): warning C4625: „sf::InputSoundFile”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(216,1): warning C4626: „sf::InputSoundFile”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(313,41): warning C4820: "sf::SoundStream": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundStream::m_isStreaming"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(318,37): warning C4820: "sf::SoundStream": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundStream::m_loop"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(320,1): warning C4625: „sf::SoundStream”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(320,1): warning C4626: „sf::SoundStream”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\Music.hpp(282,34): warning C4820: "sf::Music": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Music::m_mutex"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\Music.hpp(283,1): warning C4625: „sf::Music”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\Music.hpp(283,1): warning C4626: „sf::Music”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\OutputSoundFile.hpp(97,1): warning C4625: „sf::OutputSoundFile”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\OutputSoundFile.hpp(97,1): warning C4626: „sf::OutputSoundFile”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundBuffer.hpp(277,34): warning C4820: "sf::SoundBuffer": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundBuffer::m_samples"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundBuffer.hpp(279,1): warning C4820: "sf::SoundBuffer": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundBuffer::m_sounds"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(291,44): warning C4820: "sf::SoundRecorder": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_sampleRate"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(293,36): warning C4820: "sf::SoundRecorder": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_isCapturing"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4820: "sf::SoundRecorder": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_channelCount"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4625: „sf::SoundRecorder”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4626: „sf::SoundRecorder”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundBufferRecorder.hpp(101,1): warning C4625: „sf::SoundBufferRecorder”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Audio\SoundBufferRecorder.hpp(101,1): warning C4626: „sf::SoundBufferRecorder”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Aplikacja.h(10,1): warning C4625: „Aplikacja”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Aplikacja.h(10,1): warning C5026: „Aplikacja”: konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Aplikacja.h(10,1): warning C4626: „Aplikacja”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Aplikacja.h(10,1): warning C5027: „Aplikacja”: przenoszący operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.h(16,1): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::kierunekTla"
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::Count" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::Resized" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::LostFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::GainedFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::TextEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::KeyPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::KeyReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelScrolled" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::MouseMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::MouseEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::MouseLeft" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::JoystickMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::JoystickConnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::JoystickDisconnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::TouchBegan" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::TouchMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::TouchEnded" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\src\Menu.cpp(46,13): warning C4062: moduł wyliczający "sf::Event::SensorChanged" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4625: „sf::Thread”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4626: „sf::Thread”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4625: „sf::ThreadLocal”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4626: „sf::ThreadLocal”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4625: „sf::GlResource::TransientContextLock”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4626: „sf::GlResource::TransientContextLock”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(83,1): warning C4820: "sf::ContextSettings": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::ContextSettings::sRgbCapable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(153,31): warning C4820: "sf::Context": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4625: „sf::Context”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4626: „sf::Context”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4625: „sf::Cursor”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4626: „sf::Cursor”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(545,29): warning C4820: "sf::Window": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(547,30): warning C4820: "sf::Window": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Window::m_context"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4625: „sf::Window”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4626: „sf::Window”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(325,41): warning C4820: "sf::Transformable": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::Transformable::m_transformNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(327,1): warning C4820: "sf::Transformable": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::Transformable::m_inverseTransformNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Texture.hpp(628,27): warning C4820: "sf::Texture": wypełnienie "6" bajtów zostało dodane po składowa danych "sf::Texture::m_hasMipmap"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(295,33): warning C4820: "sf::Font::Page": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Font::Page::glyphs"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(298,5): warning C4820: "sf::Font::Page": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Font::Page::rows"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\View.hpp(280,1): warning C4820: "sf::View": wypełnienie "2" bajtów zostało dodane po składowa danych "sf::View::m_invTransformUpdated"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(464,32): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "1" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::viewChanged"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(465,32): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::lastBlendMode"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(468,47): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "2" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::useVertexCache"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(469,5): warning C4820: "sf::RenderTarget::StatesCache": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTarget::StatesCache::vertexCache"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4625: „sf::RenderTarget”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4626: „sf::RenderTarget”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(242,39): warning C4820: "sf::RenderTexture": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::RenderTexture::m_impl"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4625: „sf::RenderTexture”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4626: „sf::RenderTexture”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4625: „sf::RenderWindow”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4626: „sf::RenderWindow”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(748,33): warning C4820: "sf::Shader": wypełnienie "3" bajtów zostało dodane po klasa bazowa "sf::NonCopyable"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4625: „sf::Shader”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4626: „sf::Shader”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Text.hpp(451,40): warning C4820: "sf::Text": wypełnienie "7" bajtów zostało dodane po składowa danych "sf::Text::m_geometryNeedUpdate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(212,36): warning C4820: "sf::InputSoundFile": wypełnienie "7" bajtów zostało dodane po składowa danych "sf::InputSoundFile::m_streamOwned"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(216,1): warning C4625: „sf::InputSoundFile”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\InputSoundFile.hpp(216,1): warning C4626: „sf::InputSoundFile”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(313,41): warning C4820: "sf::SoundStream": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundStream::m_isStreaming"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(318,37): warning C4820: "sf::SoundStream": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundStream::m_loop"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(320,1): warning C4625: „sf::SoundStream”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundStream.hpp(320,1): warning C4626: „sf::SoundStream”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(282,34): warning C4820: "sf::Music": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::Music::m_mutex"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(283,1): warning C4625: „sf::Music”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\Music.hpp(283,1): warning C4626: „sf::Music”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\OutputSoundFile.hpp(97,1): warning C4625: „sf::OutputSoundFile”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\OutputSoundFile.hpp(97,1): warning C4626: „sf::OutputSoundFile”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBuffer.hpp(277,34): warning C4820: "sf::SoundBuffer": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundBuffer::m_samples"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBuffer.hpp(279,1): warning C4820: "sf::SoundBuffer": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundBuffer::m_sounds"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(291,44): warning C4820: "sf::SoundRecorder": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_sampleRate"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(293,36): warning C4820: "sf::SoundRecorder": wypełnienie "3" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_isCapturing"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4820: "sf::SoundRecorder": wypełnienie "4" bajtów zostało dodane po składowa danych "sf::SoundRecorder::m_channelCount"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4625: „sf::SoundRecorder”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundRecorder.hpp(295,1): warning C4626: „sf::SoundRecorder”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBufferRecorder.hpp(101,1): warning C4625: „sf::SoundBufferRecorder”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Audio\SoundBufferRecorder.hpp(101,1): warning C4626: „sf::SoundBufferRecorder”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C4625: „Aplikacja”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5026: „Aplikacja”: konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C4626: „Aplikacja”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5027: „Aplikacja”: przenoszący operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(16,1): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::kierunekTla"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::Count" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::Resized" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::LostFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::GainedFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::TextEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::KeyPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::KeyReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelScrolled" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::MouseLeft" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickConnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::JoystickDisconnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::TouchBegan" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::TouchMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::TouchEnded" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(47,13): warning C4062: moduł wyliczający "sf::Event::SensorChanged" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(290,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(295,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(300,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
@@ -328,8 +332,8 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(170,37)
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(175,37): warning C4514: "__ascii_towlower": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(180,37): warning C4514: "__ascii_towupper": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\ctype.h(234,28): warning C4514: "_ischartype_l": funkcja wbudowana, do której nie istniały odwołania, została usunięta
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(53,5): warning C4514: "sf::NonCopyable::NonCopyable": funkcja wbudowana, do której nie istniały odwołania, została usunięta
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(63,6): warning C4514: "sf::NonCopyable::~NonCopyable": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(53,5): warning C4514: "sf::NonCopyable::NonCopyable": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(63,6): warning C4514: "sf::NonCopyable::~NonCopyable": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(476,41): warning C4514: "ctime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(487,42): warning C4514: "difftime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(496,46): warning C4514: "gmtime": funkcja wbudowana, do której nie istniały odwołania, została usunięta
@@ -341,7 +345,7 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(540,39):
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(550,47): warning C4514: "ctime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(560,47): warning C4514: "gmtime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(569,47): warning C4514: "localtime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(62,5): warning C4514: "sf::ContextSettings::ContextSettings": funkcja wbudowana, do której nie istniały odwołania, została usunięta
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Glyph.hpp(49,5): warning C4514: "sf::Glyph::Glyph": funkcja wbudowana, do której nie istniały odwołania, została usunięta
-C:\Users\Chomik\Desktop\Projekt\Snake SFML\SFML-2.5.1\include\SFML\Graphics\Font.hpp(274,9): warning C4514: "sf::Font::Row::Row": funkcja wbudowana, do której nie istniały odwołania, została usunięta
-  Snake SFML.vcxproj -> C:\Users\Chomik\Desktop\Projekt\Snake SFML\Debug\Snake SFML.exe
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(62,5): warning C4514: "sf::ContextSettings::ContextSettings": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Glyph.hpp(49,5): warning C4514: "sf::Glyph::Glyph": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(274,9): warning C4514: "sf::Font::Row::Row": funkcja wbudowana, do której nie istniały odwołania, została usunięta
+  Snake SFML.vcxproj -> C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\Debug\Snake SFML.exe
