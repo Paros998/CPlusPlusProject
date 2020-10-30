@@ -1,0 +1,2 @@
+C:\Users\Chomik\Desktop\Projekt\Snake SFML\Debug\Snake SFML.exe
+C:\Users\Chomik\Desktop\Projekt\Snake SFML\Debug\Snake SFML.pdb
