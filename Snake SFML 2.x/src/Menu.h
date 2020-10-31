@@ -19,18 +19,12 @@ public:
 
 private:
 	void poruszajTlo();
-<<<<<<< Updated upstream
-	void rysuj(RenderWindow& okno);
-	void aktualizacjaMenu();
-	void ruchMyszka(int,int);
-	void klikMyszka(int,int);
-=======
 	void rysuj(RenderWindow& okno,int,int);
 	void przygotujStrone(int,int);
 	void aktualizacjaMenu(int);
 	void ruchMyszka(int,int,int);
 	void klikMyszka(int,int,int, RenderWindow& okno);
 	void enter(int,int,RenderWindow& okno);
->>>>>>> Stashed changes
+
 };
 

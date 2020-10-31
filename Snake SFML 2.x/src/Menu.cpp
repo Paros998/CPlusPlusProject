@@ -50,31 +50,19 @@ Menu::Menu()
     tablicaText[TWORCY].setPosition(875,700);
     tablicaText[WYJSCIE].setPosition(860,850);
     
-<<<<<<< Updated upstream
-    menuAmbient.openFromFile("data/Muzyka/menuAmbient.ogg");
-    menuAmbient.setVolume(13.0f);
-    menuAmbient.play();
-    menuAmbient.setLoop(true);
-=======
     menuMuzyka.openFromFile("data/Muzyka/menuAmbient.ogg");
     menuMuzyka.setVolume(15.0f);
     menuMuzyka.play();
     menuMuzyka.setLoop(true);
->>>>>>> Stashed changes
 
     bufor.loadFromFile("data/Muzyka/misc_menu.wav");
     menuDzwiekWybor.setBuffer(bufor);
     menuDzwiekWybor.setVolume(0.8f);
 
     bufor2.loadFromFile("data/Muzyka/misc_menu_2.wav");
-<<<<<<< Updated upstream
-    menuZatwierdzMenu.setBuffer(bufor2);
-    menuZatwierdzMenu.setVolume(1.0f);
-=======
+
     menuDzwiekZatwierdzMenu.setBuffer(bufor2);
     menuDzwiekZatwierdzMenu.setVolume(2.0f);
->>>>>>> Stashed changes
-
 }
 
 Menu::~Menu() { delete [] tablicaText; }
@@ -265,15 +253,10 @@ void Menu::ruchMyszka(int x,int y,int podstronaMenu)
     }
 }
 
-<<<<<<< Updated upstream
-void Menu::klikMyszka(int x, int y)
-{
-    for (int i = 0; i < 5; i++)
-=======
+
 void Menu::klikMyszka(int x, int y, int podstronaMenu, RenderWindow& okno)
 {   
     switch (podstronaMenu)
->>>>>>> Stashed changes
     {
     case GLOWNA:
         for (int i = 0; i < 5; i++)
@@ -290,9 +273,8 @@ void Menu::klikMyszka(int x, int y, int podstronaMenu, RenderWindow& okno)
     case POSTART:
         for (int i = 0; i < 4; i++)
         {
-<<<<<<< Updated upstream
-            menuZatwierdzMenu.play();
-=======
+            menuDzwiekZatwierdzMenu.play();
+
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
             obszar = IntRect(tablicaText[i].getPosition().x, tablicaText[i].getPosition().y, liczbaLiter * 40, 40);
@@ -300,7 +282,7 @@ void Menu::klikMyszka(int x, int y, int podstronaMenu, RenderWindow& okno)
             {
                 enter(i, podstronaMenu, okno);
             }
->>>>>>> Stashed changes
+
         }
         break;
     case POPOMOC:
@@ -312,8 +294,6 @@ void Menu::klikMyszka(int x, int y, int podstronaMenu, RenderWindow& okno)
     }
 }
 
-<<<<<<< Updated upstream
-=======
 void Menu::enter(int aktualnyWyborMenu,int podstronaMenu, RenderWindow& okno)
 {   
     menuDzwiekZatwierdzMenu.play();
@@ -349,7 +329,6 @@ void Menu::enter(int aktualnyWyborMenu,int podstronaMenu, RenderWindow& okno)
     }
 }
 
->>>>>>> Stashed changes
 bool Menu::start(RenderWindow& okno)
 {
     while (okno.isOpen())
@@ -425,8 +404,6 @@ bool Menu::start(RenderWindow& okno)
                         break;
                     }
                 }
-<<<<<<< Updated upstream
-=======
                 if (zdarzenie.key.code == Keyboard::Escape)
                 {   
                     if(podstronaMenu != GLOWNA) aktualizacjaMenu(podstronaMenu = GLOWNA);
@@ -441,7 +418,6 @@ bool Menu::start(RenderWindow& okno)
                     enter(aktualnyWyborMenu,podstronaMenu,okno);
                     break;
                 }
->>>>>>> Stashed changes
             case Event::MouseMoved:
             {
                 int x, y;
@@ -456,11 +432,7 @@ bool Menu::start(RenderWindow& okno)
                     int x, y;
                     x = zdarzenie.mouseButton.x;
                     y = zdarzenie.mouseButton.y;
-<<<<<<< Updated upstream
-                    klikMyszka(x, y);
-=======
                     klikMyszka(x, y,podstronaMenu,okno);
->>>>>>> Stashed changes
                 }
             }
             }
