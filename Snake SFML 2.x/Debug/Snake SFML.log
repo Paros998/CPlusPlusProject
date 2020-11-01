@@ -76,87 +76,305 @@ C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5026: „Aplikacja”: konstruktor przenoszenia został niejawnie zdefiniowany jako usunięty
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C4626: „Aplikacja”: operator przypisania został niejawnie zdefiniowany jako usunięty
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Aplikacja.h(10,1): warning C5027: „Aplikacja”: przenoszący operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(9,19): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::tablicaText"
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(27,1): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::Wybor"
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(27,1): warning C4625: „Menu”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(27,1): warning C4626: „Menu”: operator przypisania został niejawnie zdefiniowany jako usunięty
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(126,42): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(127,86): warning C4244: "argument": konwersja z "const T" do "T", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(9,26): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::wynikiText"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(11,18): warning C4820: "Menu": wypełnienie "4" bajtów zostało dodane po składowa danych "Menu::linia"
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(32,1): warning C4625: „Menu”: konstruktor kopiujący został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.h(32,1): warning C4626: „Menu”: operator przypisania został niejawnie zdefiniowany jako usunięty
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(236,41): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(243,31): warning C4365: "=": konwersja z "unsigned int" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(246,41): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(358,46): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(471,46): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(472,133): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
-          [
-              T=float
-          ]
-          and
           [
               T=int
           ]
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(127,54): warning C4244: "argument": konwersja z "const T" do "T", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(472,122): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
-          [
-              T=float
-          ]
-          and
           [
               T=int
           ]
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(141,42): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(142,86): warning C4244: "argument": konwersja z "const T" do "T", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(472,98): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
-          [
-              T=float
-          ]
-          and
           [
               T=int
           ]
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(142,54): warning C4244: "argument": konwersja z "const T" do "T", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(472,60): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
           with
-          [
-              T=float
-          ]
-          and
           [
               T=int
           ]
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::Count" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(484,46): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(485,139): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(485,127): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(485,101): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(485,61): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(497,46): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(498,135): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(498,123): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(498,97): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(498,59): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(505,113): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(505,101): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(505,89): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(505,53): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(511,115): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(511,103): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(511,91): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(511,54): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(534,46): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(535,139): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(535,127): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(535,101): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(535,61): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(547,46): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(548,139): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(548,127): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(548,101): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(548,61): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(560,46): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(561,135): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(561,123): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(561,97): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(561,59): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(580,111): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(580,100): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(580,89): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(580,53): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(591,113): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(591,102): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(591,91): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(591,54): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(607,46): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(608,135): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(608,123): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(608,97): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(608,59): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(620,46): warning C4365: "inicjowanie": konwersja z "size_t" do "int", niezgodność ze znakiem/bez znaku
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(621,135): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(621,123): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(621,97): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(621,59): warning C4244: "argument": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(850,31): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(850,28): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(865,35): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(865,32): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::Count" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::Resized" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::Resized" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::LostFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::LostFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::GainedFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::GainedFocus" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::TextEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::TextEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::KeyReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::KeyReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelScrolled" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::MouseWheelScrolled" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::MouseButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::MouseEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::MouseEntered" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::MouseLeft" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::MouseLeft" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonPressed" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::JoystickButtonReleased" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::JoystickMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::JoystickMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::JoystickConnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::JoystickConnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::JoystickDisconnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::JoystickDisconnected" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::TouchBegan" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::TouchBegan" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::TouchMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::TouchMoved" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::TouchEnded" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::TouchEnded" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(233,13): warning C4062: moduł wyliczający "sf::Event::SensorChanged" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(868,13): warning C4062: moduł wyliczający "sf::Event::SensorChanged" w instrukcji switch wyliczenia "sf::Event::EventType" nie jest obsługiwany
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\Event.hpp(187): message : zobacz deklarację „sf::Event::EventType”
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(290,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_math.h(295,31): warning C4514: "fpclassify": funkcja wbudowana, do której nie istniały odwołania, została usunięta
@@ -380,25 +598,66 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(540,39):
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(550,47): warning C4514: "ctime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(560,47): warning C4514: "gmtime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\time.h(569,47): warning C4514: "localtime_s": funkcja wbudowana, do której nie istniały odwołania, została usunięta
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(62,5): warning C4514: "sf::ContextSettings::ContextSettings": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Glyph.hpp(49,5): warning C4514: "sf::Glyph::Glyph": funkcja wbudowana, do której nie istniały odwołania, została usunięta
 C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\SFML-2.5.1\include\SFML\Graphics\Font.hpp(274,9): warning C4514: "sf::Font::Row::Row": funkcja wbudowana, do której nie istniały odwołania, została usunięta
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(34): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(30) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(34) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(89): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(87) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(89) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(127): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(123) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(127) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(145): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(138) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(145) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(142): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(138) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(142) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
-C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(98): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(96) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
-  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(98) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(359): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(356) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(359) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(349): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(347) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(349) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(332): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(330) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(332) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(432): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(429) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(432) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(324): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(322) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(324) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(408): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(405) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(408) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(381): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(378) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(381) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(112): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(106) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(112) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(99): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(97) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(99) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(88): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(82) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(88) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(498): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(494) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(498) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(204): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(198) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(204) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(165): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(165) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(165) : uwaga: wywołanie kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(485): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(481) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(485) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(472): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(468) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(472) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(621): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(617) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(621) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(608): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(604) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(608) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(561): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(557) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(561) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(548): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(544) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(548) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
+C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(535): warning C5045: Kompilator wstawi kroki zaradcze dla luki Spectre w przypadku obciążenia pamięci, jeśli określono przełącznik /Qspectre
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(531) : uwaga: sprawdzono zakres indeksu „i” przez porównanie w tym wierszu
+  C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\src\Menu.cpp(535) : uwaga: obciążenie pamięci kanałów informacyjnych w tym wierszu
   Snake SFML.vcxproj -> C:\Users\part4\Documents\GitHub\CPlusPlusProject\Snake SFML 2.x\Debug\Snake SFML.exe

@@ -1,25 +1,25 @@
 #include "Menu.h"
 
-enum wyborMenu  {START,POMOC,WYNIKI,TWORCY,WYJSCIE};
-enum wyborPodstronyMenu {GLOWNA,POSTART,POPOMOC,POWYNIKI,POTWORCY};
+enum wyborMenu  {START,OPCJE,WYNIKI,TWORCY,WYJSCIE};
+enum wyborPodstronyMenu {GLOWNA,POSTART,POOPCJE,POWYNIKI,POTWORCY};
 enum wyborPoStart {POZIOM1,POZIOM2,POZIOM3,WSTECZ};
 enum wyborPoWynikiPoTworcy {POWROT};
-enum opcjeTekst {STEROWANIE,GORA,DOL,PRAWO,LEWO,OPCJE,MUZYKA,EKRAN,PELNY,RAMKA,WSTEC};
+enum opcjeTekst {STEROWANIE,GORA,DOL,PRAWO,LEWO,USTAWIENIA,MUZYKA,EKRAN,PELNY,RAMKA,WSTEC};
 
 Menu::Menu()
 {
     poziomMuzyki = 15.0f;
-    kierunekTla = 0, aktualnyWyborMenu = START,podstronaMenu = GLOWNA;
+    kierunekTla = 0, aktualnyWyborMenu = START,podstronaMenu = GLOWNA,iloscWynikow=0;
     menuTekstura.loadFromFile("data/Obrazy menu/menuSnake.png");
     menuTekstura.setSmooth(true);
     menuSprite.setTexture(menuTekstura);
     menuSprite.setScale(1.1f, 1.0f);
 
-    logoTekstura.loadFromFile("data/Obrazy menu/logoSnake.png");
+    logoTekstura.loadFromFile("data/Obrazy menu/logoSnake2.png");
     logoTekstura.setSmooth(true);
     logoSprite.setTexture(logoTekstura);
-    logoSprite.setPosition(760, 50);
-    logoSprite.setScale(1.0f, 1.0f);
+    logoSprite.setPosition(560, 0);
+    logoSprite.setScale(1.0f, 0.5f);
 
     strzalkaTekstura.loadFromFile("data/Obrazy menu/snake_glowa.png");
     strzalkaTekstura.setSmooth(true);
@@ -77,31 +77,57 @@ Menu::Menu()
 
     tablicaText = new Text[5];
     opcjeText = new Text[11];
+    wynikiText = new Text[5];
+
+    for (int i = 0; i < 5; i++)
+    {
+        wynikiText[i].setCharacterSize(40);
+        wynikiText[i].setFont(czcionka);
+        wynikiText[i].setFillColor(Color::Black);
+        wynikiText[i].setOutlineThickness(1.0f);
+        wynikiText[i].setOutlineColor(Color::Red);
+    }
+
+    wynikiPlik.open("data/wyniki.txt");
+    linia ;
+
+    if (wynikiPlik.is_open())
+    {
+        int i = 0;
+        while (getline(wynikiPlik, linia) && i<5)
+        {
+            wynikiText[i].setString(linia);
+            i++; iloscWynikow++;
+        }
+    }
+    wynikiPlik.close();
+
 
     for (int i = 0; i < 5; i++)
     {
         tablicaText[i].setCharacterSize(40);
         tablicaText[i].setFont(czcionka);
         tablicaText[i].setFillColor(Color::Black);
+        tablicaText[i].setOutlineThickness(1.0f);
+        tablicaText[i].setOutlineColor(Color::Red);
     }
 
     tablicaText[START].setFillColor(Color::Red);
+    tablicaText[START].setOutlineColor(Color::Black);
     tablicaText[START].setString("START");
-    tablicaText[POMOC].setString("POMOC");
+    tablicaText[OPCJE].setString("OPCJE");
     tablicaText[WYNIKI].setString("WYNIKI");
     tablicaText[TWORCY].setString("TWORCY");
     tablicaText[WYJSCIE].setString("WYJSCIE");
 
     tablicaText[START].setPosition(890,250);
-    tablicaText[POMOC].setPosition(885,400);
+    tablicaText[OPCJE].setPosition(885,400);
     tablicaText[WYNIKI].setPosition(875,550);
     tablicaText[TWORCY].setPosition(875,700);
     tablicaText[WYJSCIE].setPosition(860,850);
     
     menuMuzyka.openFromFile("data/Muzyka/menuAmbient.ogg");
     menuMuzyka.setVolume(poziomMuzyki);
-    menuMuzyka.play();
-    menuMuzyka.setLoop(true);
 
     bufor.loadFromFile("data/Muzyka/misc_menu.wav");
     menuDzwiekWybor.setBuffer(bufor);
@@ -113,7 +139,11 @@ Menu::Menu()
     menuDzwiekZatwierdzMenu.setVolume(2.0f);
 }
 
-Menu::~Menu() { delete [] tablicaText,opcjeText; }
+Menu::~Menu() {
+    delete[] tablicaText;
+    delete [] opcjeText;
+    delete [] wynikiText;
+}
 
 void Menu::poruszajTlo()
 {
@@ -137,21 +167,23 @@ void Menu::przygotujStrone()
     {
     case GLOWNA:
         tablicaText[aktualnyWyborMenu].setFillColor(Color::Red);
+        tablicaText[aktualnyWyborMenu].setOutlineColor(Color::Black);
 
         tablicaText[START].setString("START");
-        tablicaText[POMOC].setString("POMOC");
+        tablicaText[OPCJE].setString("OPCJE");
         tablicaText[WYNIKI].setString("WYNIKI");
         tablicaText[TWORCY].setString("TWORCY");
         tablicaText[WYJSCIE].setString("WYJSCIE");
 
         tablicaText[START].setPosition(890, 250);
-        tablicaText[POMOC].setPosition(885, 400);
+        tablicaText[OPCJE].setPosition(885, 400);
         tablicaText[WYNIKI].setPosition(875, 550);
         tablicaText[TWORCY].setPosition(875, 700);
         tablicaText[WYJSCIE].setPosition(860, 850);
         break;
     case POSTART:
         tablicaText[aktualnyWyborMenu].setFillColor(Color::Red);
+        tablicaText[aktualnyWyborMenu].setOutlineColor(Color::Black);
         tablicaText[POZIOM1].setString("POZIOM 1");
         tablicaText[POZIOM2].setString("POZIOM 2");
         tablicaText[POZIOM3].setString("POZIOM 3");
@@ -162,56 +194,118 @@ void Menu::przygotujStrone()
         tablicaText[POZIOM3].setPosition(855, 550);
         tablicaText[WSTECZ].setPosition(875, 700);
         break;
-    case POPOMOC:
+    case POOPCJE:
         for (int i = 0; i < 11; i++)
         {
             opcjeText[i].setCharacterSize(40);
             opcjeText[i].setFont(czcionka);
             opcjeText[i].setFillColor(Color::Black);
+            opcjeText[i].setOutlineThickness(1.0f);
+            opcjeText[i].setOutlineColor(Color::Red);
         }
         opcjeText[STEROWANIE].setString("STEROWANIE");
-        opcjeText[STEROWANIE].setPosition(710,250);
-        kontrolerSprite.setPosition(1210, 245);
+        opcjeText[STEROWANIE].setPosition(620,200);
+        kontrolerSprite.setPosition(1140, 200);
 
-        goraSprite.setPosition(830, 300);
+        goraSprite.setPosition(1140, 300);
         opcjeText[GORA].setString("GORA");
-        opcjeText[GORA].setPosition(1090,295);
+        opcjeText[GORA].setPosition(620,300);
         
-        dolSprite.setPosition(855,345);
+        dolSprite.setPosition(1140,350);
         opcjeText[DOL].setString("DOL");
-        opcjeText[DOL].setPosition(1065,350);
+        opcjeText[DOL].setPosition(620,350);
 
-        prawoSprite.setPosition(810,395);
+        prawoSprite.setPosition(1140,400);
         opcjeText[PRAWO].setString("PRAWO");
-        opcjeText[PRAWO].setPosition(1110, 400);
+        opcjeText[PRAWO].setPosition(620, 400);
 
-        lewoSprite.setPosition(830, 445);
+        lewoSprite.setPosition(1140, 450);
         opcjeText[LEWO].setString("LEWO");
-        opcjeText[LEWO].setPosition(1090, 450);
+        opcjeText[LEWO].setPosition(620, 450);
 
-        opcjeSprite.setPosition(1110, 495);
-        opcjeText[OPCJE].setString("OPCJE");
-        opcjeText[OPCJE].setPosition(810, 500);
+        opcjeSprite.setPosition(1140, 550);
+        opcjeText[USTAWIENIA].setString("OPCJE");
+        opcjeText[USTAWIENIA].setPosition(620, 550);
 
         opcjeText[MUZYKA].setString("MUZYKA");
-        opcjeText[MUZYKA].setPosition(750,550);
-        plusSprite.setPosition(1030,545);
-        minusSprite.setPosition(1120, 545);
+        opcjeText[MUZYKA].setPosition(620,700);
+        plusSprite.setPosition(1010,700);
+        minusSprite.setPosition(1270, 700);
+
+        int procent;
+        procent =( poziomMuzyki / 30.0 )*100;
+        int znaki;
+        
+        linia = "";
+        linia += std::to_string(procent);
+        linia += "%";
+       
+        znaki = linia.length();
+        tablicaText[0].setString(linia);
+        
+        tablicaText[0].setPosition(1180 - ((znaki/2.0 )* 40.0),700);
 
         opcjeText[EKRAN].setString("EKRAN");
-        opcjeText[EKRAN].setPosition(620, 600);
+        opcjeText[EKRAN].setPosition(620, 800);
         opcjeText[PELNY].setString("PELNY");
-        opcjeText[PELNY].setPosition(960, 600);
+        opcjeText[PELNY].setPosition(960, 800);
         opcjeText[RAMKA].setString("RAMKA");
-        opcjeText[RAMKA].setPosition(1200, 600);
+        opcjeText[RAMKA].setPosition(1200, 800);
 
-        opcjeText[WSTEC].setFillColor(Color::Red);
         opcjeText[WSTEC].setString("WSTECZ");
-        opcjeText[WSTEC].setPosition(875, 700);
+        opcjeText[WSTEC].setPosition(875, 900);
+
+        opcjeText[aktualnyWyborMenu].setFillColor(Color::Red);
+        opcjeText[aktualnyWyborMenu].setOutlineColor(Color::Black);
         break;
     case POWYNIKI:
+        
+        opcjeText[WSTEC].setCharacterSize(40);
+        opcjeText[WSTEC].setFont(czcionka);
+        opcjeText[WSTEC].setFillColor(Color::Red);
+        opcjeText[WSTEC].setOutlineThickness(1.0f);
+        opcjeText[WSTEC].setOutlineColor(Color::Black);
+        opcjeText[WSTEC].setString("WSTECZ");
+        opcjeText[WSTEC].setPosition(875, 900);
+
+        opcjeText[aktualnyWyborMenu].setFillColor(Color::Red);
+        opcjeText[aktualnyWyborMenu].setOutlineColor(Color::Black);
         break;
     case POTWORCY:
+        opcjeText[0].setString("Dominik Grudzieñ");
+        opcjeText[0].setCharacterSize(40);
+        opcjeText[0].setFont(czcionka);
+        opcjeText[0].setFillColor(Color::Black);
+        opcjeText[0].setOutlineThickness(1.0f);
+        opcjeText[0].setOutlineColor(Color::Red);
+        opcjeText[0].setPosition(760, 300);
+
+        opcjeText[1].setString("Patryk Grzywacz");
+        opcjeText[1].setCharacterSize(40);
+        opcjeText[1].setFont(czcionka);
+        opcjeText[1].setFillColor(Color::Black);
+        opcjeText[1].setOutlineThickness(1.0f);
+        opcjeText[1].setOutlineColor(Color::Red);
+        opcjeText[1].setPosition(760, 400);
+
+        opcjeText[2].setString("Adrian Pelka");
+        opcjeText[2].setCharacterSize(40);
+        opcjeText[2].setFont(czcionka);
+        opcjeText[2].setFillColor(Color::Black);
+        opcjeText[2].setOutlineThickness(1.0f);
+        opcjeText[2].setOutlineColor(Color::Red);
+        opcjeText[2].setPosition(810, 500);
+
+        opcjeText[WSTEC].setCharacterSize(40);
+        opcjeText[WSTEC].setFont(czcionka);
+        opcjeText[WSTEC].setFillColor(Color::Red);
+        opcjeText[WSTEC].setOutlineThickness(1.0f);
+        opcjeText[WSTEC].setOutlineColor(Color::Black);
+        opcjeText[WSTEC].setString("WSTECZ");
+        opcjeText[WSTEC].setPosition(875, 900);
+
+        opcjeText[aktualnyWyborMenu].setFillColor(Color::Red);
+        opcjeText[aktualnyWyborMenu].setOutlineColor(Color::Black);
         break;
     }
 }
@@ -238,8 +332,9 @@ void Menu::rysuj(RenderWindow& okno)
             okno.draw(tablicaText[i]);
         }
         break;
-    case POPOMOC:
+    case POOPCJE:
         przygotujStrone();
+        okno.draw(strzalkaSprite);
         okno.draw(kontrolerSprite);
         okno.draw(goraSprite);
         okno.draw(dolSprite);
@@ -248,14 +343,29 @@ void Menu::rysuj(RenderWindow& okno)
         okno.draw(opcjeSprite);
         okno.draw(plusSprite);
         okno.draw(minusSprite);
+        okno.draw(tablicaText[0]);
         for (int i = 0; i < 11; i++)
         {
             okno.draw(opcjeText[i]);
         }
         break;
     case POWYNIKI:
+        przygotujStrone();
+        okno.draw(strzalkaSprite);
+        okno.draw(opcjeText[WSTEC]);
+        for (int i = 0; i < iloscWynikow; i++)
+        {
+            wynikiText[i].setPosition(660,100+((i+1)*100));
+            okno.draw(wynikiText[i]);
+        }
         break;
     case POTWORCY:
+        przygotujStrone();
+        okno.draw(strzalkaSprite);
+        okno.draw(opcjeText[0]);
+        okno.draw(opcjeText[1]);
+        okno.draw(opcjeText[2]);
+        okno.draw(opcjeText[WSTEC]);
         break;
     }
 }
@@ -267,9 +377,11 @@ void Menu::aktualizacjaMenu()
     case GLOWNA:
         for (int i = 0; i < 5; i++)
         {
-            tablicaText[i].setFillColor(Color::Black);
+            tablicaText[i].setFillColor(Color::Black); 
+            tablicaText[i].setOutlineColor(Color::Red);
         }
         tablicaText[aktualnyWyborMenu].setFillColor(Color::Red);
+        tablicaText[aktualnyWyborMenu].setOutlineColor(Color::Black);
         switch (aktualnyWyborMenu)
         {
             case 0: 
@@ -293,8 +405,10 @@ void Menu::aktualizacjaMenu()
         for (int i = 0; i < 4; i++)
         {
             tablicaText[i].setFillColor(Color::Black);
+            tablicaText[i].setOutlineColor(Color::Red);
         }
         tablicaText[aktualnyWyborMenu].setFillColor(Color::Red);
+        tablicaText[aktualnyWyborMenu].setOutlineColor(Color::Black);
         switch (aktualnyWyborMenu)
         {
         case 0:
@@ -311,17 +425,42 @@ void Menu::aktualizacjaMenu()
             break;
         }
         break;
-    case POPOMOC:
+    case POOPCJE:
+        for (int i = 8; i < 11; i++)
+        {
+            opcjeText[i].setFillColor(Color::Black);
+            opcjeText[i].setOutlineColor(Color::Red);
+        }
         opcjeText[aktualnyWyborMenu].setFillColor(Color::Red);
+        opcjeText[aktualnyWyborMenu].setOutlineColor(Color::Black);
+        switch (aktualnyWyborMenu)
+        {   
+        case 6:
+            strzalkaSprite.setPosition(455, 666);
+            break;
+        case 8:
+            strzalkaSprite.setPosition(455, 766);
+            break;
+        case 9:
+            strzalkaSprite.setPosition(455, 766);
+            break;
+        case 10:
+            strzalkaSprite.setPosition(710, 866);
+            break;
+        }
         break;
     case POWYNIKI:
+        opcjeText[aktualnyWyborMenu].setFillColor(Color::Red);
+        strzalkaSprite.setPosition(710, 866);
         break;
     case POTWORCY:
+        opcjeText[aktualnyWyborMenu].setFillColor(Color::Red);
+        strzalkaSprite.setPosition(710, 866);
         break;
     }
 }
 
-void Menu::ruchMyszka(int x,int y)
+void Menu::ruchMyszka(int x,int y,double procX,double procY)
 {   
     switch (podstronaMenu)
     {
@@ -330,7 +469,7 @@ void Menu::ruchMyszka(int x,int y)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(tablicaText[i].getPosition().x, tablicaText[i].getPosition().y,liczbaLiter * 40 ,40);
+            obszar = IntRect(tablicaText[i].getPosition().x*procX, tablicaText[i].getPosition().y*procY,liczbaLiter * 37 * procX,40 * procY);
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
@@ -343,7 +482,7 @@ void Menu::ruchMyszka(int x,int y)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(tablicaText[i].getPosition().x, tablicaText[i].getPosition().y, liczbaLiter * 40, 40);
+            obszar = IntRect(tablicaText[i].getPosition().x * procX, tablicaText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
@@ -351,27 +490,40 @@ void Menu::ruchMyszka(int x,int y)
             }
         }
         break;
-    case POPOMOC:
+    case POOPCJE:
         for (int i = 8; i < 11; i++)
         {
             String tekst = opcjeText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(opcjeText[i].getPosition().x, opcjeText[i].getPosition().y, liczbaLiter * 40, 40);
+            obszar = IntRect(opcjeText[i].getPosition().x * procX, opcjeText[i].getPosition().y * procY, liczbaLiter * 40 * procX, 40 * procY);
             if (obszar.contains(x, y))
             {
-                opcjeText[i].setFillColor(Color::Red);
+                aktualnyWyborMenu = i;
                 aktualizacjaMenu();
             }
         }
+        obszar = IntRect(plusSprite.getPosition().x * procX, plusSprite.getPosition().y * procY, 51 * procX, 51 * procY);
+        if (obszar.contains(x, y))
+        {
+            aktualnyWyborMenu = 6;
+            aktualizacjaMenu();
+        }
+        obszar = IntRect(minusSprite.getPosition().x * procX, minusSprite.getPosition().y * procY, 51 * procX, 51 * procY);
+        if (obszar.contains(x, y))
+        {
+            aktualnyWyborMenu = 6;
+            aktualizacjaMenu();
+        }
         break;
     case POWYNIKI:
+
         break;
     case POTWORCY:
         break;
     }
 }
 
-void Menu::klikMyszka(int x, int y, RenderWindow& okno)
+void Menu::klikMyszka(int x, int y,double procX,double procY, RenderWindow& okno)
 {   
     switch (podstronaMenu)
     {
@@ -380,7 +532,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(tablicaText[i].getPosition().x, tablicaText[i].getPosition().y, liczbaLiter * 40, 40);
+            obszar = IntRect(tablicaText[i].getPosition().x * procX, tablicaText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
@@ -393,7 +545,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(tablicaText[i].getPosition().x, tablicaText[i].getPosition().y, liczbaLiter * 40, 40);
+            obszar = IntRect(tablicaText[i].getPosition().x * procX, tablicaText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
             if (obszar.contains(x, y))
             {   
                 aktualnyWyborMenu = i;
@@ -401,12 +553,12 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
             }
         }
         break;
-    case POPOMOC:
+    case POOPCJE:
         for (int i = 8; i < 11; i++)
         {
             String tekst = opcjeText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(opcjeText[i].getPosition().x, opcjeText[i].getPosition().y, liczbaLiter * 40, 40);
+            obszar = IntRect(opcjeText[i].getPosition().x * procX, opcjeText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
             if (obszar.contains(x, y))
             {
                 switch (i)
@@ -425,11 +577,10 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
                 }
             }
         }
-
-        obszar = IntRect(plusSprite.getPosition().x, plusSprite.getPosition().y,51,51);
+        obszar = IntRect(plusSprite.getPosition().x * procX, plusSprite.getPosition().y * procY,51 * procX,51 * procY);
         if (obszar.contains(x, y))
         {   
-            if (poziomMuzyki == 15.0f){}
+            if (poziomMuzyki == 30.0f){}
             else
             {
                 poziomMuzyki += 3.0f;
@@ -437,8 +588,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
                 break;
             }
         } 
-
-        obszar = IntRect(minusSprite.getPosition().x, minusSprite.getPosition().y,51,51);
+        obszar = IntRect(minusSprite.getPosition().x * procX, minusSprite.getPosition().y * procY,51 * procX,51 * procY);
         if (obszar.contains(x, y))
         {   
             if (poziomMuzyki == 0.0f){}
@@ -451,8 +601,30 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         }
         break;
     case POWYNIKI:
+        for (int i = WSTEC; i <= WSTEC; i++)
+        {
+            String tekst = opcjeText[i].getString();
+            int liczbaLiter = tekst.getSize();
+            obszar = IntRect(opcjeText[i].getPosition().x * procX, opcjeText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
+            if (obszar.contains(x, y))
+            {
+                aktualnyWyborMenu = WSTEC;
+                enter(okno);
+            }
+        }
         break;
     case POTWORCY:
+        for (int i = WSTEC; i <= WSTEC; i++)
+        {
+            String tekst = opcjeText[i].getString();
+            int liczbaLiter = tekst.getSize();
+            obszar = IntRect(opcjeText[i].getPosition().x * procX, opcjeText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
+            if (obszar.contains(x, y))
+            {
+                aktualnyWyborMenu = WSTEC;
+                enter(okno);
+            }
+        }
         break;
     }
 }
@@ -470,14 +642,20 @@ void Menu::enter( RenderWindow& okno)
             aktualnyWyborMenu = 0;
             aktualizacjaMenu();
             break;
-        case POMOC:
-            podstronaMenu = POPOMOC;
-            aktualnyWyborMenu = WSTEC;
+        case OPCJE:
+            podstronaMenu = POOPCJE;
+            aktualnyWyborMenu = 9;
             aktualizacjaMenu();
             break;
         case WYNIKI:
+            podstronaMenu = POWYNIKI;
+            aktualnyWyborMenu = WSTEC;
+            aktualizacjaMenu();
             break;
         case TWORCY:
+            podstronaMenu = POTWORCY;
+            aktualnyWyborMenu = WSTEC;
+            aktualizacjaMenu();
             break;
         case WYJSCIE:
             okno.close();
@@ -499,7 +677,24 @@ void Menu::enter( RenderWindow& okno)
             aktualizacjaMenu();
             break;
         }
-    case POPOMOC:
+    case POOPCJE:
+        switch (aktualnyWyborMenu)
+        {
+        case PELNY:
+            okno.create(VideoMode(1920, 1080), "Snake", Style::Fullscreen | Style::Close);
+            okno.setFramerateLimit(60);
+            break;
+        case RAMKA:
+            okno.create(VideoMode(1920, 1080), "Snake", Style::Titlebar | Style::Close | Style::Resize);
+            okno.setFramerateLimit(60);
+            break;
+        case WSTEC:
+            aktualnyWyborMenu = 0;
+            podstronaMenu = GLOWNA;
+            aktualizacjaMenu();
+            break;
+        }
+    case POWYNIKI:
         switch (aktualnyWyborMenu)
         {
         case WSTEC:
@@ -508,15 +703,23 @@ void Menu::enter( RenderWindow& okno)
             aktualizacjaMenu();
             break;
         }
-    case POWYNIKI:
-        break;
     case POTWORCY:
-        break;
+        switch (aktualnyWyborMenu)
+        {
+        case WSTEC:
+            aktualnyWyborMenu = 0;
+            podstronaMenu = GLOWNA;
+            aktualizacjaMenu();
+            break;
+        }
+    break;
     }
 }
 
 bool Menu::start(RenderWindow& okno)
-{
+{   
+    menuMuzyka.play();
+    menuMuzyka.setLoop(true);
     while (okno.isOpen())
     {
         // Obs³uga zdarzeñ
@@ -553,13 +756,22 @@ bool Menu::start(RenderWindow& okno)
                             aktualizacjaMenu();
                         }
                         break;
-                    case POPOMOC:
+                    case POOPCJE:
+                        if (aktualnyWyborMenu == WSTEC)
+                            continue;
+                        else
+                        {
+                            aktualnyWyborMenu++;
+                            aktualizacjaMenu();
+                        }
+                        break;
+                    case POWYNIKI:
                         aktualnyWyborMenu = WSTEC;
                         aktualizacjaMenu();
                         break;
-                    case POWYNIKI:
-                        break;
                     case POTWORCY:
+                        aktualnyWyborMenu = WSTEC;
+                        aktualizacjaMenu();
                         break;
                     }
                 }
@@ -585,13 +797,22 @@ bool Menu::start(RenderWindow& okno)
                             aktualizacjaMenu();
                         }
                         break;
-                    case POPOMOC:
+                    case POOPCJE:
+                        if (aktualnyWyborMenu == PELNY)
+                            continue;
+                        else
+                        {
+                            aktualnyWyborMenu--;
+                            aktualizacjaMenu();
+                        }
+                        break;
+                    case POWYNIKI:
                         aktualnyWyborMenu = WSTEC;
                         aktualizacjaMenu();
                         break;
-                    case POWYNIKI:
-                        break;
                     case POTWORCY:
+                        aktualnyWyborMenu = WSTEC;
+                        aktualizacjaMenu();
                         break;
                     }
                 }
@@ -599,6 +820,8 @@ bool Menu::start(RenderWindow& okno)
                 {   
                     if (podstronaMenu != GLOWNA)
                     {
+                        aktualnyWyborMenu = 0;
+                        menuDzwiekZatwierdzMenu.play();
                         podstronaMenu = GLOWNA;
                         aktualizacjaMenu();
                     }
@@ -615,19 +838,31 @@ bool Menu::start(RenderWindow& okno)
                 }
             case Event::MouseMoved:
             {
-                int x, y;
+                double x, y,x1,y1;
+                double procX;
+                double procY;
                 x = zdarzenie.mouseMove.x;
                 y = zdarzenie.mouseMove.y;
-                ruchMyszka(x, y);
+                x1 = okno.getSize().x;
+                y1 = okno.getSize().y;
+                procX =( x1 / 1920.0);
+                procY =( y1 / 1080.0);
+                ruchMyszka(x, y,procX,procY);
             }
             case Event::MouseButtonPressed:
             {
                 if (zdarzenie.mouseButton.button == Mouse::Left)
                 {
-                    int x, y;
+                    double x, y, x1, y1;
+                    double procX;
+                    double procY;
                     x = zdarzenie.mouseButton.x;
                     y = zdarzenie.mouseButton.y;
-                    klikMyszka(x, y,okno);
+                    x1 = okno.getSize().x;
+                    y1 = okno.getSize().y;
+                    procX = (x1 / 1920.0);
+                    procY = (y1 / 1080.0);
+                    klikMyszka(x, y,procX,procY,okno);
                 }
             }
             }
