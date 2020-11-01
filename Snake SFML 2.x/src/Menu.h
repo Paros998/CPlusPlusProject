@@ -3,15 +3,16 @@
 
 class Menu
 {
-	Texture menuTekstura,logoTekstura,strzalkaTekstura;
-	Sprite menuSprite,logoSprite,strzalkaSprite;
-	Text *tablicaText;
+	Texture menuTekstura,logoTekstura,strzalkaTekstura,plusTekstura,minusTekstura,opcjeTekstura,ludzikiTekstura,kontrolerTekstura,dolTekstura,goraTekstura,lewoTekstura,prawoTekstura;
+	Sprite menuSprite,logoSprite,strzalkaSprite,plusSprite,minusSprite,opcjeSprite,ludzikiSprite,kontrolerSprite,dolSprite,goraSprite,lewoSprite,prawoSprite;
+	Text *tablicaText,*opcjeText;
 	Music menuMuzyka; 
 	Sound menuDzwiekWybor,menuDzwiekZatwierdzMenu;
 	SoundBuffer bufor,bufor2;
 	Font czcionka;
 	IntRect obszar;
 	int kierunekTla,aktualnyWyborMenu,podstronaMenu;
+	float poziomMuzyki;
 public:
 	Menu();
 	~Menu();
@@ -19,12 +20,12 @@ public:
 
 private:
 	void poruszajTlo();
-	void rysuj(RenderWindow& okno,int,int);
-	void przygotujStrone(int,int);
-	void aktualizacjaMenu(int);
-	void ruchMyszka(int,int,int);
-	void klikMyszka(int,int,int, RenderWindow& okno);
-	void enter(int,int,RenderWindow& okno);
+	void rysuj(RenderWindow& okno);
+	void przygotujStrone();
+	void aktualizacjaMenu();
+	void ruchMyszka(int,int);
+	void klikMyszka(int,int, RenderWindow& okno);
+	void enter(RenderWindow& okno);
 
 };
 
