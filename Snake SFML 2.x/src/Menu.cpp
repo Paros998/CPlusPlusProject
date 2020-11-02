@@ -9,7 +9,8 @@ enum opcjeTekst {STEROWANIE,GORA,DOL,PRAWO,LEWO,USTAWIENIA,MUZYKA,EKRAN,PELNY,RA
 Menu::Menu()
 {
     poziomMuzyki = 15.0f;
-    kierunekTla = 0, aktualnyWyborMenu = START,podstronaMenu = GLOWNA,iloscWynikow=0;
+    kierunekTla = 0, aktualnyWyborMenu = START, podstronaMenu = GLOWNA, iloscWynikow = 0, numerMuzyki = 0;
+    procX = 1.0, procY = 1.0;
     menuTekstura.loadFromFile("data/Obrazy menu/menuSnake.png");
     menuTekstura.setSmooth(true);
     menuSprite.setTexture(menuTekstura);
@@ -126,8 +127,17 @@ Menu::Menu()
     tablicaText[TWORCY].setPosition(875,700);
     tablicaText[WYJSCIE].setPosition(860,850);
     
-    menuMuzyka.openFromFile("data/Muzyka/menuAmbient.ogg");
-    menuMuzyka.setVolume(poziomMuzyki);
+    menuMuzyka = new Music[4];
+
+    menuMuzyka[0].openFromFile("data/Muzyka/mainMenu.wav");
+    menuMuzyka[1].openFromFile("data/Muzyka/No More Magic.ogg");
+    menuMuzyka[2].openFromFile("data/Muzyka/Winds Of Stories.ogg");
+    menuMuzyka[3].openFromFile("data/Muzyka/Path to Lake Land.ogg");
+    
+    for (int i = 0; i < 4; i++)
+    {
+    menuMuzyka[i].setVolume(poziomMuzyki);
+    }
 
     bufor.loadFromFile("data/Muzyka/misc_menu.wav");
     menuDzwiekWybor.setBuffer(bufor);
@@ -143,6 +153,7 @@ Menu::~Menu() {
     delete[] tablicaText;
     delete [] opcjeText;
     delete [] wynikiText;
+    delete[] menuMuzyka;
 }
 
 void Menu::poruszajTlo()
@@ -234,7 +245,7 @@ void Menu::przygotujStrone()
 
         int procent;
         procent =( poziomMuzyki / 30.0 )*100;
-        int znaki;
+        unsigned int znaki;
         
         linia = "";
         linia += std::to_string(procent);
@@ -273,33 +284,22 @@ void Menu::przygotujStrone()
         break;
     case POTWORCY:
         opcjeText[0].setString("Dominik Grudzieñ");
-        opcjeText[0].setCharacterSize(40);
-        opcjeText[0].setFont(czcionka);
-        opcjeText[0].setFillColor(Color::Black);
-        opcjeText[0].setOutlineThickness(1.0f);
-        opcjeText[0].setOutlineColor(Color::Red);
         opcjeText[0].setPosition(760, 300);
-
         opcjeText[1].setString("Patryk Grzywacz");
-        opcjeText[1].setCharacterSize(40);
-        opcjeText[1].setFont(czcionka);
-        opcjeText[1].setFillColor(Color::Black);
-        opcjeText[1].setOutlineThickness(1.0f);
-        opcjeText[1].setOutlineColor(Color::Red);
         opcjeText[1].setPosition(760, 400);
-
         opcjeText[2].setString("Adrian Pelka");
-        opcjeText[2].setCharacterSize(40);
-        opcjeText[2].setFont(czcionka);
-        opcjeText[2].setFillColor(Color::Black);
-        opcjeText[2].setOutlineThickness(1.0f);
-        opcjeText[2].setOutlineColor(Color::Red);
         opcjeText[2].setPosition(810, 500);
 
-        opcjeText[WSTEC].setCharacterSize(40);
-        opcjeText[WSTEC].setFont(czcionka);
+        for (int i = 0; i < 11; i++)
+        {
+        opcjeText[i].setCharacterSize(40);
+        opcjeText[i].setFont(czcionka);
+        opcjeText[i].setFillColor(Color::Black);
+        opcjeText[i].setOutlineThickness(1.0f);
+        opcjeText[i].setOutlineColor(Color::Red);
+        }
+
         opcjeText[WSTEC].setFillColor(Color::Red);
-        opcjeText[WSTEC].setOutlineThickness(1.0f);
         opcjeText[WSTEC].setOutlineColor(Color::Black);
         opcjeText[WSTEC].setString("WSTECZ");
         opcjeText[WSTEC].setPosition(875, 900);
@@ -362,9 +362,7 @@ void Menu::rysuj(RenderWindow& okno)
     case POTWORCY:
         przygotujStrone();
         okno.draw(strzalkaSprite);
-        okno.draw(opcjeText[0]);
-        okno.draw(opcjeText[1]);
-        okno.draw(opcjeText[2]);
+        for(int i = 0; i < 3 ; i++)  okno.draw(opcjeText[i]);
         okno.draw(opcjeText[WSTEC]);
         break;
     }
@@ -460,7 +458,7 @@ void Menu::aktualizacjaMenu()
     }
 }
 
-void Menu::ruchMyszka(int x,int y,double procX,double procY)
+void Menu::ruchMyszka(int x,int y)
 {   
     switch (podstronaMenu)
     {
@@ -469,8 +467,8 @@ void Menu::ruchMyszka(int x,int y,double procX,double procY)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(tablicaText[i].getPosition().x*procX, tablicaText[i].getPosition().y*procY,liczbaLiter * 37 * procX,40 * procY);
-            if (obszar.contains(x, y))
+            obszar = IntRect((tablicaText[i].getPosition().x*procX), (tablicaText[i].getPosition().y*procY),(liczbaLiter * 37 * procX),(40 * procY));
+            if (obszar.contains(x, y)) 
             {
                 aktualnyWyborMenu = i;
                 aktualizacjaMenu();
@@ -482,7 +480,7 @@ void Menu::ruchMyszka(int x,int y,double procX,double procY)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(tablicaText[i].getPosition().x * procX, tablicaText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
+            obszar = IntRect((tablicaText[i].getPosition().x * procX),( tablicaText[i].getPosition().y * procY),( liczbaLiter * 37 * procX),( 40 * procY));
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
@@ -495,20 +493,20 @@ void Menu::ruchMyszka(int x,int y,double procX,double procY)
         {
             String tekst = opcjeText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(opcjeText[i].getPosition().x * procX, opcjeText[i].getPosition().y * procY, liczbaLiter * 40 * procX, 40 * procY);
+            obszar = IntRect((opcjeText[i].getPosition().x * procX),( opcjeText[i].getPosition().y * procY), (liczbaLiter * 40 * procX),( 40 * procY));
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
                 aktualizacjaMenu();
             }
         }
-        obszar = IntRect(plusSprite.getPosition().x * procX, plusSprite.getPosition().y * procY, 51 * procX, 51 * procY);
+        obszar = IntRect((plusSprite.getPosition().x * procX),( plusSprite.getPosition().y * procY),( 51 * procX), (51 * procY));
         if (obszar.contains(x, y))
         {
             aktualnyWyborMenu = 6;
             aktualizacjaMenu();
         }
-        obszar = IntRect(minusSprite.getPosition().x * procX, minusSprite.getPosition().y * procY, 51 * procX, 51 * procY);
+        obszar = IntRect((minusSprite.getPosition().x * procX), (minusSprite.getPosition().y * procY), (51 * procX), (51 * procY));
         if (obszar.contains(x, y))
         {
             aktualnyWyborMenu = 6;
@@ -523,7 +521,7 @@ void Menu::ruchMyszka(int x,int y,double procX,double procY)
     }
 }
 
-void Menu::klikMyszka(int x, int y,double procX,double procY, RenderWindow& okno)
+void Menu::klikMyszka(int x, int y, RenderWindow& okno)
 {   
     switch (podstronaMenu)
     {
@@ -584,7 +582,7 @@ void Menu::klikMyszka(int x, int y,double procX,double procY, RenderWindow& okno
             else
             {
                 poziomMuzyki += 3.0f;
-                menuMuzyka.setVolume(poziomMuzyki);
+                menuMuzyka[numerMuzyki].setVolume(poziomMuzyki);
                 break;
             }
         } 
@@ -595,7 +593,7 @@ void Menu::klikMyszka(int x, int y,double procX,double procY, RenderWindow& okno
             else
             {
                 poziomMuzyki -= 3.0f;
-                menuMuzyka.setVolume(poziomMuzyki);
+                menuMuzyka[numerMuzyki].setVolume(poziomMuzyki);
                 break;
             }
         }
@@ -718,10 +716,15 @@ void Menu::enter( RenderWindow& okno)
 
 bool Menu::start(RenderWindow& okno)
 {   
-    menuMuzyka.play();
-    menuMuzyka.setLoop(true);
+    menuMuzyka[numerMuzyki].play();
     while (okno.isOpen())
     {
+        if (menuMuzyka[numerMuzyki].getStatus() == SoundSource::Stopped)
+        {   
+            numerMuzyki++;
+            if (numerMuzyki > 3) numerMuzyki = 0;
+            menuMuzyka[numerMuzyki].play();
+        }
         // Obs³uga zdarzeñ
         Event zdarzenie;
         while (okno.pollEvent(zdarzenie))
@@ -732,6 +735,13 @@ bool Menu::start(RenderWindow& okno)
                 // Obs³uga zdarzenia
             case Event::Closed:
                 okno.close();
+                break;
+            case Event::Resized:
+                double x1, y1;
+                x1 = okno.getSize().x;
+                y1 = okno.getSize().y;
+                procX = (x1 / 1920.0);
+                procY = (y1 / 1080.0);
                 break;
             case Event::KeyPressed:
                 if (zdarzenie.key.code == Keyboard::Down)
@@ -838,31 +848,19 @@ bool Menu::start(RenderWindow& okno)
                 }
             case Event::MouseMoved:
             {
-                double x, y,x1,y1;
-                double procX;
-                double procY;
+                double x, y;
                 x = zdarzenie.mouseMove.x;
                 y = zdarzenie.mouseMove.y;
-                x1 = okno.getSize().x;
-                y1 = okno.getSize().y;
-                procX =( x1 / 1920.0);
-                procY =( y1 / 1080.0);
-                ruchMyszka(x, y,procX,procY);
+                ruchMyszka(x, y);
             }
             case Event::MouseButtonPressed:
             {
                 if (zdarzenie.mouseButton.button == Mouse::Left)
                 {
-                    double x, y, x1, y1;
-                    double procX;
-                    double procY;
+                    double x, y;
                     x = zdarzenie.mouseButton.x;
                     y = zdarzenie.mouseButton.y;
-                    x1 = okno.getSize().x;
-                    y1 = okno.getSize().y;
-                    procX = (x1 / 1920.0);
-                    procY = (y1 / 1080.0);
-                    klikMyszka(x, y,procX,procY,okno);
+                    klikMyszka(x, y,okno);
                 }
             }
             }

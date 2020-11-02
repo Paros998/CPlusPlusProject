@@ -8,13 +8,14 @@ class Menu
 	Text *tablicaText,*opcjeText,*wynikiText;
 	std::ifstream wynikiPlik;
 	std::string linia;
-	Music menuMuzyka; 
+	Music *menuMuzyka; 
 	Sound menuDzwiekWybor,menuDzwiekZatwierdzMenu;
 	SoundBuffer bufor,bufor2;
 	Font czcionka;
 	IntRect obszar;
-	int kierunekTla,aktualnyWyborMenu,podstronaMenu,iloscWynikow;
+	int kierunekTla,aktualnyWyborMenu,podstronaMenu,iloscWynikow, numerMuzyki;
 	float poziomMuzyki;
+	double procX, procY;
 public:
 	Menu();
 	~Menu();
@@ -25,8 +26,8 @@ private:
 	void rysuj(RenderWindow& okno);
 	void przygotujStrone();
 	void aktualizacjaMenu();
-	void ruchMyszka(int,int,double,double);
-	void klikMyszka(int,int,double,double, RenderWindow& okno);
+	void ruchMyszka(int,int);
+	void klikMyszka(int,int, RenderWindow& okno);
 	void enter(RenderWindow& okno);
 
 };
