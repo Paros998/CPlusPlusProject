@@ -1,71 +1,144 @@
 #include "Gracz.h"
 
+enum opis_gracz {GLOWA, CIALO};
+
+void Gracz::przejdzNaKoniecListy(Lista** wsk)
+{
+	while ((*wsk)->nast != NULL)
+		*wsk = (*wsk)->nast;
+}
+
+void Gracz::dodajElement()
+{
+	if (wsk_listy != NULL)
+	{
+		Lista* nowy_element = new Lista;
+		if (nowy_element != NULL)
+		{
+			nowy_element->sprite = graczSprite[GLOWA];
+			nowy_element->y = nowy_element->x = 0.0f;
+			wsk_listy->sprite = graczSprite[CIALO];
+			nowy_element->nast = wsk_listy;
+			wsk_listy->poprz = nowy_element;
+			nowy_element->poprz = NULL;
+			wsk_listy = nowy_element;
+		}
+	}
+}
+
 Gracz::Gracz()
 {
 	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa.png");
 	graczCialoTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_cialo.png");
+
 	graczSprite = new Sprite[2];
 	graczSprite[0].setTexture(graczGlowaTekstura);
+	Rect<float> rozmiar = graczSprite[0].getGlobalBounds();
+	graczSprite[0].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+
 	graczSprite[1].setTexture(graczCialoTekstura);
+	Rect<float> _rozmiar = graczSprite[1].getGlobalBounds();
+	graczSprite[1].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 	kierunek = 0;
-	dlugoscGracza = 4;
+	dlugoscGracza = 50;
 	szybkosc = 0.7f;
+
+	// Tworzenie listy
+	wsk_listy = new Lista;
+	if (wsk_listy != NULL)
+	{
+		wsk_listy->sprite = graczSprite[GLOWA];
+		wsk_listy->y = wsk_listy->x = 0.0f;
+		wsk_listy->nast = wsk_listy->poprz = NULL;
+	}
+
+	// Dodanie elementów listy
+	for (int i = 0; i < 10; i++)
+		dodajElement();
 }
 
 
 Gracz::~Gracz()
 { 
+	while (wsk_listy != NULL)
+	{
+		Lista* nast = wsk_listy->nast;
+		delete wsk_listy;
+		wsk_listy = nast;
+	}
 	delete[] graczSprite; 
 }
 
 void Gracz::ruchGracza()
 {
-	for (int i = dlugoscGracza; i > 0; i--)
+	Lista* koniec = wsk_listy;
+	przejdzNaKoniecListy(&koniec);
+	while (koniec != NULL)
 	{
-		w¹¿[i].x = w¹¿[i - 1].x;
-		w¹¿[i].y = w¹¿[i - 1].y;
+		//cout << "qui ";
+		if (koniec->poprz != NULL)
+		{
+			koniec->x = koniec->poprz->x;
+			koniec->y = koniec->poprz->y;
+
+			if (koniec->sprite.getRotation() != koniec->poprz->sprite.getRotation())
+				koniec->sprite.setRotation(koniec->poprz->sprite.getRotation());
+		}
+		koniec = koniec->poprz;
 	}
 
 	switch (kierunek)
 	{
 	case 0:
-		w¹¿[0].y += szybkosc;
-		graczSprite[0].setRotation(0.0f);
+		wsk_listy->y += szybkosc;
 		break;
-		
+
 	case 1:
-		w¹¿[0].x -= szybkosc;
-		graczSprite[0].setRotation(90.0f);
+		wsk_listy->x -= szybkosc;
 		break;
 
 	case 2:
-		w¹¿[0].x += szybkosc;
-		graczSprite[0].setRotation(-90.0f);
+		wsk_listy->x += szybkosc;
 		break;
 
 	case 3:
-		w¹¿[0].y -= szybkosc;
-		graczSprite[0].setRotation(180.0f);
+		wsk_listy->y -= szybkosc;
 		break;
 	}
 }
 
 void Gracz::sterowanie()
 {
-	if (Keyboard::isKeyPressed(Keyboard::Left)) kierunek = 1;
-	if (Keyboard::isKeyPressed(Keyboard::Right)) kierunek = 2;
-	if (Keyboard::isKeyPressed(Keyboard::Up)) kierunek = 3;
-	if (Keyboard::isKeyPressed(Keyboard::Down)) kierunek = 0;
+	if (Keyboard::isKeyPressed(Keyboard::Left))
+	{
+		kierunek = 1;
+		wsk_listy->sprite.setRotation(90.0f);
+	}
+	if (Keyboard::isKeyPressed(Keyboard::Right))
+	{
+		kierunek = 2;
+		wsk_listy->sprite.setRotation(-90.0f);
+	}
+	if (Keyboard::isKeyPressed(Keyboard::Up))
+	{
+		kierunek = 3;
+		wsk_listy->sprite.setRotation(180.0f);
+	}
+	if (Keyboard::isKeyPressed(Keyboard::Down))
+	{
+		kierunek = 0;
+		wsk_listy->sprite.setRotation(0.0f);
+	}
 }
 
 void Gracz::rysuj(RenderWindow& okno)
 {
-	for (int i = 1; i < dlugoscGracza; i++)
+	Lista* wsk = wsk_listy;
+	while (wsk != NULL)
 	{
-		graczSprite[0].setPosition((float)w¹¿[0].x * 60, (float)w¹¿[0].y * 60);
-		graczSprite[1].setPosition((float)w¹¿[i].x * 60, (float)w¹¿[i].y * 60);
-		for (int j = 0; j < 2; j++)
-			okno.draw(graczSprite[j]);
+		wsk->sprite.setPosition((float)wsk->x * 60, (float)wsk->y * 60);
+		okno.draw(wsk->sprite);
+		wsk = wsk->nast;
 	}
 }
 

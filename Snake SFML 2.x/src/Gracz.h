@@ -1,12 +1,21 @@
 #pragma once
 #include "Biblioteki.h"
-#include <vector>
 
 class Gracz
 {
-	struct W¹¿ { float x, y; };
-	struct W¹¿ w¹¿[100];
+	struct Lista
+	{
+		float x, y;
+		Sprite sprite;
+		struct Lista* nast, * poprz;
+		Lista()
+		{
+			x = y = 0;
+			nast = poprz = NULL;
+		}
+	};
 
+	struct Lista *wsk_listy;
 	int dlugoscGracza, kierunek;
 	float szybkosc;
 	Texture graczCialoTekstura, graczGlowaTekstura;
@@ -18,5 +27,9 @@ public:
 	void ruchGracza();
 	void sterowanie();
 	void rysuj(RenderWindow& okno);
+
+private:
+	void dodajElement();
+	void przejdzNaKoniecListy(Lista **wskaznik);
 };
 
