@@ -7,5 +7,11 @@
 using namespace sf;using namespace std;
 // Kolejne klasy
 // ...
+#include "Gracz.h"
+#include "Gra.h"
+#include "Poziom1.h"
 #include "Menu.h"
 #include "Aplikacja.h"
+
+extern float losuj();
+extern bool kolizja(Sprite s1, Sprite s2);
