@@ -7,11 +7,21 @@ Aplikacja::Aplikacja()
 }
 
 void Aplikacja::start()
-{
-    Menu menu;
+{       
+    srand(time(0));
+    int poziom = MENU;
     while (true)
     {
-        if (!menu.start(oknoAplikacji))
-            break;
+        if (poziom == MENU)
+        {   
+            Menu menu;
+            poziom = menu.start(oknoAplikacji);
+        }
+        if (poziom == P1)
+        {
+            Poziom1 p1;
+            if (!p1.start(oknoAplikacji));
+        }
+        break;
     }
 }

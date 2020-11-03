@@ -19,8 +19,7 @@ class Menu
 public:
 	Menu();
 	~Menu();
-	bool start(RenderWindow& okno);
-
+	int start(RenderWindow& okno);
 private:
 	void poruszajTlo();
 	void rysuj(RenderWindow& okno);
