@@ -40,7 +40,8 @@ bool Poziom1::start(RenderWindow& okno)
 	float czasomierz = 0.0f, opoznienie = 0.1f;
 	Gracz gracz;
 	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja.png");
-
+	Punkty punkty;
+	int koniec = 0;
 	while (okno.isOpen())
 	{
 		Event zdarzenie;
@@ -48,11 +49,19 @@ bool Poziom1::start(RenderWindow& okno)
 		{
 			switch (zdarzenie.type)
 			{
+			case Event::Closed:
+				okno.close();
+				break;
 			case Event::KeyPressed:
 				if (zdarzenie.key.code == Keyboard::Escape)
 				{
-					// PAUZA
-					return false;
+					koniec = 2;
+					while (koniec == 2)
+					{
+						koniec = pauza(okno);
+					}
+					if (koniec == 0)break;
+					if (koniec == 1)return false;
 				}
 			}
 		}
