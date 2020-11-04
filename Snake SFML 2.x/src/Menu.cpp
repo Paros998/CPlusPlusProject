@@ -1,7 +1,7 @@
 #include "Menu.h"
 
 enum wyborMenu  {START,OPCJE,WYNIKI,TWORCY,WYJSCIE};
-enum wyborPodstronyMenu {GLOWNA,POSTART,POOPCJE,POWYNIKI,POTWORCY};
+enum wyborPodstronyMenu {GLOWNA,POSTART,POOPCJE,POWYNIKI,POTWORCY,WYBORPOZIOMU};
 enum wyborPoStart {POZIOM1,POZIOM2,POZIOM3,WSTECZ};
 enum wyborPoWynikiPoTworcy {POWROT};
 enum opcjeTekst {STEROWANIE,GORA,DOL,PRAWO,LEWO,USTAWIENIA,MUZYKA,EKRAN,PELNY,RAMKA,WSTEC};
@@ -131,8 +131,8 @@ Menu::Menu()
 
     menuMuzyka[0].openFromFile("data/Muzyka/mainMenu.wav");
     menuMuzyka[1].openFromFile("data/Muzyka/No More Magic.ogg");
-    menuMuzyka[2].openFromFile("data/Muzyka/Winds Of Stories.ogg");
-    menuMuzyka[3].openFromFile("data/Muzyka/Path to Lake Land.ogg");
+    menuMuzyka[3].openFromFile("data/Muzyka/Winds Of Stories.ogg");
+    menuMuzyka[2].openFromFile("data/Muzyka/Path to Lake Land.ogg");
     
     for (int i = 0; i < 4; i++)
     {
@@ -493,7 +493,7 @@ void Menu::ruchMyszka(int x,int y)
         {
             String tekst = opcjeText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect((opcjeText[i].getPosition().x * procX),( opcjeText[i].getPosition().y * procY), (liczbaLiter * 40 * procX),( 40 * procY));
+            obszar = IntRect((opcjeText[i].getPosition().x * procX),( opcjeText[i].getPosition().y * procY), (liczbaLiter * 37 * procX),( 40 * procY));
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
@@ -664,10 +664,16 @@ void Menu::enter( RenderWindow& okno)
         switch (aktualnyWyborMenu)
         {
         case POZIOM1:
+            aktualnyWyborMenu = 0;
+            podstronaMenu = WYBORPOZIOMU;
             break;
         case POZIOM2:
+            aktualnyWyborMenu = 1;
+            podstronaMenu = WYBORPOZIOMU;
             break;
         case POZIOM3:
+            aktualnyWyborMenu = 2;
+            podstronaMenu = WYBORPOZIOMU;
             break;
         case WSTECZ:
             aktualnyWyborMenu = 0;
@@ -714,15 +720,19 @@ void Menu::enter( RenderWindow& okno)
     }
 }
 
-bool Menu::start(RenderWindow& okno)
-{   
+int Menu::start(RenderWindow& okno)
+{
+    numerMuzyki = 0;
     menuMuzyka[numerMuzyki].play();
     while (okno.isOpen())
     {
-        if (menuMuzyka[numerMuzyki].getStatus() == SoundSource::Stopped)
+        if (menuMuzyka[numerMuzyki].getStatus() == SoundStream::Stopped)
         {   
             numerMuzyki++;
-            if (numerMuzyki > 3) numerMuzyki = 0;
+            if (numerMuzyki > 3)
+            {
+                numerMuzyki = 0;
+            }
             menuMuzyka[numerMuzyki].play();
         }
         // Obs³uga zdarzeñ
@@ -844,6 +854,21 @@ bool Menu::start(RenderWindow& okno)
                 if (zdarzenie.key.code == Keyboard::Enter)
                 {
                     enter(okno);
+                    if (podstronaMenu == WYBORPOZIOMU)
+                    {
+                        switch (aktualnyWyborMenu)
+                        {
+                        case 0:
+                            return 1;
+                            break;
+                        case 1:
+                            return 2;
+                            break;
+                        case 2:
+                            return 3;
+                            break;
+                        }
+                    }
                     break;
                 }
             case Event::MouseMoved:
@@ -861,8 +886,25 @@ bool Menu::start(RenderWindow& okno)
                     x = zdarzenie.mouseButton.x;
                     y = zdarzenie.mouseButton.y;
                     klikMyszka(x, y,okno);
+                    if (podstronaMenu == WYBORPOZIOMU)
+                    {
+                        switch (aktualnyWyborMenu)
+                        {
+                        case 0:
+                            return 1;
+                            break;
+                        case 1:
+                            return 2;
+                            break;
+                        case 2:
+                            return 3;
+                            break;
+                        }
+                    }
                 }
             }
+            default:
+                break;
             }
         }
         poruszajTlo();
@@ -871,5 +913,5 @@ bool Menu::start(RenderWindow& okno)
         rysuj(okno);
         okno.display();
     }
-	return false;
+	return 0;
 }
