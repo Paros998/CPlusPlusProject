@@ -41,7 +41,7 @@ Gracz::Gracz()
 	Rect<float> _rozmiar = graczSprite[1].getGlobalBounds();
 	graczSprite[1].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 	czasomierz = kierunek = 0;
-	opoznienie = 0.1f;
+	opoznienie = 0.1f,czas = 0.0f;	
 	szybkosc = 0.7f;
 
 	// Tworzenie listy
@@ -132,8 +132,8 @@ void Gracz::sterowanie()
 }
 
 void Gracz::obsluguj()
-{
-	float czas = zegar.getElapsedTime().asSeconds();
+{	
+	czas = zegar.getElapsedTime().asSeconds();
 	zegar.restart();
 	czasomierz += czas;
 	if (czasomierz >= opoznienie)

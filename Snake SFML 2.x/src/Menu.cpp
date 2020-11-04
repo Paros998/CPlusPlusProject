@@ -102,8 +102,6 @@ Menu::Menu()
         }
     }
     wynikiPlik.close();
-
-
     for (int i = 0; i < 5; i++)
     {
         tablicaText[i].setCharacterSize(40);

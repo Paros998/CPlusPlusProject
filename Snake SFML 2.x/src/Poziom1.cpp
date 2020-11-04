@@ -37,7 +37,6 @@ Poziom1::~Poziom1()
 bool Poziom1::start(RenderWindow& okno)
 {
 	Clock zegarRuchu, zegarAnimacji;
-	float czasomierz = 0.0f, opoznienie = 0.1f;
 	Gracz gracz;
 	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja.png");
 	Punkty punkty;
@@ -61,6 +60,8 @@ bool Poziom1::start(RenderWindow& okno)
 					{
 						pauzaFlaga = true;
 						koniec = pauza(okno);
+						gracz.zegar.restart();
+						gracz.czasomierz = 0.0f;
 					}
 					if (koniec == 0)
 					{
@@ -71,16 +72,12 @@ bool Poziom1::start(RenderWindow& okno)
 				}
 			}
 		}
-		if (pauzaFlaga)
-		{
-			// POKARM
-			pokarm.aktualizuj(0);
-			pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy);
+		// POKARM
+		pokarm.aktualizuj(0);
+		pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy);
 
-			// GRACZ
-
-			gracz.obsluguj();
-		}
+		// GRACZ
+		gracz.obsluguj();
 		// RYSOWANIE
 		okno.clear(Color::Blue);
 

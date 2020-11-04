@@ -16,11 +16,12 @@ struct Lista
 class Gracz
 {
 	int kierunek;
-	float szybkosc, czasomierz, opoznienie;
+	float szybkosc, opoznienie,czas;
 	Texture graczCialoTekstura, graczGlowaTekstura;
 	Sprite* graczSprite;
+public:
 	Clock zegar;
-
+	float czasomierz;
 public:
 	struct Lista* wsk_listy;
 
