@@ -16,9 +16,10 @@ struct Lista
 class Gracz
 {
 	int kierunek;
-	float szybkosc;
+	float szybkosc, czasomierz, opoznienie;
 	Texture graczCialoTekstura, graczGlowaTekstura;
 	Sprite* graczSprite;
+	Clock zegar;
 
 public:
 	struct Lista* wsk_listy;
@@ -26,12 +27,13 @@ public:
 public:
 	Gracz();
 	~Gracz();
-	void ruchGracza();
-	void sterowanie();
 	void dodajElement();
 	void rysuj(RenderWindow& okno);
+	void obsluguj();
 
 private:
+	void ruchGracza();
+	void sterowanie();
 	void przejdzNaKoniecListy(Lista **wskaznik);
 };
 

@@ -1,14 +1,9 @@
 #include "Pokarm.h"
 
-Pokarm::Pokarm()
-	:Animacja(Vector2u(6,1), 0.12f)
+Pokarm::Pokarm(string sciezkaPliku)
+	:Animacja::Animacja(sciezkaPliku, Vector2u(9, 1), 0.06f)
 {
-	animacjaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/jablko_animacja.png");
-	animacjaSprite.setTexture(animacjaTekstura);
-	animacjaSprite.setScale(0.1f, 0.1f);
-	Rect<float> obszar = animacjaSprite.getGlobalBounds();
-	animacjaSprite.setOrigin(Vector2f(obszar.width / 2.0f, obszar.width / 2.0f));
-	x = y = 200.0f;
+	x = y = 0.0f;
 }
 
 void Pokarm::ustawPokarm(Gracz& gracz)

@@ -1,17 +1,26 @@
 #include "Biblioteki.h"
 
-Animacja::Animacja(Vector2u liczbaObrazow, float czasZmiany)
+Animacja::Animacja(string sciezkaPliku, Vector2u liczbaObrazow, float czasZmiany)
 {
+	animacjaTekstura.loadFromFile(sciezkaPliku);
+	animacjaSprite.setTexture(animacjaTekstura);
+	animacjaSprite.setScale(0.1f, 0.1f);
+	Rect<float> _obszar = animacjaSprite.getGlobalBounds();
+	animacjaSprite.setOrigin(Vector2f(_obszar.width / 2.0f, _obszar.width / 2.0f));
+	animacjaSprite.setPosition(100, 100);
+
 	this->liczbaObrazow = liczbaObrazow;
 	this->czasZmiany = czasZmiany;
-	calkowityCzas = 0.0f;
+	
+	deltaCzas = calkowityCzas = 0.0f;
 	aktualnyObraz.x = 0;
 	obszar.width = animacjaTekstura.getSize().x / float(liczbaObrazow.x);
 	obszar.height = animacjaTekstura.getSize().y / float(liczbaObrazow.y);
 }
 
-void Animacja::aktualizuj(int wiersz, float deltaCzas)
+void Animacja::aktualizuj(int wiersz)
 {
+	deltaCzas = zegar.restart().asSeconds();
 	aktualnyObraz.y = wiersz;
 	calkowityCzas += deltaCzas;
 
@@ -28,17 +37,10 @@ void Animacja::aktualizuj(int wiersz, float deltaCzas)
 
 	obszar.left = aktualnyObraz.x * obszar.width;
 	obszar.top = aktualnyObraz.y * obszar.height;
-	
+	animacjaSprite.setTextureRect(obszar);
 }
 
 void Animacja::rysujAnimacje(RenderWindow& okno) 
 {
 	okno.draw(animacjaSprite);
-}
-
-void Animacja::startAnimacji(float deltaCzas)
-{
-	aktualizuj(0, deltaCzas);
-	//czasOdpoczynku.restart();
-	animacjaSprite.setTextureRect(obszar);
 }

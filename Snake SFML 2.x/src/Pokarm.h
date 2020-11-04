@@ -8,7 +8,7 @@ class Pokarm : public Animacja
 	float x, y;
 
 public:
-	Pokarm();
+	Pokarm(string sciezkaPliku);
 	bool sprawdzCzyZjedzony(Gracz& gracz);
 
 private:

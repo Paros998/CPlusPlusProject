@@ -40,7 +40,8 @@ Gracz::Gracz()
 	graczSprite[1].setTexture(graczCialoTekstura);
 	Rect<float> _rozmiar = graczSprite[1].getGlobalBounds();
 	graczSprite[1].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
-	kierunek = 0;
+	czasomierz = kierunek = 0;
+	opoznienie = 0.1f;
 	szybkosc = 0.7f;
 
 	// Tworzenie listy
@@ -75,7 +76,6 @@ void Gracz::ruchGracza()
 	przejdzNaKoniecListy(&koniec);
 	while (koniec != NULL)
 	{
-		//cout << "qui ";
 		if (koniec->poprz != NULL)
 		{
 			koniec->x = koniec->poprz->x;
@@ -129,6 +129,19 @@ void Gracz::sterowanie()
 		kierunek = 0;
 		wsk_listy->sprite.setRotation(0.0f);
 	}
+}
+
+void Gracz::obsluguj()
+{
+	float czas = zegar.getElapsedTime().asSeconds();
+	zegar.restart();
+	czasomierz += czas;
+	if (czasomierz >= opoznienie)
+	{
+		czasomierz -= opoznienie;
+		ruchGracza();
+	}
+	sterowanie();
 }
 
 void Gracz::rysuj(RenderWindow& okno)

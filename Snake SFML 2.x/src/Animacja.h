@@ -4,9 +4,9 @@
 class Animacja
 {
 private:
-	float calkowityCzas, czasZmiany;
+	float calkowityCzas, czasZmiany, deltaCzas;
 	Vector2u aktualnyObraz, liczbaObrazow;
-	Clock czasOdpoczynku;
+	Clock zegar;
 	IntRect obszar;
 
 protected:
@@ -14,8 +14,7 @@ protected:
 	Sprite animacjaSprite;
 	
 public:
-	Animacja(Vector2u liczbaObrazow, float czasZmiany);
-	void aktualizuj(int wiersz, float deltaCzas);
+	Animacja(string sciezkaPliku, Vector2u liczbaObrazow, float czasZmiany);
+	void aktualizuj(int wiersz);
 	void rysujAnimacje(RenderWindow& okno);
-	void startAnimacji(float deltaCzas);
 };
