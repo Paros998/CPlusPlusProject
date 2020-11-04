@@ -74,7 +74,7 @@ bool Poziom1::start(RenderWindow& okno)
 		}
 		// POKARM
 		pokarm.aktualizuj(0);
-		pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy);
+		pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy,przeszkodaSprite,liczbaPrzeszkod);
 
 		// GRACZ
 		gracz.obsluguj();

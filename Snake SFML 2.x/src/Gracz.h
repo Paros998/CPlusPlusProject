@@ -8,7 +8,7 @@ struct Lista
 	struct Lista* nast, * poprz;
 	Lista()
 	{
-		x = y = 0;
+		x , y = 0;
 		nast = poprz = NULL;
 	}
 };

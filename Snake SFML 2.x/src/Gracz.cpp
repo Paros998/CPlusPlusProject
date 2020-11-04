@@ -49,7 +49,8 @@ Gracz::Gracz()
 	if (wsk_listy != NULL)
 	{
 		wsk_listy->sprite = graczSprite[GLOWA];
-		wsk_listy->y = wsk_listy->x = 0.0f;
+		wsk_listy->y = 1.34375f;
+		wsk_listy->x = 2.625f;
 		wsk_listy->nast = wsk_listy->poprz = NULL;
 	}
 
@@ -110,22 +111,26 @@ void Gracz::ruchGracza()
 void Gracz::sterowanie()
 {
 	if (Keyboard::isKeyPressed(Keyboard::Left))
-	{
+	{	
+		if (kierunek == 2)return;
 		kierunek = 1;
 		wsk_listy->sprite.setRotation(90.0f);
 	}
 	if (Keyboard::isKeyPressed(Keyboard::Right))
-	{
+	{	
+		if (kierunek == 1)return;
 		kierunek = 2;
 		wsk_listy->sprite.setRotation(-90.0f);
 	}
 	if (Keyboard::isKeyPressed(Keyboard::Up))
-	{
+	{	
+		if (kierunek == 0)return;
 		kierunek = 3;
 		wsk_listy->sprite.setRotation(180.0f);
 	}
 	if (Keyboard::isKeyPressed(Keyboard::Down))
-	{
+	{	
+		if (kierunek == 3)return;
 		kierunek = 0;
 		wsk_listy->sprite.setRotation(0.0f);
 	}
@@ -149,7 +154,7 @@ void Gracz::rysuj(RenderWindow& okno)
 	Lista* wsk = wsk_listy;
 	while (wsk != NULL)
 	{
-		wsk->sprite.setPosition((float)wsk->x * 60, (float)wsk->y * 60);
+		wsk->sprite.setPosition((float)wsk->x * 64, (float)wsk->y * 64);
 		okno.draw(wsk->sprite);
 		wsk = wsk->nast;
 	}
