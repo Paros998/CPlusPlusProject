@@ -3,8 +3,9 @@
 Animacja::Animacja(string sciezkaPliku, Vector2u liczbaObrazow, float czasZmiany)
 {
 	animacjaTekstura.loadFromFile(sciezkaPliku);
+	animacjaTekstura.setSmooth(true);
 	animacjaSprite.setTexture(animacjaTekstura);
-	animacjaSprite.setScale(0.1f, 0.1f);
+	animacjaSprite.setScale(0.2f, 0.2f);
 	Rect<float> _obszar = animacjaSprite.getGlobalBounds();
 	animacjaSprite.setOrigin(Vector2f(_obszar.width / 2.0f, _obszar.width / 2.0f));
 	animacjaSprite.setPosition(100, 100);

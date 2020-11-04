@@ -38,7 +38,7 @@ bool Poziom1::start(RenderWindow& okno)
 {
 	Clock zegarRuchu, zegarAnimacji;
 	Gracz gracz;
-	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja.png");
+	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png");
 	Punkty punkty;
 	bool pauzaFlaga = false;
 	int koniec = 0;

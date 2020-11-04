@@ -18,7 +18,7 @@ void Pokarm::ustawPokarm(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY])
 		{
 			losuj(x, DLUGOSC_PLANSZY);
 			losuj(y, WYSOKOSC_PLANSZY);
-			animacjaSprite.setPosition(plansza[(int)y][(int)x].x, plansza[(int)y][(int)x].y);
+			animacjaSprite.setPosition(plansza[(int)y][(int)x].x+32.0f, plansza[(int)y][(int)x].y+32.0f);
 		}
 		wsk = wsk->nast;
 	}
