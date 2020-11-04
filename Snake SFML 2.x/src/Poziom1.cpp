@@ -41,6 +41,7 @@ bool Poziom1::start(RenderWindow& okno)
 	Gracz gracz;
 	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja.png");
 	Punkty punkty;
+	bool pauzaFlaga = false;
 	int koniec = 0;
 	while (okno.isOpen())
 	{
@@ -58,20 +59,28 @@ bool Poziom1::start(RenderWindow& okno)
 					koniec = 2;
 					while (koniec == 2)
 					{
+						pauzaFlaga = true;
 						koniec = pauza(okno);
 					}
-					if (koniec == 0)break;
+					if (koniec == 0)
+					{
+						pauzaFlaga = false;
+						break;
+					}
 					if (koniec == 1)return false;
 				}
 			}
 		}
-		// POKARM
-		pokarm.aktualizuj(0);
-		pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy);
+		if (pauzaFlaga)
+		{
+			// POKARM
+			pokarm.aktualizuj(0);
+			pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy);
 
-		// GRACZ
-		gracz.obsluguj();
+			// GRACZ
 
+			gracz.obsluguj();
+		}
 		// RYSOWANIE
 		okno.clear(Color::Blue);
 
