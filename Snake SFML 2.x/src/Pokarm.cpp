@@ -6,7 +6,7 @@ Pokarm::Pokarm(string sciezkaPliku)
 	x = y = 0.0f;
 }
 
-void Pokarm::ustawPokarm(Gracz& gracz)
+void Pokarm::ustawPokarm(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY])
 {
 	losuj(x, DLUGOSC_PLANSZY);
 	losuj(y, WYSOKOSC_PLANSZY);
@@ -18,18 +18,18 @@ void Pokarm::ustawPokarm(Gracz& gracz)
 		{
 			losuj(x, DLUGOSC_PLANSZY);
 			losuj(y, WYSOKOSC_PLANSZY);
-			animacjaSprite.setPosition(x * 60, y * 60);
+			animacjaSprite.setPosition(plansza[(int)y][(int)x].x, plansza[(int)y][(int)x].y);
 		}
 		wsk = wsk->nast;
 	}
 }
 
-bool Pokarm::sprawdzCzyZjedzony(Gracz& gracz)
+bool Pokarm::sprawdzCzyZjedzony(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY])
 {
 	if (kolizja(gracz.wsk_listy->sprite, animacjaSprite))
 	{
 		gracz.dodajElement();
-		ustawPokarm(gracz);
+		ustawPokarm(gracz, plansza);
 		return true;
 	}
 	return false;

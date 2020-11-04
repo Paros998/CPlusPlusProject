@@ -9,9 +9,9 @@ class Pokarm : public Animacja
 
 public:
 	Pokarm(string sciezkaPliku);
-	bool sprawdzCzyZjedzony(Gracz& gracz);
+	bool sprawdzCzyZjedzony(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY]);
 
 private:
-	void ustawPokarm(Gracz& gracz);
+	void ustawPokarm(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY]);
 };
 
