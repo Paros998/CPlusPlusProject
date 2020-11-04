@@ -9,7 +9,7 @@ using namespace sf;using namespace std;
 #define DLUGOSC_PLANSZY 24
 // Kolejne klasy
 // ...
-//#include "Punkty.h"
+#include "Punkty.h"
 #include "Animacja.h"
 #include "Gracz.h"
 #include "Pokarm.h"

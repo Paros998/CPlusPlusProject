@@ -4,11 +4,14 @@ class Punkty
 {
 protected:
 	int wartosc;
-	float skalowaniePunktow;
-	Text wyswietlPunkty;
-	String iloscPunktow;
+	float kombo;
+	Text wyswietlPunkty,wyswietlKombo;
+	string stringPunktow,stringKombo;
+	Font czcionka;
 public:
 	Punkty();
 	~Punkty();
+	void dodajPunkty(int parametr);
+	void zmienKombo(float noweKombo);
 };
 
