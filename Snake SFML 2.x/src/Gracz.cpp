@@ -15,13 +15,14 @@ void Gracz::dodajElement()
 		Lista* nowy_element = new Lista;
 		if (nowy_element != NULL)
 		{
-			nowy_element->sprite = graczSprite[GLOWA];
-			nowy_element->y = nowy_element->x = 0.0f;
-			wsk_listy->sprite = graczSprite[CIALO];
-			nowy_element->nast = wsk_listy;
-			wsk_listy->poprz = nowy_element;
-			nowy_element->poprz = NULL;
-			wsk_listy = nowy_element;
+			Lista* wsk = wsk_listy;
+			przejdzNaKoniecListy(&wsk);
+			nowy_element->sprite = graczSprite[CIALO];
+			nowy_element->sprite.setRotation(wsk->sprite.getRotation());
+			nowy_element->y = wsk->y;
+			nowy_element->x = wsk->x;
+			wsk->nast = nowy_element;
+			nowy_element->poprz = wsk;
 		}
 	}
 }
@@ -40,7 +41,6 @@ Gracz::Gracz()
 	Rect<float> _rozmiar = graczSprite[1].getGlobalBounds();
 	graczSprite[1].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 	kierunek = 0;
-	dlugoscGracza = 50;
 	szybkosc = 0.7f;
 
 	// Tworzenie listy
