@@ -74,7 +74,6 @@ Gra::~Gra()
 	delete[] tablicaX;
 	delete[] tablicaY;
 	delete[] tablicaJ;
-
 }
 
 int Gra::pauza(RenderWindow& okno)
