@@ -4,11 +4,13 @@
 class Animacja
 {
 private:
-	float calkowityCzas, czasZmiany, deltaCzas;
+	float  czasZmiany, deltaCzas;
 	Vector2u aktualnyObraz, liczbaObrazow;
-	Clock zegar;
-	IntRect obszar;
 
+	IntRect obszar;
+public:
+	Clock zegar;
+	float calkowityCzas;
 protected:
 	Texture animacjaTekstura;
 	Sprite animacjaSprite;

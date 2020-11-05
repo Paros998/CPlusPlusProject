@@ -33,18 +33,19 @@ Gra::Gra(int liczbaprzeszkod)
 	tablicaJ = new int[liczbaPrzeszkod];
 
 	for (int i = 0; i < liczbaPrzeszkod; i++)
-	{
-		for (int j = 0; j <= i; j++)
-		{
-			if (tablicaX[j] == tablicaX[i] && tablicaY[j] == tablicaY[i])
-			{
-				tablicaX[j] = losuj(24);
-				tablicaY[j] = losuj(12);
-			}
-		}
+	{	
 		tablicaX[i] = losuj(24);
 		tablicaY[i] = losuj(12);
 		tablicaJ[i] = losuj(3);
+		for (int j = 0; j < i; j++)
+		{
+			if ((tablicaX[j] == tablicaX[i]) && (tablicaY[j] == tablicaY[i]))
+			{
+				tablicaX[i] = losuj(24);
+				tablicaY[i] = losuj(12);
+				j = 0;
+			}
+		}
 	}
 	for (int i = 0; i < 2; i++)
 	{

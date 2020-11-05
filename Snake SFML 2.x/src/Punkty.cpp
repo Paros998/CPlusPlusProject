@@ -41,10 +41,12 @@ void Punkty::dodajPunkty(int parametr)
 	wartosc += parametr * kombo;
 	stringPunktow = "Wynik:";
 	stringPunktow += std::to_string(wartosc);
+	wyswietlPunkty.setString(stringPunktow);
 }
 void Punkty::zmienKombo(float noweKombo)
 {
-	kombo = noweKombo;
+	kombo += noweKombo;
 	stringKombo = "Combo:x";
 	stringKombo += std::to_string(kombo);
+	wyswietlKombo.setString(stringKombo);
 }

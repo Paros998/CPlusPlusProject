@@ -3,7 +3,7 @@
 enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
 Poziom1::Poziom1()
-	:Gra::Gra{15}
+	:Gra::Gra{30}
 {
 	int jeden= 0, dwa = 0, trzy = 0;
 	jeden = losuj(8);
@@ -27,7 +27,6 @@ Poziom1::Poziom1()
 	tloMapySprite.setTexture(tloMapyTekstura);
 	tloMapySprite.setPosition(0.0f, 0.0f);
 	tloMapySprite.setScale(1.0f, 1.0f);
-
 }
 
 Poziom1::~Poziom1()
@@ -36,12 +35,13 @@ Poziom1::~Poziom1()
 
 bool Poziom1::start(RenderWindow& okno)
 {
-	Clock zegarRuchu, zegarAnimacji;
+	float czasOdJedzenia = 0.0f;
 	Gracz gracz;
 	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png");
 	Punkty punkty;
 	bool pauzaFlaga = false;
 	int koniec = 0;
+	Clock zegarJedzenia;
 	while (okno.isOpen())
 	{
 		Event zdarzenie;
@@ -61,6 +61,8 @@ bool Poziom1::start(RenderWindow& okno)
 						pauzaFlaga = true;
 						koniec = pauza(okno);
 						gracz.zegar.restart();
+						pokarm.zegar.restart();
+						pokarm.calkowityCzas = 0.0f;
 						gracz.czasomierz = 0.0f;
 					}
 					if (koniec == 0)
@@ -74,7 +76,17 @@ bool Poziom1::start(RenderWindow& okno)
 		}
 		// POKARM
 		pokarm.aktualizuj(0);
-		pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy,przeszkodaSprite,liczbaPrzeszkod);
+		if (pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy, przeszkodaSprite, liczbaPrzeszkod) == true)
+		{	
+			czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
+			if (czasOdJedzenia <= 3)
+			{
+				zmienKombo(0.25);
+			}
+			dodajPunkty(100);
+			czasOdJedzenia = 0.0f;
+			zegarJedzenia.restart();
+		}
 
 		// GRACZ
 		gracz.obsluguj();
