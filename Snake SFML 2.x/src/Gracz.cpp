@@ -29,8 +29,8 @@ void Gracz::dodajElement()
 
 Gracz::Gracz()
 {
-	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa.png");
-	graczCialoTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_cialo.png");
+	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa12.png");
+	graczCialoTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_cialo12.png");
 
 	graczSprite = new Sprite[2];
 	graczSprite[0].setTexture(graczGlowaTekstura);
@@ -41,18 +41,22 @@ Gracz::Gracz()
 	Rect<float> _rozmiar = graczSprite[1].getGlobalBounds();
 	graczSprite[1].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 	
+	graczSprite[GLOWA].setScale(0.85f, 1.0f);
+	graczSprite[CIALO].setScale(0.85f, 1.0f);
+
 	czas = czasomierz = 0.0f;
 	kierunek = 0;
 	opoznienie = 0.1f;
-	szybkosc = 1.0f;
+	szybkosc = graczGlowaTekstura.getSize().x;
+	cout << szybkosc;
 
 	// Tworzenie listy
 	wsk_listy = new Lista;
 	if (wsk_listy != NULL)
 	{
 		wsk_listy->sprite = graczSprite[GLOWA];
-		wsk_listy->y = 4.0f;
-		wsk_listy->x = 4.0f;
+		wsk_listy->y = 88.0f + 32.0f;
+		wsk_listy->x = 168.0f + 32.0f;
 		wsk_listy->nast = wsk_listy->poprz = NULL;
 	}
 
@@ -156,7 +160,7 @@ void Gracz::rysuj(RenderWindow& okno)
 	Lista* wsk = wsk_listy;
 	while (wsk != NULL)
 	{
-		wsk->sprite.setPosition((float)wsk->x * 64.65, (float)wsk->y * 63.15);
+		wsk->sprite.setPosition((float)wsk->x, (float)wsk->y);
 		okno.draw(wsk->sprite);
 		wsk = wsk->nast;
 	}
