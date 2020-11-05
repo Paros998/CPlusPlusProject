@@ -8,7 +8,8 @@ struct Lista
 	struct Lista* nast, * poprz;
 	Lista()
 	{
-		x = y = 0;
+		x = START_X;
+		y = START_Y;
 		nast = poprz = NULL;
 	}
 };
@@ -19,10 +20,10 @@ class Gracz
 	float szybkosc, opoznienie,czas;
 	Texture graczCialoTekstura, graczGlowaTekstura;
 	Sprite* graczSprite;
+
 public:
 	Clock zegar;
 	float czasomierz;
-public:
 	struct Lista* wsk_listy;
 
 public:
@@ -36,5 +37,6 @@ private:
 	void ruchGracza();
 	void sterowanie();
 	void przejdzNaKoniecListy(Lista **wskaznik);
+	void przejdzPrzezSciane();
 };
 

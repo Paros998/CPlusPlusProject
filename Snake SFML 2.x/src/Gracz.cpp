@@ -47,7 +47,7 @@ Gracz::Gracz()
 	czas = czasomierz = 0.0f;
 	kierunek = 0;
 	opoznienie = 0.1f;
-	szybkosc = graczGlowaTekstura.getSize().x;
+	szybkosc = (float)graczGlowaTekstura.getSize().x;
 	cout << szybkosc;
 
 	// Tworzenie listy
@@ -55,8 +55,8 @@ Gracz::Gracz()
 	if (wsk_listy != NULL)
 	{
 		wsk_listy->sprite = graczSprite[GLOWA];
-		wsk_listy->y = 88.0f + 32.0f;
-		wsk_listy->x = 168.0f + 32.0f;
+		wsk_listy->x = START_X;
+		wsk_listy->y = START_Y;
 		wsk_listy->nast = wsk_listy->poprz = NULL;
 	}
 
@@ -67,14 +67,22 @@ Gracz::Gracz()
 
 
 Gracz::~Gracz()
-{ 
+{
 	while (wsk_listy != NULL)
 	{
 		Lista* nast = wsk_listy->nast;
 		delete wsk_listy;
 		wsk_listy = nast;
 	}
-	delete[] graczSprite; 
+	delete[] graczSprite;
+}
+
+void Gracz::przejdzPrzezSciane()
+{
+	if (wsk_listy->x > KONIEC_X) wsk_listy->x = START_X;
+	if (wsk_listy->y > KONIEC_Y) wsk_listy->y = START_Y;
+	if (wsk_listy->x < START_X) wsk_listy->x = KONIEC_X;
+	if (wsk_listy->y < START_Y) wsk_listy->y = KONIEC_Y;
 }
 
 void Gracz::ruchGracza()
@@ -112,6 +120,7 @@ void Gracz::ruchGracza()
 		wsk_listy->y -= szybkosc;
 		break;
 	}
+	przejdzPrzezSciane();
 }
 
 void Gracz::sterowanie()
