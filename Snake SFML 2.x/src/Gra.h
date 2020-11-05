@@ -1,7 +1,7 @@
 #pragma once
 #include "Biblioteki.h"
 
-class Gra: public Punkty
+class Gra : public Punkty
 {
 protected:
 	Texture tloMapyTekstura, planszaTekstura[3], przeszkodaTekstura;
@@ -18,5 +18,6 @@ public:
 protected:
 	void rysujPlansze(RenderWindow& okno);
 	int pauza(RenderWindow& okno);
+	bool silnikPoziomu(RenderWindow& okno);
 };
 

@@ -4,6 +4,7 @@ enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
 Gra::Gra(int liczbaprzeszkod)
 {
+
 	planszaSprite = NULL;
 	odstep = 64;
 	wysokoscPlanszy = 12;
@@ -25,6 +26,24 @@ Gra::Gra(int liczbaprzeszkod)
 	tablicaTeksturPrzeszkod[2] = "data/Sprity do gry/Plansza/przeszkoda2.png";	
 
 	planszaSprite = new Sprite[3];
+
+	int jeden = 0, dwa = 0, trzy = 0;
+	jeden = losuj(8);
+	while (dwa == jeden)	dwa = losuj(8);
+	while (trzy == dwa || trzy == jeden) trzy = losuj(8);
+	planszaTekstura[PIERWSZA_KRATKA].loadFromFile(tablicaTekstur[jeden]);
+	planszaTekstura[PIERWSZA_KRATKA].setSmooth(true);
+	planszaTekstura[DRUGA_KRATKA].loadFromFile(tablicaTekstur[dwa]);
+	planszaTekstura[DRUGA_KRATKA].setSmooth(true);
+	planszaTekstura[RAMKA].loadFromFile(tablicaTekstur[trzy]);
+	planszaTekstura[RAMKA].setSmooth(true);
+
+	for (int i = 0; i < 3; i++)
+	{
+		planszaSprite[i].setTexture(planszaTekstura[i]);
+		planszaSprite[i].setScale(1.0f, 1.0f);
+	}
+
 	this->liczbaPrzeszkod = liczbaprzeszkod;
 	przeszkodaSprite = new Sprite[liczbaPrzeszkod];
 
@@ -65,6 +84,8 @@ Gra::Gra(int liczbaprzeszkod)
 	znaki = linia.length();
 	menuPauzy[1].setString("Zakoñcz");
 	menuPauzy[1].setPosition(884.0f - (znaki * 20), 550);
+
+	
 }
 
 Gra::~Gra()
@@ -183,4 +204,75 @@ void Gra::rysujPlansze(RenderWindow& okno)
 			okno.draw(przeszkodaSprite[i]);
 		} 
 	}
+}
+
+bool Gra::silnikPoziomu(RenderWindow& okno)
+{
+	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0;
+	Gracz gracz;
+	//Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png", gracz, tablica_srodkow_planszy, przeszkodaSprite, liczbaPrzeszkod);
+	Punkty punkty;
+	bool pauzaFlaga = false;
+	int koniec = 0;
+	Clock zegarJedzenia, zegarRysowania;
+	while (okno.isOpen())
+	{
+		Event zdarzenie;
+		while (okno.pollEvent(zdarzenie))
+		{
+			switch (zdarzenie.type)
+			{
+			case Event::Closed:
+				okno.close();
+				break;
+			case Event::KeyPressed:
+				if (zdarzenie.key.code == Keyboard::Escape)
+				{
+					koniec = 2;
+					while (koniec == 2)
+					{
+						pauzaFlaga = true;
+						koniec = pauza(okno);
+						gracz.zegar.restart();
+						//pokarm.zegar.restart();
+						//pokarm.calkowityCzas = 0.0f;
+						gracz.czasomierz = 0.0f;
+					}
+					if (koniec == 0)
+					{
+						pauzaFlaga = false;
+						break;
+					}
+					if (koniec == 1)return false;
+				}
+			}
+		}
+		czasomierz = zegarRysowania.getElapsedTime().asMilliseconds();
+		if (czasomierz >= milisekunda)
+		{
+			// POKARM
+			//pokarm.aktualizuj(0);
+			//if (pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy, przeszkodaSprite, liczbaPrzeszkod) == true)
+			//{
+			//	czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
+			//	if (czasOdJedzenia <= 2.0)
+			//	{
+			//		zmienKombo(0.25);
+		//	}
+		//		dodajPunkty(100);
+			//	czasOdJedzenia = 0.0f;
+		//		zegarJedzenia.restart();
+		//	}
+			// GRACZ
+			gracz.obsluguj();
+			// RYSOWANIE
+			okno.clear(Color::Blue);
+			rysujPlansze(okno);
+			gracz.rysuj(okno);
+		//	pokarm.rysujAnimacje(okno);
+			czasomierz -= milisekunda;
+		}
+		okno.display();
+	}
+	return false;
 }

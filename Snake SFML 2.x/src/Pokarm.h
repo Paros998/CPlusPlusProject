@@ -5,13 +5,9 @@ class Gracz;
 
 class Pokarm : public Animacja
 {
-	float x, y;
 
 public:
-	Pokarm(string sciezkaPliku);
+	Pokarm(string sciezkaPliku, Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY], Sprite* przeszkody, int liczbaprzeszkod);
 	bool sprawdzCzyZjedzony(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY], Sprite* przeszkody,int liczbaprzeszkod);
-
-private:
-	void ustawPokarm(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY],Sprite* przeszkody,int liczbaprzeszkod);
 };
 
