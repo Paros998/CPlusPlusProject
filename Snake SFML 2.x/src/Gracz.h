@@ -32,9 +32,9 @@ public:
 	void dodajElement();
 	void rysuj(RenderWindow& okno);
 	void obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod);
+	bool walnijPrzeszkode(Sprite* przeszkodaSprite, int liczbaPrzeszkod);
 
 private:
-	bool walnijPrzeszkode(Sprite* przeszkodaSprite, int liczbaPrzeszkod);
 	void przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur);
 	void ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod);
 	void sterowanie();

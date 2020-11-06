@@ -310,6 +310,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 	bool pauzaFlaga = false;
 	int koniec = 0;
 	Clock zegarJedzenia, zegarRysowania;
+	pokarm.ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
 	while (okno.isOpen())
 	{
 		Event zdarzenie;
@@ -346,7 +347,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 		if (czasomierz >= milisekunda)
 		{
 			// POKARM
-			/*pokarm::aktualizuj(0);
+
 			if (pokarm.sprawdzCzyZjedzony(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod) == true)
 			{
 				czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
@@ -358,18 +359,18 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 				czasOdJedzenia = 0.0f;
 				zegarJedzenia.restart();
 			}
-			*/
+			
 			// GRACZ
 			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
 			//if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))
 			//{
-			//		return false;
+			//	return false;
 			//}
 			// RYSOWANIE
 			okno.clear(Color::Blue);
 			rysujPlansze(okno);
 			gracz.rysuj(okno);
-			//	pokarm.rysujAnimacje(okno);
+			pokarm.rysuj(okno);
 			czasomierz -= milisekunda;
 		}
 		okno.display();
