@@ -4,14 +4,16 @@ enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
 Gra::Gra(int liczbaprzeszkod)
 {
+	srand(time(0));
 	rdzenie = thread::hardware_concurrency();
 	cout <<"\nIlosc dostepnych rdzeni: " << rdzenie <<"\n";
 	planszaSprite = NULL;
-	odstep = 64;
-	wysokoscPlanszy = 12;
-	dlugoscPlanszy = 24;
 	wyborPauza = 0;
 	tablicaTekstur = new String[8];
+
+	wysokoscPlanszy = WYSOKOSC_PLANSZY;
+	dlugoscPlanszy = DLUGOSC_PLANSZY;
+	odstep = ODSTEP;
 
 	tablicaTekstur[0] = "data/Sprity do gry/Plansza/kamien1.png";
 	tablicaTekstur[1] = "data/Sprity do gry/Plansza/trawa1.png";
@@ -29,7 +31,17 @@ Gra::Gra(int liczbaprzeszkod)
 	dziuraTekstura.loadFromFile("data/Sprity do gry/Plansza/dziura.png");
 	dziuraTekstura.setSmooth(true);
 
-	planszaSprite = new Sprite[3];
+	planszaSprite = new Sprite * [wysokoscPlanszy];
+	for (int i = 0; i < wysokoscPlanszy; i++)
+	{
+		planszaSprite[i] = new Sprite[dlugoscPlanszy];
+	}
+
+	ramkaSprite = new Sprite * [wysokoscPlanszy +2];
+	for (int i = 0; i < wysokoscPlanszy +2; i++)
+	{
+		ramkaSprite[i] = new Sprite[dlugoscPlanszy+2];
+	}
 
 	int jeden = 0, dwa = 0, trzy = 0;
 	jeden = losuj(8);
@@ -42,11 +54,15 @@ Gra::Gra(int liczbaprzeszkod)
 	planszaTekstura[RAMKA].loadFromFile(tablicaTekstur[trzy]);
 	planszaTekstura[RAMKA].setSmooth(true);
 
-	for (int i = 0; i < 3; i++)
-	{
-		planszaSprite[i].setTexture(planszaTekstura[i]);
-		planszaSprite[i].setScale(1.0f, 1.0f);
-	}
+	przeszkodaTekstura[0].loadFromFile(tablicaTeksturPrzeszkod[0]);
+	przeszkodaTekstura[0].setSmooth(true);
+
+	przeszkodaTekstura[1].loadFromFile(tablicaTeksturPrzeszkod[1]);
+	przeszkodaTekstura[1].setSmooth(true);
+
+	przeszkodaTekstura[2].loadFromFile(tablicaTeksturPrzeszkod[2]);
+	przeszkodaTekstura[2].setSmooth(true);
+
 
 	this->liczbaPrzeszkod = liczbaprzeszkod;
 	przeszkodaSprite = new Sprite[liczbaPrzeszkod];
@@ -76,22 +92,81 @@ Gra::Gra(int liczbaprzeszkod)
 	znaki = linia.length();
 	menuPauzy[1].setString("Zakoñcz");
 	menuPauzy[1].setPosition(884.0f - (znaki * 20), 550);
-
 	
-}
-
-Gra::~Gra()
-{
-	delete[] tablicaTekstur;
-	delete[] planszaSprite;
-	delete[] przeszkodaSprite;
 	delete[] tablicaX;
 	delete[] tablicaY;
 	delete[] tablicaJ;
 }
 
-void Gra::obliczPozycje()
+Gra::~Gra()
 {
+	delete[] tablicaTekstur;
+
+	for (int i = 0; i < wysokoscPlanszy; i++)
+	{
+		delete[] planszaSprite[i];
+	}
+	delete[] planszaSprite;
+
+	for (int i = 0; i < wysokoscPlanszy +2; i++)
+	{
+		delete[] ramkaSprite[i];
+	}
+	delete[] ramkaSprite;
+
+	delete[] przeszkodaSprite;
+	
+}
+
+void Gra::obliczPozycje()
+{	
+	srand(time(0));
+	for (unsigned int i = 0; i < dlugoscPlanszy; i++)
+		for (unsigned int j = 0; j < wysokoscPlanszy; j++)
+		{
+			float x = ((float)i * odstep) + 200.0f, y = ((float)j * odstep) + 120.0f;
+			if (((j & 1) == 1) ^ ((i & 1) == 1)) // Szachownica
+			{
+				planszaSprite[j][i].setTexture(planszaTekstura[0]);
+				planszaSprite[j][i].setScale(1.0f, 1.0f);
+				planszaSprite[j][i].setPosition(x, y);
+				Rect<float> rozmiar = planszaSprite[j][i].getGlobalBounds();
+				planszaSprite[j][i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+
+			}
+			else
+			{
+				planszaSprite[j][i].setTexture(planszaTekstura[1]);
+				planszaSprite[j][i].setScale(1.0f, 1.0f);
+				planszaSprite[j][i].setPosition(x, y);
+				Rect<float> rozmiar = planszaSprite[j][i].getGlobalBounds();
+				planszaSprite[j][i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+			}
+		}
+
+	for (unsigned int i = 0; i < dlugoscPlanszy + 2; i++)
+		for (unsigned int j = 0; j < wysokoscPlanszy + 2; j++)
+		{
+			float x = ((float)i * odstep) + 136.0f, y = ((float)j * odstep) + 56.0f;
+			if (j == 0 || j == (12 + 1))
+			{
+				ramkaSprite[j][i].setTexture(planszaTekstura[2]);
+				ramkaSprite[j][i].setScale(1.0f, 1.0f);
+				ramkaSprite[j][i].setPosition(x, y);
+				Rect<float> rozmiar = ramkaSprite[j][i].getGlobalBounds();
+				ramkaSprite[j][i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+
+			}
+			else if (j != 0 && i == 0 || i == (24 + 1))
+			{
+				ramkaSprite[j][i].setTexture(planszaTekstura[2]);
+				ramkaSprite[j][i].setScale(1.0f, 1.0f);
+				ramkaSprite[j][i].setPosition(x, y);
+				Rect<float> rozmiar = ramkaSprite[j][i].getGlobalBounds();
+				ramkaSprite[j][i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+			}
+		}
+
 	for (int i = 0; i < 2; i++)
 	{
 		dziuraSprite[i].setTexture(dziuraTekstura);
@@ -102,30 +177,40 @@ void Gra::obliczPozycje()
 		dziuraSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 	}
 
-
-	for (int i = 0; i < liczbaPrzeszkod; i++)
+	for (int z = 0; z < liczbaPrzeszkod; z++)
 	{
-		tablicaX[i] = losuj(24);
-		tablicaY[i] = losuj(12);
-		tablicaJ[i] = losuj(3);
-		for (int j = 0; j < i; j++)
+		tablicaX[z] = losuj(24);
+		tablicaY[z] = losuj(12);
+		tablicaJ[z] = losuj(3);
+		for (int w = 0; w < z; w++)
 		{
-			if ((tablicaX[j] == tablicaX[i]) && (tablicaY[j] == tablicaY[i]))
+			if ((tablicaX[w] == tablicaX[z]) && (tablicaY[w] == tablicaY[z]))
 			{
-				tablicaX[i] = losuj(24);
-				tablicaY[i] = losuj(12);
-				j = 0;
+				tablicaX[z] = losuj(24);
+				tablicaY[z] = losuj(12);
+				w = 0;
 				break;
 			}
 		}
 		for (int k = 0; k < 2; k++)
 		{
-			if ((dziuraSprite[k].getPosition().x == tablicaX[i]) && (dziuraSprite[k].getPosition().y == tablicaY[i]))
-				i = 0;
+			if ((dziuraSprite[k].getPosition().x == tablicaX[z]) && (dziuraSprite[k].getPosition().y == tablicaY[z]))
+				z = 0;
 			break;
 		}
 	}
 
+	for (int i = 0; i < liczbaPrzeszkod; i++)
+	{
+		int x = tablicaX[i];
+		int y = tablicaY[i];
+		int j = tablicaJ[i];
+		przeszkodaSprite[i].setTexture(przeszkodaTekstura[j]);
+		przeszkodaSprite[i].setScale(1.0f, 1.0f);
+		przeszkodaSprite[i].setPosition(planszaSprite[y][x].getPosition().x, planszaSprite[y][x].getPosition().y);
+		Rect<float> rozmiar = przeszkodaSprite[i].getGlobalBounds();
+		przeszkodaSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+	}
 }
 
 int Gra::pauza(RenderWindow& okno)
@@ -185,52 +270,28 @@ void Gra::rysujPlansze(RenderWindow& okno)
 	okno.draw(wyswietlKombo);
 	okno.draw(wyswietlPunkty);
 
-	if (planszaSprite != NULL)
+	if (planszaSprite != NULL && ramkaSprite != NULL)
 	{
 		for (unsigned int i = 0; i < dlugoscPlanszy; i++)
 			for (unsigned int j = 0; j < wysokoscPlanszy; j++)
 			{
-				float x = ((float)i * odstep) + 168.0f, y = ((float)j * odstep) + 88.0f;
-				if (((j & 1) == 1) ^ ((i & 1) == 1)) // Szachownica
-				{	
-					planszaSprite[PIERWSZA_KRATKA].setPosition(x,y);
-					tablica_srodkow_planszy[j][i].x = x;
-					tablica_srodkow_planszy[j][i].y = y;
-				}
-				else
-				{	
-					
-					planszaSprite[DRUGA_KRATKA].setPosition(x, y);
-					tablica_srodkow_planszy[j][i].x = x;
-					tablica_srodkow_planszy[j][i].y = y;
-				}
-				okno.draw(planszaSprite[PIERWSZA_KRATKA]);
-				okno.draw(planszaSprite[DRUGA_KRATKA]);
+				okno.draw(planszaSprite[j][i]);
 			}
-		for (unsigned int i = 0; i < dlugoscPlanszy+2; i++)
-			for (unsigned int j = 0; j < wysokoscPlanszy+2; j++)
+		for (unsigned int i = 0; i < dlugoscPlanszy +2; i++)
+			for (unsigned int j = 0; j < wysokoscPlanszy +2; j++)
 			{
-				float x = ((float)i * odstep) + 104.0f, y = ((float)j * odstep) + 24.0f;
-				if (j == 0 || j == wysokoscPlanszy + 1)
+				if (j == 0 || j == (wysokoscPlanszy + 1))
 				{
-					planszaSprite[RAMKA].setPosition(x, y);
-					okno.draw(planszaSprite[RAMKA]);
+					okno.draw(ramkaSprite[j][i]);
 				}
-				else if (j != 0  && i == 0 ||  i == dlugoscPlanszy+1)
+				else if (j != 0  && i == 0 ||  i == (dlugoscPlanszy +1))
 				{
-					planszaSprite[RAMKA].setPosition(x,y);
-					okno.draw(planszaSprite[RAMKA]);
+					okno.draw(ramkaSprite[j][i]);
 				}
 			}
 		for (int i = 0; i < liczbaPrzeszkod; i++)
 		{	
-			int x = tablicaX[i];
-			int y = tablicaY[i];
-			int j = tablicaJ[i];
-			przeszkodaTekstura.loadFromFile(tablicaTeksturPrzeszkod[j]);
-			przeszkodaSprite[i].setTexture(przeszkodaTekstura);
-			przeszkodaSprite[i].setScale(1.0f, 1.0f);
-			przeszkodaSprite[i].setPosition(tablica_srodkow_planszy[y][x].x, tablica_srodkow_planszy[y][x].y);
+			
 			okno.draw(przeszkodaSprite[i]);
 		}
 		for (int i = 0; i < 2; i++)
@@ -244,7 +305,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 {
 	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0;
 	Gracz gracz;
-	//Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png", gracz, tablica_srodkow_planszy, przeszkodaSprite, liczbaPrzeszkod);
+	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png");
 	Punkty punkty;
 	bool pauzaFlaga = false;
 	int koniec = 0;
@@ -285,18 +346,19 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 		if (czasomierz >= milisekunda)
 		{
 			// POKARM
-			//pokarm.aktualizuj(0);
-			//if (pokarm.sprawdzCzyZjedzony(gracz, tablica_srodkow_planszy, przeszkodaSprite, liczbaPrzeszkod) == true)
-			//{
-			//	czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
-			//	if (czasOdJedzenia <= 2.0)
-			//	{
-			//		zmienKombo(0.25);
-		//	}
-		//		dodajPunkty(100);
-			//	czasOdJedzenia = 0.0f;
-		//		zegarJedzenia.restart();
-		//	}
+			/*pokarm::aktualizuj(0);
+			if (pokarm.sprawdzCzyZjedzony(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod) == true)
+			{
+				czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
+				if (czasOdJedzenia <= 2.0)
+				{
+					zmienKombo(0.25);
+			}
+				dodajPunkty(100);
+				czasOdJedzenia = 0.0f;
+				zegarJedzenia.restart();
+			}
+			*/
 			// GRACZ
 			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
 			//if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))

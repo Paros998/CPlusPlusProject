@@ -4,19 +4,18 @@
 class Gra : public Punkty
 {
 protected:
-	Texture tloMapyTekstura, planszaTekstura[3], przeszkodaTekstura,dziuraTekstura;
+	Texture tloMapyTekstura, planszaTekstura[3], przeszkodaTekstura[3],dziuraTekstura;
 	String* tablicaTekstur, tablicaTeksturPrzeszkod[3];
-	Sprite tloMapySprite, * planszaSprite, * przeszkodaSprite, dziuraSprite[2];
-	unsigned int wysokoscPlanszy, dlugoscPlanszy, odstep;
+	Sprite tloMapySprite, ** planszaSprite,**ramkaSprite ,* przeszkodaSprite, dziuraSprite[2];
+	unsigned int dlugoscPlanszy, wysokoscPlanszy, odstep;
 	int liczbaPrzeszkod,wyborPauza,rdzenie;
 	int *tablicaX, *tablicaY, *tablicaJ;
-	Vector2f tablica_srodkow_planszy[12][24];
 	Text menuPauzy[2],koniecGry[2];
 public:
 	Gra(int);
 	~Gra();
 public:
-	thread RdzenGracz,RdzenPlansza;
+	thread RdzenPlansza;
 protected:
 	void rysujPlansze(RenderWindow& okno);
 	int pauza(RenderWindow& okno);

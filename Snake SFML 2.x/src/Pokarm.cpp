@@ -15,11 +15,11 @@ Pokarm::Pokarm(string sciezkaPliku)
 
 Pokarm::~Pokarm() { delete animacja; }
 
-void Pokarm::ustawPokarm(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY], Sprite* przeszkody, int liczbaprzeszkod)
+void Pokarm::ustawPokarm(Gracz& gracz, Sprite ** plansza, Sprite* przeszkody, int liczbaprzeszkod)
 {
 	losuj(x, DLUGOSC_PLANSZY);
 	losuj(y, WYSOKOSC_PLANSZY);
-	pokarmSprite.setPosition(plansza[(int)y][(int)x].x + 48.0f, plansza[(int)y][(int)x].y + 48.0f);
+	pokarmSprite.setPosition(plansza[(int)y][(int)x].getPosition().x + 48.0f, plansza[(int)y][(int)x].getPosition().y + 48.0f);
 miejsce:
 	Lista* wsk = gracz.wsk_listy;
 	while (wsk != NULL)
@@ -28,7 +28,7 @@ miejsce:
 		{
 			losuj(x, DLUGOSC_PLANSZY);
 			losuj(y, WYSOKOSC_PLANSZY);
-			pokarmSprite.setPosition(plansza[(int)y][(int)x].x + 48.0f, plansza[(int)y][(int)x].y + 48.0f);
+			pokarmSprite.setPosition(plansza[(int)y][(int)x].getPosition().x + 48.0f, plansza[(int)y][(int)x].getPosition().y + 48.0f);
 			wsk = gracz.wsk_listy;
 		}
 		wsk = wsk->nast;
@@ -39,13 +39,13 @@ miejsce:
 		{
 			losuj(x, DLUGOSC_PLANSZY);
 			losuj(y, WYSOKOSC_PLANSZY);
-			pokarmSprite.setPosition(plansza[(int)y][(int)x].x + 48.0f, plansza[(int)y][(int)x].y + 48.0f);
+			pokarmSprite.setPosition(plansza[(int)y][(int)x].getPosition().x + 48.0f, plansza[(int)y][(int)x].getPosition().y + 48.0f);
 			goto miejsce;
 		}
 	}
 }
 
-bool Pokarm::sprawdzCzyZjedzony(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY],Sprite* przeszkody,int liczbaprzeszkod)
+bool Pokarm::sprawdzCzyZjedzony(Gracz& gracz, Sprite** plansza,Sprite* przeszkody,int liczbaprzeszkod)
 {
 	if (kolizja(gracz.wsk_listy->sprite, pokarmSprite))
 	{

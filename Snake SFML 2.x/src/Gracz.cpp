@@ -189,12 +189,7 @@ void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkoda
 		wsk_listy->y -= szybkosc;
 		break;
 	}
-	/*
-	thread rdzenSciany([&]() {przejdzPrzezSciane(); });
-	thread rdzenDziura([&]() {przejdzPrzezDziure(dziuraSprite, liczbaDziur); });
-	rdzenSciany.join();
-	rdzenDziura.join();
-	*/
+	
 	przejdzPrzezSciane();
 	przejdzPrzezDziure(dziuraSprite, liczbaDziur);
 }

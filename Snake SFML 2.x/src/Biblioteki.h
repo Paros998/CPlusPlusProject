@@ -15,7 +15,7 @@ using namespace sf;using namespace std;
 #define START_Y 120
 #define KONIEC_X START_X + (64 * (DLUGOSC_PLANSZY - 1))
 #define KONIEC_Y START_Y + (64 * (WYSOKOSC_PLANSZY - 1))
-
+#define ODSTEP 64.0
 // Kolejne klasy
 // ...
 #include "Punkty.h"
