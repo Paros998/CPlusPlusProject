@@ -29,6 +29,7 @@ void Gracz::dodajElement()
 
 Gracz::Gracz()
 {
+
 	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa12.png");
 	graczCialoTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_cialo12.png");
 
@@ -85,7 +86,75 @@ void Gracz::przejdzPrzezSciane()
 	if (wsk_listy->y < START_Y) wsk_listy->y = KONIEC_Y;
 }
 
-void Gracz::ruchGracza()
+bool Gracz::walnijPrzeszkode(Sprite * przeszkodaSprite,int liczbaPrzeszkod)
+{
+	for (int i = 0; i < liczbaPrzeszkod; i++)
+	{
+		if (kolizja(wsk_listy->sprite, przeszkodaSprite[i]))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+void Gracz::przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur)
+{
+	for (int i = 0; i < liczbaDziur; i++)
+	{
+		if (kolizja(wsk_listy->sprite, dziuraSprite[i]))
+		{
+			if (i == 0)
+			{	
+				if (kierunek == 0)
+				{
+					wsk_listy->x = dziuraSprite[1].getPosition().x;
+					wsk_listy->y = dziuraSprite[1].getPosition().y + 64.0f;
+				}
+				if (kierunek == 1)
+				{
+					wsk_listy->x = dziuraSprite[1].getPosition().x - 64.0f;
+					wsk_listy->y = dziuraSprite[1].getPosition().y;
+				}
+				if (kierunek == 2)
+				{
+					wsk_listy->x = dziuraSprite[1].getPosition().x + 64.0f;
+					wsk_listy->y = dziuraSprite[1].getPosition().y;
+				}
+				if (kierunek == 3)
+				{
+					wsk_listy->x = dziuraSprite[1].getPosition().x;
+					wsk_listy->y = dziuraSprite[1].getPosition().y - 64.0f;
+				}
+			}
+			if (i == 1)
+			{
+				if (kierunek == 0)
+				{
+					wsk_listy->x = dziuraSprite[0].getPosition().x;
+					wsk_listy->y = dziuraSprite[0].getPosition().y + 64.0f;
+				}
+				if (kierunek == 1)
+				{
+					wsk_listy->x = dziuraSprite[0].getPosition().x - 64.0f;
+					wsk_listy->y = dziuraSprite[0].getPosition().y;
+				}
+				if (kierunek == 2)
+				{
+					wsk_listy->x = dziuraSprite[0].getPosition().x + 64.0f;
+					wsk_listy->y = dziuraSprite[0].getPosition().y;
+				}
+				if (kierunek == 3)
+				{
+					wsk_listy->x = dziuraSprite[0].getPosition().x;
+					wsk_listy->y = dziuraSprite[0].getPosition().y - 64.0f;
+				}
+			}
+		}
+	}
+}
+
+void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod)
 {
 	Lista* koniec = wsk_listy;
 	przejdzNaKoniecListy(&koniec);
@@ -120,7 +189,14 @@ void Gracz::ruchGracza()
 		wsk_listy->y -= szybkosc;
 		break;
 	}
+	/*
+	thread rdzenSciany([&]() {przejdzPrzezSciane(); });
+	thread rdzenDziura([&]() {przejdzPrzezDziure(dziuraSprite, liczbaDziur); });
+	rdzenSciany.join();
+	rdzenDziura.join();
+	*/
 	przejdzPrzezSciane();
+	przejdzPrzezDziure(dziuraSprite, liczbaDziur);
 }
 
 void Gracz::sterowanie()
@@ -151,7 +227,7 @@ void Gracz::sterowanie()
 	}
 }
 
-void Gracz::obsluguj()
+void Gracz::obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod)
 {	
 	czas = zegar.getElapsedTime().asSeconds();
 	zegar.restart();
@@ -159,7 +235,7 @@ void Gracz::obsluguj()
 	if (czasomierz >= opoznienie)
 	{
 		czasomierz -= opoznienie;
-		ruchGracza();
+		ruchGracza(dziuraSprite,liczbaDziur,przeszkodaSprite,liczbaPrzeszkod);
 	}
 	sterowanie();
 }
@@ -174,4 +250,3 @@ void Gracz::rysuj(RenderWindow& okno)
 		wsk = wsk->nast;
 	}
 }
-

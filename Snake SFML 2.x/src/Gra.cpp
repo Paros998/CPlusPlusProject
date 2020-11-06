@@ -4,7 +4,8 @@ enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
 Gra::Gra(int liczbaprzeszkod)
 {
-
+	rdzenie = thread::hardware_concurrency();
+	cout <<"\nIlosc dostepnych rdzeni: " << rdzenie <<"\n";
 	planszaSprite = NULL;
 	odstep = 64;
 	wysokoscPlanszy = 12;
@@ -24,6 +25,9 @@ Gra::Gra(int liczbaprzeszkod)
 	tablicaTeksturPrzeszkod[0] = "data/Sprity do gry/Plansza/przeszkoda.png";
 	tablicaTeksturPrzeszkod[1] = "data/Sprity do gry/Plansza/przeszkoda1.png";
 	tablicaTeksturPrzeszkod[2] = "data/Sprity do gry/Plansza/przeszkoda2.png";	
+
+	dziuraTekstura.loadFromFile("data/Sprity do gry/Plansza/dziura.png");
+	dziuraTekstura.setSmooth(true);
 
 	planszaSprite = new Sprite[3];
 
@@ -51,21 +55,9 @@ Gra::Gra(int liczbaprzeszkod)
 	tablicaY = new int[liczbaPrzeszkod];
 	tablicaJ = new int[liczbaPrzeszkod];
 
-	for (int i = 0; i < liczbaPrzeszkod; i++)
-	{	
-		tablicaX[i] = losuj(24);
-		tablicaY[i] = losuj(12);
-		tablicaJ[i] = losuj(3);
-		for (int j = 0; j < i; j++)
-		{
-			if ((tablicaX[j] == tablicaX[i]) && (tablicaY[j] == tablicaY[i]))
-			{
-				tablicaX[i] = losuj(24);
-				tablicaY[i] = losuj(12);
-				j = 0;
-			}
-		}
-	}
+	RdzenPlansza = thread([&]() {obliczPozycje(); });
+	RdzenPlansza.join();
+
 	for (int i = 0; i < 2; i++)
 	{
 		menuPauzy[i].setFont(czcionka);
@@ -96,6 +88,44 @@ Gra::~Gra()
 	delete[] tablicaX;
 	delete[] tablicaY;
 	delete[] tablicaJ;
+}
+
+void Gra::obliczPozycje()
+{
+	for (int i = 0; i < 2; i++)
+	{
+		dziuraSprite[i].setTexture(dziuraTekstura);
+		dziuraSprite[i].setScale(1.0f, 1.0f);
+		float x = ((float)(i + 1) * 8 * odstep) + 168.0f, y = ((float)(i + 1) * 4 * odstep) + 88.0f;
+		dziuraSprite[i].setPosition(x + 32.0f, y + 32.0f);
+		Rect<float> rozmiar = dziuraSprite[i].getGlobalBounds();
+		dziuraSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+	}
+
+
+	for (int i = 0; i < liczbaPrzeszkod; i++)
+	{
+		tablicaX[i] = losuj(24);
+		tablicaY[i] = losuj(12);
+		tablicaJ[i] = losuj(3);
+		for (int j = 0; j < i; j++)
+		{
+			if ((tablicaX[j] == tablicaX[i]) && (tablicaY[j] == tablicaY[i]))
+			{
+				tablicaX[i] = losuj(24);
+				tablicaY[i] = losuj(12);
+				j = 0;
+				break;
+			}
+		}
+		for (int k = 0; k < 2; k++)
+		{
+			if ((dziuraSprite[k].getPosition().x == tablicaX[i]) && (dziuraSprite[k].getPosition().y == tablicaY[i]))
+				i = 0;
+			break;
+		}
+	}
+
 }
 
 int Gra::pauza(RenderWindow& okno)
@@ -202,7 +232,11 @@ void Gra::rysujPlansze(RenderWindow& okno)
 			przeszkodaSprite[i].setScale(1.0f, 1.0f);
 			przeszkodaSprite[i].setPosition(tablica_srodkow_planszy[y][x].x, tablica_srodkow_planszy[y][x].y);
 			okno.draw(przeszkodaSprite[i]);
-		} 
+		}
+		for (int i = 0; i < 2; i++)
+		{
+			okno.draw(dziuraSprite[i]);
+		}
 	}
 }
 
@@ -264,12 +298,16 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 		//		zegarJedzenia.restart();
 		//	}
 			// GRACZ
-			gracz.obsluguj();
+			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
+			//if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))
+			//{
+			//		return false;
+			//}
 			// RYSOWANIE
 			okno.clear(Color::Blue);
 			rysujPlansze(okno);
 			gracz.rysuj(okno);
-		//	pokarm.rysujAnimacje(okno);
+			//	pokarm.rysujAnimacje(okno);
 			czasomierz -= milisekunda;
 		}
 		okno.display();

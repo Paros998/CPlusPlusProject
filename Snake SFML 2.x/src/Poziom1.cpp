@@ -2,7 +2,7 @@
 
 
 Poziom1::Poziom1()
-	:Gra::Gra{30}
+	:Gra::Gra{10}
 {
 	tloMapyTekstura.loadFromFile("data/Sprity do gry/Plansza/tlo_1.jpg");
 	tloMapyTekstura.setSmooth(true);

@@ -31,12 +31,15 @@ public:
 	~Gracz();
 	void dodajElement();
 	void rysuj(RenderWindow& okno);
-	void obsluguj();
+	void obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod);
 
 private:
-	void ruchGracza();
+	bool walnijPrzeszkode(Sprite* przeszkodaSprite, int liczbaPrzeszkod);
+	void przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur);
+	void ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod);
 	void sterowanie();
 	void przejdzNaKoniecListy(Lista **wskaznik);
 	void przejdzPrzezSciane();
+
 };
 

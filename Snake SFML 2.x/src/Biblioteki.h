@@ -4,6 +4,8 @@
 #include <list>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <chrono>
+#include <thread>
 using namespace sf;using namespace std;
 
 // STA£E
