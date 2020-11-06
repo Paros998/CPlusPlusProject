@@ -5,21 +5,16 @@ class Gracz;
 
 class Animacja
 {
-private:
-	float  czasZmiany, deltaCzas;
+	float czasZmiany, deltaCzas;
 	Vector2u aktualnyObraz, liczbaObrazow;
-	float x= 0.0f, y=0.0f;
-	IntRect obszar;
+	float x = 0.0f, y = 0.0f;
+
 public:
+	IntRect obszar;
 	Clock zegar;
 	float calkowityCzas;
-protected:
-	Texture animacjaTekstura;
-	Sprite animacjaSprite;
 	
 public:
-	Animacja(string sciezkaPliku, Vector2u liczbaObrazow, float czasZmiany, Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY], Sprite* przeszkody, int liczbaprzeszkod);
+	Animacja(Texture& spriteTekstura, Vector2u liczbaObrazow, float czasZmiany);
 	void aktualizuj(int wiersz);
-	void rysujAnimacje(RenderWindow& okno);
-	void ustawPokarm(Gracz& gracz, Vector2f plansza[][DLUGOSC_PLANSZY], Sprite* przeszkody, int liczbaprzeszkod);
 };
