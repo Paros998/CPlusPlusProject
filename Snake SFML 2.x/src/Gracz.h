@@ -22,7 +22,7 @@ class Gracz
 	Sprite* graczSprite;
 
 public:
-	Clock zegar, zegarOchronyOdrodzenia;
+	Clock zegar;
 	float czasomierz;
 	struct Lista* wsk_listy;
 

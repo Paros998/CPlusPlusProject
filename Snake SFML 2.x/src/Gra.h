@@ -21,5 +21,6 @@ protected:
 	int pauza(RenderWindow& okno);
 	bool silnikPoziomu(RenderWindow& okno);
 	void obliczPozycje();
+	bool przegrana(Gracz& gracz, Clock zegar);
 };
 

@@ -307,6 +307,18 @@ void Gra::rysujPlansze(RenderWindow& okno)
 	}
 }
 
+bool Gra::przegrana(Gracz& gracz, Clock zegar)
+{
+	if (zegar.getElapsedTime().asSeconds() > 5.0f)
+	{
+		if (gracz.samoUkaszenie())
+			return false;
+		if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))
+			return false;
+	}
+	return true;
+}
+
 bool Gra::silnikPoziomu(RenderWindow& okno)
 {
 	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0;
@@ -315,7 +327,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 	Punkty punkty;
 	bool pauzaFlaga = false;
 	int koniec = 0;
-	Clock zegarJedzenia, zegarRysowania;
+	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia;
 	pokarm.ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
 	while (okno.isOpen())
 	{
@@ -368,10 +380,9 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 			
 			// GRACZ
 			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
-			//if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))
-			//{
-			//	return false;
-			//}
+			/*if (!przegrana(gracz, zegarOchronyOdrodzenia))
+				return false;*/
+
 			// RYSOWANIE
 			okno.clear(Color::Blue);
 			rysujPlansze(okno);

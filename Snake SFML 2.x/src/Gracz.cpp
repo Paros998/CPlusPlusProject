@@ -213,16 +213,13 @@ void Gracz::obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSp
 
 bool Gracz::samoUkaszenie()
 {
-	if (zegarOchronyOdrodzenia.getElapsedTime().asSeconds() > 5)
+	Lista* wsk = wsk_listy->nast;
+	while (wsk != NULL)
 	{
-		Lista* wsk = wsk_listy->nast;
-		while (wsk != NULL)
-		{
-			if ((wsk_listy->x == wsk->x) && (wsk_listy->y == wsk->y))
-				return true;
+		if ((wsk_listy->x == wsk->x) && (wsk_listy->y == wsk->y))
+			return true;
 
-			wsk = wsk->nast;
-		}
+		wsk = wsk->nast;
 	}
 	return false;
 }
