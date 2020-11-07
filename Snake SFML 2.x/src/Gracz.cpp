@@ -29,7 +29,6 @@ void Gracz::dodajElement()
 
 Gracz::Gracz()
 {
-
 	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa12.png");
 	graczCialoTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_cialo12.png");
 
@@ -233,6 +232,22 @@ void Gracz::obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSp
 		ruchGracza(dziuraSprite,liczbaDziur,przeszkodaSprite,liczbaPrzeszkod);
 	}
 	sterowanie();
+}
+
+bool Gracz::samoUkaszenie()
+{
+	if (zegarOchronyOdrodzenia.getElapsedTime().asSeconds() > 5)
+	{
+		Lista* wsk = wsk_listy->nast;
+		while (wsk != NULL)
+		{
+			if ((wsk_listy->x == wsk->x) && (wsk_listy->y == wsk->y))
+				return true;
+
+			wsk = wsk->nast;
+		}
+	}
+	return false;
 }
 
 void Gracz::rysuj(RenderWindow& okno)

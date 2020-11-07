@@ -22,7 +22,7 @@ class Gracz
 	Sprite* graczSprite;
 
 public:
-	Clock zegar;
+	Clock zegar, zegarOchronyOdrodzenia;
 	float czasomierz;
 	struct Lista* wsk_listy;
 
@@ -33,6 +33,7 @@ public:
 	void rysuj(RenderWindow& okno);
 	void obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod);
 	bool walnijPrzeszkode(Sprite* przeszkodaSprite, int liczbaPrzeszkod);
+	bool samoUkaszenie();
 
 private:
 	void przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur);
