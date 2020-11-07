@@ -2,7 +2,7 @@
 
 
 Poziom1::Poziom1()
-	:Gra::Gra{15}
+	:Gra::Gra{15,P1-1}
 {
 	tloMapyTekstura.loadFromFile("data/Sprity do gry/Plansza/tlo_1.jpg");
 	tloMapyTekstura.setSmooth(true);
@@ -17,5 +17,5 @@ Poziom1::~Poziom1()
 
 bool Poziom1::start(RenderWindow& okno)
 {
-	return silnikPoziomu(okno);
+	return silnikPoziomu(okno,P1-1);
 }

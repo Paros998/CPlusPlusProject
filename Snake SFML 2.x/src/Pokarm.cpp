@@ -11,7 +11,7 @@ Pokarm::Pokarm(string sciezkaPliku)
 	Rect<float> _obszar = pokarmSprite.getGlobalBounds();
 	pokarmSprite.setOrigin(Vector2f(_obszar.width / 2.0f, _obszar.width / 2.0f));
 
-	animacja = new Animacja(pokarmTekstura, Vector2u(9, 1), 0.02f);
+	animacja = new Animacja(pokarmTekstura, Vector2u(9, 1), 0.04f);
 }
 
 Pokarm::~Pokarm() { delete animacja; }
@@ -62,4 +62,10 @@ void Pokarm::rysuj(RenderWindow& okno)
 	animacja->aktualizuj(0);
 	pokarmSprite.setTextureRect(animacja->obszar);
 	okno.draw(pokarmSprite);
+}
+
+void Pokarm::wyzerujAnimacje()
+{
+	animacja->zegar.restart();
+	animacja->calkowityCzas = 0.0f;
 }

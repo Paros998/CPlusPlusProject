@@ -29,8 +29,27 @@ void Gracz::dodajElement()
 	}
 }
 
-Gracz::Gracz()
+Gracz::Gracz(int poziom)
 {
+	buforPrzeszkoda.loadFromFile("data/MuzykaDzwiekiGra/wazWkamien.ogg");
+	buforTeleport.loadFromFile("data/MuzykaDzwiekiGra/teleport.wav");
+	buforWaz.loadFromFile("data/MuzykaDzwiekiGra/wazWsiebie.ogg");
+
+	tablicaKroki[0] = "data/MuzykaDzwiekiGra/stepdirt_1.wav";
+	tablicaKroki[1] = "data/MuzykaDzwiekiGra/stepsnow_1.wav";
+	tablicaKroki[2] = "data/MuzykaDzwiekiGra/stepstone_1.wav";
+
+	buforKroki.loadFromFile(tablicaKroki[poziom]);
+
+	dzwiekWalnieciePrzeszkody.setBuffer(buforPrzeszkoda);
+	dzwiekTeleport.setBuffer(buforTeleport);
+	dzwiekWalnieciePrzeszkody.setVolume(3.0f);
+	dzwiekTeleport.setVolume(2.0f);
+	dzwiekWalniecieSiebie.setBuffer(buforWaz);
+	dzwiekWalniecieSiebie.setVolume(3.0f);
+	dzwiekKroki.setBuffer(buforKroki);
+	dzwiekKroki.setVolume(2.0f);
+
 	tablicaStringCialoTekstura[0] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_green.png";
 	tablicaStringCialoTekstura[1] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_grey.png";
 	tablicaStringCialoTekstura[2] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_pink.png";
@@ -91,10 +110,26 @@ Gracz::~Gracz()
 
 void Gracz::przejdzPrzezSciane()
 {
-	if (wsk_listy->x > KONIEC_X) wsk_listy->x = START_X;
-	if (wsk_listy->y > KONIEC_Y) wsk_listy->y = START_Y;
-	if (wsk_listy->x < START_X) wsk_listy->x = KONIEC_X;
-	if (wsk_listy->y < START_Y) wsk_listy->y = KONIEC_Y;
+	if (wsk_listy->x > KONIEC_X)
+	{
+		wsk_listy->x = START_X;
+		dzwiekTeleport.play();
+	}
+	if (wsk_listy->y > KONIEC_Y)
+	{
+		wsk_listy->y = START_Y;
+		dzwiekTeleport.play();
+	}
+	if (wsk_listy->x < START_X)
+	{
+		wsk_listy->x = KONIEC_X;
+		dzwiekTeleport.play();
+	}
+	if (wsk_listy->y < START_Y)
+	{
+		wsk_listy->y = KONIEC_Y;
+		dzwiekTeleport.play();
+	}
 }
 
 bool Gracz::walnijPrzeszkode(Sprite * przeszkodaSprite,int liczbaPrzeszkod)
@@ -102,7 +137,8 @@ bool Gracz::walnijPrzeszkode(Sprite * przeszkodaSprite,int liczbaPrzeszkod)
 	for (int i = 0; i < liczbaPrzeszkod; i++)
 	{
 		if (kolizja(wsk_listy->sprite, przeszkodaSprite[i]))
-		{
+		{	
+			dzwiekWalnieciePrzeszkody.play();
 			return true;
 		}
 	}
@@ -114,7 +150,8 @@ void Gracz::przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur)
 	for (int i = 0; i < liczbaDziur; i++)
 	{
 		if (kolizja(wsk_listy->sprite, dziuraSprite[i]))
-		{
+		{	
+			dzwiekTeleport.play();
 			int k;
 			if (i == 0) k = 1;
 			else if (i == 1) k = 0;
@@ -143,7 +180,12 @@ void Gracz::przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur)
 }
 
 void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod)
-{
+{	
+	if (zegar2.getElapsedTime().asSeconds() >= 0.5f)
+	{
+		dzwiekKroki.play();	
+		zegar2.restart();
+	}
 	Lista* koniec = wsk_listy;
 	przejdzNaKoniecListy(&koniec);
 	while (koniec != NULL)
@@ -224,7 +266,8 @@ void Gracz::obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSp
 }
 
 bool Gracz::samoUkaszenie()
-{
+{	
+	dzwiekWalniecieSiebie.play();
 	Lista* wsk = wsk_listy->nast;
 	while (wsk != NULL)
 	{
@@ -245,4 +288,10 @@ void Gracz::rysuj(RenderWindow& okno)
 		okno.draw(wsk->sprite);
 		wsk = wsk->nast;
 	}
+}
+
+void Gracz::zerujAnimacje()
+{
+	zegar.restart();
+	czasomierz = 0.0f;
 }

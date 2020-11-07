@@ -41,7 +41,7 @@ void Punkty::dodajPunkty(int parametr)
 	wartosc += parametr * kombo;
 	stringPunktow = "Wynik:";
 	stringPunktow += std::to_string(wartosc);
-	wyswietlPunkty.setString(stringPunktow);
+	wyswietlPunkty.setString(stringPunktow);	
 }
 void Punkty::zmienKombo(float noweKombo)
 {
@@ -53,4 +53,31 @@ void Punkty::zmienKombo(float noweKombo)
 int Punkty::sprawdzWynik()
 {
 	return wartosc;
+}
+
+void Punkty::animujPunkty(int i)
+{
+	if (i == 0)
+	{
+		wyswietlPunkty.setOutlineColor(Color::Black);
+		wyswietlPunkty.setFillColor(Color(ZLOTY));
+	}
+	if (i == 1)
+	{
+		wyswietlPunkty.setOutlineColor(Color::Red);
+		wyswietlPunkty.setFillColor(Color::Black);
+	}
+}
+void Punkty::animujKombo(int i)
+{
+	if (i == 0)
+	{
+		wyswietlKombo.setOutlineColor(Color::Black);
+		wyswietlKombo.setFillColor(Color(ZLOTY));
+	}
+	if (i == 1)
+	{
+		wyswietlKombo.setOutlineColor(Color::Red);
+		wyswietlKombo.setFillColor(Color::Black);
+	}
 }

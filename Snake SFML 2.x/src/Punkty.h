@@ -14,5 +14,7 @@ public:
 	void dodajPunkty(int parametr);
 	void zmienKombo(float noweKombo);
 	int sprawdzWynik();
+	void animujPunkty(int tryb);
+	void animujKombo(int tryb);
 };
 

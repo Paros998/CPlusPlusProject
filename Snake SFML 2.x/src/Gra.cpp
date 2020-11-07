@@ -2,8 +2,19 @@
 
 enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
-Gra::Gra(int liczbaprzeszkod)
-{
+Gra::Gra(int liczbaprzeszkod,int muzyka)
+{	
+	tablicaMuzyka[0] = "data/MuzykaDzwiekiGra/muzykaPoziom1.ogg";
+	tablicaMuzyka[1] = "data/MuzykaDzwiekiGra/muzykaPoziom2.ogg";
+	tablicaMuzyka[2] = "data/MuzykaDzwiekiGra/muzykaPoziom3.ogg";
+
+	muzykaGra.openFromFile(tablicaMuzyka[muzyka]);
+	muzykaGra.setVolume(10.0f);
+
+	buforJedzenie.loadFromFile("data/MuzykaDzwiekiGra/jedzenieJablko.wav");
+	dzwiekJedzenie.setBuffer(buforJedzenie);
+	dzwiekJedzenie.setVolume(10.0f);
+
 	srand(time(0));
 	rdzenie = thread::hardware_concurrency();
 	cout <<"\nIlosc dostepnych rdzeni: " << rdzenie <<"\n";
@@ -176,7 +187,7 @@ void Gra::obliczPozycje()
 		Rect<float> rozmiar = dziuraSprite[i].getGlobalBounds();
 		dziuraSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 	}
-	int z, w, k ;
+	int z;
 	for (z = 0; z < liczbaPrzeszkod; z++)
 	{
 		tablicaX[z] = losuj(24);
@@ -319,15 +330,18 @@ bool Gra::przegrana(Gracz& gracz, Clock zegar)
 	return true;
 }
 
-bool Gra::silnikPoziomu(RenderWindow& okno)
-{
-	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0;
-	Gracz gracz;
-	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2-gold.png");
+bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
+{	
+	muzykaGra.play();
+	muzykaGra.setLoop(true);
+
+	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0,czasOdAP = 0.0f,czasOdAK = 0.0f;
+	Gracz gracz(poziom);
+	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png");
 	Punkty punkty;
 	bool pauzaFlaga = false;
 	int koniec = 0;
-	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia;
+	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia,zegarAnimacjiPunkty,zegarAnimacjiKombo;
 	pokarm.ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
 	while (okno.isOpen())
 	{
@@ -347,10 +361,8 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 					{
 						pauzaFlaga = true;
 						koniec = pauza(okno);
-						gracz.zegar.restart();
-						//pokarm.zegar.restart();
-						//pokarm.calkowityCzas = 0.0f;
-						gracz.czasomierz = 0.0f;
+						pokarm.wyzerujAnimacje();
+						gracz.zerujAnimacje();
 					}
 					if (koniec == 0)
 					{
@@ -365,26 +377,39 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 		if (czasomierz >= milisekunda)
 		{
 			// POKARM
-
 			if (pokarm.sprawdzCzyZjedzony(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod) == true)
-			{
+			{	
+				dzwiekJedzenie.play();
 				czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
 				if (czasOdJedzenia <= 2.0)
 				{
 					zmienKombo(0.25);
+					zegarAnimacjiKombo.restart();
+					animujKombo(0);
+				
 				}
+				zegarAnimacjiPunkty.restart();
 				dodajPunkty(100);
+				animujPunkty(0);
+				
 				int wynik = sprawdzWynik();
 				if (wynik >= 20000 && wynik <= 159999)
 					gracz.tekstura = (wynik / 20000);	
+
 				czasOdJedzenia = 0.0f;
 				zegarJedzenia.restart();
 			}
-			
+
+			czasOdAK = zegarAnimacjiKombo.getElapsedTime().asSeconds();
+			if (czasOdAK >= 2.0f) animujKombo(1);
+
+			czasOdAP = zegarAnimacjiPunkty.getElapsedTime().asSeconds();
+			if (czasOdAP >= 2.0f) animujPunkty(1);
+
 			// GRACZ
 			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
-			/*if (!przegrana(gracz, zegarOchronyOdrodzenia))
-				return false;*/
+			//if (!przegrana(gracz, zegarOchronyOdrodzenia))
+			//	return false;
 
 			// RYSOWANIE
 			okno.clear(Color::Blue);
