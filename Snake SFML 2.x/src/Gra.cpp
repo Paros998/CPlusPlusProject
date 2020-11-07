@@ -181,6 +181,18 @@ void Gra::obliczPozycje()
 	{
 		tablicaX[z] = losuj(24);
 		tablicaY[z] = losuj(12);
+		miejsce1:
+		while (tablicaX[z] == 8 && tablicaY[z] == 4)
+		{
+			tablicaX[z] = losuj(24);
+			tablicaY[z] = losuj(12);
+		}
+		while (tablicaX[z] == 16 && tablicaY[z] == 8)
+		{
+			tablicaX[z] = losuj(24);
+			tablicaY[z] = losuj(12);
+			goto miejsce1;
+		}
 		tablicaJ[z] = losuj(3);
 		for (int w = 0; w < z; w++)
 		{
@@ -188,16 +200,7 @@ void Gra::obliczPozycje()
 			{
 				tablicaX[z] = losuj(24);
 				tablicaY[z] = losuj(12);
-				w = 0;
-				break;
-			}
-		}
-		for (int k = 0; k < 2; k++)
-		{
-			if ((dziuraSprite[k].getPosition().x == tablicaX[z]) && (dziuraSprite[k].getPosition().y == tablicaY[z]))
-			{
-				z = 0;
-				break;
+				goto miejsce1;
 			}
 		}
 	}
