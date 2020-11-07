@@ -372,8 +372,11 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 				if (czasOdJedzenia <= 2.0)
 				{
 					zmienKombo(0.25);
-			}
+				}
 				dodajPunkty(100);
+				int wynik = sprawdzWynik();
+				if (wynik >= 20000 && wynik <= 159999)
+					gracz.tekstura = (wynik / 20000);	
 				czasOdJedzenia = 0.0f;
 				zegarJedzenia.restart();
 			}

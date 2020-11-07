@@ -13,5 +13,6 @@ public:
 	~Punkty();
 	void dodajPunkty(int parametr);
 	void zmienKombo(float noweKombo);
+	int sprawdzWynik();
 };
 

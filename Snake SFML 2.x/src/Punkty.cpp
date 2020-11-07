@@ -50,3 +50,7 @@ void Punkty::zmienKombo(float noweKombo)
 	stringKombo += std::to_string(kombo);
 	wyswietlKombo.setString(stringKombo);
 }
+int Punkty::sprawdzWynik()
+{
+	return wartosc;
+}

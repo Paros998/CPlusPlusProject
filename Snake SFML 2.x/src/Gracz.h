@@ -20,11 +20,12 @@ class Gracz
 	float szybkosc, opoznienie,czas;
 	Texture graczCialoTekstura, graczGlowaTekstura;
 	Sprite* graczSprite;
-
+	String tablicaStringCialoTekstura[10];
 public:
 	Clock zegar;
 	float czasomierz;
 	struct Lista* wsk_listy;
+	int tekstura;
 
 public:
 	Gracz();
