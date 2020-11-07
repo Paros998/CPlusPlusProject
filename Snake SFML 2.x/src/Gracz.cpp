@@ -103,51 +103,28 @@ void Gracz::przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur)
 	{
 		if (kolizja(wsk_listy->sprite, dziuraSprite[i]))
 		{
-			if (i == 0)
-			{	
-				if (kierunek == 0)
-				{
-					wsk_listy->x = dziuraSprite[1].getPosition().x;
-					wsk_listy->y = dziuraSprite[1].getPosition().y + 64.0f;
-				}
-				if (kierunek == 1)
-				{
-					wsk_listy->x = dziuraSprite[1].getPosition().x - 64.0f;
-					wsk_listy->y = dziuraSprite[1].getPosition().y;
-				}
-				if (kierunek == 2)
-				{
-					wsk_listy->x = dziuraSprite[1].getPosition().x + 64.0f;
-					wsk_listy->y = dziuraSprite[1].getPosition().y;
-				}
-				if (kierunek == 3)
-				{
-					wsk_listy->x = dziuraSprite[1].getPosition().x;
-					wsk_listy->y = dziuraSprite[1].getPosition().y - 64.0f;
-				}
-			}
-			if (i == 1)
+			int k;
+			if (i == 0) k = 1;
+			else if (i == 1) k = 0;
+			if (kierunek == 0)
 			{
-				if (kierunek == 0)
-				{
-					wsk_listy->x = dziuraSprite[0].getPosition().x;
-					wsk_listy->y = dziuraSprite[0].getPosition().y + 64.0f;
-				}
-				if (kierunek == 1)
-				{
-					wsk_listy->x = dziuraSprite[0].getPosition().x - 64.0f;
-					wsk_listy->y = dziuraSprite[0].getPosition().y;
-				}
-				if (kierunek == 2)
-				{
-					wsk_listy->x = dziuraSprite[0].getPosition().x + 64.0f;
-					wsk_listy->y = dziuraSprite[0].getPosition().y;
-				}
-				if (kierunek == 3)
-				{
-					wsk_listy->x = dziuraSprite[0].getPosition().x;
-					wsk_listy->y = dziuraSprite[0].getPosition().y - 64.0f;
-				}
+				wsk_listy->x = dziuraSprite[k].getPosition().x;
+				wsk_listy->y = dziuraSprite[k].getPosition().y + 64.0f;
+			}
+			if (kierunek == 1)
+			{
+				wsk_listy->x = dziuraSprite[k].getPosition().x - 64.0f;
+				wsk_listy->y = dziuraSprite[k].getPosition().y;
+			}
+			if (kierunek == 2)
+			{
+				wsk_listy->x = dziuraSprite[k].getPosition().x + 64.0f;
+				wsk_listy->y = dziuraSprite[k].getPosition().y;
+			}
+			if (kierunek == 3)
+			{
+				wsk_listy->x = dziuraSprite[k].getPosition().x;
+				wsk_listy->y = dziuraSprite[k].getPosition().y - 64.0f;
 			}
 		}
 	}

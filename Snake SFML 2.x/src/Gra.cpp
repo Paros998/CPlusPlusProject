@@ -176,8 +176,8 @@ void Gra::obliczPozycje()
 		Rect<float> rozmiar = dziuraSprite[i].getGlobalBounds();
 		dziuraSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 	}
-
-	for (int z = 0; z < liczbaPrzeszkod; z++)
+	int z, w, k ;
+	for (z = 0; z < liczbaPrzeszkod; z++)
 	{
 		tablicaX[z] = losuj(24);
 		tablicaY[z] = losuj(12);
@@ -195,11 +195,14 @@ void Gra::obliczPozycje()
 		for (int k = 0; k < 2; k++)
 		{
 			if ((dziuraSprite[k].getPosition().x == tablicaX[z]) && (dziuraSprite[k].getPosition().y == tablicaY[z]))
+			{
 				z = 0;
-			break;
+				break;
+			}
 		}
 	}
-
+	
+	
 	for (int i = 0; i < liczbaPrzeszkod; i++)
 	{
 		int x = tablicaX[i];
@@ -305,7 +308,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno)
 {
 	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0;
 	Gracz gracz;
-	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png");
+	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2-gold.png");
 	Punkty punkty;
 	bool pauzaFlaga = false;
 	int koniec = 0;

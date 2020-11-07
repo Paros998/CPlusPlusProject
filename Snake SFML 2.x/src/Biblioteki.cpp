@@ -1,5 +1,7 @@
 #include "Biblioteki.h"
 
+
+
 void losuj(float& zmienna, int parametr) { zmienna = rand() % parametr; }
 int losuj(int parametr) { return rand() % parametr; }
 
