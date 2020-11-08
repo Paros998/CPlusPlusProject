@@ -20,7 +20,7 @@ class Gracz
 	float szybkosc, opoznienie,czas;
 	Texture graczCialoTekstura, graczGlowaTekstura;
 	Sprite* graczSprite;
-	String tablicaStringCialoTekstura[10],tablicaKroki[3];
+	String tablicaStringCialoTekstura[5][8], tablicaKroki[3];
 	Sound dzwiekTeleport, dzwiekWalnieciePrzeszkody,dzwiekWalniecieSiebie,dzwiekKroki;
 	SoundBuffer buforTeleport, buforPrzeszkoda,buforWaz,buforKroki;
 
@@ -28,7 +28,7 @@ public:
 	Clock zegar,zegar2;
 	float czasomierz;
 	struct Lista* wsk_listy;
-	int tekstura;
+	int tekstura, poziomTekstury;
 
 public:
 	Gracz(int poziom);
@@ -39,6 +39,8 @@ public:
 	bool walnijPrzeszkode(Sprite* przeszkodaSprite, int liczbaPrzeszkod);
 	bool samoUkaszenie();
 	void zerujAnimacje();
+	void ochronaKolizji(Clock zegarAnimacji,int i , int j);
+	void ustawTeksture100();
 
 private:
 	void przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur);

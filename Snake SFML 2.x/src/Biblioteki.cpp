@@ -1,6 +1,6 @@
 #include "Biblioteki.h"
 
-
+extern float glosnoscMuzyki = 15.0f;
 
 void losuj(float& zmienna, int parametr) { zmienna = rand() % parametr; }
 int losuj(int parametr) { return rand() % parametr; }

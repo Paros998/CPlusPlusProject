@@ -8,7 +8,6 @@ enum opcjeTekst {STEROWANIE,GORA,DOL,PRAWO,LEWO,USTAWIENIA,MUZYKA,EKRAN,PELNY,RA
 
 Menu::Menu()
 {
-    poziomMuzyki = 15.0f;
     kierunekTla = 0, aktualnyWyborMenu = START, podstronaMenu = GLOWNA, iloscWynikow = 0, numerMuzyki = 0;
     procX = 1.0, procY = 1.0;
     menuTekstura.loadFromFile("data/Obrazy menu/menuSnake.png");
@@ -134,7 +133,7 @@ Menu::Menu()
     
     for (int i = 0; i < 4; i++)
     {
-    menuMuzyka[i].setVolume(poziomMuzyki);
+    menuMuzyka[i].setVolume(glosnoscMuzyki);
     }
 
     bufor.loadFromFile("data/Muzyka/misc_menu.wav");
@@ -242,7 +241,7 @@ void Menu::przygotujStrone()
         minusSprite.setPosition(1270, 700);
 
         int procent;
-        procent =( poziomMuzyki / 30.0 )*100;
+        procent =( glosnoscMuzyki / 30.0 )*100;
         unsigned int znaki;
         
         linia = "";
@@ -576,22 +575,22 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         obszar = IntRect(plusSprite.getPosition().x * procX, plusSprite.getPosition().y * procY,51 * procX,51 * procY);
         if (obszar.contains(x, y))
         {   
-            if (poziomMuzyki == 30.0f){}
+            if (glosnoscMuzyki == 30.0f){}
             else
             {
-                poziomMuzyki += 3.0f;
-                menuMuzyka[numerMuzyki].setVolume(poziomMuzyki);
+                glosnoscMuzyki += 3.0f;
+                menuMuzyka[numerMuzyki].setVolume(glosnoscMuzyki);
                 break;
             }
         } 
         obszar = IntRect(minusSprite.getPosition().x * procX, minusSprite.getPosition().y * procY,51 * procX,51 * procY);
         if (obszar.contains(x, y))
         {   
-            if (poziomMuzyki == 0.0f){}
+            if (glosnoscMuzyki == 0.0f){}
             else
             {
-                poziomMuzyki -= 3.0f;
-                menuMuzyka[numerMuzyki].setVolume(poziomMuzyki);
+                glosnoscMuzyki -= 3.0f;
+                menuMuzyka[numerMuzyki].setVolume(glosnoscMuzyki);
                 break;
             }
         }

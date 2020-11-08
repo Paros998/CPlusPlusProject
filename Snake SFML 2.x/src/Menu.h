@@ -14,7 +14,6 @@ class Menu
 	Font czcionka;
 	IntRect obszar;
 	int kierunekTla,aktualnyWyborMenu,podstronaMenu,iloscWynikow, numerMuzyki;
-	float poziomMuzyki;
 	double procX, procY;
 public:
 	Menu();

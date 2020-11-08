@@ -2,14 +2,14 @@
 
 enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
-Gra::Gra(int liczbaprzeszkod,int muzyka)
+Gra::Gra(int liczbaprzeszkod,int poziom)
 {	
 	tablicaMuzyka[0] = "data/MuzykaDzwiekiGra/muzykaPoziom1.ogg";
 	tablicaMuzyka[1] = "data/MuzykaDzwiekiGra/muzykaPoziom2.ogg";
 	tablicaMuzyka[2] = "data/MuzykaDzwiekiGra/muzykaPoziom3.ogg";
 
-	muzykaGra.openFromFile(tablicaMuzyka[muzyka]);
-	muzykaGra.setVolume(10.0f);
+	muzykaGra.openFromFile(tablicaMuzyka[poziom]);
+	muzykaGra.setVolume(glosnoscMuzyki);
 
 	buforJedzenie.loadFromFile("data/MuzykaDzwiekiGra/jedzenieJablko.wav");
 	dzwiekJedzenie.setBuffer(buforJedzenie);
@@ -54,16 +54,34 @@ Gra::Gra(int liczbaprzeszkod,int muzyka)
 		ramkaSprite[i] = new Sprite[dlugoscPlanszy+2];
 	}
 
-	int jeden = 0, dwa = 0, trzy = 0;
-	jeden = losuj(8);
-	while (dwa == jeden)	dwa = losuj(8);
-	while (trzy == dwa || trzy == jeden) trzy = losuj(8);
-	planszaTekstura[PIERWSZA_KRATKA].loadFromFile(tablicaTekstur[jeden]);
-	planszaTekstura[PIERWSZA_KRATKA].setSmooth(true);
-	planszaTekstura[DRUGA_KRATKA].loadFromFile(tablicaTekstur[dwa]);
-	planszaTekstura[DRUGA_KRATKA].setSmooth(true);
-	planszaTekstura[RAMKA].loadFromFile(tablicaTekstur[trzy]);
-	planszaTekstura[RAMKA].setSmooth(true);
+	if (poziom == 0)
+	{
+		planszaTekstura[PIERWSZA_KRATKA].loadFromFile(tablicaTekstur[0]);
+		planszaTekstura[PIERWSZA_KRATKA].setSmooth(true);
+		planszaTekstura[DRUGA_KRATKA].loadFromFile(tablicaTekstur[1]);
+		planszaTekstura[DRUGA_KRATKA].setSmooth(true);
+		planszaTekstura[RAMKA].loadFromFile(tablicaTekstur[4]);
+		planszaTekstura[RAMKA].setSmooth(true);
+
+	}
+	else if (poziom == 1)
+	{
+		planszaTekstura[PIERWSZA_KRATKA].loadFromFile(tablicaTekstur[2]);
+		planszaTekstura[PIERWSZA_KRATKA].setSmooth(true);
+		planszaTekstura[DRUGA_KRATKA].loadFromFile(tablicaTekstur[3]);
+		planszaTekstura[DRUGA_KRATKA].setSmooth(true);
+		planszaTekstura[RAMKA].loadFromFile(tablicaTekstur[5]);
+		planszaTekstura[RAMKA].setSmooth(true);
+	}
+	else if (poziom == 2)
+	{
+		planszaTekstura[PIERWSZA_KRATKA].loadFromFile(tablicaTekstur[5]);
+		planszaTekstura[PIERWSZA_KRATKA].setSmooth(true);
+		planszaTekstura[DRUGA_KRATKA].loadFromFile(tablicaTekstur[7]);
+		planszaTekstura[DRUGA_KRATKA].setSmooth(true);
+		planszaTekstura[RAMKA].loadFromFile(tablicaTekstur[2]);
+		planszaTekstura[RAMKA].setSmooth(true);
+	}
 
 	przeszkodaTekstura[0].loadFromFile(tablicaTeksturPrzeszkod[0]);
 	przeszkodaTekstura[0].setSmooth(true);
@@ -335,13 +353,13 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 	muzykaGra.play();
 	muzykaGra.setLoop(true);
 
-	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0,czasOdAP = 0.0f,czasOdAK = 0.0f;
+	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0,czasOdAP = 0.0f,czasOdAK = 0.0f, aktualnyCzasOchrony = 0.0f,poprzedniCzasOchrony = 0.0f;
 	Gracz gracz(poziom);
 	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png");
 	Punkty punkty;
 	bool pauzaFlaga = false;
 	int koniec = 0;
-	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia,zegarAnimacjiPunkty,zegarAnimacjiKombo;
+	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia,zegarAnimacjiPunkty,zegarAnimacjiKombo,zegarAnimacjiWeza;
 	pokarm.ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
 	while (okno.isOpen())
 	{
@@ -410,7 +428,17 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
 			//if (!przegrana(gracz, zegarOchronyOdrodzenia))
 			//	return false;
-
+			aktualnyCzasOchrony = zegarOchronyOdrodzenia.getElapsedTime().asSeconds();
+			if (aktualnyCzasOchrony <= 5.0f)
+			{
+				gracz.ochronaKolizji(zegarAnimacjiWeza, gracz.tekstura, gracz.poziomTekstury);
+				zegarAnimacjiWeza.restart();
+			}
+			else
+			{
+				gracz.ustawTeksture100();
+				zegarAnimacjiWeza.restart();
+			}
 			// RYSOWANIE
 			okno.clear(Color::Blue);
 			rysujPlansze(okno);

@@ -9,14 +9,14 @@ Aplikacja::Aplikacja()
 void Aplikacja::start()
 {       
     srand(time(0));
-    int poziom = P1;
+    int poziom = MENU;
     while (true)
     {
-        //if (poziom == MENU)
-       // {   
-       //     Menu menu;
-       //     poziom = menu.start(oknoAplikacji);
-       // }
+       if (poziom == MENU)
+        {   
+            Menu menu;
+            poziom = menu.start(oknoAplikacji);
+        }
         if (poziom == P1)
         {
             Poziom1 p1;
