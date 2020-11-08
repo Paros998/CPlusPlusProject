@@ -50,14 +50,14 @@ Gracz::Gracz(int poziom)
 	dzwiekKroki.setBuffer(buforKroki);
 	dzwiekKroki.setVolume(2.0f);
 
-	tablicaStringCialoTekstura[0] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_green.png";
-	tablicaStringCialoTekstura[1] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_grey.png";
-	tablicaStringCialoTekstura[2] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_pink.png";
-	tablicaStringCialoTekstura[3] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_cyan.png";
-	tablicaStringCialoTekstura[4] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_blue.png";
-	tablicaStringCialoTekstura[5] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_red.png";
-	tablicaStringCialoTekstura[6] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_purple.png";
-	tablicaStringCialoTekstura[7] = "data/Sprity do gry/Gracz i przedmioty/snake_cialo_yellow.png";
+	tablicaStringCialoTekstura[0] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_green.png";
+	tablicaStringCialoTekstura[1] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_grey.png";
+	tablicaStringCialoTekstura[2] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_pink.png";
+	tablicaStringCialoTekstura[3] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_cyan.png";
+	tablicaStringCialoTekstura[4] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_blue.png";
+	tablicaStringCialoTekstura[5] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_red.png";
+	tablicaStringCialoTekstura[6] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_purple.png";
+	tablicaStringCialoTekstura[7] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_yellow.png";
 
 	tekstura = 0;
 
@@ -71,7 +71,7 @@ Gracz::Gracz(int poziom)
 	graczSprite[1].setTexture(graczCialoTekstura);
 	Rect<float> _rozmiar = graczSprite[1].getGlobalBounds();
 	graczSprite[1].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
-	
+
 	graczSprite[GLOWA].setScale(0.85f, 1.0f);
 	graczSprite[CIALO].setScale(0.85f, 1.0f);
 
@@ -137,7 +137,7 @@ bool Gracz::walnijPrzeszkode(Sprite * przeszkodaSprite,int liczbaPrzeszkod)
 	for (int i = 0; i < liczbaPrzeszkod; i++)
 	{
 		if (kolizja(wsk_listy->sprite, przeszkodaSprite[i]))
-		{	
+		{
 			dzwiekWalnieciePrzeszkody.play();
 			return true;
 		}
@@ -150,7 +150,7 @@ void Gracz::przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur)
 	for (int i = 0; i < liczbaDziur; i++)
 	{
 		if (kolizja(wsk_listy->sprite, dziuraSprite[i]))
-		{	
+		{
 			dzwiekTeleport.play();
 			int k;
 			if (i == 0) k = 1;
@@ -180,10 +180,10 @@ void Gracz::przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur)
 }
 
 void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod)
-{	
+{
 	if (zegar2.getElapsedTime().asSeconds() >= 0.5f)
 	{
-		dzwiekKroki.play();	
+		dzwiekKroki.play();
 		zegar2.restart();
 	}
 	Lista* koniec = wsk_listy;
@@ -219,7 +219,7 @@ void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkoda
 		wsk_listy->y -= szybkosc;
 		break;
 	}
-	
+
 	przejdzPrzezSciane();
 	przejdzPrzezDziure(dziuraSprite, liczbaDziur);
 }
@@ -227,25 +227,25 @@ void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkoda
 void Gracz::sterowanie()
 {
 	if (Keyboard::isKeyPressed(Keyboard::Left))
-	{	
+	{
 		if (kierunek == 2)return;
 		kierunek = 1;
 		wsk_listy->sprite.setRotation(90.0f);
 	}
 	if (Keyboard::isKeyPressed(Keyboard::Right))
-	{	
+	{
 		if (kierunek == 1)return;
 		kierunek = 2;
 		wsk_listy->sprite.setRotation(-90.0f);
 	}
 	if (Keyboard::isKeyPressed(Keyboard::Up))
-	{	
+	{
 		if (kierunek == 0)return;
 		kierunek = 3;
 		wsk_listy->sprite.setRotation(180.0f);
 	}
 	if (Keyboard::isKeyPressed(Keyboard::Down))
-	{	
+	{
 		if (kierunek == 3)return;
 		kierunek = 0;
 		wsk_listy->sprite.setRotation(0.0f);
@@ -253,7 +253,7 @@ void Gracz::sterowanie()
 }
 
 void Gracz::obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod)
-{	
+{
 	czas = zegar.getElapsedTime().asSeconds();
 	zegar.restart();
 	czasomierz += czas;
@@ -266,7 +266,7 @@ void Gracz::obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSp
 }
 
 bool Gracz::samoUkaszenie()
-{	
+{
 	dzwiekWalniecieSiebie.play();
 	Lista* wsk = wsk_listy->nast;
 	while (wsk != NULL)
