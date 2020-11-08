@@ -1,8 +1,8 @@
 #include "Menu.h"
 
 enum wyborMenu  {START,OPCJE,WYNIKI,TWORCY,WYJSCIE};
-enum wyborPodstronyMenu {GLOWNA,POSTART,POOPCJE,POWYNIKI,POTWORCY,WYBORPOZIOMU};
-enum wyborPoStart {POZIOM1,POZIOM2,POZIOM3,WSTECZ};
+enum wyborPodstronyMenu {GLOWNA,POSTART,POOPCJE,POWYNIKI,POTWORCY,PRZEDGRA};
+enum wyborPoStart {DALEJ,WSTECZ};
 enum wyborPoWynikiPoTworcy {POWROT};
 enum opcjeTekst {STEROWANIE,GORA,DOL,PRAWO,LEWO,USTAWIENIA,MUZYKA,EKRAN,PELNY,RAMKA,WSTEC};
 
@@ -78,6 +78,59 @@ Menu::Menu()
     tablicaText = new Text[5];
     opcjeText = new Text[11];
     wynikiText = new Text[5];
+
+    teksturaSprite = new Texture[7];
+    tablicaSprite = new Sprite[7];
+
+    teksturaSprite[0].loadFromFile("data/Obrazy menu/jablko_animacja2.png");
+    teksturaSprite[0].setSmooth(true);
+    tablicaSprite[0].setTexture(teksturaSprite[0]);
+    tablicaSprite[0].setScale(0.26f, 0.26f);
+
+    teksturaSprite[1].loadFromFile("data/Obrazy menu/jablko_animacja2-gold.png");
+    teksturaSprite[1].setSmooth(true);
+    tablicaSprite[1].setTexture(teksturaSprite[1]);
+    tablicaSprite[1].setScale(0.26f, 0.26f);
+
+    teksturaSprite[2].loadFromFile("data/Obrazy menu/jablko_animacja2-gold.png");
+    teksturaSprite[2].setSmooth(true);
+    tablicaSprite[2].setTexture(teksturaSprite[2]);
+    tablicaSprite[2].setScale(0.26f, 0.26f);
+
+    teksturaSprite[3].loadFromFile("data/Sprity do gry/Plansza/dziura.png");
+    teksturaSprite[3].setSmooth(true);
+    tablicaSprite[3].setTexture(teksturaSprite[3]);
+    tablicaSprite[3].setScale(1.0, 1.0);
+
+    teksturaSprite[4].loadFromFile("data/Sprity do gry/Plansza/przeszkoda1.png");
+    teksturaSprite[4].setSmooth(true);
+    tablicaSprite[4].setTexture(teksturaSprite[4]);
+    tablicaSprite[4].setScale(1.0, 1.0);
+
+    teksturaSprite[5].loadFromFile("data/Sprity do gry/Plansza/kamien3.png");
+    teksturaSprite[5].setSmooth(true);
+    tablicaSprite[5].setTexture(teksturaSprite[5]);
+    tablicaSprite[5].setScale(1.0, 1.0);
+
+    teksturaSprite[6].loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa12.png");
+    teksturaSprite[6].setSmooth(true);
+    tablicaSprite[6].setTexture(teksturaSprite[6]);
+    tablicaSprite[6].setScale(1.0, 1.0);
+
+    for (int i = 0; i < 3; i++)
+    {
+        tablicaSprite[i].setPosition(725, ((i + 1) * 70.0 + 250.0));
+        Rect<float> rozmiar = tablicaSprite[i].getGlobalBounds();
+        tablicaSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+    }
+
+    for (int i = 3; i < 7; i++)
+    {
+        tablicaSprite[i].setPosition(750,( (i+1) * 80.0 + 250.0 ));
+        Rect<float> rozmiar = tablicaSprite[i].getGlobalBounds();
+        tablicaSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+    }
+
 
     for (int i = 0; i < 5; i++)
     {
@@ -192,15 +245,11 @@ void Menu::przygotujStrone()
     case POSTART:
         tablicaText[aktualnyWyborMenu].setFillColor(Color::Red);
         tablicaText[aktualnyWyborMenu].setOutlineColor(Color::Black);
-        tablicaText[POZIOM1].setString("POZIOM 1");
-        tablicaText[POZIOM2].setString("POZIOM 2");
-        tablicaText[POZIOM3].setString("POZIOM 3");
+        tablicaText[DALEJ].setString("DALEJ");
         tablicaText[WSTECZ].setString("WSTECZ");
-
-        tablicaText[POZIOM1].setPosition(855, 250);
-        tablicaText[POZIOM2].setPosition(855, 400);
-        tablicaText[POZIOM3].setPosition(855, 550);
-        tablicaText[WSTECZ].setPosition(875, 700);
+        tablicaText[DALEJ].setPosition(890, 250);
+        tablicaText[WSTECZ].setPosition(870, 850);
+      
         break;
     case POOPCJE:
         for (int i = 0; i < 11; i++)
@@ -324,9 +373,13 @@ void Menu::rysuj(RenderWindow& okno)
     case POSTART:
         okno.draw(strzalkaSprite);
         przygotujStrone();
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 2; i++)
         {   
             okno.draw(tablicaText[i]);
+        }
+        for (int i = 0; i < 7; i++)
+        {
+            okno.draw(tablicaSprite[i]);
         }
         break;
     case POOPCJE:
@@ -410,14 +463,9 @@ void Menu::aktualizacjaMenu()
             strzalkaSprite.setPosition(725, 206);
             break;
         case 1:
-            strzalkaSprite.setPosition(725, 366);
+            strzalkaSprite.setPosition(705, 806);
             break;
-        case 2:
-            strzalkaSprite.setPosition(725, 506);
-            break;
-        case 3:
-            strzalkaSprite.setPosition(725, 666);
-            break;
+       
         }
         break;
     case POOPCJE:
@@ -473,7 +521,7 @@ void Menu::ruchMyszka(int x,int y)
         }
         break;
     case POSTART:
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 2; i++)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
@@ -536,7 +584,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         }
         break;
     case POSTART:
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 2; i++)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
@@ -660,18 +708,11 @@ void Menu::enter( RenderWindow& okno)
     case POSTART:
         switch (aktualnyWyborMenu)
         {
-        case POZIOM1:
+        case DALEJ:
             aktualnyWyborMenu = 0;
-            podstronaMenu = WYBORPOZIOMU;
+            podstronaMenu = PRZEDGRA;
             break;
-        case POZIOM2:
-            aktualnyWyborMenu = 1;
-            podstronaMenu = WYBORPOZIOMU;
-            break;
-        case POZIOM3:
-            aktualnyWyborMenu = 2;
-            podstronaMenu = WYBORPOZIOMU;
-            break;
+        
         case WSTECZ:
             aktualnyWyborMenu = 0;
             podstronaMenu = GLOWNA;
@@ -724,7 +765,7 @@ int Menu::start(RenderWindow& okno)
     while (okno.isOpen())
     {
         if (menuMuzyka[numerMuzyki].getStatus() == SoundStream::Stopped)
-        {   
+        {
             numerMuzyki++;
             if (numerMuzyki > 3)
             {
@@ -736,7 +777,7 @@ int Menu::start(RenderWindow& okno)
         Event zdarzenie;
         while (okno.pollEvent(zdarzenie))
         {
-            switch(zdarzenie.type)
+            switch (zdarzenie.type)
             {
                 // Case zdarzenie:
                 // Obs³uga zdarzenia
@@ -752,13 +793,13 @@ int Menu::start(RenderWindow& okno)
                 break;
             case Event::KeyPressed:
                 if (zdarzenie.key.code == Keyboard::Down)
-                {   
+                {
                     switch (podstronaMenu)
                     {
                     case GLOWNA:
                         if (aktualnyWyborMenu == WYJSCIE)
                             continue;
-                        else 
+                        else
                         {
                             aktualnyWyborMenu++;
                             aktualizacjaMenu();
@@ -806,7 +847,7 @@ int Menu::start(RenderWindow& okno)
                         }
                         break;
                     case POSTART:
-                        if (aktualnyWyborMenu == POZIOM1)
+                        if (aktualnyWyborMenu == DALEJ)
                             continue;
                         else
                         {
@@ -834,7 +875,7 @@ int Menu::start(RenderWindow& okno)
                     }
                 }
                 if (zdarzenie.key.code == Keyboard::Escape)
-                {   
+                {
                     if (podstronaMenu != GLOWNA)
                     {
                         aktualnyWyborMenu = 0;
@@ -851,18 +892,12 @@ int Menu::start(RenderWindow& okno)
                 if (zdarzenie.key.code == Keyboard::Enter)
                 {
                     enter(okno);
-                    if (podstronaMenu == WYBORPOZIOMU)
+                    if (podstronaMenu == PRZEDGRA)
                     {
                         switch (aktualnyWyborMenu)
                         {
                         case 0:
                             return 1;
-                            break;
-                        case 1:
-                            return 2;
-                            break;
-                        case 2:
-                            return 3;
                             break;
                         }
                     }
@@ -882,19 +917,13 @@ int Menu::start(RenderWindow& okno)
                     double x, y;
                     x = zdarzenie.mouseButton.x;
                     y = zdarzenie.mouseButton.y;
-                    klikMyszka(x, y,okno);
-                    if (podstronaMenu == WYBORPOZIOMU)
+                    klikMyszka(x, y, okno);
+                    if (podstronaMenu == PRZEDGRA)
                     {
                         switch (aktualnyWyborMenu)
                         {
                         case 0:
                             return 1;
-                            break;
-                        case 1:
-                            return 2;
-                            break;
-                        case 2:
-                            return 3;
                             break;
                         }
                     }
@@ -910,5 +939,5 @@ int Menu::start(RenderWindow& okno)
         rysuj(okno);
         okno.display();
     }
-	return 0;
+    return 0;
 }
