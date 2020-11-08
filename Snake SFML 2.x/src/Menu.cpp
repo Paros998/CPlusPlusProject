@@ -119,14 +119,14 @@ Menu::Menu()
 
     for (int i = 0; i < 3; i++)
     {
-        tablicaSprite[i].setPosition(725, ((i + 1) * 70.0 + 250.0));
+        tablicaSprite[i].setPosition(300, ((i + 1) * 70.0 + 250.0));
         Rect<float> rozmiar = tablicaSprite[i].getGlobalBounds();
         tablicaSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
     }
 
     for (int i = 3; i < 7; i++)
     {
-        tablicaSprite[i].setPosition(750,( (i+1) * 80.0 + 250.0 ));
+        tablicaSprite[i].setPosition(325,( (i+1) * 80.0 + 250.0 ));
         Rect<float> rozmiar = tablicaSprite[i].getGlobalBounds();
         tablicaSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
     }
@@ -249,7 +249,36 @@ void Menu::przygotujStrone()
         tablicaText[WSTECZ].setString("WSTECZ");
         tablicaText[DALEJ].setPosition(890, 250);
         tablicaText[WSTECZ].setPosition(870, 850);
-      
+        
+        opcjeText[0].setString("Ukoñcz poziomy jedzac jablka!");
+        opcjeText[0].setPosition(tablicaSprite[0].getPosition().x + 102.0f, tablicaSprite[0].getPosition().y);
+        opcjeText[1].setString("Nabijaj 5 kombo pod rzad i ciesz lepszymi punktami i ochrona!");
+        opcjeText[1].setPosition(tablicaSprite[1].getPosition().x + 102.0f, tablicaSprite[1].getPosition().y );
+
+        opcjeText[2].setString("Wypatruj tego rzadkiego pokarmu, potrafi uciac 10 ogonów!");
+        opcjeText[2].setPosition(tablicaSprite[2].getPosition().x + 102.0f, tablicaSprite[2].getPosition().y );
+
+        opcjeText[3].setString("Madrze korzystaj z systemu teleportacji dziurowej!");
+        opcjeText[3].setPosition(tablicaSprite[3].getPosition().x + 70.0f, tablicaSprite[3].getPosition().y - 20.0f);
+
+        opcjeText[4].setString("Unikaj lepiej tych drobiazgów o róznym wygladzie!");
+        opcjeText[4].setPosition(tablicaSprite[4].getPosition().x + 70.0f, tablicaSprite[4].getPosition().y - 20.0f);
+
+        opcjeText[5].setString("I nie bój siê wchodzic w sciany!");
+        opcjeText[5].setPosition(tablicaSprite[5].getPosition().x + 70.0f, tablicaSprite[5].getPosition().y - 20.0f);
+
+        opcjeText[6].setString("Lepiej nie kieruj swojej glodnej paszczy na wlasne cialo!");
+        opcjeText[6].setPosition(tablicaSprite[6].getPosition().x + 70.0f, tablicaSprite[6].getPosition().y - 20.0f);
+
+        for (int i = 0; i < 7; i++)
+        {
+            opcjeText[i].setCharacterSize(40);
+            opcjeText[i].setFont(czcionka);
+            opcjeText[i].setFillColor(Color::Black);
+            opcjeText[i].setOutlineColor(Color::Red);
+            opcjeText[i].setOutlineThickness(1.0f);
+        }
+
         break;
     case POOPCJE:
         for (int i = 0; i < 11; i++)
@@ -380,6 +409,7 @@ void Menu::rysuj(RenderWindow& okno)
         for (int i = 0; i < 7; i++)
         {
             okno.draw(tablicaSprite[i]);
+            okno.draw(opcjeText[i]);
         }
         break;
     case POOPCJE:
@@ -457,13 +487,14 @@ void Menu::aktualizacjaMenu()
         }
         tablicaText[aktualnyWyborMenu].setFillColor(Color::Red);
         tablicaText[aktualnyWyborMenu].setOutlineColor(Color::Black);
+
         switch (aktualnyWyborMenu)
         {
         case 0:
-            strzalkaSprite.setPosition(725, 206);
+            strzalkaSprite.setPosition(300, 206);
             break;
         case 1:
-            strzalkaSprite.setPosition(705, 806);
+            strzalkaSprite.setPosition(280, 806);
             break;
        
         }
