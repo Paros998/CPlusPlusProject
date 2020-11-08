@@ -431,7 +431,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			aktualnyCzasOchrony = zegarOchronyOdrodzenia.getElapsedTime().asSeconds();
 			if (aktualnyCzasOchrony <= 5.0f)
 			{
-				gracz.ochronaKolizji(zegarAnimacjiWeza, gracz.tekstura, gracz.poziomTekstury);
+				gracz.ochronaKolizji();
 			}
 			else
 			{

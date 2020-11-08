@@ -14,18 +14,22 @@ struct Lista
 	}
 };
 
+class Animacja;
+
 class Gracz
 {
 	int kierunek;
 	float szybkosc, opoznienie,czas;
+	bool ustawTeksture;
 	Texture graczCialoTekstura, graczGlowaTekstura;
 	Sprite* graczSprite;
-	String tablicaStringCialoTekstura[5][8], tablicaKroki[3];
+	String tablicaStringCialoTekstura[2][8], tablicaKroki[3];
 	Sound dzwiekTeleport, dzwiekWalnieciePrzeszkody,dzwiekWalniecieSiebie,dzwiekKroki;
 	SoundBuffer buforTeleport, buforPrzeszkoda,buforWaz,buforKroki;
+	Animacja* animacjaCiala;
 
 public:
-	Clock zegar,zegar2;
+	Clock zegar,zegarDzwieki;
 	float czasomierz;
 	struct Lista* wsk_listy;
 	int tekstura, poziomTekstury;
@@ -39,7 +43,7 @@ public:
 	bool walnijPrzeszkode(Sprite* przeszkodaSprite, int liczbaPrzeszkod);
 	bool samoUkaszenie();
 	void zerujAnimacje();
-	void ochronaKolizji(Clock zegarAnimacji,int i , int j);
+	void ochronaKolizji();
 	void ustawTeksture100();
 
 private:

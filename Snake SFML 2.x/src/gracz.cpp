@@ -17,8 +17,8 @@ void Gracz::dodajElement()
 		{
 			Lista* wsk = wsk_listy;
 			przejdzNaKoniecListy(&wsk);
-			graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[0][tekstura]);
-			graczSprite[CIALO].setTexture(graczCialoTekstura);
+			//graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[0][tekstura]);
+			//graczSprite[CIALO].setTexture(graczCialoTekstura);
 			nowy_element->sprite = graczSprite[CIALO];
 			nowy_element->sprite.setRotation(wsk->sprite.getRotation());
 			nowy_element->y = wsk->y;
@@ -59,57 +59,35 @@ Gracz::Gracz(int poziom)
 	tablicaStringCialoTekstura[0][6] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_purple.png";
 	tablicaStringCialoTekstura[0][7] = "data/Sprity do gry/Gracz i przedmioty/cialo/snake_cialo_yellow.png";
 
-	tablicaStringCialoTekstura[1][0] = "data/Sprity do gry/Gracz i przedmioty/cialo80/snake_cialo_green.png";
-	tablicaStringCialoTekstura[1][1] = "data/Sprity do gry/Gracz i przedmioty/cialo80/snake_cialo_grey.png";
-	tablicaStringCialoTekstura[1][2] = "data/Sprity do gry/Gracz i przedmioty/cialo80/snake_cialo_pink.png";
-	tablicaStringCialoTekstura[1][3] = "data/Sprity do gry/Gracz i przedmioty/cialo80/snake_cialo_cyan.png";
-	tablicaStringCialoTekstura[1][4] = "data/Sprity do gry/Gracz i przedmioty/cialo80/snake_cialo_blue.png";
-	tablicaStringCialoTekstura[1][5] = "data/Sprity do gry/Gracz i przedmioty/cialo80/snake_cialo_red.png";
-	tablicaStringCialoTekstura[1][6] = "data/Sprity do gry/Gracz i przedmioty/cialo80/snake_cialo_purple.png";
-	tablicaStringCialoTekstura[1][7] = "data/Sprity do gry/Gracz i przedmioty/cialo80/snake_cialo_yellow.png";
+	tablicaStringCialoTekstura[1][0] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_green_trans.png";
+	tablicaStringCialoTekstura[1][1] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_grey_trans.png";
+	tablicaStringCialoTekstura[1][2] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_pink_trans.png";
+	tablicaStringCialoTekstura[1][3] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_cyan_trans.png";
+	tablicaStringCialoTekstura[1][4] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_blue_trans.png";
+	tablicaStringCialoTekstura[1][5] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_red_trans.png";
+	tablicaStringCialoTekstura[1][6] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_purple_trans.png";
+	tablicaStringCialoTekstura[1][7] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_yellow_trans.png";
 	
-	tablicaStringCialoTekstura[2][0] = "data/Sprity do gry/Gracz i przedmioty/cialo60/snake_cialo_green.png";
-	tablicaStringCialoTekstura[2][1] = "data/Sprity do gry/Gracz i przedmioty/cialo60/snake_cialo_grey.png";
-	tablicaStringCialoTekstura[2][2] = "data/Sprity do gry/Gracz i przedmioty/cialo60/snake_cialo_pink.png";
-	tablicaStringCialoTekstura[2][3] = "data/Sprity do gry/Gracz i przedmioty/cialo60/snake_cialo_cyan.png";
-	tablicaStringCialoTekstura[2][4] = "data/Sprity do gry/Gracz i przedmioty/cialo60/snake_cialo_blue.png";
-	tablicaStringCialoTekstura[2][5] = "data/Sprity do gry/Gracz i przedmioty/cialo60/snake_cialo_red.png";
-	tablicaStringCialoTekstura[2][6] = "data/Sprity do gry/Gracz i przedmioty/cialo60/snake_cialo_purple.png";
-	tablicaStringCialoTekstura[2][7] = "data/Sprity do gry/Gracz i przedmioty/cialo60/snake_cialo_yellow.png";
-	
-	tablicaStringCialoTekstura[3][0] = "data/Sprity do gry/Gracz i przedmioty/cialo40/snake_cialo_green.png";
-	tablicaStringCialoTekstura[3][1] = "data/Sprity do gry/Gracz i przedmioty/cialo40/snake_cialo_grey.png";
-	tablicaStringCialoTekstura[3][2] = "data/Sprity do gry/Gracz i przedmioty/cialo40/snake_cialo_pink.png";
-	tablicaStringCialoTekstura[3][3] = "data/Sprity do gry/Gracz i przedmioty/cialo40/snake_cialo_cyan.png";
-	tablicaStringCialoTekstura[3][4] = "data/Sprity do gry/Gracz i przedmioty/cialo40/snake_cialo_blue.png";
-	tablicaStringCialoTekstura[3][5] = "data/Sprity do gry/Gracz i przedmioty/cialo40/snake_cialo_red.png";
-	tablicaStringCialoTekstura[3][6] = "data/Sprity do gry/Gracz i przedmioty/cialo40/snake_cialo_purple.png";
-	tablicaStringCialoTekstura[3][7] = "data/Sprity do gry/Gracz i przedmioty/cialo40/snake_cialo_yellow.png";
-	
-	tablicaStringCialoTekstura[4][0] = "data/Sprity do gry/Gracz i przedmioty/cialo20/snake_cialo_green.png";
-	tablicaStringCialoTekstura[4][1] = "data/Sprity do gry/Gracz i przedmioty/cialo20/snake_cialo_grey.png";
-	tablicaStringCialoTekstura[4][2] = "data/Sprity do gry/Gracz i przedmioty/cialo20/snake_cialo_pink.png";
-	tablicaStringCialoTekstura[4][3] = "data/Sprity do gry/Gracz i przedmioty/cialo20/snake_cialo_cyan.png";
-	tablicaStringCialoTekstura[4][4] = "data/Sprity do gry/Gracz i przedmioty/cialo20/snake_cialo_blue.png";
-	tablicaStringCialoTekstura[4][5] = "data/Sprity do gry/Gracz i przedmioty/cialo20/snake_cialo_red.png";
-	tablicaStringCialoTekstura[4][6] = "data/Sprity do gry/Gracz i przedmioty/cialo20/snake_cialo_purple.png";
-	tablicaStringCialoTekstura[4][7] = "data/Sprity do gry/Gracz i przedmioty/cialo20/snake_cialo_yellow.png";
 
 	tekstura = 0, poziomTekstury = 0;
 
 	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa12.png");
-	graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[0][tekstura]);
+	graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[1][tekstura]);
+	ustawTeksture = true;
+
+	animacjaCiala = new Animacja(graczCialoTekstura, Vector2u(4, 1), 0.2f);
 	graczSprite = new Sprite[2];
-	graczSprite[0].setTexture(graczGlowaTekstura);
-	Rect<float> rozmiar = graczSprite[0].getGlobalBounds();
-	graczSprite[0].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 
-	graczSprite[1].setTexture(graczCialoTekstura);
-	Rect<float> _rozmiar = graczSprite[1].getGlobalBounds();
-	graczSprite[1].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+	graczSprite[GLOWA].setTexture(graczGlowaTekstura);
+	Rect<float> rozmiar = graczSprite[GLOWA].getGlobalBounds();
+	graczSprite[GLOWA].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
 
-	graczSprite[GLOWA].setScale(0.85f, 1.0f);
-	graczSprite[CIALO].setScale(0.85f, 1.0f);
+	graczSprite[CIALO].setTexture(graczCialoTekstura);
+	Rect<float> _rozmiar = graczSprite[CIALO].getGlobalBounds();
+	graczSprite[CIALO].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+
+	for(int i = 0; i < 2; i++)
+		graczSprite[i].setScale(0.85f, 1.0f);
 
 	czas = czasomierz = 0.0f;
 	kierunek = 0;
@@ -142,6 +120,7 @@ Gracz::~Gracz()
 		wsk_listy = nast;
 	}
 	delete[] graczSprite;
+	delete animacjaCiala;
 }
 
 void Gracz::przejdzPrzezSciane()
@@ -217,10 +196,10 @@ void Gracz::przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur)
 
 void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod)
 {
-	if (zegar2.getElapsedTime().asSeconds() >= 0.5f)
+	if (zegarDzwieki.getElapsedTime().asSeconds() >= 0.5f)
 	{
 		dzwiekKroki.play();
-		zegar2.restart();
+		zegarDzwieki.restart();
 	}
 	Lista* koniec = wsk_listy;
 	przejdzNaKoniecListy(&koniec);
@@ -332,25 +311,33 @@ void Gracz::zerujAnimacje()
 	czasomierz = 0.0f;
 }
 
-void Gracz::ochronaKolizji(Clock zegarAnimacji,int i,int j)
+void Gracz::ochronaKolizji()
 {
-	float zmianaSkina = 2.0f;
-	float deltaczas = zegarAnimacji.getElapsedTime().asSeconds();
-	float calkowityczas = 0.0f;
-	calkowityczas += deltaczas;
-	if (calkowityczas >= zmianaSkina)
+	ustawTeksture = true;
+	animacjaCiala->aktualizuj(0);
+	Lista* wsk = wsk_listy->nast;
+	while (wsk != NULL)
 	{
-		calkowityczas -= zmianaSkina;
-		j++;
-		if (j == 5) j = 0;
-		graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[j][i]);
-		poziomTekstury = j;
-		zegarAnimacji.restart();
-	}	
+		wsk->sprite.setTextureRect(animacjaCiala->obszar);
+		wsk = wsk->nast;
+	}
 }
 
 void Gracz::ustawTeksture100()
 {
-	poziomTekstury = 0;
-	graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[poziomTekstury][tekstura]);
+	if (ustawTeksture)
+	{
+		poziomTekstury = 0;
+		graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[0][tekstura]);
+		graczSprite[CIALO].setTexture(graczCialoTekstura);
+		graczSprite[CIALO].setTextureRect(IntRect(0, 0, 64, 64));
+		Lista* wsk = wsk_listy->nast;
+		while (wsk != NULL)
+		{
+			wsk->sprite = graczSprite[CIALO];
+			wsk->sprite.setRotation(wsk->poprz->sprite.getRotation());
+			wsk = wsk->nast;
+		}
+		ustawTeksture = false;
+	}
 }
