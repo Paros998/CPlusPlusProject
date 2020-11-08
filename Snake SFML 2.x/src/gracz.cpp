@@ -128,7 +128,7 @@ Gracz::Gracz(int poziom)
 	}
 
 	// Dodanie elementów listy
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 4; i++)
 		dodajElement();
 }
 
@@ -334,15 +334,18 @@ void Gracz::zerujAnimacje()
 
 void Gracz::ochronaKolizji(Clock zegarAnimacji,int i,int j)
 {
-	float zmianaSkina = 0.5f;
-	float czas = zegarAnimacji.getElapsedTime().asSeconds();
-	if ( czas >= zmianaSkina)
+	float zmianaSkina = 2.0f;
+	float deltaczas = zegarAnimacji.getElapsedTime().asSeconds();
+	float calkowityczas = 0.0f;
+	calkowityczas += deltaczas;
+	if (calkowityczas >= zmianaSkina)
 	{
-		czas -= zmianaSkina;
+		calkowityczas -= zmianaSkina;
 		j++;
 		if (j == 5) j = 0;
 		graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[j][i]);
 		poziomTekstury = j;
+		zegarAnimacji.restart();
 	}	
 }
 

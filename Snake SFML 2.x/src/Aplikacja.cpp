@@ -9,7 +9,7 @@ Aplikacja::Aplikacja()
 void Aplikacja::start()
 {       
     srand(time(0));
-    int poziom = MENU;
+    int poziom = P1;
     while (true)
     {
        if (poziom == MENU)

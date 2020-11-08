@@ -432,12 +432,10 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			if (aktualnyCzasOchrony <= 5.0f)
 			{
 				gracz.ochronaKolizji(zegarAnimacjiWeza, gracz.tekstura, gracz.poziomTekstury);
-				zegarAnimacjiWeza.restart();
 			}
 			else
 			{
 				gracz.ustawTeksture100();
-				zegarAnimacjiWeza.restart();
 			}
 			// RYSOWANIE
 			okno.clear(Color::Blue);
