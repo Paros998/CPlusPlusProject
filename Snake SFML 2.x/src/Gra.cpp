@@ -356,11 +356,15 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0,czasOdAP = 0.0f,czasOdAK = 0.0f, aktualnyCzasOchrony = 0.0f,poprzedniCzasOchrony = 0.0f;
 	Gracz gracz(poziom);
 	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png");
+	Pokarm pokarmzloty("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2-gold.png");
+	pokarmzloty.bonus = 1;
+	pokarmzloty.wartoscPunktow = 500;
+	Pokarm *wskaznikNaPokarm = &pokarm;
 	Punkty punkty;
 	bool pauzaFlaga = false;
-	int koniec = 0;
+	int koniec = 0,iloscKombo = 0;
 	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia,zegarAnimacjiPunkty,zegarAnimacjiKombo,zegarAnimacjiWeza;
-	pokarm.ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
+	wskaznikNaPokarm->ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
 	while (okno.isOpen())
 	{
 		Event zdarzenie;
@@ -379,7 +383,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 					{
 						pauzaFlaga = true;
 						koniec = pauza(okno);
-						pokarm.wyzerujAnimacje();
+						wskaznikNaPokarm->wyzerujAnimacje();
 						gracz.zerujAnimacje();
 					}
 					if (koniec == 0)
@@ -395,24 +399,41 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 		if (czasomierz >= milisekunda)
 		{
 			// POKARM
-			if (pokarm.sprawdzCzyZjedzony(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod) == true)
+			if (wskaznikNaPokarm->sprawdzCzyZjedzony(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod) == true)
 			{	
 				dzwiekJedzenie.play();
 				czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
+				if (wskaznikNaPokarm->bonus == 1) zegarOchronyOdrodzenia.restart();
 				if (czasOdJedzenia <= 2.0)
 				{
 					zmienKombo(0.25);
+					iloscKombo++;
+					if (iloscKombo >= 5)
+					{
+						wskaznikNaPokarm = &pokarmzloty;
+						wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
+					}
+					else
+					{
+						wskaznikNaPokarm = &pokarm;
+						wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
+					}
 					zegarAnimacjiKombo.restart();
 					animujKombo(0);
-				
+				}
+				else
+				{
+					iloscKombo = 0;
 				}
 				zegarAnimacjiPunkty.restart();
-				dodajPunkty(100);
+				dodajPunkty(wskaznikNaPokarm->wartoscPunktow);
 				animujPunkty(0);
 				
 				int wynik = sprawdzWynik();
 				if (wynik >= 20000 && wynik <= 159999)
+				{
 					gracz.tekstura = (wynik / 20000);	
+				}
 
 				czasOdJedzenia = 0.0f;
 				zegarJedzenia.restart();
@@ -441,7 +462,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			okno.clear(Color::Blue);
 			rysujPlansze(okno);
 			gracz.rysuj(okno);
-			pokarm.rysuj(okno);
+			wskaznikNaPokarm->rysuj(okno);
 			czasomierz -= milisekunda;
 		}
 		okno.display();

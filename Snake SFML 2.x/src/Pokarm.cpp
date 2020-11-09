@@ -1,7 +1,11 @@
 #include "Pokarm.h"
 
+enum ktorybonus {Brak,Ochrona};
+
 Pokarm::Pokarm(string sciezkaPliku)
-{
+{	
+	wartoscPunktow = 100;
+	bonus = Brak;
 	pokarmTekstura.loadFromFile(sciezkaPliku); // NA POTEM
 	pokarmTekstura.setSmooth(true);
 	pokarmSprite.setTexture(pokarmTekstura);
@@ -51,7 +55,6 @@ bool Pokarm::sprawdzCzyZjedzony(Gracz& gracz, Sprite** plansza,Sprite* przeszkod
 	if (kolizja(gracz.wsk_listy->sprite, pokarmSprite))
 	{
 		gracz.dodajElement();
-		ustawPokarm(gracz, plansza,przeszkody,liczbaprzeszkod);
 		return true;
 	}
 	return false;

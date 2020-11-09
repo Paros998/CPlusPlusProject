@@ -71,7 +71,7 @@ Gracz::Gracz(int poziom)
 
 	tekstura = 0, poziomTekstury = 0;
 
-	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa12.png");
+	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa.png");
 	graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[1][tekstura]);
 	ustawTeksture = true;
 

@@ -19,5 +19,7 @@ public:
 	void ustawPokarm(Gracz& gracz, Sprite** plansza, Sprite* przeszkody, int liczbaprzeszkod);
 	void rysuj(RenderWindow& okno);
 	void wyzerujAnimacje();
+	int wartoscPunktow;
+	int bonus;
 };
 
