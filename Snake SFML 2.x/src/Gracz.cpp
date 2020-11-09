@@ -318,12 +318,16 @@ void Gracz::ochronaKolizji()
 		graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[1][tekstura]);
 		animacjaCiala = new Animacja(graczCialoTekstura, Vector2u(4, 1), 0.2f);
 	}
-	animacjaCiala->aktualizuj(0);
-	Lista* wsk = wsk_listy->nast;
-	while (wsk != NULL)
+	else
 	{
-		wsk->sprite.setTextureRect(animacjaCiala->obszar);
-		wsk = wsk->nast;
+		ustawTeksture = true;
+		animacjaCiala->aktualizuj(0);
+		Lista* wsk = wsk_listy->nast;
+		while (wsk != NULL)
+		{
+			wsk->sprite.setTextureRect(animacjaCiala->obszar);
+			wsk = wsk->nast;
+		}
 	}
 }
 
