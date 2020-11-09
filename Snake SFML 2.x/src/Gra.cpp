@@ -10,6 +10,8 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 	tablicaMuzyka[1] = "data/MuzykaDzwiekiGra/muzykaPoziom2.ogg";
 	tablicaMuzyka[2] = "data/MuzykaDzwiekiGra/muzykaPoziom3.ogg";
 
+	procX = 1.0, procY = 1.0;
+
 	muzykaGra.openFromFile(tablicaMuzyka[poziom]);
 	muzykaGra.setVolume(glosnoscMuzyki);
 
@@ -315,6 +317,13 @@ int Gra::pauza(RenderWindow& okno)
 					if (wyborPauza == 1) return 1;
 					break;
 				}
+			case Event::Resized:
+				double x1, y1;
+				x1 = okno.getSize().x;
+				y1 = okno.getSize().y;
+				procX = (x1 / 1920.0);
+				procY = (y1 / 1080.0);
+				break;
 			}
 		}
 		okno.display();
@@ -404,6 +413,13 @@ int Gra::gameOver(RenderWindow & okno)
 					if (wyborkoniecGry == 1) return 1;
 					break;
 				}
+			case Event::Resized:
+				double x1, y1;
+				x1 = okno.getSize().x;
+				y1 = okno.getSize().y;
+				procX = (x1 / 1920.0);
+				procY = (y1 / 1080.0);
+				break;
 			}
 		}
 		okno.display();
@@ -443,7 +459,7 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 	Pokarm *wskaznikNaPokarm = &pokarm;
 	Punkty punkty;
 	bool pauzaFlaga = false;
-	int koniec = 0,iloscKombo = 0, poprzTekstura = 0;
+	int koniec = 0,iloscKombo = 0, poprzTekstura = 0,aktualnystan = 0;
 	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia,zegarAnimacjiPunkty,zegarAnimacjiKombo,zegarAnimacjiWeza;
 	wskaznikNaPokarm->ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
 	while (okno.isOpen())
@@ -482,6 +498,7 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			// POKARM
 			if (wskaznikNaPokarm->sprawdzCzyZjedzony(gracz) == true)
 			{	
+				aktualnystan++;
 				dzwiekJedzenie.play();
 				czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
 				if (wskaznikNaPokarm->bonus == 1) zegarOchronyOdrodzenia.restart();
@@ -493,12 +510,14 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 					{
 						wskaznikNaPokarm = &pokarmzloty;
 						wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
+						wskaznikNaPokarm->wyzerujAnimacje();
 						gracz.dodajElement();
 					}
 					else
 					{
 						wskaznikNaPokarm = &pokarm;
 						wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
+						wskaznikNaPokarm->wyzerujAnimacje();
 						gracz.dodajElement();
 					}
 					zegarAnimacjiKombo.restart();
@@ -509,6 +528,7 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 					iloscKombo = 0;
 					wskaznikNaPokarm = &pokarm;
 					wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
+					wskaznikNaPokarm->wyzerujAnimacje();
 					gracz.dodajElement();
 				}
 				zegarAnimacjiPunkty.restart();
@@ -516,6 +536,7 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 				animujPunkty(0);
 				
 				int wynik = sprawdzWynik();
+				Wynik = wynik;
 				if (wynik >= 20000 && wynik <= 159999)
 				{
 					gracz.tekstura = (wynik / 20000);	
@@ -524,8 +545,8 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 				{
 					gracz.ustawNowaTeksture();
 					poprzTekstura = gracz.tekstura;
+					skinWeza = poprzTekstura;
 				}
-
 				czasOdJedzenia = 0.0f;
 				zegarJedzenia.restart();
 			}
@@ -553,16 +574,15 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 				}
 			* }
 				*/
-			/*if(wygrana() == true)
+			if(wygrana(aktualnystan) == true)
 			 {
 				  if(POZIOM+2 > 3) 
 				  {
-					wstawWynik(punkty);
+					//wstawWynik(punkty);
 					return 0;
 				  }
-				*	return (POZIOM+2)
-			* }
-			*/
+				  return (POZIOM + 2);
+			 }
 			aktualnyCzasOchrony = zegarOchronyOdrodzenia.getElapsedTime().asSeconds();
 			if (aktualnyCzasOchrony <= 5.0f)
 			{

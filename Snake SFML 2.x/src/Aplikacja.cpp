@@ -25,17 +25,17 @@ void Aplikacja::start()
                 Poziom1 p1;
                 podpoziom = p1.start(oknoAplikacji);
             }
-            else if (podpoziom == 2)
+            if (podpoziom == 2)
             {   
                 Poziom2 p2;
                 podpoziom = p2.start(oknoAplikacji);
             }
-            else if (podpoziom == 3)
+            if (podpoziom == 3)
             {   
                 Poziom3 p3;
                 podpoziom = p3.start(oknoAplikacji);
             }
-            else if (podpoziom == 0) return;
+            if (podpoziom == 0) return;
         }
         break;
     }

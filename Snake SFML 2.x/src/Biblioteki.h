@@ -32,6 +32,7 @@ using namespace sf;using namespace std;
 #include "Menu.h"
 #include "Aplikacja.h"
 
+extern int skinWeza, Wynik;
 extern float glosnoscMuzyki;
 extern void losuj(float& zmienna, int parametr);
 extern bool kolizja(Sprite s1, Sprite s2);

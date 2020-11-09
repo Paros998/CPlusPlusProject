@@ -17,6 +17,7 @@ protected:
 public:
 	Gra(int iloscprzeszkod,int poziom,int warunek);
 	~Gra();
+	double procX, procY;
 public:
 	thread RdzenPlansza;
 protected:

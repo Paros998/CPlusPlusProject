@@ -1,7 +1,7 @@
 #include "Biblioteki.h"
 Punkty::Punkty()
 {
-	wartosc = 0;
+	wartosc = Wynik;
 	kombo = 1.0f;
 
 	stringPunktow = "Wynik: ";

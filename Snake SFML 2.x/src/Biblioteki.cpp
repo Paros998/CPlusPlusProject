@@ -1,5 +1,6 @@
 #include "Biblioteki.h"
 
+extern int skinWeza = 0, Wynik = 0;
 extern float glosnoscMuzyki = 15.0f;
 
 void losuj(float& zmienna, int parametr) { zmienna = rand() % parametr; }

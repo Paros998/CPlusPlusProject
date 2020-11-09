@@ -69,7 +69,7 @@ Gracz::Gracz(int poziom)
 	tablicaStringCialoTekstura[1][7] = "data/Sprity do gry/Gracz i przedmioty/animacja gracz/snake_yellow_trans.png";
 	
 
-	tekstura = 0, poziomTekstury = 0;
+	tekstura = skinWeza, poziomTekstury = 0;
 
 	graczGlowaTekstura.loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa.png");
 	graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[1][tekstura]);
@@ -333,7 +333,6 @@ void Gracz::ochronaKolizji()
 
 void Gracz::ustawNowaTeksture()
 {
-	poziomTekstury = 0;
 	graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[0][tekstura]);
 	graczSprite[CIALO].setTexture(graczCialoTekstura);
 	graczSprite[CIALO].setTextureRect(IntRect(0, 0, 64, 64));
