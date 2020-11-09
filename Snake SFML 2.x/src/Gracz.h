@@ -18,7 +18,7 @@ class Animacja;
 
 class Gracz
 {
-	int kierunek;
+	int kierunek,Poziom;
 	float szybkosc, opoznienie,czas;
 	bool ustawTeksture;
 	Texture graczCialoTekstura, graczGlowaTekstura;

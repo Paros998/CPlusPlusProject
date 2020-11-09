@@ -31,6 +31,7 @@ void Gracz::dodajElement()
 
 Gracz::Gracz(int poziom)
 {
+	this->Poziom = poziom;
 	buforPrzeszkoda.loadFromFile("data/MuzykaDzwiekiGra/wazWkamien.ogg");
 	buforTeleport.loadFromFile("data/MuzykaDzwiekiGra/teleport.wav");
 	buforWaz.loadFromFile("data/MuzykaDzwiekiGra/wazWsiebie.ogg");
@@ -269,7 +270,12 @@ void Gracz::sterowanie()
 
 void Gracz::obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod)
 {
-	czas = zegar.getElapsedTime().asSeconds();
+	if(Poziom + 1 == 1)
+		czas = zegar.getElapsedTime().asSeconds()* 0.9;
+	if(Poziom + 1 == 2)
+		czas = zegar.getElapsedTime().asSeconds();
+	if (Poziom + 1 == 3)
+		czas = zegar.getElapsedTime().asSeconds() * 1.1;
 	zegar.restart();
 	czasomierz += czas;
 	if (czasomierz >= opoznienie)
