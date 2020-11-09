@@ -452,8 +452,10 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 
 	float czasOdJedzenia = 0.0f, czasomierz = 0.0f, milisekunda = 1.0 / 60.0,czasOdAP = 0.0f,czasOdAK = 0.0f, aktualnyCzasOchrony = 0.0f,poprzedniCzasOchrony = 0.0f;
 	Gracz gracz(poziom);
-	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png");
-	Pokarm pokarmzloty("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2-gold.png");
+	Pokarm pokarm("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2.png",
+		"data/Sprity do gry/Gracz i przedmioty/zjedz_jablko_animacja.png", Vector2u(24, 1));
+	Pokarm pokarmzloty("data/Sprity do gry/Gracz i przedmioty/jablko_animacja2-gold.png",
+		"data/Sprity do gry/Gracz i przedmioty/zlote_jablko_efekt.png", Vector2u(50, 1));
 	pokarmzloty.bonus = 1;
 	pokarmzloty.wartoscPunktow = 500;
 	Pokarm *wskaznikNaPokarm = &pokarm;
@@ -506,7 +508,7 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 				{
 					zmienKombo(0.25);
 					iloscKombo++;
-					if (iloscKombo >= 5)
+					if (iloscKombo >= 1)
 					{
 						wskaznikNaPokarm = &pokarmzloty;
 						wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);

@@ -11,7 +11,7 @@ Animacja::Animacja(Texture& spriteTekstura, Vector2u liczbaObrazow, float czasZm
 	obszar.height = spriteTekstura.getSize().y / float(liczbaObrazow.y);
 }
 
-void Animacja::aktualizuj(int wiersz)
+int Animacja::aktualizuj(int wiersz)
 {
 	deltaCzas = zegar.restart().asSeconds();
 	aktualnyObraz.y = wiersz;
@@ -30,4 +30,6 @@ void Animacja::aktualizuj(int wiersz)
 
 	obszar.left = aktualnyObraz.x * obszar.width;
 	obszar.top = aktualnyObraz.y * obszar.height;
+
+	return aktualnyObraz.x;
 }

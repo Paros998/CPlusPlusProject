@@ -16,5 +16,5 @@ public:
 	
 public:
 	Animacja(Texture& spriteTekstura, Vector2u liczbaObrazow, float czasZmiany);
-	void aktualizuj(int wiersz);
+	int aktualizuj(int wiersz);
 };
