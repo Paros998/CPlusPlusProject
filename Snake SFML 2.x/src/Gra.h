@@ -18,6 +18,7 @@ public:
 	Gra(int iloscprzeszkod,int poziom,int warunek);
 	~Gra();
 	double procX, procY;
+	float czasZloteJablko;
 public:
 	thread RdzenPlansza;
 protected:
@@ -28,5 +29,7 @@ protected:
 	bool przegrana(Gracz& gracz, Clock zegar);
 	int gameOver(RenderWindow& okno);
 	bool wygrana(int aktualnyStan);
+	string wpiszNick(RenderWindow& okno);
+	void wynikiTXT(string pseudonimGracza);
 };
 

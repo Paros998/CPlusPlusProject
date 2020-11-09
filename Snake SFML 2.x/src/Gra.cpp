@@ -9,6 +9,8 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 	tablicaMuzyka[0] = "data/MuzykaDzwiekiGra/muzykaPoziom1.ogg";
 	tablicaMuzyka[1] = "data/MuzykaDzwiekiGra/muzykaPoziom2.ogg";
 	tablicaMuzyka[2] = "data/MuzykaDzwiekiGra/muzykaPoziom3.ogg";
+	
+	czasZloteJablko = 5.0 - (POZIOM + 1.0);
 
 	procX = 1.0, procY = 1.0;
 
@@ -141,9 +143,9 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 	znaki = linia.length();
 	koniecGry[0].setString("Ponów poziom");
 	koniecGry[0].setPosition(884.0f - (znaki * 20), 350);
-	linia = "Zakoñcz Grê!";
+	linia = "Zakoñcz Gre!";
 	znaki = linia.length();
-	koniecGry[1].setString("Zakoñcz Grê!");
+	koniecGry[1].setString("Zakoñcz Gre!");
 	koniecGry[1].setPosition(884.0f - (znaki * 20), 550);
 
 	delete[] tablicaX;
@@ -393,7 +395,7 @@ int Gra::gameOver(RenderWindow & okno)
 			case Event::KeyPressed:
 				if (zdarzenie.key.code == Keyboard::Escape)
 				{
-					return 0;
+					break;
 				}
 				if (zdarzenie.key.code == Keyboard::Up)
 				{
@@ -432,10 +434,118 @@ bool Gra::przegrana(Gracz& gracz, Clock zegar)
 	{
 		if (gracz.samoUkaszenie())
 			return false;
-		if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))
-			return false;
+		//if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))
+		//	return false;
 	}
 	return true;
+}
+
+string Gra::wpiszNick(RenderWindow & okno)
+{
+	string pseudonim = "";
+	Text Pseudonim,TextKoncowy;
+	Pseudonim.setCharacterSize(40);
+	TextKoncowy.setCharacterSize(40);
+	Pseudonim.setFont(czcionka);
+	TextKoncowy.setFont(czcionka);
+	Pseudonim.setFillColor(Color::Black);
+	TextKoncowy.setFillColor(Color::Black);
+	Pseudonim.setOutlineThickness(1.0f);
+	TextKoncowy.setOutlineThickness(1.0f);
+	Pseudonim.setOutlineColor(Color::Red);
+	TextKoncowy.setOutlineColor(Color::Red);
+	Pseudonim.setString(pseudonim);
+
+	TextKoncowy.setString("Wpisz swoj nick i jesli jestes super graczem to wpiszemy cie do wynikow!");
+	int znaki = 0;
+	string linia = "Wpisz swoj nick i jesli jestes super graczem to wpiszemy cie do wynikow!";
+	znaki = linia.length();
+	TextKoncowy.setPosition(960 - (znaki/2 * 20), 350);
+	
+	znaki = 0;
+	linia = pseudonim;
+	znaki = linia.length();
+	Pseudonim.setPosition(960 - (znaki/2 * 20), 450);
+
+	while (true)
+	{	
+		okno.draw(tloMapySprite);
+		okno.draw(TextKoncowy);
+		okno.draw(Pseudonim);
+		Event zdarzenie;
+		while (okno.pollEvent(zdarzenie));
+		{
+			switch (zdarzenie.type)
+			{
+			case Event::Closed:
+				continue;
+			case Event::KeyPressed:
+				if (zdarzenie.key.code == Keyboard::Enter)
+					return pseudonim;
+				if (zdarzenie.key.code == Keyboard::Escape)
+					continue;
+			case Event::TextEntered:
+				if (zdarzenie.text.unicode != 8)
+				{
+					pseudonim += static_cast <char>(zdarzenie.text.unicode);
+					Pseudonim.setString(pseudonim);
+				}
+			}
+		}
+		znaki = 0;
+		linia = pseudonim;
+		znaki = linia.length();
+		Pseudonim.setPosition(960 - (znaki/2 * 20), 450);
+		okno.display();
+	}
+}
+
+void Gra::wynikiTXT(string pseudonimGracza)
+{
+	map<string, int> lista;
+	map<string, int>::iterator it;
+	map<string, int>::iterator it2;
+	string miejsce = "";
+	int wynik,i = 0;
+	string pseudonim;
+	fstream wynikiPlik("data/wyniki.txt",ios::in | ios::out);
+	if (wynikiPlik)
+	{
+		while (i < 5)
+		{
+			wynikiPlik >> pseudonim >> wynik;
+			lista[pseudonim]=wynik;
+			i++;
+		}
+	}
+	else cout << "Nie znaleziono pliku z wynikami!" << endl;
+	
+	for (it = lista.begin(); it != lista.end(); it++)
+	{
+		if (it->second > Wynik)
+			continue;
+		if (it->second <= Wynik)
+		{
+			miejsce = it->first;
+			it2 = it;
+			break;
+		}
+	}
+	if (miejsce != "")
+	{
+		lista.insert(it2, { pseudonimGracza ,Wynik });
+	}
+	i = 0;
+	it = lista.begin();
+	if (wynikiPlik)
+	{
+		while (i < 5 || it != lista.end())
+		{
+			wynikiPlik << it->first << it->second << endl;
+			it++;
+		}
+	}
+	wynikiPlik.close();
 }
 
 bool Gra::wygrana(int aktualnyStan)
@@ -504,11 +614,11 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 				dzwiekJedzenie.play();
 				czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
 				if (wskaznikNaPokarm->bonus == 1) zegarOchronyOdrodzenia.restart();
-				if (czasOdJedzenia <= 2.0)
+				if (czasOdJedzenia <= czasZloteJablko)
 				{
 					zmienKombo(0.25);
 					iloscKombo++;
-					if (iloscKombo >= 1)
+					if (iloscKombo >= 5)
 					{
 						wskaznikNaPokarm = &pokarmzloty;
 						wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
@@ -561,26 +671,27 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 
 			// GRACZ
 			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
-			/*if (!przegrana(gracz, zegarOchronyOdrodzenia))
-			* {
-				int menuGameOver =  gameOver();
+			if (!przegrana(gracz, zegarOchronyOdrodzenia))
+			 {
+				int menuGameOver =  gameOver(okno);
 				if(menuGameOver == 0)
 				{
 					return (POZIOM+1);
 				}
-				if(menuGameOver == 1
+				if(menuGameOver == 1)
 				{
-				//Tutaj bd funkcja do wpisania nicku/pseudonimu i wpisania wyniku oraz nazwy do pliku
-					wstawWynik(punkty);
+					string pseudonim = wpiszNick(okno);
+					wynikiTXT(pseudonim);
 					return 0;
 				}
-			* }
-				*/
+			 }
+				
 			if(wygrana(aktualnystan) == true)
 			 {
 				  if(POZIOM+2 > 3) 
 				  {
-					//wstawWynik(punkty);
+					string pseudonim = wpiszNick(okno);
+					wynikiTXT(pseudonim);
 					return 0;
 				  }
 				  return (POZIOM + 2);
