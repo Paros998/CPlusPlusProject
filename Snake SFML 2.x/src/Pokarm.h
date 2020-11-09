@@ -15,7 +15,7 @@ private:
 public:
 	Pokarm(string sciezkaPliku);
 	~Pokarm();
-	bool sprawdzCzyZjedzony(Gracz& gracz, Sprite ** plansza, Sprite* przeszkody,int liczbaprzeszkod);
+	bool sprawdzCzyZjedzony(Gracz& gracz);
 	void ustawPokarm(Gracz& gracz, Sprite** plansza, Sprite* przeszkody, int liczbaprzeszkod);
 	void rysuj(RenderWindow& okno);
 	void wyzerujAnimacje();

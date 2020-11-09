@@ -362,7 +362,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 	Pokarm *wskaznikNaPokarm = &pokarm;
 	Punkty punkty;
 	bool pauzaFlaga = false;
-	int koniec = 0,iloscKombo = 0;
+	int koniec = 0,iloscKombo = 0, poprzTekstura = 0;
 	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia,zegarAnimacjiPunkty,zegarAnimacjiKombo,zegarAnimacjiWeza;
 	wskaznikNaPokarm->ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
 	while (okno.isOpen())
@@ -399,7 +399,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 		if (czasomierz >= milisekunda)
 		{
 			// POKARM
-			if (wskaznikNaPokarm->sprawdzCzyZjedzony(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod) == true)
+			if (wskaznikNaPokarm->sprawdzCzyZjedzony(gracz) == true)
 			{	
 				dzwiekJedzenie.play();
 				czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
@@ -412,11 +412,13 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 					{
 						wskaznikNaPokarm = &pokarmzloty;
 						wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
+						gracz.dodajElement();
 					}
 					else
 					{
 						wskaznikNaPokarm = &pokarm;
 						wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
+						gracz.dodajElement();
 					}
 					zegarAnimacjiKombo.restart();
 					animujKombo(0);
@@ -424,6 +426,9 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 				else
 				{
 					iloscKombo = 0;
+					wskaznikNaPokarm = &pokarm;
+					wskaznikNaPokarm->ustawPokarm(gracz, planszaSprite, przeszkodaSprite, liczbaPrzeszkod);
+					gracz.dodajElement();
 				}
 				zegarAnimacjiPunkty.restart();
 				dodajPunkty(wskaznikNaPokarm->wartoscPunktow);
@@ -433,6 +438,11 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 				if (wynik >= 20000 && wynik <= 159999)
 				{
 					gracz.tekstura = (wynik / 20000);	
+				}
+				if (poprzTekstura != gracz.tekstura)
+				{
+					gracz.ustawNowaTeksture();
+					poprzTekstura = gracz.tekstura;
 				}
 
 				czasOdJedzenia = 0.0f;

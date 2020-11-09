@@ -50,11 +50,10 @@ miejsce:
 	}
 }
 
-bool Pokarm::sprawdzCzyZjedzony(Gracz& gracz, Sprite** plansza,Sprite* przeszkody,int liczbaprzeszkod)
+bool Pokarm::sprawdzCzyZjedzony(Gracz& gracz)
 {
 	if (kolizja(gracz.wsk_listy->sprite, pokarmSprite))
 	{
-		gracz.dodajElement();
 		return true;
 	}
 	return false;
