@@ -313,6 +313,11 @@ void Gracz::zerujAnimacje()
 
 void Gracz::ochronaKolizji()
 {
+	if (NULL == animacjaCiala)
+	{
+		graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[1][tekstura]);
+		animacjaCiala = new Animacja(graczCialoTekstura, Vector2u(4, 1), 0.2f);
+	}
 	animacjaCiala->aktualizuj(0);
 	Lista* wsk = wsk_listy->nast;
 	while (wsk != NULL)
@@ -343,6 +348,8 @@ void Gracz::ustawTeksture100()
 {
 	if (ustawTeksture)
 	{
+		delete animacjaCiala;
+		animacjaCiala = NULL;
 		poziomTekstury = 0;
 		graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[0][tekstura]);
 		graczSprite[CIALO].setTexture(graczCialoTekstura);
