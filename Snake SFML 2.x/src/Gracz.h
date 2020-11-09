@@ -44,6 +44,7 @@ public:
 	bool samoUkaszenie();
 	void zerujAnimacje();
 	void ochronaKolizji();
+	void ustawNowaTeksture();
 	void ustawTeksture100();
 
 private:

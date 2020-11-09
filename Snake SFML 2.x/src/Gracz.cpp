@@ -313,12 +313,28 @@ void Gracz::zerujAnimacje()
 
 void Gracz::ochronaKolizji()
 {
-	ustawTeksture = true;
 	animacjaCiala->aktualizuj(0);
 	Lista* wsk = wsk_listy->nast;
 	while (wsk != NULL)
 	{
 		wsk->sprite.setTextureRect(animacjaCiala->obszar);
+		wsk = wsk->nast;
+	}
+}
+
+void Gracz::ustawNowaTeksture()
+{
+	poziomTekstury = 0;
+	graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[0][tekstura]);
+	graczSprite[CIALO].setTexture(graczCialoTekstura);
+	graczSprite[CIALO].setTextureRect(IntRect(0, 0, 64, 64));
+
+	Lista* wsk = wsk_listy->nast;
+	while (wsk != NULL)
+	{
+		float rotacja = wsk->sprite.getRotation();
+		wsk->sprite = graczSprite[CIALO];
+		wsk->sprite.setRotation(rotacja);
 		wsk = wsk->nast;
 	}
 }
@@ -331,11 +347,13 @@ void Gracz::ustawTeksture100()
 		graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[0][tekstura]);
 		graczSprite[CIALO].setTexture(graczCialoTekstura);
 		graczSprite[CIALO].setTextureRect(IntRect(0, 0, 64, 64));
+
 		Lista* wsk = wsk_listy->nast;
 		while (wsk != NULL)
 		{
+			float rotacja = wsk->sprite.getRotation();
 			wsk->sprite = graczSprite[CIALO];
-			wsk->sprite.setRotation(wsk->poprz->sprite.getRotation());
+			wsk->sprite.setRotation(rotacja);
 			wsk = wsk->nast;
 		}
 		ustawTeksture = false;
