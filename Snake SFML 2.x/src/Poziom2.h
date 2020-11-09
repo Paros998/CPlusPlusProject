@@ -1,11 +1,11 @@
 #pragma once
 #include "Biblioteki.h"
 
-class Poziom1 : public Gra
+class Poziom2 : public Gra
 {
 public:
-	Poziom1();
-	~Poziom1();
+	Poziom2();
+	~Poziom2();
 	int start(RenderWindow& okno);
 };
 

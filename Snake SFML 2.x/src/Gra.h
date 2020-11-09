@@ -8,22 +8,24 @@ protected:
 	String* tablicaTekstur, tablicaTeksturPrzeszkod[3],tablicaMuzyka[3];
 	Sprite tloMapySprite, ** planszaSprite,**ramkaSprite ,* przeszkodaSprite, dziuraSprite[2];
 	unsigned int dlugoscPlanszy, wysokoscPlanszy, odstep;
-	int liczbaPrzeszkod,wyborPauza,rdzenie;
+	int liczbaPrzeszkod,wyborPauza,rdzenie,POZIOM,WARUNEK;
 	int *tablicaX, *tablicaY, *tablicaJ;
 	Text menuPauzy[2],koniecGry[2];
 	Music muzykaGra;
 	SoundBuffer buforJedzenie;
 	Sound dzwiekJedzenie;
 public:
-	Gra(int,int);
+	Gra(int iloscprzeszkod,int poziom,int warunek);
 	~Gra();
 public:
 	thread RdzenPlansza;
 protected:
 	void rysujPlansze(RenderWindow& okno);
 	int pauza(RenderWindow& okno);
-	bool silnikPoziomu(RenderWindow& okno,int poziom);
+	int silnikPoziomu(RenderWindow& okno,int poziom);
 	void obliczPozycje();
 	bool przegrana(Gracz& gracz, Clock zegar);
+	int gameOver(RenderWindow& okno);
+	bool wygrana(int aktualnyStan);
 };
 

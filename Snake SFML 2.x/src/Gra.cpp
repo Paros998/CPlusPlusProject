@@ -2,8 +2,10 @@
 
 enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
-Gra::Gra(int liczbaprzeszkod,int poziom)
+Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 {	
+	this->POZIOM = poziom;
+	this->WARUNEK = warunek;
 	tablicaMuzyka[0] = "data/MuzykaDzwiekiGra/muzykaPoziom1.ogg";
 	tablicaMuzyka[1] = "data/MuzykaDzwiekiGra/muzykaPoziom2.ogg";
 	tablicaMuzyka[2] = "data/MuzykaDzwiekiGra/muzykaPoziom3.ogg";
@@ -122,6 +124,26 @@ Gra::Gra(int liczbaprzeszkod,int poziom)
 	menuPauzy[1].setString("Zakoñcz");
 	menuPauzy[1].setPosition(884.0f - (znaki * 20), 550);
 	
+	for (int i = 0; i < 2; i++)
+	{
+		koniecGry[i].setFont(czcionka);
+		koniecGry[i].setCharacterSize(100);
+		koniecGry[i].setFillColor(Color::Black);
+		koniecGry[i].setOutlineColor(Color::Red);
+		koniecGry[i].setOutlineThickness(1.0f);
+		koniecGry[i].setScale(1.0f, 1.0f);
+	}
+
+	znaki = 0;
+	linia = "Ponów poziom";
+	znaki = linia.length();
+	koniecGry[0].setString("Ponów poziom");
+	koniecGry[0].setPosition(884.0f - (znaki * 20), 350);
+	linia = "Zakoñcz Grê!";
+	znaki = linia.length();
+	koniecGry[1].setString("Zakoñcz Grê!");
+	koniecGry[1].setPosition(884.0f - (znaki * 20), 550);
+
 	delete[] tablicaX;
 	delete[] tablicaY;
 	delete[] tablicaJ;
@@ -336,6 +358,58 @@ void Gra::rysujPlansze(RenderWindow& okno)
 	}
 }
 
+int Gra::gameOver(RenderWindow & okno)
+{
+	int wyborkoniecGry = 0;
+	while (true)
+	{
+		okno.draw(koniecGry[0]);
+		okno.draw(koniecGry[1]);
+		Event zdarzenie;
+		while (okno.pollEvent(zdarzenie))
+		{
+			for (int i = 0; i < 2; i++)
+			{
+				koniecGry[i].setFillColor(Color::Black);
+				koniecGry[i].setOutlineColor(Color::Red);
+			}
+			koniecGry[wyborkoniecGry].setFillColor(Color::Red);
+			koniecGry[wyborkoniecGry].setOutlineColor(Color::Black);
+
+			switch (zdarzenie.type)
+			{
+			case Event::Closed:
+				okno.close();
+				break;
+			case Event::KeyPressed:
+				if (zdarzenie.key.code == Keyboard::Escape)
+				{
+					return 0;
+				}
+				if (zdarzenie.key.code == Keyboard::Up)
+				{
+					if (wyborkoniecGry == 0) continue;
+					wyborkoniecGry = 0;
+					break;
+				}
+				if (zdarzenie.key.code == Keyboard::Down)
+				{
+					if (wyborkoniecGry == 1) continue;
+					wyborkoniecGry = 1;
+					break;
+				}
+				if (zdarzenie.key.code == Keyboard::Enter)
+				{
+					if (wyborkoniecGry == 0) return 0;
+					if (wyborkoniecGry == 1) return 1;
+					break;
+				}
+			}
+		}
+		okno.display();
+	}
+}
+
 bool Gra::przegrana(Gracz& gracz, Clock zegar)
 {
 	if (zegar.getElapsedTime().asSeconds() > 5.0f)
@@ -348,7 +422,14 @@ bool Gra::przegrana(Gracz& gracz, Clock zegar)
 	return true;
 }
 
-bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
+bool Gra::wygrana(int aktualnyStan)
+{
+	if (POZIOM + 1 == 3) return false;
+	if (aktualnyStan == WARUNEK) return true;
+	return false;
+}
+
+int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 {	
 	muzykaGra.play();
 	muzykaGra.setLoop(true);
@@ -391,7 +472,7 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 						pauzaFlaga = false;
 						break;
 					}
-					if (koniec == 1)return false;
+					if (koniec == 1)return 0;
 				}
 			}
 		}
@@ -457,8 +538,31 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 
 			// GRACZ
 			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
-			//if (!przegrana(gracz, zegarOchronyOdrodzenia))
-			//	return false;
+			/*if (!przegrana(gracz, zegarOchronyOdrodzenia))
+			* {
+				int menuGameOver =  gameOver();
+				if(menuGameOver == 0)
+				{
+					return (POZIOM+1);
+				}
+				if(menuGameOver == 1
+				{
+				//Tutaj bd funkcja do wpisania nicku/pseudonimu i wpisania wyniku oraz nazwy do pliku
+					wstawWynik(punkty);
+					return 0;
+				}
+			* }
+				*/
+			/*if(wygrana() == true)
+			 {
+				  if(POZIOM+2 > 3) 
+				  {
+					wstawWynik(punkty);
+					return 0;
+				  }
+				*	return (POZIOM+2)
+			* }
+			*/
 			aktualnyCzasOchrony = zegarOchronyOdrodzenia.getElapsedTime().asSeconds();
 			if (aktualnyCzasOchrony <= 5.0f)
 			{
@@ -477,5 +581,5 @@ bool Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 		}
 		okno.display();
 	}
-	return false;
+	return 0;
 }

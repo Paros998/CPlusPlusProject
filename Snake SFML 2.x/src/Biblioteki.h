@@ -26,6 +26,8 @@ using namespace sf;using namespace std;
 #include "Gracz.h"
 #include "Pokarm.h"
 #include "Gra.h"
+#include "Poziom3.h"
+#include "Poziom2.h"
 #include "Poziom1.h"
 #include "Menu.h"
 #include "Aplikacja.h"

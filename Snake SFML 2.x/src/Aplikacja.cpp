@@ -19,8 +19,23 @@ void Aplikacja::start()
         }
         if (poziom == P1)
         {
-            Poziom1 p1;
-            if (!p1.start(oknoAplikacji));
+            int podpoziom = P1;
+            if (podpoziom == 1)
+            {   
+                Poziom1 p1;
+                podpoziom = p1.start(oknoAplikacji);
+            }
+            else if (podpoziom == 2)
+            {   
+                Poziom2 p2;
+                podpoziom = p2.start(oknoAplikacji);
+            }
+            else if (podpoziom == 3)
+            {   
+                Poziom3 p3;
+                podpoziom = p3.start(oknoAplikacji);
+            }
+            else if (podpoziom == 0) return;
         }
         break;
     }
