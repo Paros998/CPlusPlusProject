@@ -456,7 +456,7 @@ string Gra::wpiszNick(RenderWindow & okno)
 	TextKoncowy.setOutlineColor(Color::Red);
 	Pseudonim.setString(pseudonim);
 
-	TextKoncowy.setString("Wpisz swoj nick i jesli jestes super graczem to wpiszemy cie do wynikow!");
+	TextKoncowy.setString("Wpisz swoj nick i zatwierdz enterem, jesli jestes super graczem to wpiszemy cie do wynikow!");
 	int znaki = 0;
 	string linia = "Wpisz swoj nick i jesli jestes super graczem to wpiszemy cie do wynikow!";
 	znaki = linia.length();
@@ -466,7 +466,9 @@ string Gra::wpiszNick(RenderWindow & okno)
 	linia = pseudonim;
 	znaki = linia.length();
 	Pseudonim.setPosition(960 - (znaki/2 * 20), 450);
-
+	Time czas = seconds(0.5);
+	sleep(czas);
+	czas = seconds(0.05);
 	while (true)
 	{	
 		okno.draw(tloMapySprite);
@@ -474,22 +476,33 @@ string Gra::wpiszNick(RenderWindow & okno)
 		okno.draw(Pseudonim);
 		Event zdarzenie;
 		while (okno.pollEvent(zdarzenie));
-		{
+		{	
 			switch (zdarzenie.type)
 			{
 			case Event::Closed:
 				continue;
 			case Event::KeyPressed:
-				if (zdarzenie.key.code == Keyboard::Enter)
-					return pseudonim;
 				if (zdarzenie.key.code == Keyboard::Escape)
 					continue;
+				break;
 			case Event::TextEntered:
-				if (zdarzenie.text.unicode != 8)
+				if ((zdarzenie.text.unicode >= 48 && zdarzenie.text.unicode <= 57) || (zdarzenie.text.unicode >= 65 && zdarzenie.text.unicode <= 90) || (zdarzenie.text.unicode >= 97 && zdarzenie.text.unicode <= 122))
 				{
+					sleep(czas);
 					pseudonim += static_cast <char>(zdarzenie.text.unicode);
 					Pseudonim.setString(pseudonim);
 				}
+				if (zdarzenie.key.code == 8)
+				{
+					sleep(czas);
+					pseudonim = pseudonim.substr(0, pseudonim.length() - 1);
+					Pseudonim.setString(pseudonim);
+				}
+				if (zdarzenie.key.code == 13)
+				{
+					return pseudonim;
+				}
+				break;
 			}
 		}
 		znaki = 0;
@@ -498,54 +511,118 @@ string Gra::wpiszNick(RenderWindow & okno)
 		Pseudonim.setPosition(960 - (znaki/2 * 20), 450);
 		okno.display();
 	}
+	return pseudonim;
 }
 
 void Gra::wynikiTXT(string pseudonimGracza)
 {
-	map<string, int> lista;
-	map<string, int>::iterator it;
-	map<string, int>::iterator it2;
-	string miejsce = "";
+
+	ListaWynikow* head = new ListaWynikow;
+	head->next = NULL;
 	int wynik,i = 0;
+	int znaleziono = 0;
 	string pseudonim;
-	fstream wynikiPlik("data/wyniki.txt",ios::in | ios::out);
+	fstream wynikiPlik("data/wyniki.txt",ios::in);
+	
+	//Wczytywanie wyników z pliku do listy
 	if (wynikiPlik)
 	{
-		while (i < 5)
-		{
+		while (i < 5 && wynikiPlik.eof() == false)
+		{	
 			wynikiPlik >> pseudonim >> wynik;
-			lista[pseudonim]=wynik;
+			cout <<endl<< pseudonim << " " << wynik << endl;
+
+			ListaWynikow *new_node = new ListaWynikow;
+			new_node->pseudonim = pseudonim;
+			new_node->wynikGracza = wynik;
+			new_node->next = NULL;
+			if (head->next == NULL)
+			{
+				wsk_wyniki = new_node;
+				head->next = wsk_wyniki;
+			}
+			if(head->next != NULL)
+			{
+				wsk_wyniki->next = new_node;
+				wsk_wyniki = wsk_wyniki->next;
+			}
 			i++;
 		}
+		cout << endl << "Wpisano poprzednie do listy" << endl;
 	}
 	else cout << "Nie znaleziono pliku z wynikami!" << endl;
-	
-	for (it = lista.begin(); it != lista.end(); it++)
+	wynikiPlik.close();
+	fstream wynikiPlik2("data/wyniki.txt", ios::out);
+	wsk_wyniki = head->next;
+
+	cout << endl << "LISTA:" << endl;
+	while (wsk_wyniki != NULL)
 	{
-		if (it->second > Wynik)
-			continue;
-		if (it->second <= Wynik)
-		{
-			miejsce = it->first;
-			it2 = it;
-			break;
+		cout << wsk_wyniki->pseudonim << "  " << wsk_wyniki->wynikGracza << endl;
+		wsk_wyniki = wsk_wyniki->next;
+	}
+
+	wsk_wyniki = head->next;
+	//Jesli lista pusta to wstawi odrazu gracza z wynikiem do niej
+	if (head->next == NULL)
+	{	
+		ListaWynikow* new_node = new ListaWynikow;
+		new_node->pseudonim = pseudonimGracza;
+		new_node->wynikGracza = Wynik;
+		new_node->next = NULL;
+		
+		head->next = new_node;
+		cout << "Wpisano jedynego gracza do wyniki.txt " << endl;
+	}
+	else
+	{//Jesli nie to poszuka miejsca
+		ListaWynikow* new_node = new ListaWynikow;
+		new_node->pseudonim = pseudonimGracza;
+		new_node->wynikGracza = Wynik;
+		new_node->next = NULL;
+		if (wsk_wyniki->next == NULL) wsk_wyniki->next = new_node;
+		while(wsk_wyniki->next != NULL)
+		{	
+			if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next != NULL)
+			{
+				wsk_wyniki = wsk_wyniki->next;
+				cout << endl << "Szukam dalej" << endl;
+			}
+			if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next == NULL)
+			{
+				wsk_wyniki->next = new_node;
+				cout << endl << "Znaleziono miejsce " << endl;
+				break;
+			}
+			if(wsk_wyniki->wynikGracza <= Wynik && wsk_wyniki->next != NULL)
+			{
+				new_node->next = wsk_wyniki->next;
+				wsk_wyniki = new_node;
+				cout << endl << "Znaleziono miejsce " << endl;
+				break;
+			}
+			if (wsk_wyniki->wynikGracza <= Wynik && wsk_wyniki->next == NULL)
+			{
+				wsk_wyniki = new_node;
+				cout << endl << "Znaleziono miejsce " << endl;
+				break;
+			}
 		}
 	}
-	if (miejsce != "")
-	{
-		lista.insert(it2, { pseudonimGracza ,Wynik });
-	}
+	wsk_wyniki = head->next;
+	
+	//Wstawianie z listy do pliku
 	i = 0;
-	it = lista.begin();
 	if (wynikiPlik)
 	{
-		while (i < 5 || it != lista.end())
-		{
-			wynikiPlik << it->first << it->second << endl;
-			it++;
+		while (i < 5 && wsk_wyniki!= NULL)
+		{	
+			wynikiPlik2 << wsk_wyniki->pseudonim << "  " << wsk_wyniki->wynikGracza << endl;
+			cout << endl << "Wstawiono do pliku " << wsk_wyniki->pseudonim << " oraz " << wsk_wyniki->wynikGracza << endl;
+			wsk_wyniki = wsk_wyniki->next;
 		}
 	}
-	wynikiPlik.close();
+	wynikiPlik2.close();
 }
 
 bool Gra::wygrana(int aktualnyStan)

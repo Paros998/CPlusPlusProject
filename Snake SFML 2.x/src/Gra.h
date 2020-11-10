@@ -1,6 +1,12 @@
 #pragma once
 #include "Biblioteki.h"
 
+struct ListaWynikow {
+	string pseudonim;
+	int wynikGracza;
+	struct ListaWynikow* next;
+};
+
 class Gra : public Punkty
 {
 protected:
@@ -19,6 +25,7 @@ public:
 	~Gra();
 	double procX, procY;
 	float czasZloteJablko;
+	struct ListaWynikow* wsk_wyniki;
 public:
 	thread RdzenPlansza;
 protected:
