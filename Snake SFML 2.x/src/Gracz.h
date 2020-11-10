@@ -19,20 +19,21 @@ class Animacja;
 class Gracz
 {
 	int kierunek,Poziom;
-	float szybkosc, opoznienie,czas;
+	float szybkosc, opoznienie, mnoznikCzasu;
 	bool ustawTeksture;
 	Texture graczCialoTekstura, graczGlowaTekstura;
 	Sprite* graczSprite;
-	String tablicaStringCialoTekstura[2][8], tablicaKroki[3];
+	String tablicaStringCialoTekstura[3][8], tablicaKroki[3];
 	Sound dzwiekTeleport, dzwiekWalnieciePrzeszkody,dzwiekWalniecieSiebie,dzwiekKroki;
 	SoundBuffer buforTeleport, buforPrzeszkoda,buforWaz,buforKroki;
 	Animacja* animacjaCiala;
+	Time czasRuchu;
 
 public:
 	Clock zegar,zegarDzwieki;
 	float czasomierz;
 	struct Lista* wsk_listy;
-	int tekstura, poziomTekstury;
+	int tekstura;
 
 public:
 	Gracz(int poziom);
@@ -48,9 +49,9 @@ public:
 	void ustawTeksture100();
 
 private:
+	void sterowanie();
 	void przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur);
 	void ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSprite, int liczbaPrzeszkod);
-	void sterowanie();
 	void przejdzNaKoniecListy(Lista **wskaznik);
 	void przejdzPrzezSciane();
 
