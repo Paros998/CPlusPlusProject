@@ -79,8 +79,8 @@ Menu::Menu()
     opcjeText = new Text[11];
     wynikiText = new Text[5];
 
-    teksturaSprite = new Texture[7];
-    tablicaSprite = new Sprite[7];
+    teksturaSprite = new Texture[6];
+    tablicaSprite = new Sprite[6];
 
     teksturaSprite[0].loadFromFile("data/Obrazy menu/jablko_animacja2.png");
     teksturaSprite[0].setSmooth(true);
@@ -92,39 +92,34 @@ Menu::Menu()
     tablicaSprite[1].setTexture(teksturaSprite[1]);
     tablicaSprite[1].setScale(0.26f, 0.26f);
 
-    teksturaSprite[2].loadFromFile("data/Obrazy menu/jablko_animacja2-gold.png");
+    teksturaSprite[2].loadFromFile("data/Sprity do gry/Plansza/dziura.png");
     teksturaSprite[2].setSmooth(true);
     tablicaSprite[2].setTexture(teksturaSprite[2]);
-    tablicaSprite[2].setScale(0.26f, 0.26f);
+    tablicaSprite[2].setScale(1.0, 1.0);
 
-    teksturaSprite[3].loadFromFile("data/Sprity do gry/Plansza/dziura.png");
+    teksturaSprite[3].loadFromFile("data/Sprity do gry/Plansza/przeszkoda1.png");
     teksturaSprite[3].setSmooth(true);
     tablicaSprite[3].setTexture(teksturaSprite[3]);
     tablicaSprite[3].setScale(1.0, 1.0);
 
-    teksturaSprite[4].loadFromFile("data/Sprity do gry/Plansza/przeszkoda1.png");
+    teksturaSprite[4].loadFromFile("data/Sprity do gry/Plansza/kamien3.png");
     teksturaSprite[4].setSmooth(true);
     tablicaSprite[4].setTexture(teksturaSprite[4]);
     tablicaSprite[4].setScale(1.0, 1.0);
 
-    teksturaSprite[5].loadFromFile("data/Sprity do gry/Plansza/kamien3.png");
+    teksturaSprite[5].loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa12.png");
     teksturaSprite[5].setSmooth(true);
     tablicaSprite[5].setTexture(teksturaSprite[5]);
     tablicaSprite[5].setScale(1.0, 1.0);
 
-    teksturaSprite[6].loadFromFile("data/Sprity do gry/Gracz i przedmioty/snake_glowa12.png");
-    teksturaSprite[6].setSmooth(true);
-    tablicaSprite[6].setTexture(teksturaSprite[6]);
-    tablicaSprite[6].setScale(1.0, 1.0);
-
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 2; i++)
     {
         tablicaSprite[i].setPosition(300, ((i + 1) * 70.0 + 250.0));
         Rect<float> rozmiar = tablicaSprite[i].getGlobalBounds();
         tablicaSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
     }
 
-    for (int i = 3; i < 7; i++)
+    for (int i = 2; i < 6; i++)
     {
         tablicaSprite[i].setPosition(325,( (i+1) * 80.0 + 250.0 ));
         Rect<float> rozmiar = tablicaSprite[i].getGlobalBounds();
@@ -255,22 +250,19 @@ void Menu::przygotujStrone()
         opcjeText[1].setString("Nabijaj 5 kombo pod rzad i ciesz lepszymi punktami i ochrona!");
         opcjeText[1].setPosition(tablicaSprite[1].getPosition().x + 102.0f, tablicaSprite[1].getPosition().y );
 
-        opcjeText[2].setString("Wypatruj tego rzadkiego pokarmu, potrafi uciac 10 ogonów!");
-        opcjeText[2].setPosition(tablicaSprite[2].getPosition().x + 102.0f, tablicaSprite[2].getPosition().y );
+        opcjeText[2].setString("Madrze korzystaj z systemu teleportacji dziurowej!");
+        opcjeText[2].setPosition(tablicaSprite[2].getPosition().x + 70.0f, tablicaSprite[2].getPosition().y - 20.0f);
 
-        opcjeText[3].setString("Madrze korzystaj z systemu teleportacji dziurowej!");
+        opcjeText[3].setString("Unikaj lepiej tych drobiazgów o róznym wygladzie!");
         opcjeText[3].setPosition(tablicaSprite[3].getPosition().x + 70.0f, tablicaSprite[3].getPosition().y - 20.0f);
 
-        opcjeText[4].setString("Unikaj lepiej tych drobiazgów o róznym wygladzie!");
+        opcjeText[4].setString("I nie bój siê wchodzic w sciany!");
         opcjeText[4].setPosition(tablicaSprite[4].getPosition().x + 70.0f, tablicaSprite[4].getPosition().y - 20.0f);
 
-        opcjeText[5].setString("I nie bój siê wchodzic w sciany!");
+        opcjeText[5].setString("Lepiej nie kieruj swojej glodnej paszczy na wlasne cialo!");
         opcjeText[5].setPosition(tablicaSprite[5].getPosition().x + 70.0f, tablicaSprite[5].getPosition().y - 20.0f);
 
-        opcjeText[6].setString("Lepiej nie kieruj swojej glodnej paszczy na wlasne cialo!");
-        opcjeText[6].setPosition(tablicaSprite[6].getPosition().x + 70.0f, tablicaSprite[6].getPosition().y - 20.0f);
-
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 6; i++)
         {
             opcjeText[i].setCharacterSize(40);
             opcjeText[i].setFont(czcionka);
@@ -406,7 +398,7 @@ void Menu::rysuj(RenderWindow& okno)
         {   
             okno.draw(tablicaText[i]);
         }
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 6; i++)
         {
             okno.draw(tablicaSprite[i]);
             okno.draw(opcjeText[i]);

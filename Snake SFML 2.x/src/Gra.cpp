@@ -22,8 +22,6 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 	dzwiekJedzenie.setVolume(10.0f);
 
 	srand(time(0));
-	rdzenie = thread::hardware_concurrency();
-	cout <<"\nIlosc dostepnych rdzeni: " << rdzenie <<"\n";
 	planszaSprite = NULL;
 	wyborPauza = 0;
 	tablicaTekstur = new String[8];
@@ -278,6 +276,7 @@ int Gra::pauza(RenderWindow& okno)
 {	
 	while (true)
 	{
+		rysujPlansze(okno);
 		okno.draw(menuPauzy[0]);
 		okno.draw(menuPauzy[1]);
 		Event zdarzenie;
@@ -373,7 +372,8 @@ int Gra::gameOver(RenderWindow & okno)
 {
 	int wyborkoniecGry = 0;
 	while (true)
-	{
+	{	
+		rysujPlansze(okno);
 		okno.draw(koniecGry[0]);
 		okno.draw(koniecGry[1]);
 		Event zdarzenie;
@@ -580,34 +580,40 @@ void Gra::wynikiTXT(string pseudonimGracza)
 		new_node->pseudonim = pseudonimGracza;
 		new_node->wynikGracza = Wynik;
 		new_node->next = NULL;
-		if (wsk_wyniki->next == NULL) wsk_wyniki->next = new_node;
-		while(wsk_wyniki->next != NULL)
-		{	
-			if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next != NULL)
-			{
-				wsk_wyniki = wsk_wyniki->next;
-				cout << endl << "Szukam dalej" << endl;
-			}
-			if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next == NULL)
-			{
-				wsk_wyniki->next = new_node;
-				cout << endl << "Znaleziono miejsce " << endl;
-				break;
-			}
-			if(wsk_wyniki->wynikGracza <= Wynik && wsk_wyniki->next != NULL)
-			{
-				new_node->next = wsk_wyniki->next;
-				wsk_wyniki = new_node;
-				cout << endl << "Znaleziono miejsce " << endl;
-				break;
-			}
-			if (wsk_wyniki->wynikGracza <= Wynik && wsk_wyniki->next == NULL)
-			{
-				wsk_wyniki = new_node;
-				cout << endl << "Znaleziono miejsce " << endl;
-				break;
-			}
+		if (wsk_wyniki->wynikGracza <= Wynik)
+		{
+			new_node->next = wsk_wyniki;
+			head->next = new_node;
 		}
+		else if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next == NULL) wsk_wyniki->next = new_node;
+		else if(wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next != NULL)
+			while(wsk_wyniki!= NULL)
+			{	
+				if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next != NULL)
+				{
+					wsk_wyniki = wsk_wyniki->next;
+					cout << endl << "Szukam dalej" << endl;
+				}
+				if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next == NULL)
+				{	
+					wsk_wyniki->next = new_node;
+					cout << endl << "Znaleziono miejsce na koncu" << endl;
+					break;
+				}
+				if(wsk_wyniki->wynikGracza <= Wynik && wsk_wyniki->next != NULL)
+				{
+					new_node->next = wsk_wyniki->next;
+					wsk_wyniki = new_node;
+					cout << endl << "Znaleziono miejsce w srodku" << endl;
+					break;
+				}
+				if (wsk_wyniki->wynikGracza <= Wynik && wsk_wyniki->next == NULL)
+				{
+					cout << endl << "Znaleziono miejsce na koncu, Zamieniam "<<wsk_wyniki->wynikGracza<<" z "<< new_node->wynikGracza << endl;
+					wsk_wyniki = new_node;
+					break;
+				}
+			}
 	}
 	wsk_wyniki = head->next;
 	
@@ -648,9 +654,15 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 	Pokarm *wskaznikNaPokarm = &pokarm;
 	Punkty punkty;
 	bool pauzaFlaga = false;
-	int koniec = 0,iloscKombo = 0, poprzTekstura = 0,aktualnystan = 0;
+	int koniec = 0,iloscKombo = 0, poprzTekstura = 0,aktualnystan = 0,wynikPrzedPoziomem = Wynik;
 	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia,zegarAnimacjiPunkty,zegarAnimacjiKombo,zegarAnimacjiWeza;
 	wskaznikNaPokarm->ustawPokarm(gracz,planszaSprite,przeszkodaSprite,liczbaPrzeszkod);
+	if (Wynik < 20000) gracz.tekstura = 0;
+	if (Wynik >= 20000 && Wynik <= 159999)
+	{
+		gracz.tekstura = (Wynik / 20000);
+	}
+	gracz.ustawNowaTeksture();
 	while (okno.isOpen())
 	{
 		Event zdarzenie;
@@ -752,7 +764,8 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			 {
 				int menuGameOver =  gameOver(okno);
 				if(menuGameOver == 0)
-				{
+				{	
+					Wynik = wynikPrzedPoziomem;
 					return (POZIOM+1);
 				}
 				if(menuGameOver == 1)
