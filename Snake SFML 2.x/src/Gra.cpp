@@ -587,30 +587,30 @@ void Gra::wynikiTXT(string pseudonimGracza)
 		}
 		else if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next == NULL) wsk_wyniki->next = new_node;
 		else if(wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next != NULL)
-			while(wsk_wyniki!= NULL)
+			while(wsk_wyniki->next != NULL)
 			{	
-				if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next != NULL)
+				if (wsk_wyniki->next->wynikGracza > Wynik && wsk_wyniki->next->next != NULL)
 				{
 					wsk_wyniki = wsk_wyniki->next;
 					cout << endl << "Szukam dalej" << endl;
 				}
-				if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next == NULL)
+				else if (wsk_wyniki->next->wynikGracza > Wynik && wsk_wyniki->next->next == NULL)
 				{	
-					wsk_wyniki->next = new_node;
+					wsk_wyniki->next->next = new_node;
 					cout << endl << "Znaleziono miejsce na koncu" << endl;
 					break;
 				}
-				if(wsk_wyniki->wynikGracza <= Wynik && wsk_wyniki->next != NULL)
+				else if(wsk_wyniki->next->wynikGracza <= Wynik && wsk_wyniki->next->next != NULL)
 				{
 					new_node->next = wsk_wyniki->next;
-					wsk_wyniki = new_node;
+					wsk_wyniki->next = new_node;
 					cout << endl << "Znaleziono miejsce w srodku" << endl;
 					break;
 				}
-				if (wsk_wyniki->wynikGracza <= Wynik && wsk_wyniki->next == NULL)
+				else if (wsk_wyniki->next->wynikGracza <= Wynik && wsk_wyniki->next->next == NULL)
 				{
 					cout << endl << "Znaleziono miejsce na koncu, Zamieniam "<<wsk_wyniki->wynikGracza<<" z "<< new_node->wynikGracza << endl;
-					wsk_wyniki = new_node;
+					wsk_wyniki->next = new_node;
 					break;
 				}
 			}
@@ -626,6 +626,7 @@ void Gra::wynikiTXT(string pseudonimGracza)
 			wynikiPlik2 << wsk_wyniki->pseudonim << "  " << wsk_wyniki->wynikGracza << endl;
 			cout << endl << "Wstawiono do pliku " << wsk_wyniki->pseudonim << " oraz " << wsk_wyniki->wynikGracza << endl;
 			wsk_wyniki = wsk_wyniki->next;
+			i++;
 		}
 	}
 	wynikiPlik2.close();
