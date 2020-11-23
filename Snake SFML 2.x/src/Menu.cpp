@@ -186,7 +186,7 @@ Menu::Menu()
 
     bufor.loadFromFile("data/Muzyka/misc_menu.wav");
     menuDzwiekWybor.setBuffer(bufor);
-    menuDzwiekWybor.setVolume(0.8f);
+    menuDzwiekWybor.setVolume(10.0f);
 
     bufor2.loadFromFile("data/Muzyka/misc_menu_2.wav");
 
@@ -427,7 +427,7 @@ void Menu::rysuj(RenderWindow& okno)
         okno.draw(opcjeText[WSTEC]);
         for (int i = 0; i < iloscWynikow; i++)
         {
-            wynikiText[i].setPosition(660,100+((i+1)*100));
+            wynikiText[i].setPosition(660,200+((i+1)*100));
             okno.draw(wynikiText[i]);
         }
         break;
@@ -748,10 +748,14 @@ void Menu::enter( RenderWindow& okno)
         case PELNY:
             okno.create(VideoMode(1920, 1080), "Snake", Style::Fullscreen | Style::Close);
             okno.setFramerateLimit(60);
+            okno.setKeyRepeatEnabled(false);
+            aktualizacjaMenu();
             break;
         case RAMKA:
             okno.create(VideoMode(1920, 1080), "Snake", Style::Titlebar | Style::Close | Style::Resize);
             okno.setFramerateLimit(60);
+            okno.setKeyRepeatEnabled(false);
+            aktualizacjaMenu();
             break;
         case WSTEC:
             aktualnyWyborMenu = 0;

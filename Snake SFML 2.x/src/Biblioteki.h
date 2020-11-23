@@ -22,6 +22,7 @@ using namespace sf;using namespace std;
 // Kolejne klasy
 // ...
 #include "Punkty.h"
+#include "Koniec.h"
 #include "Animacja.h"
 #include "Gracz.h"
 #include "Pokarm.h"

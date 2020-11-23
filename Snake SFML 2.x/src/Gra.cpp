@@ -1,4 +1,4 @@
-#include "Biblioteki.h"
+ï»¿#include "Biblioteki.h"
 
 enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
@@ -117,13 +117,13 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 		menuPauzy[i].setScale(1.0f, 1.0f);
 	}
 	int znaki = 0;
-	string linia = "Wróc do gry";
+	string linia = "WrÃ³c do gry";
 	znaki = linia.length();
-	menuPauzy[0].setString("Wróc do gry");
+	menuPauzy[0].setString("WrÃ³c do gry");
 	menuPauzy[0].setPosition(884.0f - (znaki * 20), 350);
-	linia = "Zakoñcz";
+	linia = "ZakoÅ„cz";
 	znaki = linia.length();
-	menuPauzy[1].setString("Zakoñcz");
+	menuPauzy[1].setString("ZakoÅ„cz");
 	menuPauzy[1].setPosition(884.0f - (znaki * 20), 550);
 	
 	for (int i = 0; i < 2; i++)
@@ -137,14 +137,39 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 	}
 
 	znaki = 0;
-	linia = "Ponów poziom";
+	linia = "PonÃ³w poziom";
 	znaki = linia.length();
-	koniecGry[0].setString("Ponów poziom");
+	koniecGry[0].setString("PonÃ³w poziom");
 	koniecGry[0].setPosition(884.0f - (znaki * 20), 350);
-	linia = "Zakoñcz Gre!";
+	linia = "ZakoÅ„cz Gre!";
 	znaki = linia.length();
-	koniecGry[1].setString("Zakoñcz Gre!");
+	koniecGry[1].setString("ZakoÅ„cz Gre!");
 	koniecGry[1].setPosition(884.0f - (znaki * 20), 550);
+
+	tablicaTeskturPucharu[0] = "data/Sprity do gry/Plansza/Puchary/puchar1.png";
+	tablicaTeskturPucharu[1] = "data/Sprity do gry/Plansza/Puchary/puchar2.png";
+	tablicaTeskturPucharu[2] = "data/Sprity do gry/Plansza/Puchary/puchar3.png";
+
+	pucharTekstura.loadFromFile(tablicaTeskturPucharu[poziom]);
+	pucharTekstura.setSmooth(true);
+
+	pucharSprite.setTexture(pucharTekstura);
+	pucharSprite.setScale(1.0f, 1.0f);
+	pucharSprite.setPosition((float)12 * odstep + 136.0f,56.0f);
+	Rect<float> rozmiar = pucharSprite.getGlobalBounds();
+	pucharSprite.setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
+
+	wynikText.setFont(czcionka);
+	wynikText.setCharacterSize(32);
+	wynikText.setFillColor(Color::Black);
+	wynikText.setOutlineColor(Color::Red);
+	wynikText.setOutlineThickness(1.0f);
+	wynikText.setScale(1.0f, 1.0f);
+	wynikString = "0/";
+	if (POZIOM + 1 != 3)wynikString += std::to_string(WARUNEK);
+	if (POZIOM + 1 == 3)wynikString += "âˆž";
+	wynikText.setString(wynikString);
+	wynikText.setPosition(pucharSprite.getPosition().x + 32.0f, pucharSprite.getPosition().y - 24.0f);
 
 	delete[] tablicaX;
 	delete[] tablicaY;
@@ -272,11 +297,13 @@ void Gra::obliczPozycje()
 	}
 }
 
-int Gra::pauza(RenderWindow& okno)
+int Gra::pauza(RenderWindow& okno, Gracz& gracz, Pokarm* pokarm)
 {	
 	while (true)
 	{
 		rysujPlansze(okno);
+		gracz.rysuj(okno);
+		pokarm->rysuj(okno);
 		okno.draw(menuPauzy[0]);
 		okno.draw(menuPauzy[1]);
 		Event zdarzenie;
@@ -336,6 +363,7 @@ void Gra::rysujPlansze(RenderWindow& okno)
 	okno.draw(tloMapySprite);
 	okno.draw(wyswietlKombo);
 	okno.draw(wyswietlPunkty);
+	
 
 	if (planszaSprite != NULL && ramkaSprite != NULL)
 	{
@@ -366,14 +394,18 @@ void Gra::rysujPlansze(RenderWindow& okno)
 			okno.draw(dziuraSprite[i]);
 		}
 	}
+	okno.draw(pucharSprite);
+	okno.draw(wynikText);
 }
 
-int Gra::gameOver(RenderWindow & okno)
+int Gra::gameOver(RenderWindow & okno,Gracz & gracz, Pokarm* pokarm)
 {
 	int wyborkoniecGry = 0;
 	while (true)
 	{	
 		rysujPlansze(okno);
+		gracz.rysuj(okno);
+		pokarm->rysuj(okno);
 		okno.draw(koniecGry[0]);
 		okno.draw(koniecGry[1]);
 		Event zdarzenie;
@@ -430,206 +462,14 @@ int Gra::gameOver(RenderWindow & okno)
 
 bool Gra::przegrana(Gracz& gracz, Clock zegar)
 {
-	if (zegar.getElapsedTime().asSeconds() > 5.0f)
+	if (zegar.getElapsedTime().asSeconds() > czasZloteJablko)
 	{
 		if (gracz.samoUkaszenie())
 			return false;
-		//if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))
-		//	return false;
+		if (gracz.walnijPrzeszkode(przeszkodaSprite, liczbaPrzeszkod))
+			return false;
 	}
 	return true;
-}
-
-string Gra::wpiszNick(RenderWindow & okno)
-{
-	string pseudonim = "";
-	Text Pseudonim,TextKoncowy;
-	Pseudonim.setCharacterSize(40);
-	TextKoncowy.setCharacterSize(40);
-	Pseudonim.setFont(czcionka);
-	TextKoncowy.setFont(czcionka);
-	Pseudonim.setFillColor(Color::Black);
-	TextKoncowy.setFillColor(Color::Black);
-	Pseudonim.setOutlineThickness(1.0f);
-	TextKoncowy.setOutlineThickness(1.0f);
-	Pseudonim.setOutlineColor(Color::Red);
-	TextKoncowy.setOutlineColor(Color::Red);
-	Pseudonim.setString(pseudonim);
-
-	TextKoncowy.setString("Wpisz swoj nick i zatwierdz enterem, jesli jestes super graczem to wpiszemy cie do wynikow!");
-	int znaki = 0;
-	string linia = "Wpisz swoj nick i jesli jestes super graczem to wpiszemy cie do wynikow!";
-	znaki = linia.length();
-	TextKoncowy.setPosition(960 - (znaki/2 * 20), 350);
-	
-	znaki = 0;
-	linia = pseudonim;
-	znaki = linia.length();
-	Pseudonim.setPosition(960 - (znaki/2 * 20), 450);
-	Time czas = seconds(0.5);
-	sleep(czas);
-	czas = seconds(0.05);
-	while (true)
-	{	
-		okno.draw(tloMapySprite);
-		okno.draw(TextKoncowy);
-		okno.draw(Pseudonim);
-		Event zdarzenie;
-		while (okno.pollEvent(zdarzenie));
-		{	
-			switch (zdarzenie.type)
-			{
-			case Event::Closed:
-				continue;
-			case Event::KeyPressed:
-				if (zdarzenie.key.code == Keyboard::Escape)
-					continue;
-				break;
-			case Event::TextEntered:
-				if ((zdarzenie.text.unicode >= 48 && zdarzenie.text.unicode <= 57) || (zdarzenie.text.unicode >= 65 && zdarzenie.text.unicode <= 90) || (zdarzenie.text.unicode >= 97 && zdarzenie.text.unicode <= 122))
-				{
-					sleep(czas);
-					pseudonim += static_cast <char>(zdarzenie.text.unicode);
-					Pseudonim.setString(pseudonim);
-				}
-				if (zdarzenie.key.code == 8)
-				{
-					sleep(czas);
-					pseudonim = pseudonim.substr(0, pseudonim.length() - 1);
-					Pseudonim.setString(pseudonim);
-				}
-				if (zdarzenie.key.code == 13)
-				{
-					return pseudonim;
-				}
-				break;
-			}
-		}
-		znaki = 0;
-		linia = pseudonim;
-		znaki = linia.length();
-		Pseudonim.setPosition(960 - (znaki/2 * 20), 450);
-		okno.display();
-	}
-	return pseudonim;
-}
-
-void Gra::wynikiTXT(string pseudonimGracza)
-{
-
-	ListaWynikow* head = new ListaWynikow;
-	head->next = NULL;
-	int wynik,i = 0;
-	int znaleziono = 0;
-	string pseudonim;
-	fstream wynikiPlik("data/wyniki.txt",ios::in);
-	
-	//Wczytywanie wyników z pliku do listy
-	if (wynikiPlik)
-	{
-		while (i < 5 && wynikiPlik.eof() == false)
-		{	
-			wynikiPlik >> pseudonim >> wynik;
-			cout <<endl<< pseudonim << " " << wynik << endl;
-
-			ListaWynikow *new_node = new ListaWynikow;
-			new_node->pseudonim = pseudonim;
-			new_node->wynikGracza = wynik;
-			new_node->next = NULL;
-			if (head->next == NULL)
-			{
-				wsk_wyniki = new_node;
-				head->next = wsk_wyniki;
-			}
-			if(head->next != NULL)
-			{
-				wsk_wyniki->next = new_node;
-				wsk_wyniki = wsk_wyniki->next;
-			}
-			i++;
-		}
-		cout << endl << "Wpisano poprzednie do listy" << endl;
-	}
-	else cout << "Nie znaleziono pliku z wynikami!" << endl;
-	wynikiPlik.close();
-	fstream wynikiPlik2("data/wyniki.txt", ios::out);
-	wsk_wyniki = head->next;
-
-	cout << endl << "LISTA:" << endl;
-	while (wsk_wyniki != NULL)
-	{
-		cout << wsk_wyniki->pseudonim << "  " << wsk_wyniki->wynikGracza << endl;
-		wsk_wyniki = wsk_wyniki->next;
-	}
-
-	wsk_wyniki = head->next;
-	//Jesli lista pusta to wstawi odrazu gracza z wynikiem do niej
-	if (head->next == NULL)
-	{	
-		ListaWynikow* new_node = new ListaWynikow;
-		new_node->pseudonim = pseudonimGracza;
-		new_node->wynikGracza = Wynik;
-		new_node->next = NULL;
-		
-		head->next = new_node;
-		cout << "Wpisano jedynego gracza do wyniki.txt " << endl;
-	}
-	else
-	{//Jesli nie to poszuka miejsca
-		ListaWynikow* new_node = new ListaWynikow;
-		new_node->pseudonim = pseudonimGracza;
-		new_node->wynikGracza = Wynik;
-		new_node->next = NULL;
-		if (wsk_wyniki->wynikGracza <= Wynik)
-		{
-			new_node->next = wsk_wyniki;
-			head->next = new_node;
-		}
-		else if (wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next == NULL) wsk_wyniki->next = new_node;
-		else if(wsk_wyniki->wynikGracza > Wynik && wsk_wyniki->next != NULL)
-			while(wsk_wyniki->next != NULL)
-			{	
-				if (wsk_wyniki->next->wynikGracza > Wynik && wsk_wyniki->next->next != NULL)
-				{
-					wsk_wyniki = wsk_wyniki->next;
-					cout << endl << "Szukam dalej" << endl;
-				}
-				else if (wsk_wyniki->next->wynikGracza > Wynik && wsk_wyniki->next->next == NULL)
-				{	
-					wsk_wyniki->next->next = new_node;
-					cout << endl << "Znaleziono miejsce na koncu" << endl;
-					break;
-				}
-				else if(wsk_wyniki->next->wynikGracza <= Wynik && wsk_wyniki->next->next != NULL)
-				{
-					new_node->next = wsk_wyniki->next;
-					wsk_wyniki->next = new_node;
-					cout << endl << "Znaleziono miejsce w srodku" << endl;
-					break;
-				}
-				else if (wsk_wyniki->next->wynikGracza <= Wynik && wsk_wyniki->next->next == NULL)
-				{
-					cout << endl << "Znaleziono miejsce na koncu, Zamieniam "<<wsk_wyniki->wynikGracza<<" z "<< new_node->wynikGracza << endl;
-					wsk_wyniki->next = new_node;
-					break;
-				}
-			}
-	}
-	wsk_wyniki = head->next;
-	
-	//Wstawianie z listy do pliku
-	i = 0;
-	if (wynikiPlik)
-	{
-		while (i < 5 && wsk_wyniki!= NULL)
-		{	
-			wynikiPlik2 << wsk_wyniki->pseudonim << "  " << wsk_wyniki->wynikGracza << endl;
-			cout << endl << "Wstawiono do pliku " << wsk_wyniki->pseudonim << " oraz " << wsk_wyniki->wynikGracza << endl;
-			wsk_wyniki = wsk_wyniki->next;
-			i++;
-		}
-	}
-	wynikiPlik2.close();
 }
 
 bool Gra::wygrana(int aktualnyStan)
@@ -637,6 +477,57 @@ bool Gra::wygrana(int aktualnyStan)
 	if (POZIOM + 1 == 3) return false;
 	if (aktualnyStan == WARUNEK) return true;
 	return false;
+}
+
+void Gra::aktualizujStanGry(int wynikAktualny)
+{
+	wynikString = std::to_string(wynikAktualny);
+	wynikString += "/";
+	if(POZIOM+1 != 3)wynikString += std::to_string(WARUNEK);
+	if (POZIOM + 1 == 3)wynikString += "âˆž";
+	wynikText.setString(wynikString);
+}
+
+void Gra::pauzaPrzedGra(RenderWindow& okno,Gracz &gracz,Pokarm * pokarm)
+{
+	Text pauzaText;
+	pauzaText.setFont(czcionka);
+	pauzaText.setCharacterSize(40);
+	pauzaText.setOutlineThickness(1.0f);
+	pauzaText.setOutlineColor(Color::Red);
+	pauzaText.setFillColor(Color::Black);
+	pauzaText.setString("Nacisnij ENTER gdy bedziesz gotowy do gry!");
+	pauzaText.setPosition(okno.getSize().x/2 - (float)(11*40),okno.getSize().y/2 - 100);
+	while (true)
+	{
+		rysujPlansze(okno);
+		gracz.rysuj(okno);
+		pokarm->rysuj(okno);
+		okno.draw(pauzaText);
+		Event zdarzenie;
+		while (okno.pollEvent(zdarzenie))
+		{
+			switch (zdarzenie.type)
+			{
+			case Event::Closed:
+				okno.close();
+				break;
+			case Event::KeyPressed:
+				if (zdarzenie.key.code == Keyboard::Enter)
+				{
+					return;
+				}
+			case Event::Resized:
+				double x1, y1;
+				x1 = okno.getSize().x;
+				y1 = okno.getSize().y;
+				procX = (x1 / 1920.0);
+				procY = (y1 / 1080.0);
+				break;
+			}
+		}
+		okno.display();
+	}
 }
 
 int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
@@ -654,6 +545,7 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 	pokarmzloty.wartoscPunktow = 500;
 	Pokarm *wskaznikNaPokarm = &pokarm;
 	Punkty punkty;
+	Koniec KoniecGry;
 	bool pauzaFlaga = false;
 	int koniec = 0,iloscKombo = 0, poprzTekstura = 0,aktualnystan = 0,wynikPrzedPoziomem = Wynik;
 	Clock zegarJedzenia, zegarRysowania, zegarOchronyOdrodzenia,zegarAnimacjiPunkty,zegarAnimacjiKombo,zegarAnimacjiWeza;
@@ -664,6 +556,22 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 		gracz.tekstura = (Wynik / 20000);
 	}
 	gracz.ustawNowaTeksture();
+
+	pauzaPrzedGra(okno,gracz,wskaznikNaPokarm);
+
+	zegarOchronyOdrodzenia.restart();
+	zegarAnimacjiWeza.restart();
+	zegarJedzenia.restart();
+	zegarRysowania.restart();
+	zegarAnimacjiKombo.restart();
+	zegarAnimacjiPunkty.restart();
+
+	gracz.zerujAnimacje();
+	wskaznikNaPokarm->wyzerujAnimacje();
+
+	wskaznikNaPokarm->rysuj(okno);
+	gracz.rysuj(okno);
+
 	while (okno.isOpen())
 	{
 		Event zdarzenie;
@@ -681,7 +589,7 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 					while (koniec == 2)
 					{
 						pauzaFlaga = true;
-						koniec = pauza(okno);
+						koniec = pauza(okno,gracz,wskaznikNaPokarm);
 						wskaznikNaPokarm->wyzerujAnimacje();
 						gracz.zerujAnimacje();
 					}
@@ -701,6 +609,7 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			if (wskaznikNaPokarm->sprawdzCzyZjedzony(gracz) == true)
 			{	
 				aktualnystan++;
+				aktualizujStanGry(aktualnystan);
 				dzwiekJedzenie.play();
 				czasOdJedzenia = zegarJedzenia.getElapsedTime().asSeconds();
 				if (wskaznikNaPokarm->bonus == 1) zegarOchronyOdrodzenia.restart();
@@ -754,16 +663,16 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			}
 
 			czasOdAK = zegarAnimacjiKombo.getElapsedTime().asSeconds();
-			if (czasOdAK >= 2.0f) animujKombo(1);
+			if (czasOdAK >= czasZloteJablko) animujKombo(1);
 
 			czasOdAP = zegarAnimacjiPunkty.getElapsedTime().asSeconds();
-			if (czasOdAP >= 2.0f) animujPunkty(1);
+			if (czasOdAP >= czasZloteJablko) animujPunkty(1);
 
 			// GRACZ
 			gracz.obsluguj(dziuraSprite, 2, przeszkodaSprite, liczbaPrzeszkod);
 			if (!przegrana(gracz, zegarOchronyOdrodzenia))
 			 {
-				int menuGameOver =  gameOver(okno);
+				int menuGameOver =  gameOver(okno,gracz,wskaznikNaPokarm);
 				if(menuGameOver == 0)
 				{	
 					Wynik = wynikPrzedPoziomem;
@@ -771,8 +680,8 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 				}
 				if(menuGameOver == 1)
 				{
-					string pseudonim = wpiszNick(okno);
-					wynikiTXT(pseudonim);
+					string pseudonim = KoniecGry.wpiszNick(okno,czcionka,tloMapySprite);
+					KoniecGry.wynikiTXT(pseudonim);
 					return 0;
 				}
 			 }
@@ -781,14 +690,14 @@ int Gra::silnikPoziomu(RenderWindow& okno,int poziom)
 			 {
 				  if(POZIOM+2 > 3) 
 				  {
-					string pseudonim = wpiszNick(okno);
-					wynikiTXT(pseudonim);
+					string pseudonim = KoniecGry.wpiszNick(okno,czcionka,tloMapySprite);
+					KoniecGry.wynikiTXT(pseudonim);
 					return 0;
 				  }
 				  return (POZIOM + 2);
 			 }
 			aktualnyCzasOchrony = zegarOchronyOdrodzenia.getElapsedTime().asSeconds();
-			if (aktualnyCzasOchrony <= 5.0f)
+			if (aktualnyCzasOchrony <= czasZloteJablko)
 			{
 				gracz.ochronaKolizji();
 			}

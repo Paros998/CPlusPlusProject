@@ -385,7 +385,8 @@ void Gracz::ustawTeksture100() // Po ochronaKolizji()
 	{
 		delete animacjaCiala;
 		animacjaCiala = NULL;
-
+		graczGlowaTekstura.loadFromFile(tablicaStringCialoTekstura[GLOWA][tekstura]);
+		graczSprite[GLOWA].setTexture(graczGlowaTekstura);
 		graczCialoTekstura.loadFromFile(tablicaStringCialoTekstura[CIALO][tekstura]);
 		graczSprite[CIALO].setTexture(graczCialoTekstura);
 		graczSprite[CIALO].setTextureRect(IntRect(0, 0, 64, 64));

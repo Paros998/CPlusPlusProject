@@ -2,7 +2,7 @@
 
 
 Poziom2::Poziom2()
-	:Gra::Gra{ 20,P2 - 1,75 }
+	:Gra::Gra{ 20,P2 - 1,50 }
 {
 	tloMapyTekstura.loadFromFile("data/Sprity do gry/Plansza/tlo_2.jpg");
 	tloMapyTekstura.setSmooth(true);
