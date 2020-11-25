@@ -1,3 +1,6 @@
+/*! \file Aplikacja.cpp
+*   \brief Zawiera ciala konstruktorow ,destruktorow i metod klasy Aplikacja
+*/
 #include "Aplikacja.h"
 
 Aplikacja::Aplikacja() 

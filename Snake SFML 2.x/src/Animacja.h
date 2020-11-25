@@ -1,8 +1,13 @@
+//! \file Animacja.h
+/*!	\brief Zawiera definicje klasy Animacja
+*/
 #pragma once
 #include "Biblioteki.h"
-
+//! \class Gracz
 class Gracz;
-
+//! Klasa Animacji Sprite
+/*!	\brief Klasa odpowiadajaca za animacje sprite pokarmow i weza
+*/
 class Animacja
 {
 	float czasZmiany, deltaCzas;
@@ -15,6 +20,7 @@ public:
 	float calkowityCzas;
 	
 public:
+	//! Konstruktor klasy Animacja
 	Animacja(Texture& spriteTekstura, Vector2u liczbaObrazow, float czasZmiany);
 	int aktualizuj(int wiersz);
 };
