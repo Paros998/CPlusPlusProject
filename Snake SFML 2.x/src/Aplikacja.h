@@ -9,7 +9,7 @@ enum dzialanie{MENU,P1,P2,P3};
 	\brief Klasa odpowiadajaca za wlaczenie gry w glownej funkcji gry.
 */
 class Aplikacja
-{	
+{
 	RenderWindow oknoAplikacji;
 public:
 	//! Konstruktor klasy Aplikacja
@@ -23,7 +23,7 @@ public:
 	/*! \brief Rozdziela Gre na 4 pod programy
 	*	\n
 		i tworzy odpowiednie obiekty oraz wywoluje dalsze funkcje gry.
-	*	\return void 
+	*	\return void
 		\n
 		Nic nie zwraca
 	*/

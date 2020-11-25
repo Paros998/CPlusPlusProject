@@ -5,6 +5,11 @@ struct ListaWynikow {
 	string pseudonim;
 	int wynikGracza;
 	struct ListaWynikow* next;
+	ListaWynikow()
+	{
+		wynikGracza = 0;
+		next = NULL;
+	}
 };
 
 class Koniec

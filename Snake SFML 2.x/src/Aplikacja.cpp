@@ -28,18 +28,21 @@ void Aplikacja::start()
             {
                 if (podpoziom == 1)
                 {   
-                    Poziom1 p1;
-                    podpoziom = p1.start(oknoAplikacji);
+                    Poziom1* p1 = new Poziom1;
+                    podpoziom = p1->start(oknoAplikacji);
+                    delete p1;
                 }
                 if (podpoziom == 2)
                 {   
-                    Poziom2 p2;
-                    podpoziom = p2.start(oknoAplikacji);
+                    Poziom2* p2 = new Poziom2;
+                    podpoziom = p2->start(oknoAplikacji);
+                    delete p2;
                 }
                 if (podpoziom == 3)
                 {   
-                    Poziom3 p3;
-                    podpoziom = p3.start(oknoAplikacji);
+                    Poziom3* p3 = new Poziom3;
+                    podpoziom = p3->start(oknoAplikacji);
+                    delete p3;
                 }
             }
             if (podpoziom == 0) return;

@@ -97,11 +97,11 @@ Gracz::Gracz(int poziom)
 		graczSprite[i].setScale(0.85f, 1.0f);
 
 	if (Poziom + 1 == 1)
-		mnoznikCzasu = 0.9f;
+		mnoznikCzasu = 0.6f;
 	if (Poziom + 1 == 2)
-		mnoznikCzasu = 1.0f;
+		mnoznikCzasu = 0.7f;
 	if (Poziom + 1 == 3)
-		mnoznikCzasu = 1.1f;
+		mnoznikCzasu = 0.8f;
 
 	czasomierz = 0.0f;
 	kierunek = 0;
@@ -261,19 +261,19 @@ void Gracz::sterowanie()
 		kierunek = 1;
 		wsk_listy->sprite.setRotation(90.0f);
 	}
-	else if (Keyboard::isKeyPressed(Keyboard::Right))
+	if (Keyboard::isKeyPressed(Keyboard::Right))
 	{
 		if (kierunek == 1)return;
 		kierunek = 2;
 		wsk_listy->sprite.setRotation(-90.0f);
 	}
-	else if (Keyboard::isKeyPressed(Keyboard::Up))
+	if (Keyboard::isKeyPressed(Keyboard::Up))
 	{
 		if (kierunek == 0)return;
 		kierunek = 3;
 		wsk_listy->sprite.setRotation(180.0f);
 	}
-	else if (Keyboard::isKeyPressed(Keyboard::Down))
+	if (Keyboard::isKeyPressed(Keyboard::Down))
 	{
 		if (kierunek == 3)return;
 		kierunek = 0;

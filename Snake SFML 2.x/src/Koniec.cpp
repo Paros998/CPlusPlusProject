@@ -20,16 +20,16 @@ string Koniec::wpiszNick(RenderWindow& okno,Font &czcionka,Sprite& tloMapySprite
 	int znaki = 0;
 	string linia = "Wpisz swoj nick i jesli jestes super graczem to wpiszemy cie do wynikow!";
 	znaki = linia.length();
-	TextKoncowy.setPosition(960 - (znaki / 2 * 20), 350);
+	TextKoncowy.setPosition(960.0f - (znaki / 2.0f * 20.0f), 350.0f);
 
 	znaki = 0;
 	linia = pseudonim;
 	znaki = linia.length();
-	Pseudonim.setPosition(960 - (znaki / 2 * 20), 450);
-	Time czas = seconds(0.5);
+	Pseudonim.setPosition(960.0f - (znaki / 2.0f * 20.0f), 450.0f);
+	Time czas = seconds(0.5f);
 	sleep(czas);
 	Clock czasOdOstatniejLitery;
-	float opoznienie = 0.15f, aktualnyCzas = 0.0f;;
+	float opoznienie = 0.15f, aktualnyCzas = 0.0f;
 	while (true)
 	{
 		okno.draw(tloMapySprite);
@@ -72,7 +72,7 @@ string Koniec::wpiszNick(RenderWindow& okno,Font &czcionka,Sprite& tloMapySprite
 		znaki = 0;
 		linia = pseudonim;
 		znaki = linia.length();
-		Pseudonim.setPosition(960 - (znaki / 2 * 20), 450);
+		Pseudonim.setPosition(960.0f - (znaki / 2.0f * 20.0f), 450.0f);
 		okno.display();
 	}
 	return pseudonim;
