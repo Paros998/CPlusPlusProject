@@ -1,3 +1,6 @@
+/*! \file Animacja.cpp
+*   \brief Zawiera ciala konstruktorow ,destruktorow i metod klasy Aplikacja
+*/
 #include "Animacja.h"
 
 Animacja::Animacja(Texture& spriteTekstura, Vector2u liczbaObrazow, float czasZmiany)

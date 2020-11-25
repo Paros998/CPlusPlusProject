@@ -1,4 +1,6 @@
-﻿#include "Biblioteki.h"
+﻿/*!	\file
+*/
+#include "Biblioteki.h"
 
 enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA };
 
@@ -70,9 +72,9 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 	}
 	else if (poziom == 1)
 	{
-		planszaTekstura[PIERWSZA_KRATKA].loadFromFile(tablicaTekstur[2]);
+		planszaTekstura[PIERWSZA_KRATKA].loadFromFile(tablicaTekstur[3]);
 		planszaTekstura[PIERWSZA_KRATKA].setSmooth(true);
-		planszaTekstura[DRUGA_KRATKA].loadFromFile(tablicaTekstur[3]);
+		planszaTekstura[DRUGA_KRATKA].loadFromFile(tablicaTekstur[2]);
 		planszaTekstura[DRUGA_KRATKA].setSmooth(true);
 		planszaTekstura[RAMKA].loadFromFile(tablicaTekstur[5]);
 		planszaTekstura[RAMKA].setSmooth(true);
