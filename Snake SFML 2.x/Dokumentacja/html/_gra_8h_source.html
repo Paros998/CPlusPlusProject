@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Snake SFML: Plik źródłowy Gra.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logoSnake2.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Snake SFML
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Gra.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Biblioteki.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">class </span><a class="code" href="class_pokarm.html">Pokarm</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_gra.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gra.html">Gra</a> : <span class="keyword">public</span> <a class="code" href="class_punkty.html">Punkty</a> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    Texture tloMapyTekstura, planszaTekstura[3], przeszkodaTekstura[3],dziuraTekstura,pucharTekstura;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    String* tablicaTekstur, tablicaTeksturPrzeszkod[3],tablicaMuzyka[3],tablicaTeskturPucharu[3],wynikString;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    Sprite tloMapySprite, ** planszaSprite,**ramkaSprite ,* przeszkodaSprite, dziuraSprite[2],pucharSprite;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dlugoscPlanszy, wysokoscPlanszy, odstep;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> liczbaPrzeszkod,wyborPauza,rdzenie,POZIOM,WARUNEK;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> *tablicaX, *tablicaY, *tablicaJ;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    Text menuPauzy[2],koniecGry[2], wynikText;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Music muzykaGra;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    SoundBuffer buforJedzenie;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    Sound dzwiekJedzenie;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_gra.html">Gra</a>(<span class="keywordtype">int</span> iloscprzeszkod,<span class="keywordtype">int</span> poziom,<span class="keywordtype">int</span> warunek);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ~<a class="code" href="class_gra.html">Gra</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">double</span> procX, procY;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">float</span> czasZloteJablko;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_lista_wynikow.html">ListaWynikow</a>* wsk_wyniki;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    thread RdzenPlansza;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> rysujPlansze(RenderWindow&amp; okno);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> pauza(RenderWindow&amp; okno, <a class="code" href="class_gracz.html">Gracz</a>&amp; gracz,<a class="code" href="class_pokarm.html">Pokarm</a>* pokarm);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> silnikPoziomu(RenderWindow&amp; okno,<span class="keywordtype">int</span> poziom);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> obliczPozycje();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> przegrana(<a class="code" href="class_gracz.html">Gracz</a>&amp; gracz, Clock zegar);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> gameOver(RenderWindow&amp; okno, <a class="code" href="class_gracz.html">Gracz</a>&amp; gracz,<a class="code" href="class_pokarm.html">Pokarm</a>* pokarm);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> wygrana(<span class="keywordtype">int</span> aktualnyStan);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> aktualizujStanGry(<span class="keywordtype">int</span> aktualnyWynik);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> pauzaPrzedGra(RenderWindow&amp; okno, <a class="code" href="class_gracz.html">Gracz</a>&amp; gracz,<a class="code" href="class_pokarm.html">Pokarm</a> * pokarm);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdef"><b>Definition:</b> Gracz.h:20</div></div>
+<div class="ttc" id="astruct_lista_wynikow_html"><div class="ttname"><a href="struct_lista_wynikow.html">ListaWynikow</a></div><div class="ttdef"><b>Definition:</b> Koniec.h:4</div></div>
+<div class="ttc" id="aclass_punkty_html"><div class="ttname"><a href="class_punkty.html">Punkty</a></div><div class="ttdef"><b>Definition:</b> Punkty.h:4</div></div>
+<div class="ttc" id="aclass_gra_html"><div class="ttname"><a href="class_gra.html">Gra</a></div><div class="ttdef"><b>Definition:</b> Gra.h:5</div></div>
+<div class="ttc" id="aclass_pokarm_html"><div class="ttname"><a href="class_pokarm.html">Pokarm</a></div><div class="ttdef"><b>Definition:</b> Pokarm.h:8</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

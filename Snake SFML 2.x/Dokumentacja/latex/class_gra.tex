@@ -1,0 +1,170 @@
+\hypertarget{class_gra}{}\doxysection{Dokumentacja klasy Gra}
+\label{class_gra}\index{Gra@{Gra}}
+Diagram dziedziczenia dla Gra\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gra}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gra_ae549ad9fdad603ee7afe72dcc41af17f}\label{class_gra_ae549ad9fdad603ee7afe72dcc41af17f}} 
+{\bfseries Gra} (int iloscprzeszkod, int poziom, int warunek)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gra_a41d014bdf0afb7e54adf1f53cbb0fbad}\label{class_gra_a41d014bdf0afb7e54adf1f53cbb0fbad}} 
+double {\bfseries procX}
+\item 
+\mbox{\Hypertarget{class_gra_a7aea7484646a5b5bd8afd5554a3c9051}\label{class_gra_a7aea7484646a5b5bd8afd5554a3c9051}} 
+double {\bfseries procY}
+\item 
+\mbox{\Hypertarget{class_gra_a1813e830b36a5c85675a79a587bb6783}\label{class_gra_a1813e830b36a5c85675a79a587bb6783}} 
+float {\bfseries czas\+Zlote\+Jablko}
+\item 
+\mbox{\Hypertarget{class_gra_a625e1d56bc04ac587333868743a02a46}\label{class_gra_a625e1d56bc04ac587333868743a02a46}} 
+struct \mbox{\hyperlink{struct_lista_wynikow}{Lista\+Wynikow}} $\ast$ {\bfseries wsk\+\_\+wyniki}
+\item 
+\mbox{\Hypertarget{class_gra_a5ab37ca3556b64bbf0ce30b74220d706}\label{class_gra_a5ab37ca3556b64bbf0ce30b74220d706}} 
+thread {\bfseries Rdzen\+Plansza}
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gra_ac606071c8ec4f86da80c6a1024b6b33c}\label{class_gra_ac606071c8ec4f86da80c6a1024b6b33c}} 
+void {\bfseries rysuj\+Plansze} (Render\+Window \&okno)
+\item 
+\mbox{\Hypertarget{class_gra_a250c0f0abe8e943d30a09f3f6f4f1131}\label{class_gra_a250c0f0abe8e943d30a09f3f6f4f1131}} 
+int {\bfseries pauza} (Render\+Window \&okno, \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, \mbox{\hyperlink{class_pokarm}{Pokarm}} $\ast$pokarm)
+\item 
+\mbox{\Hypertarget{class_gra_a4417fa644685717e898cfb0a6aa78c41}\label{class_gra_a4417fa644685717e898cfb0a6aa78c41}} 
+int {\bfseries silnik\+Poziomu} (Render\+Window \&okno, int poziom)
+\item 
+\mbox{\Hypertarget{class_gra_aee83dcb8e4091534e96e1b12abf6517d}\label{class_gra_aee83dcb8e4091534e96e1b12abf6517d}} 
+void {\bfseries oblicz\+Pozycje} ()
+\item 
+\mbox{\Hypertarget{class_gra_a0d3c08104abf14019e333784ad0ee43d}\label{class_gra_a0d3c08104abf14019e333784ad0ee43d}} 
+bool {\bfseries przegrana} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, Clock zegar)
+\item 
+\mbox{\Hypertarget{class_gra_a78ec396a2f0e9e1d853cef7297737165}\label{class_gra_a78ec396a2f0e9e1d853cef7297737165}} 
+int {\bfseries game\+Over} (Render\+Window \&okno, \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, \mbox{\hyperlink{class_pokarm}{Pokarm}} $\ast$pokarm)
+\item 
+\mbox{\Hypertarget{class_gra_a9272838cfd451197e03f20869905691a}\label{class_gra_a9272838cfd451197e03f20869905691a}} 
+bool {\bfseries wygrana} (int aktualny\+Stan)
+\item 
+\mbox{\Hypertarget{class_gra_a2641b5cd6dc9114a39994c37ef9b75e8}\label{class_gra_a2641b5cd6dc9114a39994c37ef9b75e8}} 
+void {\bfseries aktualizuj\+Stan\+Gry} (int aktualny\+Wynik)
+\item 
+\mbox{\Hypertarget{class_gra_acdbc74e670d016289de4cc3c8ceb62f0}\label{class_gra_acdbc74e670d016289de4cc3c8ceb62f0}} 
+void {\bfseries pauza\+Przed\+Gra} (Render\+Window \&okno, \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, \mbox{\hyperlink{class_pokarm}{Pokarm}} $\ast$pokarm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gra_a59f29e40edd90f90b5652b2c697b589c}\label{class_gra_a59f29e40edd90f90b5652b2c697b589c}} 
+Texture {\bfseries tlo\+Mapy\+Tekstura}
+\item 
+\mbox{\Hypertarget{class_gra_aa4b87f7689afd2613b59237c88598f41}\label{class_gra_aa4b87f7689afd2613b59237c88598f41}} 
+Texture {\bfseries plansza\+Tekstura} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{class_gra_a837e08d2e9b7e12f332f05f5a56eff49}\label{class_gra_a837e08d2e9b7e12f332f05f5a56eff49}} 
+Texture {\bfseries przeszkoda\+Tekstura} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{class_gra_aa0dc740be490d561d7bf3b8a40951780}\label{class_gra_aa0dc740be490d561d7bf3b8a40951780}} 
+Texture {\bfseries dziura\+Tekstura}
+\item 
+\mbox{\Hypertarget{class_gra_a440c9c808cb834e622753a734d529dd4}\label{class_gra_a440c9c808cb834e622753a734d529dd4}} 
+Texture {\bfseries puchar\+Tekstura}
+\item 
+\mbox{\Hypertarget{class_gra_a96566376e531ef17056837165ec0e738}\label{class_gra_a96566376e531ef17056837165ec0e738}} 
+String $\ast$ {\bfseries tablica\+Tekstur}
+\item 
+\mbox{\Hypertarget{class_gra_a74a3ab8908a8ae577fea267cfd37ca8a}\label{class_gra_a74a3ab8908a8ae577fea267cfd37ca8a}} 
+String {\bfseries tablica\+Tekstur\+Przeszkod} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{class_gra_ac063881f82db29205b31fb3c579543ee}\label{class_gra_ac063881f82db29205b31fb3c579543ee}} 
+String {\bfseries tablica\+Muzyka} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{class_gra_ada66c0e6db7f9ac1e73e5e44ec41e654}\label{class_gra_ada66c0e6db7f9ac1e73e5e44ec41e654}} 
+String {\bfseries tablica\+Tesktur\+Pucharu} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{class_gra_abcbbc07ee2a01b03900d09dd89a80464}\label{class_gra_abcbbc07ee2a01b03900d09dd89a80464}} 
+String {\bfseries wynik\+String}
+\item 
+\mbox{\Hypertarget{class_gra_a07a603e1f35a28cf2b383ed26944801b}\label{class_gra_a07a603e1f35a28cf2b383ed26944801b}} 
+Sprite {\bfseries tlo\+Mapy\+Sprite}
+\item 
+\mbox{\Hypertarget{class_gra_a205498a9ca2340d4dd8bc37a03cfa872}\label{class_gra_a205498a9ca2340d4dd8bc37a03cfa872}} 
+Sprite $\ast$$\ast$ {\bfseries plansza\+Sprite}
+\item 
+\mbox{\Hypertarget{class_gra_ae91cf73656ba72a31a5c9f19fba22563}\label{class_gra_ae91cf73656ba72a31a5c9f19fba22563}} 
+Sprite $\ast$$\ast$ {\bfseries ramka\+Sprite}
+\item 
+\mbox{\Hypertarget{class_gra_a8f21243b64a436897f349e3f8c8d0c33}\label{class_gra_a8f21243b64a436897f349e3f8c8d0c33}} 
+Sprite $\ast$ {\bfseries przeszkoda\+Sprite}
+\item 
+\mbox{\Hypertarget{class_gra_ac32acf0d0ffeff1e2bc558a98cf46d47}\label{class_gra_ac32acf0d0ffeff1e2bc558a98cf46d47}} 
+Sprite {\bfseries dziura\+Sprite} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{class_gra_a0f7103ff2bafae5fdcf8cd0e9855b92c}\label{class_gra_a0f7103ff2bafae5fdcf8cd0e9855b92c}} 
+Sprite {\bfseries puchar\+Sprite}
+\item 
+\mbox{\Hypertarget{class_gra_a13a6f49dc235d9e721ea256216c63727}\label{class_gra_a13a6f49dc235d9e721ea256216c63727}} 
+unsigned int {\bfseries dlugosc\+Planszy}
+\item 
+\mbox{\Hypertarget{class_gra_a647dcea0fba0b5eb01a38259c25cbeac}\label{class_gra_a647dcea0fba0b5eb01a38259c25cbeac}} 
+unsigned int {\bfseries wysokosc\+Planszy}
+\item 
+\mbox{\Hypertarget{class_gra_aa9ed9089e97b82c2ad933eb298107e0c}\label{class_gra_aa9ed9089e97b82c2ad933eb298107e0c}} 
+unsigned int {\bfseries odstep}
+\item 
+\mbox{\Hypertarget{class_gra_abbb51ed509d8899c5730411ff97fc1a8}\label{class_gra_abbb51ed509d8899c5730411ff97fc1a8}} 
+int {\bfseries liczba\+Przeszkod}
+\item 
+\mbox{\Hypertarget{class_gra_ade29ebb8a1002a7b0620215f5bf2d0ae}\label{class_gra_ade29ebb8a1002a7b0620215f5bf2d0ae}} 
+int {\bfseries wybor\+Pauza}
+\item 
+\mbox{\Hypertarget{class_gra_a29ce8214f845e2da09df8d89995fcb17}\label{class_gra_a29ce8214f845e2da09df8d89995fcb17}} 
+int {\bfseries rdzenie}
+\item 
+\mbox{\Hypertarget{class_gra_a861e50076772956767b27451d31a813f}\label{class_gra_a861e50076772956767b27451d31a813f}} 
+int {\bfseries P\+O\+Z\+I\+OM}
+\item 
+\mbox{\Hypertarget{class_gra_a93f3e94deb39e3c4cf57271f1329d9e8}\label{class_gra_a93f3e94deb39e3c4cf57271f1329d9e8}} 
+int {\bfseries W\+A\+R\+U\+N\+EK}
+\item 
+\mbox{\Hypertarget{class_gra_a92eb58183a75737accee415a3b5abaef}\label{class_gra_a92eb58183a75737accee415a3b5abaef}} 
+int $\ast$ {\bfseries tablicaX}
+\item 
+\mbox{\Hypertarget{class_gra_a1057e85ae46ddd6cebe2149a790d670f}\label{class_gra_a1057e85ae46ddd6cebe2149a790d670f}} 
+int $\ast$ {\bfseries tablicaY}
+\item 
+\mbox{\Hypertarget{class_gra_ac7abb34135fbe6e527d6fe3304885c63}\label{class_gra_ac7abb34135fbe6e527d6fe3304885c63}} 
+int $\ast$ {\bfseries tablicaJ}
+\item 
+\mbox{\Hypertarget{class_gra_a2541db729e90406d8e501b75d0a1d36b}\label{class_gra_a2541db729e90406d8e501b75d0a1d36b}} 
+Text {\bfseries menu\+Pauzy} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{class_gra_a5e48d169fd6e71970989ac84262fc9df}\label{class_gra_a5e48d169fd6e71970989ac84262fc9df}} 
+Text {\bfseries koniec\+Gry} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{class_gra_a2fd9ccc2211a379e580eae0aa9e144b7}\label{class_gra_a2fd9ccc2211a379e580eae0aa9e144b7}} 
+Text {\bfseries wynik\+Text}
+\item 
+\mbox{\Hypertarget{class_gra_a6f1b8dd7bad9d900a548438aba329650}\label{class_gra_a6f1b8dd7bad9d900a548438aba329650}} 
+Music {\bfseries muzyka\+Gra}
+\item 
+\mbox{\Hypertarget{class_gra_a931070b9405ef56105351cbdb0a48cba}\label{class_gra_a931070b9405ef56105351cbdb0a48cba}} 
+Sound\+Buffer {\bfseries bufor\+Jedzenie}
+\item 
+\mbox{\Hypertarget{class_gra_a5898794f86254ddb404001c06be31d4f}\label{class_gra_a5898794f86254ddb404001c06be31d4f}} 
+Sound {\bfseries dzwiek\+Jedzenie}
+\end{DoxyCompactItemize}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+Gra.\+h\item 
+Gra.\+cpp\end{DoxyCompactItemize}
