@@ -87,7 +87,7 @@ void Pokarm::rysuj(RenderWindow& okno)
 
 	if (rysujEfekt)
 	{
-		if (efektSpecjalny->aktualizuj(0) > klatkiEfektu.x - 2)
+		if (efektSpecjalny->aktualizuj(0) >(int)( klatkiEfektu.x - 2))
 			rysujEfekt = false;
 		efektSprite.setTextureRect(efektSpecjalny->obszar);
 		okno.draw(efektSprite);

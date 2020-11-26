@@ -1,3 +1,22 @@
+/*! \file Menu.cpp
+*   \brief Plik ten zawiera ciala metod, konstruktorow , inicjalizacje zmiennych ,enumeratorow  , tworzenie obiektow etc.
+*/
+
+/*! \enum wyborMenu  {START,OPCJE,WYNIKI,TWORCY,WYJSCIE}
+*   \brief Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach.
+*/
+/*! \enum wyborPodstronyMenu {GLOWNA,POSTART,POOPCJE,POWYNIKI,POTWORCY,PRZEDGRA}
+*   \brief Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach.
+*/
+/*! \enum wyborPoStart {DALEJ,WSTECZ}
+*   \brief Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach.
+*/
+/*! \enum wyborPoWynikiPoTworcy {POWROT}
+*   \brief Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach.
+*/
+/*! \enum opcjeTekst {STEROWANIE,GORA,DOL,PRAWO,LEWO,USTAWIENIA,MUZYKA,EKRAN,PELNY,RAMKA,WSTEC}
+*   \brief Enumerator ten ulatwia orientowanie sie po tablicy tekstow.
+*/
 #include "Menu.h"
 
 enum wyborMenu  {START,OPCJE,WYNIKI,TWORCY,WYJSCIE};
@@ -114,14 +133,14 @@ Menu::Menu()
 
     for (int i = 0; i < 2; i++)
     {
-        tablicaSprite[i].setPosition(300, ((i + 1) * 70.0 + 250.0));
+        tablicaSprite[i].setPosition((float)300, (float)( ((i + 1) * 70.0 + 250.0)) );
         Rect<float> rozmiar = tablicaSprite[i].getGlobalBounds();
         tablicaSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
     }
 
     for (int i = 2; i < 6; i++)
     {
-        tablicaSprite[i].setPosition(325,( (i+1) * 80.0 + 250.0 ));
+        tablicaSprite[i].setPosition((float)325, (float)( ( (i+1) * 80.0 + 250.0 )) );
         Rect<float> rozmiar = tablicaSprite[i].getGlobalBounds();
         tablicaSprite[i].setOrigin(Vector2f(rozmiar.width / 2.0f, rozmiar.height / 2.0f));
     }
@@ -183,21 +202,16 @@ Menu::Menu()
     {
     menuMuzyka[i].setVolume(glosnoscMuzyki);
     }
-
-    bufor.loadFromFile("data/Muzyka/misc_menu.wav");
-    menuDzwiekWybor.setBuffer(bufor);
-    menuDzwiekWybor.setVolume(10.0f);
-
     bufor2.loadFromFile("data/Muzyka/misc_menu_2.wav");
 
     menuDzwiekZatwierdzMenu.setBuffer(bufor2);
-    menuDzwiekZatwierdzMenu.setVolume(2.0f);
+    menuDzwiekZatwierdzMenu.setVolume(6.0f);
 }
 
 Menu::~Menu() {
     delete[] tablicaText;
-    delete [] opcjeText;
-    delete [] wynikiText;
+    delete[] opcjeText;
+    delete[] wynikiText;
     delete[] menuMuzyka;
 }
 
@@ -311,7 +325,7 @@ void Menu::przygotujStrone()
         minusSprite.setPosition(1270, 700);
 
         int procent;
-        procent =( glosnoscMuzyki / 30.0 )*100;
+        procent =(int)( ( glosnoscMuzyki / 30.0 )*100 );
         unsigned int znaki;
         
         linia = "";
@@ -321,7 +335,7 @@ void Menu::przygotujStrone()
         znaki = linia.length();
         tablicaText[0].setString(linia);
         
-        tablicaText[0].setPosition(1180 - ((znaki/2.0 )* 40.0),700);
+        tablicaText[0].setPosition((float)( 1180 - ((znaki/2.0 )* 40.0) ), (float)700);
 
         opcjeText[EKRAN].setString("EKRAN");
         opcjeText[EKRAN].setPosition(620, 800);
@@ -427,7 +441,7 @@ void Menu::rysuj(RenderWindow& okno)
         okno.draw(opcjeText[WSTEC]);
         for (int i = 0; i < iloscWynikow; i++)
         {
-            wynikiText[i].setPosition(660,200+((i+1)*100));
+            wynikiText[i].setPosition((float)660.0, (float)( 200.0+(((float)i+1.0)*100.0)) );
             okno.draw(wynikiText[i]);
         }
         break;
@@ -535,7 +549,7 @@ void Menu::ruchMyszka(int x,int y)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect((tablicaText[i].getPosition().x*procX), (tablicaText[i].getPosition().y*procY),(liczbaLiter * 37 * procX),(40 * procY));
+            obszar = IntRect((int)(tablicaText[i].getPosition().x*procX), (int)(tablicaText[i].getPosition().y*procY),(int)(liczbaLiter * 37.0 * procX),(int)(40.0 * procY));
             if (obszar.contains(x, y)) 
             {
                 aktualnyWyborMenu = i;
@@ -548,7 +562,7 @@ void Menu::ruchMyszka(int x,int y)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect((tablicaText[i].getPosition().x * procX),( tablicaText[i].getPosition().y * procY),( liczbaLiter * 37 * procX),( 40 * procY));
+            obszar = IntRect((int)(tablicaText[i].getPosition().x * procX), (int)( tablicaText[i].getPosition().y * procY), (int)( liczbaLiter * 37 * procX), (int)( 40 * procY));
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
@@ -561,20 +575,20 @@ void Menu::ruchMyszka(int x,int y)
         {
             String tekst = opcjeText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect((opcjeText[i].getPosition().x * procX),( opcjeText[i].getPosition().y * procY), (liczbaLiter * 37 * procX),( 40 * procY));
+            obszar = IntRect((int)(opcjeText[i].getPosition().x * procX), (int)( opcjeText[i].getPosition().y * procY), (int)(liczbaLiter * 37 * procX), (int)( 40 * procY));
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
                 aktualizacjaMenu();
             }
         }
-        obszar = IntRect((plusSprite.getPosition().x * procX),( plusSprite.getPosition().y * procY),( 51 * procX), (51 * procY));
+        obszar = IntRect((int)(plusSprite.getPosition().x * procX), (int)( plusSprite.getPosition().y * procY), (int)( 51 * procX), (int)(51 * procY));
         if (obszar.contains(x, y))
         {
             aktualnyWyborMenu = 6;
             aktualizacjaMenu();
         }
-        obszar = IntRect((minusSprite.getPosition().x * procX), (minusSprite.getPosition().y * procY), (51 * procX), (51 * procY));
+        obszar = IntRect((int)(minusSprite.getPosition().x * procX), (int)(minusSprite.getPosition().y * procY), (int)(51 * procX), (int)(51 * procY));
         if (obszar.contains(x, y))
         {
             aktualnyWyborMenu = 6;
@@ -598,7 +612,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(tablicaText[i].getPosition().x * procX, tablicaText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
+            obszar = IntRect((int)(tablicaText[i].getPosition().x * procX), (int)(tablicaText[i].getPosition().y * procY), (int)(liczbaLiter * 37 * procX), (int)(40 * procY));
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = i;
@@ -611,7 +625,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         {
             String tekst = tablicaText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(tablicaText[i].getPosition().x * procX, tablicaText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
+            obszar = IntRect((int)(tablicaText[i].getPosition().x * procX), (int)(tablicaText[i].getPosition().y * procY), (int)(liczbaLiter * 37 * procX), (int)(40 * procY));
             if (obszar.contains(x, y))
             {   
                 aktualnyWyborMenu = i;
@@ -624,7 +638,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         {
             String tekst = opcjeText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(opcjeText[i].getPosition().x * procX, opcjeText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
+            obszar = IntRect((int)(opcjeText[i].getPosition().x * procX), (int)(opcjeText[i].getPosition().y * procY), (int)(liczbaLiter * 37 * procX), (int)(40 * procY));
             if (obszar.contains(x, y))
             {
                 switch (i)
@@ -643,7 +657,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
                 }
             }
         }
-        obszar = IntRect(plusSprite.getPosition().x * procX, plusSprite.getPosition().y * procY,51 * procX,51 * procY);
+        obszar = IntRect((int)(plusSprite.getPosition().x * procX), (int)(plusSprite.getPosition().y * procY), (int)(51 * procX), (int)(51 * procY));
         if (obszar.contains(x, y))
         {   
             if (glosnoscMuzyki == 30.0f){}
@@ -654,7 +668,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
                 break;
             }
         } 
-        obszar = IntRect(minusSprite.getPosition().x * procX, minusSprite.getPosition().y * procY,51 * procX,51 * procY);
+        obszar = IntRect((int)(minusSprite.getPosition().x * procX), (int)(minusSprite.getPosition().y * procY), (int)(51 * procX), (int)(51 * procY));
         if (obszar.contains(x, y))
         {   
             if (glosnoscMuzyki == 0.0f){}
@@ -671,7 +685,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         {
             String tekst = opcjeText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(opcjeText[i].getPosition().x * procX, opcjeText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
+            obszar = IntRect((int)(opcjeText[i].getPosition().x * procX), (int)(opcjeText[i].getPosition().y * procY), (int)(liczbaLiter * 37 * procX), (int)(40 * procY));
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = WSTEC;
@@ -684,7 +698,7 @@ void Menu::klikMyszka(int x, int y, RenderWindow& okno)
         {
             String tekst = opcjeText[i].getString();
             int liczbaLiter = tekst.getSize();
-            obszar = IntRect(opcjeText[i].getPosition().x * procX, opcjeText[i].getPosition().y * procY, liczbaLiter * 37 * procX, 40 * procY);
+            obszar = IntRect((int)(opcjeText[i].getPosition().x * procX), (int)(opcjeText[i].getPosition().y * procY), (int)(liczbaLiter * 37 * procX), (int)(40 * procY));
             if (obszar.contains(x, y))
             {
                 aktualnyWyborMenu = WSTEC;
@@ -935,7 +949,7 @@ int Menu::start(RenderWindow& okno)
                 double x, y;
                 x = zdarzenie.mouseMove.x;
                 y = zdarzenie.mouseMove.y;
-                ruchMyszka(x, y);
+                ruchMyszka((int)x, (int)y);
             }
             case Event::MouseButtonPressed:
             {
@@ -944,7 +958,7 @@ int Menu::start(RenderWindow& okno)
                     double x, y;
                     x = zdarzenie.mouseButton.x;
                     y = zdarzenie.mouseButton.y;
-                    klikMyszka(x, y, okno);
+                    klikMyszka((int)x, (int)y, okno);
                     if (podstronaMenu == PRZEDGRA)
                     {
                         switch (aktualnyWyborMenu)

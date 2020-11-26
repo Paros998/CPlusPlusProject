@@ -1,5 +1,7 @@
+/*!	\file Poziom2.cpp
+*	\brief Plik ten zawiera ciala metod klasy Poziom2.
+*/
 #include "Poziom2.h"
-
 
 Poziom2::Poziom2()
 	:Gra::Gra{ 20,P2 - 1,50 }

@@ -1,4 +1,8 @@
-﻿/*!	\file
+﻿/*!	\file Gra.cpp
+*	\brief W tym pliku znajduja sie ciala metod oraz konstruktora a takze inicjalizacje zmiennych oraz tworzenie obiektow do dzialania silniku gry na podstawie klasy Gra.
+*/
+/*!	\enum opis_planszy { PIERWSZA_KRATKA, DRUGA_KRATKA,RAMKA }
+*	\brief Enumerator ulatwiajacy obsluge tablic obiektow
 */
 #include "Biblioteki.h"
 
@@ -169,7 +173,7 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 	wynikText.setScale(1.0f, 1.0f);
 	wynikString = "0/";
 	if (POZIOM + 1 != 3)wynikString += std::to_string(WARUNEK);
-	if (POZIOM + 1 == 3)wynikString += "∞";
+	if (POZIOM + 1 == 3)wynikString += std::to_string(236);
 	wynikText.setString(wynikString);
 	wynikText.setPosition(pucharSprite.getPosition().x + 32.0f, pucharSprite.getPosition().y - 24.0f);
 
@@ -486,7 +490,7 @@ void Gra::aktualizujStanGry(int wynikAktualny)
 	wynikString = std::to_string(wynikAktualny);
 	wynikString += "/";
 	if(POZIOM+1 != 3)wynikString += std::to_string(WARUNEK);
-	if (POZIOM + 1 == 3)wynikString += "∞";
+	if (POZIOM + 1 == 3)wynikString += std::to_string(236);;
 	wynikText.setString(wynikString);
 }
 

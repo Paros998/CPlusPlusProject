@@ -1,5 +1,7 @@
+/*!	\file Poziom3.cpp
+*	\brief Plik ten zawiera ciala metod klasy Poziom3.
+*/
 #include "Poziom3.h"
-
 
 Poziom3::Poziom3()
 	:Gra::Gra{ 30,P3 - 1,100 }

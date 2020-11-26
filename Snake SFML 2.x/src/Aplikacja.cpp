@@ -12,7 +12,7 @@ Aplikacja::Aplikacja()
 
 void Aplikacja::start()
 {       
-    srand(time(0));
+    srand((unsigned)time(0));
     int poziom = MENU;
     while (true)
     {

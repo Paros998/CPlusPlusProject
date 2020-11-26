@@ -1,4 +1,12 @@
+/*!	\file Koniec.cpp
+*	\brief Plik ten zawiera ciala metod wykorzystywanych przez klase Koniec po zakonczeniu rozgrywki.
+*/
 #include "Koniec.h"
+
+Koniec::Koniec()
+{
+	wsk_wyniki = NULL;
+}
 
 string Koniec::wpiszNick(RenderWindow& okno,Font &czcionka,Sprite& tloMapySprite)
 {

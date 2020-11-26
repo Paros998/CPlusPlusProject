@@ -10,8 +10,8 @@ Animacja::Animacja(Texture& spriteTekstura, Vector2u liczbaObrazow, float czasZm
 	
 	deltaCzas = calkowityCzas = 0.0f;
 	aktualnyObraz.x = 0;
-	obszar.width = spriteTekstura.getSize().x / float(liczbaObrazow.x);
-	obszar.height = spriteTekstura.getSize().y / float(liczbaObrazow.y);
+	obszar.width = (int)( spriteTekstura.getSize().x / float(liczbaObrazow.x));
+	obszar.height =(int)( spriteTekstura.getSize().y / float(liczbaObrazow.y));
 }
 
 int Animacja::aktualizuj(int wiersz)

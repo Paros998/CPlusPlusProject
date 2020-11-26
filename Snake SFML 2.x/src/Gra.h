@@ -1,9 +1,9 @@
 /*!	\file Gra.h
-*	\brief Plik zawierajacy klase Gra ze wszystkimi zmiennymi ,obiektami oraz metodami do glownego rdzenia gry
+*	\brief Plik zawierajacy klase Gra 
 */
 
-/*!	\class Gra : public Punkty
-*	\brief Klasa glowna Gry
+/*!	\class Gra : Punkty
+*	\brief Klasa glowna Gry ze wszystkimi zmiennymi ,obiektami oraz metodami do glownego rdzenia gry
 */
 
 /*!	\var Texture Gra::tloMapyTekstura
@@ -124,6 +124,7 @@
 
 /*!	\fn Gra::~Gra()
 *	\brief Dekonstruktor Klasy Gra;
+*	Jego zadaniem jest usunac wszystkie dynamiczne tablice tekstur spriteow
 */
 
 /*!	\var double Gra::procX

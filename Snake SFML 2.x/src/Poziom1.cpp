@@ -1,3 +1,6 @@
+/*!	\file Poziom1.cpp
+*	\brief Plik ten zawiera ciala metod klasy Poziom1.
+*/
 #include "Poziom1.h"
 
 

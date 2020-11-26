@@ -1,3 +1,6 @@
+/*!	\file Punkty.cpp
+*	\brief Plik ten zawiera ciala konstruktorow i metod klasy Punkty
+*/
 #include "Biblioteki.h"
 Punkty::Punkty()
 {
@@ -38,7 +41,7 @@ Punkty::~Punkty()
 {}
 void Punkty::dodajPunkty(int parametr)
 {
-	wartosc += parametr * kombo;
+	wartosc +=(int)( parametr * kombo);
 	stringPunktow = "Wynik:";
 	stringPunktow += std::to_string(wartosc);
 	wyswietlPunkty.setString(stringPunktow);	
