@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['walnijprzeszkode_201',['walnijPrzeszkode',['../class_gracz.html#a208d03389287bbf70cde35b415fc690d',1,'Gracz']]],
+  ['wartosc_202',['wartosc',['../class_punkty.html#abc8807d9da28b63cfe9368066b1178dd',1,'Punkty']]],
+  ['wartoscpunktow_203',['wartoscPunktow',['../class_pokarm.html#abc09e3f09977e9d1cc48ccf9dbcce541',1,'Pokarm']]],
+  ['warunek_204',['WARUNEK',['../class_gra.html#a93f3e94deb39e3c4cf57271f1329d9e8',1,'Gra']]],
+  ['wpisznick_205',['wpiszNick',['../class_koniec.html#abb72ba0455c1bc202b9ce010d4cfac54',1,'Koniec']]],
+  ['wsk_5flisty_206',['wsk_listy',['../class_gracz.html#aa67fd231eb0b9368a2567a2e07ed3e38',1,'Gracz']]],
+  ['wsk_5fwyniki_207',['wsk_wyniki',['../class_koniec.html#a19754aa45c73f2aa7b93e5c309479b0a',1,'Koniec']]],
+  ['wybormenu_208',['wyborMenu',['../_menu_8cpp.html#adf2581be751d88d3a3f382530665bfc8',1,'Menu.cpp']]],
+  ['wyborpauza_209',['wyborPauza',['../class_gra.html#ade29ebb8a1002a7b0620215f5bf2d0ae',1,'Gra']]],
+  ['wyborpodstronymenu_210',['wyborPodstronyMenu',['../_menu_8cpp.html#a6ae273b54e12d2cc54afc1f9dd7bafd6',1,'Menu.cpp']]],
+  ['wyborpostart_211',['wyborPoStart',['../_menu_8cpp.html#a413200a9779641bd5e740c47e9663661',1,'Menu.cpp']]],
+  ['wyborpowynikipotworcy_212',['wyborPoWynikiPoTworcy',['../_menu_8cpp.html#abd7b2a17e0a1b91768a7a48af0bd5b7b',1,'Menu.cpp']]],
+  ['wygrana_213',['wygrana',['../class_gra.html#a9272838cfd451197e03f20869905691a',1,'Gra']]],
+  ['wynik_214',['Wynik',['../_biblioteki_8cpp.html#ae4aa6b4ceb560e61ea872cdf4a6dc9b2',1,'Wynik():&#160;Biblioteki.cpp'],['../_biblioteki_8h.html#ae4aa6b4ceb560e61ea872cdf4a6dc9b2',1,'Wynik():&#160;Biblioteki.cpp']]],
+  ['wynikgracza_215',['wynikGracza',['../struct_lista_wynikow.html#a37af1599026042d1865558766bea2e13',1,'ListaWynikow']]],
+  ['wynikiplik_216',['wynikiPlik',['../class_menu.html#a112a025d1c23bbcb5d0433ee893c0d3c',1,'Menu']]],
+  ['wynikitext_217',['wynikiText',['../class_menu.html#a77f24135dd3a61f6c25b4422eb2bf07b',1,'Menu']]],
+  ['wynikitxt_218',['wynikiTXT',['../class_koniec.html#a83af98ec3a744265dc16ec6f193843d8',1,'Koniec']]],
+  ['wynikstring_219',['wynikString',['../class_gra.html#abcbbc07ee2a01b03900d09dd89a80464',1,'Gra']]],
+  ['wyniktext_220',['wynikText',['../class_gra.html#a2fd9ccc2211a379e580eae0aa9e144b7',1,'Gra']]],
+  ['wysokosc_5fplanszy_221',['WYSOKOSC_PLANSZY',['../_biblioteki_8h.html#a4b407067c065ce83d5177b469c8a305d',1,'Biblioteki.h']]],
+  ['wysokoscplanszy_222',['wysokoscPlanszy',['../class_gra.html#a647dcea0fba0b5eb01a38259c25cbeac',1,'Gra']]],
+  ['wyswietlkombo_223',['wyswietlKombo',['../class_punkty.html#a2bf1b52431fd8fb66c9b90998b59a565',1,'Punkty']]],
+  ['wyswietlpunkty_224',['wyswietlPunkty',['../class_punkty.html#aeeb032043a7de0d473088a9c8472caa1',1,'Punkty']]],
+  ['wyzerujanimacje_225',['wyzerujAnimacje',['../class_pokarm.html#a81f5fd62259ebe018bb572702bf1743f',1,'Pokarm']]]
+];

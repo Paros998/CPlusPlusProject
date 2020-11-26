@@ -262,7 +262,7 @@ void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkoda
 void Gracz::sterowanie()
 {
 	float czas = zegarSterowania.getElapsedTime().asSeconds();
-	float opoz = 0.2f;
+	float opoz = 0.15f;
 	
 	if (Keyboard::isKeyPressed(Keyboard::Left) && czas >= opoz)
 	{

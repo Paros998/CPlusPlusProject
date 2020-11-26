@@ -1,29 +1,97 @@
 \hypertarget{class_animacja}{}\doxysection{Dokumentacja klasy Animacja}
 \label{class_animacja}\index{Animacja@{Animacja}}
+
+
+Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza.  
+
+
+
+
+{\ttfamily \#include $<$Animacja.\+h$>$}
+
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_animacja_af8d08832c4b7ccb0d3fc70b558c4580a}\label{class_animacja_af8d08832c4b7ccb0d3fc70b558c4580a}} 
-{\bfseries Animacja} (Texture \&sprite\+Tekstura, Vector2u liczba\+Obrazow, float czas\+Zmiany)
-\item 
-\mbox{\Hypertarget{class_animacja_aeeebaca3717628c632d8c5ee6664afbc}\label{class_animacja_aeeebaca3717628c632d8c5ee6664afbc}} 
-int {\bfseries aktualizuj} (int wiersz)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_animacja_af8d08832c4b7ccb0d3fc70b558c4580a}{Animacja}} (Texture \&sprite\+Tekstura, Vector2u \mbox{\hyperlink{class_animacja_a398daac7a4793893c89b678cb08a15ef}{liczba\+Obrazow}}, float \mbox{\hyperlink{class_animacja_a75a3cef1f309f2fd7fc0fc0141f0c614}{czas\+Zmiany}})
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu klasy \mbox{\hyperlink{class_animacja}{Animacja}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_animacja_aeeebaca3717628c632d8c5ee6664afbc}{aktualizuj}} (int wiersz)
+\begin{DoxyCompactList}\small\item\em Metoda klasy \mbox{\hyperlink{class_animacja}{Animacja}} aktualizujaca animacje. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_animacja_adfb6e8a1979e2cf1ddbee8afb5bfbaa3}\label{class_animacja_adfb6e8a1979e2cf1ddbee8afb5bfbaa3}} 
-Int\+Rect {\bfseries obszar}
-\item 
+Int\+Rect \mbox{\hyperlink{class_animacja_adfb6e8a1979e2cf1ddbee8afb5bfbaa3}{obszar}}
+\begin{DoxyCompactList}\small\item\em Obiekt przechowujacy aktualny obrazek animacji. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_animacja_ae9e2eaee8413128ca7212fb9baf40b15}\label{class_animacja_ae9e2eaee8413128ca7212fb9baf40b15}} 
-Clock {\bfseries zegar}
-\item 
+Clock \mbox{\hyperlink{class_animacja_ae9e2eaee8413128ca7212fb9baf40b15}{zegar}}
+\begin{DoxyCompactList}\small\item\em Zegar do pilnowania czasu miedzy animacjami. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_animacja_aba5ba7be2307313e01f0ab25d0942d47}\label{class_animacja_aba5ba7be2307313e01f0ab25d0942d47}} 
-float {\bfseries calkowity\+Czas}
-\end{DoxyCompactItemize}
+float \mbox{\hyperlink{class_animacja_aba5ba7be2307313e01f0ab25d0942d47}{calkowity\+Czas}}
+\begin{DoxyCompactList}\small\item\em Zmienna pomocnicza przy animowaniu obrazkow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_animacja_a75a3cef1f309f2fd7fc0fc0141f0c614}\label{class_animacja_a75a3cef1f309f2fd7fc0fc0141f0c614}} 
+float \mbox{\hyperlink{class_animacja_a75a3cef1f309f2fd7fc0fc0141f0c614}{czas\+Zmiany}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca czas do zmiany obrazkow animacji. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_animacja_a64f29312e919e27b30006971b638e0f4}\label{class_animacja_a64f29312e919e27b30006971b638e0f4}} 
+float \mbox{\hyperlink{class_animacja_a64f29312e919e27b30006971b638e0f4}{delta\+Czas}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca uplyniety czas zegara. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_animacja_af6316e05c443734dd0cb0140362333aa}\label{class_animacja_af6316e05c443734dd0cb0140362333aa}} 
+Vector2u \mbox{\hyperlink{class_animacja_af6316e05c443734dd0cb0140362333aa}{aktualny\+Obraz}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca wpolrzedne x , y aktualnego obrazku animacji. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_animacja_a398daac7a4793893c89b678cb08a15ef}\label{class_animacja_a398daac7a4793893c89b678cb08a15ef}} 
+Vector2u \mbox{\hyperlink{class_animacja_a398daac7a4793893c89b678cb08a15ef}{liczba\+Obrazow}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca ilosc obrazkow animacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_animacja_af8d08832c4b7ccb0d3fc70b558c4580a}\label{class_animacja_af8d08832c4b7ccb0d3fc70b558c4580a}} 
+\index{Animacja@{Animacja}!Animacja@{Animacja}}
+\index{Animacja@{Animacja}!Animacja@{Animacja}}
+\doxysubsubsection{\texorpdfstring{Animacja()}{Animacja()}}
+{\footnotesize\ttfamily Animacja\+::\+Animacja (\begin{DoxyParamCaption}\item[{Texture \&}]{sprite\+Tekstura,  }\item[{Vector2u}]{liczba\+Obrazow,  }\item[{float}]{czas\+Zmiany }\end{DoxyParamCaption})}
+
+
+
+Konstruktor obiektu klasy \mbox{\hyperlink{class_animacja}{Animacja}}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sprite\+Tekstura} & Zmienna przechowujaca teksture do animacji. \\
+\hline
+{\em liczba\+Obrazow} & Zmienna przechowujaca ilosc obrazkow animacji. \\
+\hline
+{\em czas\+Zmiany} & Zmienna przechowujaca czas w sekundach zmianu obrazkow animacji. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_animacja_aeeebaca3717628c632d8c5ee6664afbc}\label{class_animacja_aeeebaca3717628c632d8c5ee6664afbc}} 
+\index{Animacja@{Animacja}!aktualizuj@{aktualizuj}}
+\index{aktualizuj@{aktualizuj}!Animacja@{Animacja}}
+\doxysubsubsection{\texorpdfstring{aktualizuj()}{aktualizuj()}}
+{\footnotesize\ttfamily int Animacja\+::aktualizuj (\begin{DoxyParamCaption}\item[{int}]{wiersz }\end{DoxyParamCaption})}
+
+
+
+Metoda klasy \mbox{\hyperlink{class_animacja}{Animacja}} aktualizujaca animacje. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em wiersz} & Zmienna przechowujaca numer obrazku animacji w poziomie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+int
+\end{DoxyReturn}
+Zwraca pierwszy obrazek animacji 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 
-Animacja.\+h\item 
-Animacja.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_animacja_8h}{Animacja.\+h}}\item 
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_animacja_8cpp}{Animacja.\+cpp}}\end{DoxyCompactItemize}

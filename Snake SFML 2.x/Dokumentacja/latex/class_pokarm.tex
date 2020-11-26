@@ -1,35 +1,230 @@
 \hypertarget{class_pokarm}{}\doxysection{Dokumentacja klasy Pokarm}
 \label{class_pokarm}\index{Pokarm@{Pokarm}}
+
+
+Klasa odpowiedzialna za obsluge pokarmu dla weza.  
+
+
+
+
+{\ttfamily \#include $<$Pokarm.\+h$>$}
+
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_pokarm_a05d6018f8d7f67b82ca4c61a163283cc}\label{class_pokarm_a05d6018f8d7f67b82ca4c61a163283cc}} 
-{\bfseries Pokarm} (string sciezka\+Pliku, string sciezka\+Pliku\+Efektu, Vector2u klatki\+Efektu)
-\item 
-\mbox{\Hypertarget{class_pokarm_a84256134090ea334db72c64967edf826}\label{class_pokarm_a84256134090ea334db72c64967edf826}} 
-bool {\bfseries sprawdz\+Czy\+Zjedzony} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
-\item 
-\mbox{\Hypertarget{class_pokarm_a0afd3d8604b3c86a97ad85fac2b207aa}\label{class_pokarm_a0afd3d8604b3c86a97ad85fac2b207aa}} 
-void {\bfseries ustaw\+Pokarm} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, Sprite $\ast$$\ast$plansza, Sprite $\ast$przeszkody, int liczbaprzeszkod)
-\item 
-\mbox{\Hypertarget{class_pokarm_a19875923930a9a0a8dc69c2d0296fba6}\label{class_pokarm_a19875923930a9a0a8dc69c2d0296fba6}} 
-void {\bfseries rysuj} (Render\+Window \&okno)
-\item 
-\mbox{\Hypertarget{class_pokarm_a81f5fd62259ebe018bb572702bf1743f}\label{class_pokarm_a81f5fd62259ebe018bb572702bf1743f}} 
-void {\bfseries wyzeruj\+Animacje} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_pokarm_a05d6018f8d7f67b82ca4c61a163283cc}{Pokarm}} (string sciezka\+Pliku, string sciezka\+Pliku\+Efektu, Vector2u \mbox{\hyperlink{class_pokarm_ad8343ab864f6f761d072b129d0a50230}{klatki\+Efektu}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \mbox{\hyperlink{class_pokarm}{Pokarm}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pokarm_a5ff624e2d44a757b5d59c336ab5768b0}{$\sim$\+Pokarm}} ()
+\begin{DoxyCompactList}\small\item\em Dekonstruktor klasy \mbox{\hyperlink{class_pokarm}{Pokarm}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pokarm_a84256134090ea334db72c64967edf826}{sprawdz\+Czy\+Zjedzony}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzajaca czy gracz wszedl w kolizje z pokarmem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pokarm_a0afd3d8604b3c86a97ad85fac2b207aa}{ustaw\+Pokarm}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, Sprite $\ast$$\ast$plansza, Sprite $\ast$przeszkody, int liczbaprzeszkod)
+\begin{DoxyCompactList}\small\item\em Metoda poszukujaca nowego polozenia dla pokarmu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pokarm_a19875923930a9a0a8dc69c2d0296fba6}{rysuj}} (Render\+Window \&okno)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za rysowanie animacji pokarmu oraz efektu pojawiania sie go na planszy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pokarm_a81f5fd62259ebe018bb572702bf1743f}{wyzeruj\+Animacje}} ()
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za ustawienie animacji na start. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_pokarm_abc09e3f09977e9d1cc48ccf9dbcce541}\label{class_pokarm_abc09e3f09977e9d1cc48ccf9dbcce541}} 
-int {\bfseries wartosc\+Punktow}
+int \mbox{\hyperlink{class_pokarm_abc09e3f09977e9d1cc48ccf9dbcce541}{wartosc\+Punktow}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu int przechowujaca informacje ile punktow mozna uzyskac za zjedzenie aktualnego pokarmu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pokarm_acb7ac24f5cfa81e979425f6e1d9d5cf4}{bonus}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu int przyjmujaca wartosci binarane (0 lub 1). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_pokarm_acb7ac24f5cfa81e979425f6e1d9d5cf4}\label{class_pokarm_acb7ac24f5cfa81e979425f6e1d9d5cf4}} 
-int {\bfseries bonus}
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_pokarm_a0a2d4bd664a0a7bcd2c7ebd65a08fc3f}\label{class_pokarm_a0a2d4bd664a0a7bcd2c7ebd65a08fc3f}} 
+float \mbox{\hyperlink{class_pokarm_a0a2d4bd664a0a7bcd2c7ebd65a08fc3f}{x}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu float, ktora przechowuje kordynate x z okna glownego. Okresla polozenie pokarmu w osi x. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_a7e9a43f2ef1684354c31761cff0946df}\label{class_pokarm_a7e9a43f2ef1684354c31761cff0946df}} 
+float \mbox{\hyperlink{class_pokarm_a7e9a43f2ef1684354c31761cff0946df}{y}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu float, ktora przechowuje kordynate y z okna glownego. Okresla polozenie pokarmu w osi y. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_a68e1978f3f20a6dc99e33382591aac88}\label{class_pokarm_a68e1978f3f20a6dc99e33382591aac88}} 
+bool \mbox{\hyperlink{class_pokarm_a68e1978f3f20a6dc99e33382591aac88}{rysuj\+Efekt}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu bool, ktora sprawdza czy nalezy wykonac animacje dla pojawienia sie pokarmu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_acbd1ffbbbc54d371d534d5333a0b0231}\label{class_pokarm_acbd1ffbbbc54d371d534d5333a0b0231}} 
+Texture \mbox{\hyperlink{class_pokarm_acbd1ffbbbc54d371d534d5333a0b0231}{pokarm\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Texture posiadajacy sciezke pliku do animacji poruszania sie pokarmu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_a847ef9a61e3818036af296246fbb2d96}\label{class_pokarm_a847ef9a61e3818036af296246fbb2d96}} 
+Texture \mbox{\hyperlink{class_pokarm_a847ef9a61e3818036af296246fbb2d96}{efekt\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Texture posiadajacy sciezke pliku do animacji pojawienia sie pokarmu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_ac66d4465b6a170b88e60e37987867af0}\label{class_pokarm_ac66d4465b6a170b88e60e37987867af0}} 
+Sprite \mbox{\hyperlink{class_pokarm_ac66d4465b6a170b88e60e37987867af0}{pokarm\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sprite przechowujacy sprite pokarmu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_a0a25d0c404d2c7c01927cd87bd95c8cd}\label{class_pokarm_a0a25d0c404d2c7c01927cd87bd95c8cd}} 
+Sprite \mbox{\hyperlink{class_pokarm_a0a25d0c404d2c7c01927cd87bd95c8cd}{efekt\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sprite przechowujacy sprite efektu pokarmu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_a708b11260e2860f89931471f11d38bc8}\label{class_pokarm_a708b11260e2860f89931471f11d38bc8}} 
+\mbox{\hyperlink{class_animacja}{Animacja}} $\ast$ \mbox{\hyperlink{class_pokarm_a708b11260e2860f89931471f11d38bc8}{animacja}}
+\begin{DoxyCompactList}\small\item\em Wskaznik na obiekt klasy \mbox{\hyperlink{class_animacja}{Animacja}} przechowujacy animacje dla pokarmu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_a96211a6de5fc6ebcc1981c86c9b73fad}\label{class_pokarm_a96211a6de5fc6ebcc1981c86c9b73fad}} 
+\mbox{\hyperlink{class_animacja}{Animacja}} $\ast$ \mbox{\hyperlink{class_pokarm_a96211a6de5fc6ebcc1981c86c9b73fad}{efekt\+Specjalny}}
+\begin{DoxyCompactList}\small\item\em Wskaznik na obiekt klasy \mbox{\hyperlink{class_animacja}{Animacja}} przechowujacy animacje dla efektu pokarmu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokarm_ad8343ab864f6f761d072b129d0a50230}\label{class_pokarm_ad8343ab864f6f761d072b129d0a50230}} 
+Vector2u \mbox{\hyperlink{class_pokarm_ad8343ab864f6f761d072b129d0a50230}{klatki\+Efektu}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Vector2u przechowujacy odpowiednie wartosci dla tworzenia animacji w klasie \mbox{\hyperlink{class_animacja}{Animacja}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa odpowiedzialna za obsluge pokarmu dla weza. 
+
+Znajduja sie w niej funkcje tjk.\+:~\newline
+
+\begin{DoxyItemize}
+\item ustalanie dokladnej nowej pozycji pokarmu~\newline
+
+\item rysowanie pokarmu~\newline
+
+\item dodawanie punktow za zjedzenie pokarmu 
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_pokarm_a05d6018f8d7f67b82ca4c61a163283cc}\label{class_pokarm_a05d6018f8d7f67b82ca4c61a163283cc}} 
+\index{Pokarm@{Pokarm}!Pokarm@{Pokarm}}
+\index{Pokarm@{Pokarm}!Pokarm@{Pokarm}}
+\doxysubsubsection{\texorpdfstring{Pokarm()}{Pokarm()}}
+{\footnotesize\ttfamily Pokarm\+::\+Pokarm (\begin{DoxyParamCaption}\item[{string}]{sciezka\+Pliku,  }\item[{string}]{sciezka\+Pliku\+Efektu,  }\item[{Vector2u}]{klatki\+Efektu }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \mbox{\hyperlink{class_pokarm}{Pokarm}}. 
+
+
+\begin{DoxyItemize}
+\item inicjalizuje wszystkie zmienne potrzebne do obslugi pokarmu~\newline
+
+\item laduje tekstury z plikow oraz przypisuje je do sprite\textquotesingle{}ow~\newline
+
+\item ustawia animacje
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parametry}
+{\em sciezka\+Pliku} & Obiekt klasy string (std\+::string) przechowujacy odpowiednia sciezke do pliku z tekstura pokarmu.\\
+\hline
+{\em sciezka\+Pliku\+Efektu} & Obiekt klasy string (std\+::string) przechowujacy odpowiednia sciezke do pliku z tekstura efektu pokarmu.\\
+\hline
+{\em klatki\+Efektu} & Obiekt klasy Vector2u przechowujacy odpowiednie wartosci dla tworzenia animacji w klasie \mbox{\hyperlink{class_animacja}{Animacja}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pokarm_a5ff624e2d44a757b5d59c336ab5768b0}\label{class_pokarm_a5ff624e2d44a757b5d59c336ab5768b0}} 
+\index{Pokarm@{Pokarm}!````~Pokarm@{$\sim$Pokarm}}
+\index{````~Pokarm@{$\sim$Pokarm}!Pokarm@{Pokarm}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pokarm()}{~Pokarm()}}
+{\footnotesize\ttfamily Pokarm\+::$\sim$\+Pokarm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dekonstruktor klasy \mbox{\hyperlink{class_pokarm}{Pokarm}}. 
+
+Usuwa efekt i animacje pokarmu. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_pokarm_a19875923930a9a0a8dc69c2d0296fba6}\label{class_pokarm_a19875923930a9a0a8dc69c2d0296fba6}} 
+\index{Pokarm@{Pokarm}!rysuj@{rysuj}}
+\index{rysuj@{rysuj}!Pokarm@{Pokarm}}
+\doxysubsubsection{\texorpdfstring{rysuj()}{rysuj()}}
+{\footnotesize\ttfamily void Pokarm\+::rysuj (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{okno }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za rysowanie animacji pokarmu oraz efektu pojawiania sie go na planszy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \&okno} & Referencja na obiekt klasy Render\+Window wykorzystywana do rysowania gracza w glownym oknie.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokarm_a84256134090ea334db72c64967edf826}\label{class_pokarm_a84256134090ea334db72c64967edf826}} 
+\index{Pokarm@{Pokarm}!sprawdzCzyZjedzony@{sprawdzCzyZjedzony}}
+\index{sprawdzCzyZjedzony@{sprawdzCzyZjedzony}!Pokarm@{Pokarm}}
+\doxysubsubsection{\texorpdfstring{sprawdzCzyZjedzony()}{sprawdzCzyZjedzony()}}
+{\footnotesize\ttfamily bool Pokarm\+::sprawdz\+Czy\+Zjedzony (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz }\end{DoxyParamCaption})}
+
+
+
+Metoda sprawdzajaca czy gracz wszedl w kolizje z pokarmem. 
+
+Nastepnie ustalane jest kolejne polozenie pokarmu. Brane sa pod uwage przeszkody oraz cialo weza.
+
+
+\begin{DoxyParams}{Parametry}
+{\em \&gracz} & Referencja na obiekt klasy \mbox{\hyperlink{class_gracz}{Gracz}}. Przechowuje informacje na temat gracza.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+bool
+\end{DoxyReturn}
+Metoda zwraca wartosc bool. \mbox{\Hypertarget{class_pokarm_a0afd3d8604b3c86a97ad85fac2b207aa}\label{class_pokarm_a0afd3d8604b3c86a97ad85fac2b207aa}} 
+\index{Pokarm@{Pokarm}!ustawPokarm@{ustawPokarm}}
+\index{ustawPokarm@{ustawPokarm}!Pokarm@{Pokarm}}
+\doxysubsubsection{\texorpdfstring{ustawPokarm()}{ustawPokarm()}}
+{\footnotesize\ttfamily void Pokarm\+::ustaw\+Pokarm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{Sprite $\ast$$\ast$}]{plansza,  }\item[{Sprite $\ast$}]{przeszkody,  }\item[{int}]{liczbaprzeszkod }\end{DoxyParamCaption})}
+
+
+
+Metoda poszukujaca nowego polozenia dla pokarmu. 
+
+Brane sa w niej pod uwage przeszkody oraz cialo weza.
+
+
+\begin{DoxyParams}{Parametry}
+{\em \&gracz} & Referencja na obiekt klasy \mbox{\hyperlink{class_gracz}{Gracz}}. Przechowuje informacje na temat gracza.\\
+\hline
+{\em $\ast$$\ast$plansza} & Podwojny wskaznik na dynamiczna tablice dwuwymiarowa klasy Sprite, przechowujacy pola planszy(sprite\textquotesingle{}y).\\
+\hline
+{\em $\ast$przeszkody} & Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna. Przechowuje sprite\textquotesingle{}y przeszkod.\\
+\hline
+{\em liczbaprzeszkod} & Zmienna typu int okreslajaca ilosc przeszkod w tablicy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokarm_a81f5fd62259ebe018bb572702bf1743f}\label{class_pokarm_a81f5fd62259ebe018bb572702bf1743f}} 
+\index{Pokarm@{Pokarm}!wyzerujAnimacje@{wyzerujAnimacje}}
+\index{wyzerujAnimacje@{wyzerujAnimacje}!Pokarm@{Pokarm}}
+\doxysubsubsection{\texorpdfstring{wyzerujAnimacje()}{wyzerujAnimacje()}}
+{\footnotesize\ttfamily void Pokarm\+::wyzeruj\+Animacje (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za ustawienie animacji na start. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych argumentow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_pokarm_acb7ac24f5cfa81e979425f6e1d9d5cf4}\label{class_pokarm_acb7ac24f5cfa81e979425f6e1d9d5cf4}} 
+\index{Pokarm@{Pokarm}!bonus@{bonus}}
+\index{bonus@{bonus}!Pokarm@{Pokarm}}
+\doxysubsubsection{\texorpdfstring{bonus}{bonus}}
+{\footnotesize\ttfamily int Pokarm\+::bonus}
+
+
+
+Zmienna typu int przyjmujaca wartosci binarane (0 lub 1). 
+
+
+\begin{DoxyItemize}
+\item jesli jest rowna 1 to zaliczany jest bonus w postaci zlotego jablka~\newline
+
+\item jesli jest rowna 0 to zaliczana jest normalna wartosc w postaci czerownego jablka. 
+\end{DoxyItemize}
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 
-Pokarm.\+h\item 
-Pokarm.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_pokarm_8h}{Pokarm.\+h}}\item 
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_pokarm_8cpp}{Pokarm.\+cpp}}\end{DoxyCompactItemize}

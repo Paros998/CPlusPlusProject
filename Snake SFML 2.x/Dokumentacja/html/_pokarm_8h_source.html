@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Snake SFML: Plik źródłowy Pokarm.h</title>
+<title>Snake SFML: Plik źródłowy C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/Pokarm.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -47,7 +47,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,41 +61,75 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Pokarm.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Biblioteki.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span><a class="code" href="class_gracz.html">Gracz</a>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_animacja.html">Animacja</a>;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_pokarm.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pokarm.html">Pokarm</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">float</span> x, y;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">bool</span> rysujEfekt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    Texture pokarmTekstura, efektTekstura;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    Sprite pokarmSprite, efektSprite;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_animacja.html">Animacja</a>* animacja, * efektSpecjalny;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Vector2u klatkiEfektu;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_pokarm.html">Pokarm</a>(<span class="keywordtype">string</span> sciezkaPliku, <span class="keywordtype">string</span> sciezkaPlikuEfektu, Vector2u klatkiEfektu);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    ~<a class="code" href="class_pokarm.html">Pokarm</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">bool</span> sprawdzCzyZjedzony(<a class="code" href="class_gracz.html">Gracz</a>&amp; gracz);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> ustawPokarm(<a class="code" href="class_gracz.html">Gracz</a>&amp; gracz, Sprite** plansza, Sprite* przeszkody, <span class="keywordtype">int</span> liczbaprzeszkod);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> rysuj(RenderWindow&amp; okno);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> wyzerujAnimacje();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> wartoscPunktow;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> bonus;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<a href="_pokarm_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/************************************************</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  Pola klasy PRIVATE</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> ***********************************************/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/************************************************</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> *  Pola klasy PRIVATE</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> ***********************************************/</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/************************************************</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> *  Metody klasy PUBLIC</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> ***********************************************/</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_biblioteki_8h.html">Biblioteki.h</a>&quot;</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">class </span><a class="code" href="class_gracz.html">Gracz</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">class </span><a class="code" href="class_animacja.html">Animacja</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_pokarm.html">  139</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pokarm.html">Pokarm</a></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_pokarm.html#a7e9a43f2ef1684354c31761cff0946df">  141</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_pokarm.html#a0a2d4bd664a0a7bcd2c7ebd65a08fc3f">x</a>, <a class="code" href="class_pokarm.html#a7e9a43f2ef1684354c31761cff0946df">y</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_pokarm.html#a68e1978f3f20a6dc99e33382591aac88">  142</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_pokarm.html#a68e1978f3f20a6dc99e33382591aac88">rysujEfekt</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_pokarm.html#acbd1ffbbbc54d371d534d5333a0b0231">  143</a></span>&#160;    Texture <a class="code" href="class_pokarm.html#acbd1ffbbbc54d371d534d5333a0b0231">pokarmTekstura</a>, <a class="code" href="class_pokarm.html#a847ef9a61e3818036af296246fbb2d96">efektTekstura</a>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_pokarm.html#ac66d4465b6a170b88e60e37987867af0">  144</a></span>&#160;    Sprite <a class="code" href="class_pokarm.html#ac66d4465b6a170b88e60e37987867af0">pokarmSprite</a>, <a class="code" href="class_pokarm.html#a0a25d0c404d2c7c01927cd87bd95c8cd">efektSprite</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_pokarm.html#a96211a6de5fc6ebcc1981c86c9b73fad">  145</a></span>&#160;    <a class="code" href="class_animacja.html">Animacja</a>* <a class="code" href="class_pokarm.html#a708b11260e2860f89931471f11d38bc8">animacja</a>, * <a class="code" href="class_pokarm.html#a96211a6de5fc6ebcc1981c86c9b73fad">efektSpecjalny</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_pokarm.html#ad8343ab864f6f761d072b129d0a50230">  146</a></span>&#160;    Vector2u <a class="code" href="class_pokarm.html#ad8343ab864f6f761d072b129d0a50230">klatkiEfektu</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="class_pokarm.html#a05d6018f8d7f67b82ca4c61a163283cc">Pokarm</a>(<span class="keywordtype">string</span> sciezkaPliku, <span class="keywordtype">string</span> sciezkaPlikuEfektu, Vector2u <a class="code" href="class_pokarm.html#ad8343ab864f6f761d072b129d0a50230">klatkiEfektu</a>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="class_pokarm.html#a5ff624e2d44a757b5d59c336ab5768b0">~Pokarm</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_pokarm.html#a84256134090ea334db72c64967edf826">sprawdzCzyZjedzony</a>(<a class="code" href="class_gracz.html">Gracz</a>&amp; gracz);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pokarm.html#a0afd3d8604b3c86a97ad85fac2b207aa">ustawPokarm</a>(<a class="code" href="class_gracz.html">Gracz</a>&amp; gracz, Sprite** plansza, Sprite* przeszkody, <span class="keywordtype">int</span> liczbaprzeszkod);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pokarm.html#a19875923930a9a0a8dc69c2d0296fba6">rysuj</a>(RenderWindow&amp; okno);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_pokarm.html#a81f5fd62259ebe018bb572702bf1743f">wyzerujAnimacje</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="class_pokarm.html#abc09e3f09977e9d1cc48ccf9dbcce541">  155</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_pokarm.html#abc09e3f09977e9d1cc48ccf9dbcce541">wartoscPunktow</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_pokarm.html#acb7ac24f5cfa81e979425f6e1d9d5cf4">  156</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_pokarm.html#acb7ac24f5cfa81e979425f6e1d9d5cf4">bonus</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;};</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_animacja_html"><div class="ttname"><a href="class_animacja.html">Animacja</a></div><div class="ttdef"><b>Definition:</b> Animacja.h:7</div></div>
-<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdef"><b>Definition:</b> Gracz.h:20</div></div>
-<div class="ttc" id="aclass_pokarm_html"><div class="ttname"><a href="class_pokarm.html">Pokarm</a></div><div class="ttdef"><b>Definition:</b> Pokarm.h:8</div></div>
+<div class="ttc" id="aclass_animacja_html"><div class="ttname"><a href="class_animacja.html">Animacja</a></div><div class="ttdoc">Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza.</div><div class="ttdef"><b>Definition:</b> Animacja.h:60</div></div>
+<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdoc">Klasa odpowiedzialna za obsluge gracza.</div><div class="ttdef"><b>Definition:</b> Gracz.h:335</div></div>
+<div class="ttc" id="aclass_pokarm_html_acb7ac24f5cfa81e979425f6e1d9d5cf4"><div class="ttname"><a href="class_pokarm.html#acb7ac24f5cfa81e979425f6e1d9d5cf4">Pokarm::bonus</a></div><div class="ttdeci">int bonus</div><div class="ttdoc">Zmienna typu int przyjmujaca wartosci binarane (0 lub 1).</div><div class="ttdef"><b>Definition:</b> Pokarm.h:156</div></div>
+<div class="ttc" id="aclass_pokarm_html_a0a2d4bd664a0a7bcd2c7ebd65a08fc3f"><div class="ttname"><a href="class_pokarm.html#a0a2d4bd664a0a7bcd2c7ebd65a08fc3f">Pokarm::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Zmienna typu float, ktora przechowuje kordynate x z okna glownego. Okresla polozenie pokarmu w osi x.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:141</div></div>
+<div class="ttc" id="aclass_pokarm_html_a5ff624e2d44a757b5d59c336ab5768b0"><div class="ttname"><a href="class_pokarm.html#a5ff624e2d44a757b5d59c336ab5768b0">Pokarm::~Pokarm</a></div><div class="ttdeci">~Pokarm()</div><div class="ttdoc">Dekonstruktor klasy Pokarm.</div><div class="ttdef"><b>Definition:</b> Pokarm.cpp:44</div></div>
+<div class="ttc" id="aclass_pokarm_html_a0a25d0c404d2c7c01927cd87bd95c8cd"><div class="ttname"><a href="class_pokarm.html#a0a25d0c404d2c7c01927cd87bd95c8cd">Pokarm::efektSprite</a></div><div class="ttdeci">Sprite efektSprite</div><div class="ttdoc">Obiekt klasy Sprite przechowujacy sprite efektu pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:144</div></div>
+<div class="ttc" id="aclass_pokarm_html_a96211a6de5fc6ebcc1981c86c9b73fad"><div class="ttname"><a href="class_pokarm.html#a96211a6de5fc6ebcc1981c86c9b73fad">Pokarm::efektSpecjalny</a></div><div class="ttdeci">Animacja * efektSpecjalny</div><div class="ttdoc">Wskaznik na obiekt klasy Animacja przechowujacy animacje dla efektu pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:145</div></div>
+<div class="ttc" id="aclass_pokarm_html_a847ef9a61e3818036af296246fbb2d96"><div class="ttname"><a href="class_pokarm.html#a847ef9a61e3818036af296246fbb2d96">Pokarm::efektTekstura</a></div><div class="ttdeci">Texture efektTekstura</div><div class="ttdoc">Obiekt klasy Texture posiadajacy sciezke pliku do animacji pojawienia sie pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:143</div></div>
+<div class="ttc" id="aclass_pokarm_html_ac66d4465b6a170b88e60e37987867af0"><div class="ttname"><a href="class_pokarm.html#ac66d4465b6a170b88e60e37987867af0">Pokarm::pokarmSprite</a></div><div class="ttdeci">Sprite pokarmSprite</div><div class="ttdoc">Obiekt klasy Sprite przechowujacy sprite pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:144</div></div>
+<div class="ttc" id="aclass_pokarm_html_a0afd3d8604b3c86a97ad85fac2b207aa"><div class="ttname"><a href="class_pokarm.html#a0afd3d8604b3c86a97ad85fac2b207aa">Pokarm::ustawPokarm</a></div><div class="ttdeci">void ustawPokarm(Gracz &amp;gracz, Sprite **plansza, Sprite *przeszkody, int liczbaprzeszkod)</div><div class="ttdoc">Metoda poszukujaca nowego polozenia dla pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.cpp:49</div></div>
+<div class="ttc" id="aclass_pokarm_html_a81f5fd62259ebe018bb572702bf1743f"><div class="ttname"><a href="class_pokarm.html#a81f5fd62259ebe018bb572702bf1743f">Pokarm::wyzerujAnimacje</a></div><div class="ttdeci">void wyzerujAnimacje()</div><div class="ttdoc">Metoda odpowiedzialna za ustawienie animacji na start.</div><div class="ttdef"><b>Definition:</b> Pokarm.cpp:107</div></div>
+<div class="ttc" id="aclass_pokarm_html_a84256134090ea334db72c64967edf826"><div class="ttname"><a href="class_pokarm.html#a84256134090ea334db72c64967edf826">Pokarm::sprawdzCzyZjedzony</a></div><div class="ttdeci">bool sprawdzCzyZjedzony(Gracz &amp;gracz)</div><div class="ttdoc">Metoda sprawdzajaca czy gracz wszedl w kolizje z pokarmem.</div><div class="ttdef"><b>Definition:</b> Pokarm.cpp:82</div></div>
+<div class="ttc" id="a_biblioteki_8h_html"><div class="ttname"><a href="_biblioteki_8h.html">Biblioteki.h</a></div><div class="ttdoc">Plik zawierajacy wszystkie potrzebne stale , pliki naglowkowe oraz globalne zmienne i funkcje .</div></div>
+<div class="ttc" id="aclass_pokarm_html_a68e1978f3f20a6dc99e33382591aac88"><div class="ttname"><a href="class_pokarm.html#a68e1978f3f20a6dc99e33382591aac88">Pokarm::rysujEfekt</a></div><div class="ttdeci">bool rysujEfekt</div><div class="ttdoc">Zmienna typu bool, ktora sprawdza czy nalezy wykonac animacje dla pojawienia sie pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:142</div></div>
+<div class="ttc" id="aclass_pokarm_html_a05d6018f8d7f67b82ca4c61a163283cc"><div class="ttname"><a href="class_pokarm.html#a05d6018f8d7f67b82ca4c61a163283cc">Pokarm::Pokarm</a></div><div class="ttdeci">Pokarm(string sciezkaPliku, string sciezkaPlikuEfektu, Vector2u klatkiEfektu)</div><div class="ttdoc">Konstruktor klasy Pokarm.</div><div class="ttdef"><b>Definition:</b> Pokarm.cpp:18</div></div>
+<div class="ttc" id="aclass_pokarm_html_abc09e3f09977e9d1cc48ccf9dbcce541"><div class="ttname"><a href="class_pokarm.html#abc09e3f09977e9d1cc48ccf9dbcce541">Pokarm::wartoscPunktow</a></div><div class="ttdeci">int wartoscPunktow</div><div class="ttdoc">Zmienna typu int przechowujaca informacje ile punktow mozna uzyskac za zjedzenie aktualnego pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:155</div></div>
+<div class="ttc" id="aclass_pokarm_html_acbd1ffbbbc54d371d534d5333a0b0231"><div class="ttname"><a href="class_pokarm.html#acbd1ffbbbc54d371d534d5333a0b0231">Pokarm::pokarmTekstura</a></div><div class="ttdeci">Texture pokarmTekstura</div><div class="ttdoc">Obiekt klasy Texture posiadajacy sciezke pliku do animacji poruszania sie pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:143</div></div>
+<div class="ttc" id="aclass_pokarm_html_a19875923930a9a0a8dc69c2d0296fba6"><div class="ttname"><a href="class_pokarm.html#a19875923930a9a0a8dc69c2d0296fba6">Pokarm::rysuj</a></div><div class="ttdeci">void rysuj(RenderWindow &amp;okno)</div><div class="ttdoc">Metoda odpowiedzialna za rysowanie animacji pokarmu oraz efektu pojawiania sie go na planszy.</div><div class="ttdef"><b>Definition:</b> Pokarm.cpp:92</div></div>
+<div class="ttc" id="aclass_pokarm_html_a708b11260e2860f89931471f11d38bc8"><div class="ttname"><a href="class_pokarm.html#a708b11260e2860f89931471f11d38bc8">Pokarm::animacja</a></div><div class="ttdeci">Animacja * animacja</div><div class="ttdoc">Wskaznik na obiekt klasy Animacja przechowujacy animacje dla pokarmu.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:145</div></div>
+<div class="ttc" id="aclass_pokarm_html_ad8343ab864f6f761d072b129d0a50230"><div class="ttname"><a href="class_pokarm.html#ad8343ab864f6f761d072b129d0a50230">Pokarm::klatkiEfektu</a></div><div class="ttdeci">Vector2u klatkiEfektu</div><div class="ttdoc">Obiekt klasy Vector2u przechowujacy odpowiednie wartosci dla tworzenia animacji w klasie Animacja.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:146</div></div>
+<div class="ttc" id="aclass_pokarm_html"><div class="ttname"><a href="class_pokarm.html">Pokarm</a></div><div class="ttdoc">Klasa odpowiedzialna za obsluge pokarmu dla weza.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:140</div></div>
+<div class="ttc" id="aclass_pokarm_html_a7e9a43f2ef1684354c31761cff0946df"><div class="ttname"><a href="class_pokarm.html#a7e9a43f2ef1684354c31761cff0946df">Pokarm::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Zmienna typu float, ktora przechowuje kordynate y z okna glownego. Okresla polozenie pokarmu w osi y.</div><div class="ttdef"><b>Definition:</b> Pokarm.h:141</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">

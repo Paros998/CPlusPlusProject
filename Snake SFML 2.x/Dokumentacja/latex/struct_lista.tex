@@ -1,25 +1,55 @@
 \hypertarget{struct_lista}{}\doxysection{Dokumentacja struktury Lista}
 \label{struct_lista}\index{Lista@{Lista}}
+
+
+Struktura listy dynamicznej listy dwukierunkowej. Przechowuje ona\+:~\newline
+.  
+
+
+
+
+{\ttfamily \#include $<$Gracz.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_lista_a1f668b36909182ef1360b48503529a31}\label{struct_lista_a1f668b36909182ef1360b48503529a31}} 
+\mbox{\hyperlink{struct_lista_a1f668b36909182ef1360b48503529a31}{Lista}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor struktury \mbox{\hyperlink{struct_lista}{Lista}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{struct_lista_a0f87200de08c3da3fd205c088041810f}\label{struct_lista_a0f87200de08c3da3fd205c088041810f}} 
-float {\bfseries x}
-\item 
+float \mbox{\hyperlink{struct_lista_a0f87200de08c3da3fd205c088041810f}{x}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu float, ktora przechowuje kordynate x z okna glownego. Okresla polozenie w osi x elementu weza. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{struct_lista_acf5f4af18c40580b4b30ba2ff48f5124}\label{struct_lista_acf5f4af18c40580b4b30ba2ff48f5124}} 
-float {\bfseries y}
-\item 
+float \mbox{\hyperlink{struct_lista_acf5f4af18c40580b4b30ba2ff48f5124}{y}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu float, ktora przechowuje kordynate y z okna glownego. Okresla polozenie w osi y elementu weza. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{struct_lista_a5b5ea9ecee9b437963e0eadd66056f3e}\label{struct_lista_a5b5ea9ecee9b437963e0eadd66056f3e}} 
-Sprite {\bfseries sprite}
-\item 
-\mbox{\Hypertarget{struct_lista_a0f7263de3a31481d2ab30276ef172bac}\label{struct_lista_a0f7263de3a31481d2ab30276ef172bac}} 
-struct \mbox{\hyperlink{struct_lista}{Lista}} $\ast$ {\bfseries nast}
-\item 
-\mbox{\Hypertarget{struct_lista_aa1a12b41fe6b282a7a47afc948802a81}\label{struct_lista_aa1a12b41fe6b282a7a47afc948802a81}} 
-struct \mbox{\hyperlink{struct_lista}{Lista}} $\ast$ {\bfseries poprz}
-\end{DoxyCompactItemize}
+Sprite \mbox{\hyperlink{struct_lista_a5b5ea9ecee9b437963e0eadd66056f3e}{sprite}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sprite przechowujacy aktualny sprite weza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_lista_adcf73ec4921fa6f130e321bb6b666a94}\label{struct_lista_adcf73ec4921fa6f130e321bb6b666a94}} 
+struct \mbox{\hyperlink{struct_lista}{Lista}} $\ast$ \mbox{\hyperlink{struct_lista_adcf73ec4921fa6f130e321bb6b666a94}{nast}}
+\begin{DoxyCompactList}\small\item\em Wskaznik na nastepny element listy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_lista_aa062c3d267b16d69bf422f679c89d8aa}\label{struct_lista_aa062c3d267b16d69bf422f679c89d8aa}} 
+struct \mbox{\hyperlink{struct_lista}{Lista}} $\ast$ \mbox{\hyperlink{struct_lista_aa062c3d267b16d69bf422f679c89d8aa}{poprz}}
+\begin{DoxyCompactList}\small\item\em Wskaznik na poprzedni element listy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Struktura listy dynamicznej listy dwukierunkowej. Przechowuje ona\+:~\newline
+. 
+
+
+\begin{DoxyItemize}
+\item kordynaty x, y dla elementow weza~\newline
+
+\item sprite\textquotesingle{}y~\newline
+
+\item wskazniki na element poprzedni i nastepny~\newline
+
+\end{DoxyItemize}
 
 Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
 \item 
-Gracz.\+h\end{DoxyCompactItemize}
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_gracz_8h}{Gracz.\+h}}\end{DoxyCompactItemize}

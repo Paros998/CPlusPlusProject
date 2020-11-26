@@ -1,0 +1,99 @@
+\hypertarget{_biblioteki_8cpp}{}\doxysection{Dokumentacja pliku C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+ML 2.x — kopia/src/\+Biblioteki.cpp}
+\label{_biblioteki_8cpp}\index{C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/Biblioteki.cpp@{C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/Biblioteki.cpp}}
+
+
+Plik zawierajacy inicjalizacje wartosciami zmienne globalne oraz ciala funkcji globalnych.  
+
+
+{\ttfamily \#include \char`\"{}Biblioteki.\+h\char`\"{}}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_biblioteki_8cpp_a3aaa8d15e14fa29e942fee18d449486c}{losuj}} (float \&zmienna, int parametr)
+\begin{DoxyCompactList}\small\item\em Funkcja do losowania. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_biblioteki_8cpp_ab638cc3eb1ef5f332b7198a911abae7c}{losuj}} (int parametr)
+\begin{DoxyCompactList}\small\item\em Funkcja do losowania. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_biblioteki_8cpp_a3b89d002b50a9390b7c5e7b35861840b}{kolizja}} (Sprite s1, Sprite s2)
+\begin{DoxyCompactList}\small\item\em Funkcja sprawdzajaca kolizje obiektow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_biblioteki_8cpp_afd3adf73e2d5572a112c7c0d947346c1}\label{_biblioteki_8cpp_afd3adf73e2d5572a112c7c0d947346c1}} 
+int \mbox{\hyperlink{_biblioteki_8cpp_afd3adf73e2d5572a112c7c0d947346c1}{skin\+Weza}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca numer tekstury weza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8cpp_ae4aa6b4ceb560e61ea872cdf4a6dc9b2}\label{_biblioteki_8cpp_ae4aa6b4ceb560e61ea872cdf4a6dc9b2}} 
+int \mbox{\hyperlink{_biblioteki_8cpp_ae4aa6b4ceb560e61ea872cdf4a6dc9b2}{Wynik}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca wynik gracza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8cpp_a4ad51d9645c04a35acf1fc405e97275f}\label{_biblioteki_8cpp_a4ad51d9645c04a35acf1fc405e97275f}} 
+float \mbox{\hyperlink{_biblioteki_8cpp_a4ad51d9645c04a35acf1fc405e97275f}{glosnosc\+Muzyki}} = 15.\+0f
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca poziom muzyki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik zawierajacy inicjalizacje wartosciami zmienne globalne oraz ciala funkcji globalnych. 
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{_biblioteki_8cpp_a3b89d002b50a9390b7c5e7b35861840b}\label{_biblioteki_8cpp_a3b89d002b50a9390b7c5e7b35861840b}} 
+\index{Biblioteki.cpp@{Biblioteki.cpp}!kolizja@{kolizja}}
+\index{kolizja@{kolizja}!Biblioteki.cpp@{Biblioteki.cpp}}
+\doxysubsubsection{\texorpdfstring{kolizja()}{kolizja()}}
+{\footnotesize\ttfamily bool kolizja (\begin{DoxyParamCaption}\item[{Sprite}]{s1,  }\item[{Sprite}]{s2 }\end{DoxyParamCaption})}
+
+
+
+Funkcja sprawdzajaca kolizje obiektow. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em s1} & \\
+\hline
+\end{DoxyParams}
+Obiekt 1 do sprawdzenia kolizji miedzy obiektami. 
+\begin{DoxyParams}{Parametry}
+{\em s2} & \\
+\hline
+\end{DoxyParams}
+Obiekt 2 do sprawdzenia kolizji miedzy obiektami. \begin{DoxyReturn}{Zwraca}
+bool
+\end{DoxyReturn}
+Zwraca true jesli wystapi kolizja, false jesli nie. \mbox{\Hypertarget{_biblioteki_8cpp_a3aaa8d15e14fa29e942fee18d449486c}\label{_biblioteki_8cpp_a3aaa8d15e14fa29e942fee18d449486c}} 
+\index{Biblioteki.cpp@{Biblioteki.cpp}!losuj@{losuj}}
+\index{losuj@{losuj}!Biblioteki.cpp@{Biblioteki.cpp}}
+\doxysubsubsection{\texorpdfstring{losuj()}{losuj()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void losuj (\begin{DoxyParamCaption}\item[{float \&}]{zmienna,  }\item[{int}]{parametr }\end{DoxyParamCaption})}
+
+
+
+Funkcja do losowania. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em zmienna} & Zmienna do ktorej przypisywany jest wynik losowania. \\
+\hline
+{\em parametr} & Zmienna ustalajaca zakres losowania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_biblioteki_8cpp_ab638cc3eb1ef5f332b7198a911abae7c}\label{_biblioteki_8cpp_ab638cc3eb1ef5f332b7198a911abae7c}} 
+\index{Biblioteki.cpp@{Biblioteki.cpp}!losuj@{losuj}}
+\index{losuj@{losuj}!Biblioteki.cpp@{Biblioteki.cpp}}
+\doxysubsubsection{\texorpdfstring{losuj()}{losuj()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int losuj (\begin{DoxyParamCaption}\item[{int}]{parametr }\end{DoxyParamCaption})}
+
+
+
+Funkcja do losowania. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em parametr} & Zmienna ustalajaca zakres losowania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+int
+\end{DoxyReturn}
+Zwraca wylosowana liczbe typu integer 

@@ -1,23 +1,79 @@
 \hypertarget{class_koniec}{}\doxysection{Dokumentacja klasy Koniec}
 \label{class_koniec}\index{Koniec@{Koniec}}
+
+
+Klasa do wprowadzania nicku gracza oraz manipulacji lista wynikow.  
+
+
+
+
+{\ttfamily \#include $<$Koniec.\+h$>$}
+
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_koniec_abb72ba0455c1bc202b9ce010d4cfac54}\label{class_koniec_abb72ba0455c1bc202b9ce010d4cfac54}} 
-string {\bfseries wpisz\+Nick} (Render\+Window \&okno, Font \&czcionka, Sprite \&tlo\+Mapy\+Sprite)
-\item 
-\mbox{\Hypertarget{class_koniec_a83af98ec3a744265dc16ec6f193843d8}\label{class_koniec_a83af98ec3a744265dc16ec6f193843d8}} 
-void {\bfseries wyniki\+T\+XT} (string \&pseudonim)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_koniec_a459ce8a42c06b3eb674348b809c7a2cc}\label{class_koniec_a459ce8a42c06b3eb674348b809c7a2cc}} 
+\mbox{\hyperlink{class_koniec_a459ce8a42c06b3eb674348b809c7a2cc}{Koniec}} ()
+\begin{DoxyCompactList}\small\item\em Jest to konstrukto obiektu typu \mbox{\hyperlink{class_koniec}{Koniec}} Ustawia wskaznik zmiennej wskaznikowej wsk\+\_\+wyniki na N\+U\+LL. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_koniec_abb72ba0455c1bc202b9ce010d4cfac54}{wpisz\+Nick}} (Render\+Window \&okno, Font \&czcionka, Sprite \&tlo\+Mapy\+Sprite)
+\begin{DoxyCompactList}\small\item\em Metoda ta odpowiada za umozliwienie graczowi wpisanie swojego nicku/pseudonimu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_koniec_a83af98ec3a744265dc16ec6f193843d8}{wyniki\+T\+XT}} (string \&pseudonim)
+\begin{DoxyCompactList}\small\item\em Metoda ta umozliwia znalezienie odpowiedniego miejsca w liscie wynikow. Oraz wpisuje 5 najlepszych wynikow do pliku wynikowego gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_koniec_aa3ad879eacebf0a3f5853d5bc3040910}\label{class_koniec_aa3ad879eacebf0a3f5853d5bc3040910}} 
-struct \mbox{\hyperlink{struct_lista_wynikow}{Lista\+Wynikow}} $\ast$ {\bfseries wsk\+\_\+wyniki}
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_koniec_a19754aa45c73f2aa7b93e5c309479b0a}\label{class_koniec_a19754aa45c73f2aa7b93e5c309479b0a}} 
+struct \mbox{\hyperlink{struct_lista_wynikow}{Lista\+Wynikow}} $\ast$ \mbox{\hyperlink{class_koniec_a19754aa45c73f2aa7b93e5c309479b0a}{wsk\+\_\+wyniki}}
+\begin{DoxyCompactList}\small\item\em Zmienna ta przechowuje wskaznik na 1 poprawnie wypelniony element w liscie wynikow. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa do wprowadzania nicku gracza oraz manipulacji lista wynikow. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_koniec_abb72ba0455c1bc202b9ce010d4cfac54}\label{class_koniec_abb72ba0455c1bc202b9ce010d4cfac54}} 
+\index{Koniec@{Koniec}!wpiszNick@{wpiszNick}}
+\index{wpiszNick@{wpiszNick}!Koniec@{Koniec}}
+\doxysubsubsection{\texorpdfstring{wpiszNick()}{wpiszNick()}}
+{\footnotesize\ttfamily string Koniec\+::wpisz\+Nick (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{okno,  }\item[{Font \&}]{czcionka,  }\item[{Sprite \&}]{tlo\+Mapy\+Sprite }\end{DoxyParamCaption})}
+
+
+
+Metoda ta odpowiada za umozliwienie graczowi wpisanie swojego nicku/pseudonimu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em okno} & okno to referencja na obiekt typu Render\+Window glownego okna aplikacji \\
+\hline
+{\em czcionka} & czcionka to referencja na obiekty typu Font przechowujacy typ czcionki dla wyswietlanego tekstu \\
+\hline
+{\em tlo\+Mapy\+Sprite} & tlo\+Mapy\+Sprite jest to referencja na obiekt typu Sprite przechowujaca tlo danego poziomu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+string
+\end{DoxyReturn}
+Metoda ta zwraca pseudonim gracza \mbox{\Hypertarget{class_koniec_a83af98ec3a744265dc16ec6f193843d8}\label{class_koniec_a83af98ec3a744265dc16ec6f193843d8}} 
+\index{Koniec@{Koniec}!wynikiTXT@{wynikiTXT}}
+\index{wynikiTXT@{wynikiTXT}!Koniec@{Koniec}}
+\doxysubsubsection{\texorpdfstring{wynikiTXT()}{wynikiTXT()}}
+{\footnotesize\ttfamily void Koniec\+::wyniki\+T\+XT (\begin{DoxyParamCaption}\item[{string \&}]{pseudonim }\end{DoxyParamCaption})}
+
+
+
+Metoda ta umozliwia znalezienie odpowiedniego miejsca w liscie wynikow. Oraz wpisuje 5 najlepszych wynikow do pliku wynikowego gry. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em pseudonim} & pseudonim jest to referencja na zmienna lancuchowo znakow odpowiadajaca za przechowywanie nicku/pseudonimu gracza. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Metoda nic nie zwraca 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 
-Koniec.\+h\item 
-Koniec.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_koniec_8h}{Koniec.\+h}}\item 
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_koniec_8cpp}{Koniec.\+cpp}}\end{DoxyCompactItemize}

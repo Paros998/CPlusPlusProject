@@ -65,21 +65,531 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_menu-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Menu</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Klasa ta odpowiada za dzialanie menu glownego gry.  
+ <a href="class_menu.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_menu_8h_source.html">Menu.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:addfae49eabcf14f1e9fa3d88bf19cd59"><td class="memItemLeft" align="right" valign="top"><a id="addfae49eabcf14f1e9fa3d88bf19cd59"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> (RenderWindow &amp;okno)</td></tr>
+<tr class="memitem:ad466dd83355124a6ed958430450bfe94"><td class="memItemLeft" align="right" valign="top"><a id="ad466dd83355124a6ed958430450bfe94"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ad466dd83355124a6ed958430450bfe94">Menu</a> ()</td></tr>
+<tr class="memdesc:ad466dd83355124a6ed958430450bfe94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jest to konstruktor obiektu klasy <a class="el" href="class_menu.html" title="Klasa ta odpowiada za dzialanie menu glownego gry.">Menu</a> Inicjalizuje on zmienne,obiekty ,tablice itd. <br /></td></tr>
+<tr class="separator:ad466dd83355124a6ed958430450bfe94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831387f51358cfb88cd018e1777bc980"><td class="memItemLeft" align="right" valign="top"><a id="a831387f51358cfb88cd018e1777bc980"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a831387f51358cfb88cd018e1777bc980">~Menu</a> ()</td></tr>
+<tr class="memdesc:a831387f51358cfb88cd018e1777bc980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jest to dekonstruktor obiektu klasy <a class="el" href="class_menu.html" title="Klasa ta odpowiada za dzialanie menu glownego gry.">Menu</a> Niszczy on dynamicznie utworzone tablice w konstruktorze. <br /></td></tr>
+<tr class="separator:a831387f51358cfb88cd018e1777bc980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addfae49eabcf14f1e9fa3d88bf19cd59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#addfae49eabcf14f1e9fa3d88bf19cd59">start</a> (RenderWindow &amp;okno)</td></tr>
+<tr class="memdesc:addfae49eabcf14f1e9fa3d88bf19cd59"><td class="mdescLeft">&#160;</td><td class="mdescRight">okno to referencja na obiekt typu RenderWindow sluzacy do rysowania elementow 2d w tym oknie  <a href="class_menu.html#addfae49eabcf14f1e9fa3d88bf19cd59">Więcej...</a><br /></td></tr>
 <tr class="separator:addfae49eabcf14f1e9fa3d88bf19cd59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a2db63e0559ed6f4df2c54743a0e164a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a2db63e0559ed6f4df2c54743a0e164a8">poruszajTlo</a> ()</td></tr>
+<tr class="memdesc:a2db63e0559ed6f4df2c54743a0e164a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta ma za zadanie poruszac tlem menu glownego.  <a href="class_menu.html#a2db63e0559ed6f4df2c54743a0e164a8">Więcej...</a><br /></td></tr>
+<tr class="separator:a2db63e0559ed6f4df2c54743a0e164a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca93cb64d461b8e6d6485754bb75109"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a6ca93cb64d461b8e6d6485754bb75109">rysuj</a> (RenderWindow &amp;okno)</td></tr>
+<tr class="memdesc:a6ca93cb64d461b8e6d6485754bb75109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta ma za zadanie rysowanie odpowiedniego podmenu menu glownego .  <a href="class_menu.html#a6ca93cb64d461b8e6d6485754bb75109">Więcej...</a><br /></td></tr>
+<tr class="separator:a6ca93cb64d461b8e6d6485754bb75109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04bb0c4f93310e1092b220658ea6ad9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a04bb0c4f93310e1092b220658ea6ad9f">przygotujStrone</a> ()</td></tr>
+<tr class="memdesc:a04bb0c4f93310e1092b220658ea6ad9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta przygotowuje odpowiednie zasoby do rysowania dla danej podstrony i wyboru uzytkownika.  <a href="class_menu.html#a04bb0c4f93310e1092b220658ea6ad9f">Więcej...</a><br /></td></tr>
+<tr class="separator:a04bb0c4f93310e1092b220658ea6ad9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d3e739eac97ee7eb16aac1b531419d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ad8d3e739eac97ee7eb16aac1b531419d">aktualizacjaMenu</a> ()</td></tr>
+<tr class="memdesc:ad8d3e739eac97ee7eb16aac1b531419d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta ma za zadanie odpowiednio aktualizowac widok wyboru uzytkownika.  <a href="class_menu.html#ad8d3e739eac97ee7eb16aac1b531419d">Więcej...</a><br /></td></tr>
+<tr class="separator:ad8d3e739eac97ee7eb16aac1b531419d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddcd89fd3f0aaae63175e1664e9c6d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#acddcd89fd3f0aaae63175e1664e9c6d7">ruchMyszka</a> (int x, int y)</td></tr>
+<tr class="memdesc:acddcd89fd3f0aaae63175e1664e9c6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta oblicza czy myszka najechala na ktorys interaktywny element.  <a href="class_menu.html#acddcd89fd3f0aaae63175e1664e9c6d7">Więcej...</a><br /></td></tr>
+<tr class="separator:acddcd89fd3f0aaae63175e1664e9c6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dbe614520087c5ea76096ba11d4596e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a2dbe614520087c5ea76096ba11d4596e">klikMyszka</a> (int x, int y, RenderWindow &amp;okno)</td></tr>
+<tr class="memdesc:a2dbe614520087c5ea76096ba11d4596e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta oblicza czy myszka najechala na ktorys interaktywny element.  <a href="class_menu.html#a2dbe614520087c5ea76096ba11d4596e">Więcej...</a><br /></td></tr>
+<tr class="separator:a2dbe614520087c5ea76096ba11d4596e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ffac228f003fd430d4c601c0d75c447"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a6ffac228f003fd430d4c601c0d75c447">enter</a> (RenderWindow &amp;okno)</td></tr>
+<tr class="memdesc:a6ffac228f003fd430d4c601c0d75c447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta ma za zadanie zmieniac podtstrony menu lub uruchamiac poziom czy tez konczyc dzialanie aplikacji.  <a href="class_menu.html#a6ffac228f003fd430d4c601c0d75c447">Więcej...</a><br /></td></tr>
+<tr class="separator:a6ffac228f003fd430d4c601c0d75c447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a3fa7483af0648af794922eaf51a52068"><td class="memItemLeft" align="right" valign="top"><a id="a3fa7483af0648af794922eaf51a52068"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a3fa7483af0648af794922eaf51a52068">menuTekstura</a></td></tr>
+<tr class="memdesc:a3fa7483af0648af794922eaf51a52068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture tla menu glownego. <br /></td></tr>
+<tr class="separator:a3fa7483af0648af794922eaf51a52068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9f9dba1c131dd185eb59a6a54eca28"><td class="memItemLeft" align="right" valign="top"><a id="aee9f9dba1c131dd185eb59a6a54eca28"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aee9f9dba1c131dd185eb59a6a54eca28">logoTekstura</a></td></tr>
+<tr class="memdesc:aee9f9dba1c131dd185eb59a6a54eca28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture logo menu glownego. <br /></td></tr>
+<tr class="separator:aee9f9dba1c131dd185eb59a6a54eca28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af198edca68e964f3c5e75f14b6dac919"><td class="memItemLeft" align="right" valign="top"><a id="af198edca68e964f3c5e75f14b6dac919"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#af198edca68e964f3c5e75f14b6dac919">strzalkaTekstura</a></td></tr>
+<tr class="memdesc:af198edca68e964f3c5e75f14b6dac919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture strzalki menu glownego. <br /></td></tr>
+<tr class="separator:af198edca68e964f3c5e75f14b6dac919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af71ce5b02c7e59ade2a1905ad09776b6"><td class="memItemLeft" align="right" valign="top"><a id="af71ce5b02c7e59ade2a1905ad09776b6"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#af71ce5b02c7e59ade2a1905ad09776b6">plusTekstura</a></td></tr>
+<tr class="memdesc:af71ce5b02c7e59ade2a1905ad09776b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture plusa do zmiany glosnosci muzyki w opcjach. <br /></td></tr>
+<tr class="separator:af71ce5b02c7e59ade2a1905ad09776b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6256f197529493cfa667906316e1ef72"><td class="memItemLeft" align="right" valign="top"><a id="a6256f197529493cfa667906316e1ef72"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a6256f197529493cfa667906316e1ef72">minusTekstura</a></td></tr>
+<tr class="memdesc:a6256f197529493cfa667906316e1ef72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture minusa do zmiany glosnosci muzyki w opcjach. <br /></td></tr>
+<tr class="separator:a6256f197529493cfa667906316e1ef72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7112a53b28caf8eddeeecad945233a36"><td class="memItemLeft" align="right" valign="top"><a id="a7112a53b28caf8eddeeecad945233a36"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a7112a53b28caf8eddeeecad945233a36">opcjeTekstura</a></td></tr>
+<tr class="memdesc:a7112a53b28caf8eddeeecad945233a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture znaczka opcji. <br /></td></tr>
+<tr class="separator:a7112a53b28caf8eddeeecad945233a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e3e907ae9cee5ea1a0b854a0a4f29b"><td class="memItemLeft" align="right" valign="top"><a id="ae2e3e907ae9cee5ea1a0b854a0a4f29b"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ae2e3e907ae9cee5ea1a0b854a0a4f29b">ludzikiTekstura</a></td></tr>
+<tr class="memdesc:ae2e3e907ae9cee5ea1a0b854a0a4f29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture znaczka osob. <br /></td></tr>
+<tr class="separator:ae2e3e907ae9cee5ea1a0b854a0a4f29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352eaa8ab863457a0d6c1831f8b8c9b2"><td class="memItemLeft" align="right" valign="top"><a id="a352eaa8ab863457a0d6c1831f8b8c9b2"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a352eaa8ab863457a0d6c1831f8b8c9b2">kontrolerTekstura</a></td></tr>
+<tr class="memdesc:a352eaa8ab863457a0d6c1831f8b8c9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture znaczka kontrolera. <br /></td></tr>
+<tr class="separator:a352eaa8ab863457a0d6c1831f8b8c9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3eef59a8559215843859de438357f4"><td class="memItemLeft" align="right" valign="top"><a id="acd3eef59a8559215843859de438357f4"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#acd3eef59a8559215843859de438357f4">dolTekstura</a></td></tr>
+<tr class="memdesc:acd3eef59a8559215843859de438357f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture znaczka strzalki w dol. <br /></td></tr>
+<tr class="separator:acd3eef59a8559215843859de438357f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0aeaca7401a2cedecaf227348064b8f"><td class="memItemLeft" align="right" valign="top"><a id="ac0aeaca7401a2cedecaf227348064b8f"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ac0aeaca7401a2cedecaf227348064b8f">goraTekstura</a></td></tr>
+<tr class="memdesc:ac0aeaca7401a2cedecaf227348064b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture znaczka strzalki w gore. <br /></td></tr>
+<tr class="separator:ac0aeaca7401a2cedecaf227348064b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a367107e909720126732de1d577e15455"><td class="memItemLeft" align="right" valign="top"><a id="a367107e909720126732de1d577e15455"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a367107e909720126732de1d577e15455">lewoTekstura</a></td></tr>
+<tr class="memdesc:a367107e909720126732de1d577e15455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture znaczka strzalki w lewo. <br /></td></tr>
+<tr class="separator:a367107e909720126732de1d577e15455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fbec43b4ded1999415f58ddfd53d961"><td class="memItemLeft" align="right" valign="top"><a id="a5fbec43b4ded1999415f58ddfd53d961"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a5fbec43b4ded1999415f58ddfd53d961">prawoTekstura</a></td></tr>
+<tr class="memdesc:a5fbec43b4ded1999415f58ddfd53d961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Texture przechowujaca teksture znaczka strzalki w prawo. <br /></td></tr>
+<tr class="separator:a5fbec43b4ded1999415f58ddfd53d961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d391348e88f794370b0778b3565530a"><td class="memItemLeft" align="right" valign="top"><a id="a6d391348e88f794370b0778b3565530a"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a6d391348e88f794370b0778b3565530a">menuSprite</a></td></tr>
+<tr class="memdesc:a6d391348e88f794370b0778b3565530a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca tlo menu glownego gry. <br /></td></tr>
+<tr class="separator:a6d391348e88f794370b0778b3565530a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa26c459347d9a97289a5a1cc0defa6"><td class="memItemLeft" align="right" valign="top"><a id="aefa26c459347d9a97289a5a1cc0defa6"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aefa26c459347d9a97289a5a1cc0defa6">logoSprite</a></td></tr>
+<tr class="memdesc:aefa26c459347d9a97289a5a1cc0defa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca logo menu glownego gry. <br /></td></tr>
+<tr class="separator:aefa26c459347d9a97289a5a1cc0defa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d586b71de27ace5e2697d028fdfeda7"><td class="memItemLeft" align="right" valign="top"><a id="a2d586b71de27ace5e2697d028fdfeda7"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a2d586b71de27ace5e2697d028fdfeda7">strzalkaSprite</a></td></tr>
+<tr class="memdesc:a2d586b71de27ace5e2697d028fdfeda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca strzalke menu glownego gry. <br /></td></tr>
+<tr class="separator:a2d586b71de27ace5e2697d028fdfeda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a900f65133b68eb6e4bcfcdc555b34f04"><td class="memItemLeft" align="right" valign="top"><a id="a900f65133b68eb6e4bcfcdc555b34f04"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a900f65133b68eb6e4bcfcdc555b34f04">plusSprite</a></td></tr>
+<tr class="memdesc:a900f65133b68eb6e4bcfcdc555b34f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca plus w opcjach gry. <br /></td></tr>
+<tr class="separator:a900f65133b68eb6e4bcfcdc555b34f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9e57c9396486c2d497c52be88b9265"><td class="memItemLeft" align="right" valign="top"><a id="a3b9e57c9396486c2d497c52be88b9265"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a3b9e57c9396486c2d497c52be88b9265">minusSprite</a></td></tr>
+<tr class="memdesc:a3b9e57c9396486c2d497c52be88b9265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca minus w opcjach gry. <br /></td></tr>
+<tr class="separator:a3b9e57c9396486c2d497c52be88b9265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a273b65b789a09f530d40de2b96b19521"><td class="memItemLeft" align="right" valign="top"><a id="a273b65b789a09f530d40de2b96b19521"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a273b65b789a09f530d40de2b96b19521">opcjeSprite</a></td></tr>
+<tr class="memdesc:a273b65b789a09f530d40de2b96b19521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca znaczek opcje. <br /></td></tr>
+<tr class="separator:a273b65b789a09f530d40de2b96b19521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e02fd8a99337f3742741d4f6c8441e"><td class="memItemLeft" align="right" valign="top"><a id="a79e02fd8a99337f3742741d4f6c8441e"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a79e02fd8a99337f3742741d4f6c8441e">ludzikiSprite</a></td></tr>
+<tr class="memdesc:a79e02fd8a99337f3742741d4f6c8441e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca znaczek osob. <br /></td></tr>
+<tr class="separator:a79e02fd8a99337f3742741d4f6c8441e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7902c6c5cb326db337c470d024fd5bd2"><td class="memItemLeft" align="right" valign="top"><a id="a7902c6c5cb326db337c470d024fd5bd2"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a7902c6c5cb326db337c470d024fd5bd2">kontrolerSprite</a></td></tr>
+<tr class="memdesc:a7902c6c5cb326db337c470d024fd5bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca znaczek kontrolera. <br /></td></tr>
+<tr class="separator:a7902c6c5cb326db337c470d024fd5bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a8128aafa79eeabbf0277978c35e27"><td class="memItemLeft" align="right" valign="top"><a id="a64a8128aafa79eeabbf0277978c35e27"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a64a8128aafa79eeabbf0277978c35e27">dolSprite</a></td></tr>
+<tr class="memdesc:a64a8128aafa79eeabbf0277978c35e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca znaczek strzalki w dol. <br /></td></tr>
+<tr class="separator:a64a8128aafa79eeabbf0277978c35e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d555036d96b4bf67ec4944d7ae3d39"><td class="memItemLeft" align="right" valign="top"><a id="aa8d555036d96b4bf67ec4944d7ae3d39"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aa8d555036d96b4bf67ec4944d7ae3d39">goraSprite</a></td></tr>
+<tr class="memdesc:aa8d555036d96b4bf67ec4944d7ae3d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca znaczek strzalki w gore. <br /></td></tr>
+<tr class="separator:aa8d555036d96b4bf67ec4944d7ae3d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed68da829dd539673f2a8679d0185614"><td class="memItemLeft" align="right" valign="top"><a id="aed68da829dd539673f2a8679d0185614"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aed68da829dd539673f2a8679d0185614">lewoSprite</a></td></tr>
+<tr class="memdesc:aed68da829dd539673f2a8679d0185614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca znaczek strzalki w lewo. <br /></td></tr>
+<tr class="separator:aed68da829dd539673f2a8679d0185614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5adcefca6ae1d18cb83c291c0dab505f"><td class="memItemLeft" align="right" valign="top"><a id="a5adcefca6ae1d18cb83c291c0dab505f"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a5adcefca6ae1d18cb83c291c0dab505f">prawoSprite</a></td></tr>
+<tr class="memdesc:a5adcefca6ae1d18cb83c291c0dab505f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu Sprite przechowujaca znaczek strzalki w prawo. <br /></td></tr>
+<tr class="separator:a5adcefca6ae1d18cb83c291c0dab505f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51f21570305eda72e0b0e3f3b688b59"><td class="memItemLeft" align="right" valign="top"><a id="ad51f21570305eda72e0b0e3f3b688b59"></a>
+Sprite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ad51f21570305eda72e0b0e3f3b688b59">tablicaSprite</a></td></tr>
+<tr class="memdesc:ad51f21570305eda72e0b0e3f3b688b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna wskaznikowa przechowujaca wskaznik na tablice sprite do menu postartowego. <br /></td></tr>
+<tr class="separator:ad51f21570305eda72e0b0e3f3b688b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7bf9f1579ba2dbcae45629cb03c567e"><td class="memItemLeft" align="right" valign="top"><a id="ad7bf9f1579ba2dbcae45629cb03c567e"></a>
+Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ad7bf9f1579ba2dbcae45629cb03c567e">teksturaSprite</a></td></tr>
+<tr class="memdesc:ad7bf9f1579ba2dbcae45629cb03c567e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna wskaznikowa przechowujaca wskaznik na tablice tekstur do menu postartowego. <br /></td></tr>
+<tr class="separator:ad7bf9f1579ba2dbcae45629cb03c567e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12821bb695954760a1f96fc12334ba45"><td class="memItemLeft" align="right" valign="top"><a id="a12821bb695954760a1f96fc12334ba45"></a>
+Text *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a12821bb695954760a1f96fc12334ba45">tablicaText</a></td></tr>
+<tr class="memdesc:a12821bb695954760a1f96fc12334ba45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna wskaznikowa przechowujaca wskaznik na tablice tekstu do menu glownego. <br /></td></tr>
+<tr class="separator:a12821bb695954760a1f96fc12334ba45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee51721824f8e844254ddc9f2332a57"><td class="memItemLeft" align="right" valign="top"><a id="a0ee51721824f8e844254ddc9f2332a57"></a>
+Text *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a0ee51721824f8e844254ddc9f2332a57">opcjeText</a></td></tr>
+<tr class="memdesc:a0ee51721824f8e844254ddc9f2332a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna wskaznikowa przechowujaca wskaznik na tablice tekstu do opcji. <br /></td></tr>
+<tr class="separator:a0ee51721824f8e844254ddc9f2332a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f24135dd3a61f6c25b4422eb2bf07b"><td class="memItemLeft" align="right" valign="top"><a id="a77f24135dd3a61f6c25b4422eb2bf07b"></a>
+Text *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a77f24135dd3a61f6c25b4422eb2bf07b">wynikiText</a></td></tr>
+<tr class="memdesc:a77f24135dd3a61f6c25b4422eb2bf07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna wskaznikowa przechowujaca wskaznik na tablice tekstu do wynikow. <br /></td></tr>
+<tr class="separator:a77f24135dd3a61f6c25b4422eb2bf07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112a025d1c23bbcb5d0433ee893c0d3c"><td class="memItemLeft" align="right" valign="top"><a id="a112a025d1c23bbcb5d0433ee893c0d3c"></a>
+ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a112a025d1c23bbcb5d0433ee893c0d3c">wynikiPlik</a></td></tr>
+<tr class="memdesc:a112a025d1c23bbcb5d0433ee893c0d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu ifstream do zczytywania danych z pliku wynikowego. <br /></td></tr>
+<tr class="separator:a112a025d1c23bbcb5d0433ee893c0d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad70d0363b356346759d1c8d90a5c9ea"><td class="memItemLeft" align="right" valign="top"><a id="aad70d0363b356346759d1c8d90a5c9ea"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aad70d0363b356346759d1c8d90a5c9ea">linia</a></td></tr>
+<tr class="memdesc:aad70d0363b356346759d1c8d90a5c9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pomocnicza. <br /></td></tr>
+<tr class="separator:aad70d0363b356346759d1c8d90a5c9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8983489d479050bc9630aca836cb38"><td class="memItemLeft" align="right" valign="top"><a id="a8f8983489d479050bc9630aca836cb38"></a>
+Music *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a8f8983489d479050bc9630aca836cb38">menuMuzyka</a></td></tr>
+<tr class="memdesc:a8f8983489d479050bc9630aca836cb38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna wskaznikowa na tablice obiektow typu Music do streamowania muzyki w menu glownym. <br /></td></tr>
+<tr class="separator:a8f8983489d479050bc9630aca836cb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04cdde37a9eaa3486273c66991eb475f"><td class="memItemLeft" align="right" valign="top"><a id="a04cdde37a9eaa3486273c66991eb475f"></a>
+Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a04cdde37a9eaa3486273c66991eb475f">menuDzwiekZatwierdzMenu</a></td></tr>
+<tr class="memdesc:a04cdde37a9eaa3486273c66991eb475f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt typu Sound umozliwiajacy wlaczanie dzwieku przekazanego mu przez bufor2. <br /></td></tr>
+<tr class="separator:a04cdde37a9eaa3486273c66991eb475f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc15ffbfa4bc2a286d18c610df96927"><td class="memItemLeft" align="right" valign="top"><a id="aedc15ffbfa4bc2a286d18c610df96927"></a>
+SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aedc15ffbfa4bc2a286d18c610df96927">bufor2</a></td></tr>
+<tr class="memdesc:aedc15ffbfa4bc2a286d18c610df96927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt typu SoundBuffer umozliwiajacy zczytywanie z dysku dzwieku. <br /></td></tr>
+<tr class="separator:aedc15ffbfa4bc2a286d18c610df96927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15af447edf4379bd80d62dc2f9de756d"><td class="memItemLeft" align="right" valign="top"><a id="a15af447edf4379bd80d62dc2f9de756d"></a>
+Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a15af447edf4379bd80d62dc2f9de756d">czcionka</a></td></tr>
+<tr class="memdesc:a15af447edf4379bd80d62dc2f9de756d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt typu Font przechowujacy typ czcionki tekstu. <br /></td></tr>
+<tr class="separator:a15af447edf4379bd80d62dc2f9de756d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9763c7f36cd949f968e332449cb0d49e"><td class="memItemLeft" align="right" valign="top"><a id="a9763c7f36cd949f968e332449cb0d49e"></a>
+IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a9763c7f36cd949f968e332449cb0d49e">obszar</a></td></tr>
+<tr class="memdesc:a9763c7f36cd949f968e332449cb0d49e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt typu IntRect pozwalajacy na dokladne sprawdzanie klikniec myszki w menu. <br /></td></tr>
+<tr class="separator:a9763c7f36cd949f968e332449cb0d49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35df12c48628e9779fdfd32e273a3e6"><td class="memItemLeft" align="right" valign="top"><a id="aa35df12c48628e9779fdfd32e273a3e6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aa35df12c48628e9779fdfd32e273a3e6">kierunekTla</a></td></tr>
+<tr class="memdesc:aa35df12c48628e9779fdfd32e273a3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna nadajaca kierunek ruchu tla. <br /></td></tr>
+<tr class="separator:aa35df12c48628e9779fdfd32e273a3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406cd0bee4615c4b4a7ecbe466ed8482"><td class="memItemLeft" align="right" valign="top"><a id="a406cd0bee4615c4b4a7ecbe466ed8482"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a406cd0bee4615c4b4a7ecbe466ed8482">aktualnyWyborMenu</a></td></tr>
+<tr class="memdesc:a406cd0bee4615c4b4a7ecbe466ed8482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna okreslajaca wybor w menu. <br /></td></tr>
+<tr class="separator:a406cd0bee4615c4b4a7ecbe466ed8482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d208c99454fdfe7dd717b424208800"><td class="memItemLeft" align="right" valign="top"><a id="a48d208c99454fdfe7dd717b424208800"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a48d208c99454fdfe7dd717b424208800">podstronaMenu</a></td></tr>
+<tr class="memdesc:a48d208c99454fdfe7dd717b424208800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna okreslajaca podstrone w menu glownym. <br /></td></tr>
+<tr class="separator:a48d208c99454fdfe7dd717b424208800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d3e71cba034ee725613eec4ae713151"><td class="memItemLeft" align="right" valign="top"><a id="a5d3e71cba034ee725613eec4ae713151"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a5d3e71cba034ee725613eec4ae713151">iloscWynikow</a></td></tr>
+<tr class="memdesc:a5d3e71cba034ee725613eec4ae713151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna pomocnicza przy wypisywaniu wynikow. <br /></td></tr>
+<tr class="separator:a5d3e71cba034ee725613eec4ae713151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c5d323952594a35ea10462a455ca16"><td class="memItemLeft" align="right" valign="top"><a id="a76c5d323952594a35ea10462a455ca16"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a76c5d323952594a35ea10462a455ca16">numerMuzyki</a></td></tr>
+<tr class="memdesc:a76c5d323952594a35ea10462a455ca16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna okreslajaca ktora muzyka jest grana. <br /></td></tr>
+<tr class="separator:a76c5d323952594a35ea10462a455ca16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac0c6e0dbb15c1b570c4908f40471b8"><td class="memItemLeft" align="right" valign="top"><a id="a0ac0c6e0dbb15c1b570c4908f40471b8"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a0ac0c6e0dbb15c1b570c4908f40471b8">procX</a></td></tr>
+<tr class="memdesc:a0ac0c6e0dbb15c1b570c4908f40471b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna okreslajaca procentowy rozmiar okna w poziomie od wartosci 1920. <br /></td></tr>
+<tr class="separator:a0ac0c6e0dbb15c1b570c4908f40471b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e31bab36f29fc3745c187f9ecdbcb28"><td class="memItemLeft" align="right" valign="top"><a id="a4e31bab36f29fc3745c187f9ecdbcb28"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a4e31bab36f29fc3745c187f9ecdbcb28">procY</a></td></tr>
+<tr class="memdesc:a4e31bab36f29fc3745c187f9ecdbcb28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna okreslajaca procentowy rozmiar okna w pionie od wartosci 1080. <br /></td></tr>
+<tr class="separator:a4e31bab36f29fc3745c187f9ecdbcb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa ta odpowiada za dzialanie menu glownego gry. </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ad8d3e739eac97ee7eb16aac1b531419d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d3e739eac97ee7eb16aac1b531419d">&#9670;&nbsp;</a></span>aktualizacjaMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::aktualizacjaMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda ta ma za zadanie odpowiednio aktualizowac widok wyboru uzytkownika. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>void</dd></dl>
+<p>Nic nie zwraca </p>
+
+</div>
+</div>
+<a id="a6ffac228f003fd430d4c601c0d75c447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ffac228f003fd430d4c601c0d75c447">&#9670;&nbsp;</a></span>enter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::enter </td>
+          <td>(</td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>okno</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda ta ma za zadanie zmieniac podtstrony menu lub uruchamiac poziom czy tez konczyc dzialanie aplikacji. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">okno</td><td>okno to referencja na obiekt typu RenderWindow sluzacy do rysowania elementow 2d w tym oknie </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void</dd></dl>
+<p>Nic nie zwraca </p>
+
+</div>
+</div>
+<a id="a2dbe614520087c5ea76096ba11d4596e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dbe614520087c5ea76096ba11d4596e">&#9670;&nbsp;</a></span>klikMyszka()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::klikMyszka </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>okno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda ta oblicza czy myszka najechala na ktorys interaktywny element. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>miejsce myszki w poziomie na ekranie w pixelach od lewego gornego rogu okna </td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>miejsce myszki w pionie na ekranie w pixelach od lewego gornego rogu okna </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">okno</td><td>okno to referencja na obiekt typu RenderWindow sluzacy do rysowania elementow 2d w tym oknie </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void</dd></dl>
+<p>Nic nie zwraca </p>
+
+</div>
+</div>
+<a id="a2db63e0559ed6f4df2c54743a0e164a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2db63e0559ed6f4df2c54743a0e164a8">&#9670;&nbsp;</a></span>poruszajTlo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::poruszajTlo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda ta ma za zadanie poruszac tlem menu glownego. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>void</dd></dl>
+<p>Nic nie zwraca </p>
+
+</div>
+</div>
+<a id="a04bb0c4f93310e1092b220658ea6ad9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04bb0c4f93310e1092b220658ea6ad9f">&#9670;&nbsp;</a></span>przygotujStrone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::przygotujStrone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda ta przygotowuje odpowiednie zasoby do rysowania dla danej podstrony i wyboru uzytkownika. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>void</dd></dl>
+<p>Nic nie zwraca </p>
+
+</div>
+</div>
+<a id="acddcd89fd3f0aaae63175e1664e9c6d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddcd89fd3f0aaae63175e1664e9c6d7">&#9670;&nbsp;</a></span>ruchMyszka()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::ruchMyszka </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda ta oblicza czy myszka najechala na ktorys interaktywny element. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>miejsce myszki w poziomie na ekranie w pixelach od lewego gornego rogu okna </td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>miejsce myszki w pionie na ekranie w pixelach od lewego gornego rogu okna </p><dl class="section return"><dt>Zwraca</dt><dd>void</dd></dl>
+<p>Nic nie zwraca </p>
+
+</div>
+</div>
+<a id="a6ca93cb64d461b8e6d6485754bb75109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca93cb64d461b8e6d6485754bb75109">&#9670;&nbsp;</a></span>rysuj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::rysuj </td>
+          <td>(</td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>okno</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda ta ma za zadanie rysowanie odpowiedniego podmenu menu glownego . </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">okno</td><td>okno to referencja na obiekt typu RenderWindow sluzacy do rysowania elementow 2d w tym oknie </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void</dd></dl>
+<p>Nic nie zwraca </p>
+
+</div>
+</div>
+<a id="addfae49eabcf14f1e9fa3d88bf19cd59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addfae49eabcf14f1e9fa3d88bf19cd59">&#9670;&nbsp;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Menu::start </td>
+          <td>(</td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>okno</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>okno to referencja na obiekt typu RenderWindow sluzacy do rysowania elementow 2d w tym oknie </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">okno</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>int</dd></dl>
+<p>Metoda ta zwraca 0 lub 1 Zwraca 1 gdy uzytkownik rozpocznie granie a 0 gdy chce wyjsc z gry </p>
+
+</div>
+</div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li><a class="el" href="_menu_8h_source.html">Menu.h</a></li>
-<li>Menu.cpp</li>
+<li>C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/<a class="el" href="_menu_8h_source.html">Menu.h</a></li>
+<li>C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/<a class="el" href="_menu_8cpp.html">Menu.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

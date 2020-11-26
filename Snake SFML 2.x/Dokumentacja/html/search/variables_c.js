@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['planszasprite_417',['planszaSprite',['../class_gra.html#a205498a9ca2340d4dd8bc37a03cfa872',1,'Gra']]],
+  ['planszatekstura_418',['planszaTekstura',['../class_gra.html#aa4b87f7689afd2613b59237c88598f41',1,'Gra']]],
+  ['plussprite_419',['plusSprite',['../class_menu.html#a900f65133b68eb6e4bcfcdc555b34f04',1,'Menu']]],
+  ['plustekstura_420',['plusTekstura',['../class_menu.html#af71ce5b02c7e59ade2a1905ad09776b6',1,'Menu']]],
+  ['podstronamenu_421',['podstronaMenu',['../class_menu.html#a48d208c99454fdfe7dd717b424208800',1,'Menu']]],
+  ['pokarmsprite_422',['pokarmSprite',['../class_pokarm.html#ac66d4465b6a170b88e60e37987867af0',1,'Pokarm']]],
+  ['pokarmtekstura_423',['pokarmTekstura',['../class_pokarm.html#acbd1ffbbbc54d371d534d5333a0b0231',1,'Pokarm']]],
+  ['poprz_424',['poprz',['../struct_lista.html#aa062c3d267b16d69bf422f679c89d8aa',1,'Lista']]],
+  ['poziom_425',['Poziom',['../class_gracz.html#a0c2743fe08aa413f5e54cde9e8cbddeb',1,'Gracz::Poziom()'],['../class_gra.html#a861e50076772956767b27451d31a813f',1,'Gra::POZIOM()']]],
+  ['prawosprite_426',['prawoSprite',['../class_menu.html#a5adcefca6ae1d18cb83c291c0dab505f',1,'Menu']]],
+  ['prawotekstura_427',['prawoTekstura',['../class_menu.html#a5fbec43b4ded1999415f58ddfd53d961',1,'Menu']]],
+  ['procx_428',['procX',['../class_gra.html#a41d014bdf0afb7e54adf1f53cbb0fbad',1,'Gra::procX()'],['../class_menu.html#a0ac0c6e0dbb15c1b570c4908f40471b8',1,'Menu::procX()']]],
+  ['procy_429',['procY',['../class_gra.html#a7aea7484646a5b5bd8afd5554a3c9051',1,'Gra::procY()'],['../class_menu.html#a4e31bab36f29fc3745c187f9ecdbcb28',1,'Menu::procY()']]],
+  ['przeszkodasprite_430',['przeszkodaSprite',['../class_gra.html#a8f21243b64a436897f349e3f8c8d0c33',1,'Gra']]],
+  ['przeszkodatekstura_431',['przeszkodaTekstura',['../class_gra.html#a837e08d2e9b7e12f332f05f5a56eff49',1,'Gra']]],
+  ['pseudonim_432',['pseudonim',['../struct_lista_wynikow.html#a7b6cd33785de9144cccbeee86b4ce691',1,'ListaWynikow']]],
+  ['pucharsprite_433',['pucharSprite',['../class_gra.html#a0f7103ff2bafae5fdcf8cd0e9855b92c',1,'Gra']]],
+  ['puchartekstura_434',['pucharTekstura',['../class_gra.html#a440c9c808cb834e622753a734d529dd4',1,'Gra']]]
+];

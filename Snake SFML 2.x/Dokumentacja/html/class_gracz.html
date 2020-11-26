@@ -66,66 +66,913 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
 <a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_gracz-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Gracz</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Klasa odpowiedzialna za obsluge gracza.  
+ <a href="class_gracz.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_gracz_8h_source.html">Gracz.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a23fa357432f5b1b4e5f4c58b52066b72"><td class="memItemLeft" align="right" valign="top"><a id="a23fa357432f5b1b4e5f4c58b52066b72"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Gracz</b> (int poziom)</td></tr>
+<tr class="memitem:a23fa357432f5b1b4e5f4c58b52066b72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a23fa357432f5b1b4e5f4c58b52066b72">Gracz</a> (int poziom)</td></tr>
+<tr class="memdesc:a23fa357432f5b1b4e5f4c58b52066b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="class_gracz.html" title="Klasa odpowiedzialna za obsluge gracza.">Gracz</a>.  <a href="class_gracz.html#a23fa357432f5b1b4e5f4c58b52066b72">Więcej...</a><br /></td></tr>
 <tr class="separator:a23fa357432f5b1b4e5f4c58b52066b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c5a9875059377a7d2023823f813c54"><td class="memItemLeft" align="right" valign="top"><a id="a63c5a9875059377a7d2023823f813c54"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dodajElement</b> ()</td></tr>
+<tr class="memitem:abdad0e2d01ae6c1acaa0cd43d0787fc0"><td class="memItemLeft" align="right" valign="top"><a id="abdad0e2d01ae6c1acaa0cd43d0787fc0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#abdad0e2d01ae6c1acaa0cd43d0787fc0">~Gracz</a> ()</td></tr>
+<tr class="memdesc:abdad0e2d01ae6c1acaa0cd43d0787fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dekonstruktor klasy <a class="el" href="class_gracz.html" title="Klasa odpowiedzialna za obsluge gracza.">Gracz</a> usuwajacy zmienne dynamiczne oraz liste dwukierunkowa. <br /></td></tr>
+<tr class="separator:abdad0e2d01ae6c1acaa0cd43d0787fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c5a9875059377a7d2023823f813c54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a63c5a9875059377a7d2023823f813c54">dodajElement</a> ()</td></tr>
+<tr class="memdesc:a63c5a9875059377a7d2023823f813c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za obsluge listy dwukierunkowej; dodaje nowy element do listy.  <a href="class_gracz.html#a63c5a9875059377a7d2023823f813c54">Więcej...</a><br /></td></tr>
 <tr class="separator:a63c5a9875059377a7d2023823f813c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2f744cbb7b8c9ccf82953a83eac9b1a"><td class="memItemLeft" align="right" valign="top"><a id="ab2f744cbb7b8c9ccf82953a83eac9b1a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rysuj</b> (RenderWindow &amp;okno)</td></tr>
+<tr class="memitem:ab2f744cbb7b8c9ccf82953a83eac9b1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#ab2f744cbb7b8c9ccf82953a83eac9b1a">rysuj</a> (RenderWindow &amp;okno)</td></tr>
+<tr class="memdesc:ab2f744cbb7b8c9ccf82953a83eac9b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda rysujaca elementy gracza.  <a href="class_gracz.html#ab2f744cbb7b8c9ccf82953a83eac9b1a">Więcej...</a><br /></td></tr>
 <tr class="separator:ab2f744cbb7b8c9ccf82953a83eac9b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc57b3e39bab2c2417d728dd0250c821"><td class="memItemLeft" align="right" valign="top"><a id="adc57b3e39bab2c2417d728dd0250c821"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>obsluguj</b> (Sprite *dziuraSprite, int liczbaDziur, Sprite *przeszkodaSprite, int liczbaPrzeszkod)</td></tr>
+<tr class="memitem:adc57b3e39bab2c2417d728dd0250c821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#adc57b3e39bab2c2417d728dd0250c821">obsluguj</a> (Sprite *dziuraSprite, int liczbaDziur, Sprite *przeszkodaSprite, int liczbaPrzeszkod)</td></tr>
+<tr class="memdesc:adc57b3e39bab2c2417d728dd0250c821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwiazana z ruchem gracza.  <a href="class_gracz.html#adc57b3e39bab2c2417d728dd0250c821">Więcej...</a><br /></td></tr>
 <tr class="separator:adc57b3e39bab2c2417d728dd0250c821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a208d03389287bbf70cde35b415fc690d"><td class="memItemLeft" align="right" valign="top"><a id="a208d03389287bbf70cde35b415fc690d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>walnijPrzeszkode</b> (Sprite *przeszkodaSprite, int liczbaPrzeszkod)</td></tr>
+<tr class="memitem:a208d03389287bbf70cde35b415fc690d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a208d03389287bbf70cde35b415fc690d">walnijPrzeszkode</a> (Sprite *przeszkodaSprite, int liczbaPrzeszkod)</td></tr>
+<tr class="memdesc:a208d03389287bbf70cde35b415fc690d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda sprawdzajaca czy gracz znajduje sie na przeszkodzie.  <a href="class_gracz.html#a208d03389287bbf70cde35b415fc690d">Więcej...</a><br /></td></tr>
 <tr class="separator:a208d03389287bbf70cde35b415fc690d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a993358b919df0e9ab7cb533a6fe664a2"><td class="memItemLeft" align="right" valign="top"><a id="a993358b919df0e9ab7cb533a6fe664a2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>samoUkaszenie</b> ()</td></tr>
+<tr class="memitem:a993358b919df0e9ab7cb533a6fe664a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a993358b919df0e9ab7cb533a6fe664a2">samoUkaszenie</a> ()</td></tr>
+<tr class="memdesc:a993358b919df0e9ab7cb533a6fe664a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda sprawdzajaca czy gracz znajduje sie na swoim ciele.  <a href="class_gracz.html#a993358b919df0e9ab7cb533a6fe664a2">Więcej...</a><br /></td></tr>
 <tr class="separator:a993358b919df0e9ab7cb533a6fe664a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f69704472be7bd40318b263b395ae50"><td class="memItemLeft" align="right" valign="top"><a id="a6f69704472be7bd40318b263b395ae50"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>zerujAnimacje</b> ()</td></tr>
+<tr class="memitem:a6f69704472be7bd40318b263b395ae50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a6f69704472be7bd40318b263b395ae50">zerujAnimacje</a> ()</td></tr>
+<tr class="memdesc:a6f69704472be7bd40318b263b395ae50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za ustawienie animacji na start.  <a href="class_gracz.html#a6f69704472be7bd40318b263b395ae50">Więcej...</a><br /></td></tr>
 <tr class="separator:a6f69704472be7bd40318b263b395ae50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a802fb16960a55dea2c7df3f5bc88a964"><td class="memItemLeft" align="right" valign="top"><a id="a802fb16960a55dea2c7df3f5bc88a964"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ochronaKolizji</b> ()</td></tr>
+<tr class="memitem:a802fb16960a55dea2c7df3f5bc88a964"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a802fb16960a55dea2c7df3f5bc88a964">ochronaKolizji</a> ()</td></tr>
+<tr class="memdesc:a802fb16960a55dea2c7df3f5bc88a964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za dopasowanie tekstur podczas bonusu ochrony przed kolizja.  <a href="class_gracz.html#a802fb16960a55dea2c7df3f5bc88a964">Więcej...</a><br /></td></tr>
 <tr class="separator:a802fb16960a55dea2c7df3f5bc88a964"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa712bceef0d8934cdb0842651629ed23"><td class="memItemLeft" align="right" valign="top"><a id="aa712bceef0d8934cdb0842651629ed23"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ustawNowaTeksture</b> ()</td></tr>
+<tr class="memitem:aa712bceef0d8934cdb0842651629ed23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#aa712bceef0d8934cdb0842651629ed23">ustawNowaTeksture</a> ()</td></tr>
+<tr class="memdesc:aa712bceef0d8934cdb0842651629ed23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia nowa tekstura odpowiednio do uzyskanego wyniku.  <a href="class_gracz.html#aa712bceef0d8934cdb0842651629ed23">Więcej...</a><br /></td></tr>
 <tr class="separator:aa712bceef0d8934cdb0842651629ed23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a356c030eded72d9a2b00dc1cf8c02def"><td class="memItemLeft" align="right" valign="top"><a id="a356c030eded72d9a2b00dc1cf8c02def"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ustawTeksture100</b> ()</td></tr>
+<tr class="memitem:a356c030eded72d9a2b00dc1cf8c02def"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a356c030eded72d9a2b00dc1cf8c02def">ustawTeksture100</a> ()</td></tr>
+<tr class="memdesc:a356c030eded72d9a2b00dc1cf8c02def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda, ktora ustawia teksture nieprzezroczysta po bonusie ochorony przed kolizja.  <a href="class_gracz.html#a356c030eded72d9a2b00dc1cf8c02def">Więcej...</a><br /></td></tr>
 <tr class="separator:a356c030eded72d9a2b00dc1cf8c02def"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atrybuty publiczne</h2></td></tr>
 <tr class="memitem:a9760f54da7ef4a939f9f13f77f08cddb"><td class="memItemLeft" align="right" valign="top"><a id="a9760f54da7ef4a939f9f13f77f08cddb"></a>
-Clock&#160;</td><td class="memItemRight" valign="bottom"><b>zegar</b></td></tr>
+Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a9760f54da7ef4a939f9f13f77f08cddb">zegar</a></td></tr>
+<tr class="memdesc:a9760f54da7ef4a939f9f13f77f08cddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Clock odpowiadajacy za spowolnienie ruchu weza. <br /></td></tr>
 <tr class="separator:a9760f54da7ef4a939f9f13f77f08cddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36912cf765ebdbd05785891fa4236f3c"><td class="memItemLeft" align="right" valign="top"><a id="a36912cf765ebdbd05785891fa4236f3c"></a>
-Clock&#160;</td><td class="memItemRight" valign="bottom"><b>zegarDzwieki</b></td></tr>
+Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a36912cf765ebdbd05785891fa4236f3c">zegarDzwieki</a></td></tr>
+<tr class="memdesc:a36912cf765ebdbd05785891fa4236f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Clock odpowiadajacy za czestotliwosc odtwarzania dzwieku krokow. <br /></td></tr>
 <tr class="separator:a36912cf765ebdbd05785891fa4236f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2679b8c1651804d7c29d4c34b3b997cb"><td class="memItemLeft" align="right" valign="top"><a id="a2679b8c1651804d7c29d4c34b3b997cb"></a>
+Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a2679b8c1651804d7c29d4c34b3b997cb">zegarSterowania</a></td></tr>
+<tr class="memdesc:a2679b8c1651804d7c29d4c34b3b997cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Clock odpowiadajacy za czestotliwosc zmiany kierunku weza. <br /></td></tr>
+<tr class="separator:a2679b8c1651804d7c29d4c34b3b997cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b56745f1d340708b5b746405508baba"><td class="memItemLeft" align="right" valign="top"><a id="a8b56745f1d340708b5b746405508baba"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>czasomierz</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a8b56745f1d340708b5b746405508baba">czasomierz</a></td></tr>
+<tr class="memdesc:a8b56745f1d340708b5b746405508baba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu float przechowujaca krotki odcinek czasu, nastepnie jest zerowana. <br /></td></tr>
 <tr class="separator:a8b56745f1d340708b5b746405508baba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae80aa5f94fd8c6cc9497ef1bdd48d6e6"><td class="memItemLeft" align="right" valign="top"><a id="ae80aa5f94fd8c6cc9497ef1bdd48d6e6"></a>
-struct <a class="el" href="struct_lista.html">Lista</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>wsk_listy</b></td></tr>
-<tr class="separator:ae80aa5f94fd8c6cc9497ef1bdd48d6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67fd231eb0b9368a2567a2e07ed3e38"><td class="memItemLeft" align="right" valign="top"><a id="aa67fd231eb0b9368a2567a2e07ed3e38"></a>
+struct <a class="el" href="struct_lista.html">Lista</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#aa67fd231eb0b9368a2567a2e07ed3e38">wsk_listy</a></td></tr>
+<tr class="memdesc:aa67fd231eb0b9368a2567a2e07ed3e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na poczatek listy dwukierunkowej. <br /></td></tr>
+<tr class="separator:aa67fd231eb0b9368a2567a2e07ed3e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addbd77e72fbd98e4c02425791d024598"><td class="memItemLeft" align="right" valign="top"><a id="addbd77e72fbd98e4c02425791d024598"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>tekstura</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#addbd77e72fbd98e4c02425791d024598">tekstura</a></td></tr>
+<tr class="memdesc:addbd77e72fbd98e4c02425791d024598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu int odpowiadajaca za aktualny numer tekstury weza. <br /></td></tr>
 <tr class="separator:addbd77e72fbd98e4c02425791d024598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:af4a2ea408e77b7cfa99d1a8aef74f636"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#af4a2ea408e77b7cfa99d1a8aef74f636">sterowanie</a> ()</td></tr>
+<tr class="memdesc:af4a2ea408e77b7cfa99d1a8aef74f636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za odczytywanie klawiszy strzalek w celu ustaleniu kierunku poruszania sie gracza.  <a href="class_gracz.html#af4a2ea408e77b7cfa99d1a8aef74f636">Więcej...</a><br /></td></tr>
+<tr class="separator:af4a2ea408e77b7cfa99d1a8aef74f636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30430ffc063e03e88b13b9e66c2cc79f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a30430ffc063e03e88b13b9e66c2cc79f">przejdzPrzezDziure</a> (Sprite *dziuraSprite, int liczbaDziur)</td></tr>
+<tr class="memdesc:a30430ffc063e03e88b13b9e66c2cc79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za przenoszenie weza przez tunel w inne miejsce planszy (druga dziura).  <a href="class_gracz.html#a30430ffc063e03e88b13b9e66c2cc79f">Więcej...</a><br /></td></tr>
+<tr class="separator:a30430ffc063e03e88b13b9e66c2cc79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8dd7a0482a29e22d0b7d10b24c9fa1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#aef8dd7a0482a29e22d0b7d10b24c9fa1">ruchGracza</a> (Sprite *dziuraSprite, int liczbaDziur, Sprite *przeszkodaSprite, int liczbaPrzeszkod)</td></tr>
+<tr class="memdesc:aef8dd7a0482a29e22d0b7d10b24c9fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiadajaca za poruszanie sie weza.  <a href="class_gracz.html#aef8dd7a0482a29e22d0b7d10b24c9fa1">Więcej...</a><br /></td></tr>
+<tr class="separator:aef8dd7a0482a29e22d0b7d10b24c9fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef1a1d8cfbb18f829e4961527365f61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a6ef1a1d8cfbb18f829e4961527365f61">przejdzNaKoniecListy</a> (<a class="el" href="struct_lista.html">Lista</a> **wskaznik)</td></tr>
+<tr class="memdesc:a6ef1a1d8cfbb18f829e4961527365f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za obsluge listy dwukierunkowej; przechodzi na koniec listy.  <a href="class_gracz.html#a6ef1a1d8cfbb18f829e4961527365f61">Więcej...</a><br /></td></tr>
+<tr class="separator:a6ef1a1d8cfbb18f829e4961527365f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3cdff502e155cba45573eed75703cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a2e3cdff502e155cba45573eed75703cb">przejdzPrzezSciane</a> ()</td></tr>
+<tr class="memdesc:a2e3cdff502e155cba45573eed75703cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za przejscie weza przez sciane.  <a href="class_gracz.html#a2e3cdff502e155cba45573eed75703cb">Więcej...</a><br /></td></tr>
+<tr class="separator:a2e3cdff502e155cba45573eed75703cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a0c2743fe08aa413f5e54cde9e8cbddeb"><td class="memItemLeft" align="right" valign="top"><a id="a0c2743fe08aa413f5e54cde9e8cbddeb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a0c2743fe08aa413f5e54cde9e8cbddeb">Poziom</a></td></tr>
+<tr class="memdesc:a0c2743fe08aa413f5e54cde9e8cbddeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu int informujaca o aktualnym poziomie rozgrywki. <br /></td></tr>
+<tr class="separator:a0c2743fe08aa413f5e54cde9e8cbddeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ec114b71f0b5032ef9472c1c9cb6da"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a52ec114b71f0b5032ef9472c1c9cb6da">rozmiar_weza</a></td></tr>
+<tr class="memdesc:a52ec114b71f0b5032ef9472c1c9cb6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu float przechowujaca rozmiar weza.  <a href="class_gracz.html#a52ec114b71f0b5032ef9472c1c9cb6da">Więcej...</a><br /></td></tr>
+<tr class="separator:a52ec114b71f0b5032ef9472c1c9cb6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa45b7cdd7541705dc36d20b03b4faec"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#afa45b7cdd7541705dc36d20b03b4faec">opoznienie</a></td></tr>
+<tr class="memdesc:afa45b7cdd7541705dc36d20b03b4faec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu float, przechowujaca wartosc opoznienia ruchu weza.  <a href="class_gracz.html#afa45b7cdd7541705dc36d20b03b4faec">Więcej...</a><br /></td></tr>
+<tr class="separator:afa45b7cdd7541705dc36d20b03b4faec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60dcc0eb659322ab50fc73f63a1a378e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a60dcc0eb659322ab50fc73f63a1a378e">mnoznikCzasu</a></td></tr>
+<tr class="memdesc:a60dcc0eb659322ab50fc73f63a1a378e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu float, przechowujaca mnoznik.  <a href="class_gracz.html#a60dcc0eb659322ab50fc73f63a1a378e">Więcej...</a><br /></td></tr>
+<tr class="separator:a60dcc0eb659322ab50fc73f63a1a378e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b254d2fe7fe86d9a0b8a039a1b5847"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#ac1b254d2fe7fe86d9a0b8a039a1b5847">ustawTeksture</a></td></tr>
+<tr class="memdesc:ac1b254d2fe7fe86d9a0b8a039a1b5847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pomocnicza zmienna typu bool.  <a href="class_gracz.html#ac1b254d2fe7fe86d9a0b8a039a1b5847">Więcej...</a><br /></td></tr>
+<tr class="separator:ac1b254d2fe7fe86d9a0b8a039a1b5847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f26c85c826892b361f5d20f96943b54"><td class="memItemLeft" align="right" valign="top"><a id="a6f26c85c826892b361f5d20f96943b54"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a6f26c85c826892b361f5d20f96943b54">graczCialoTekstura</a></td></tr>
+<tr class="memdesc:a6f26c85c826892b361f5d20f96943b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Texture, przechowujacy teksture ciala weza. <br /></td></tr>
+<tr class="separator:a6f26c85c826892b361f5d20f96943b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8324774aff9f1918ca30f93177fd835"><td class="memItemLeft" align="right" valign="top"><a id="ab8324774aff9f1918ca30f93177fd835"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#ab8324774aff9f1918ca30f93177fd835">graczGlowaTekstura</a></td></tr>
+<tr class="memdesc:ab8324774aff9f1918ca30f93177fd835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Texture, przechowujacy teksture glowy weza. <br /></td></tr>
+<tr class="separator:ab8324774aff9f1918ca30f93177fd835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c5a4c6e83fa6265428b7f12d72a218"><td class="memItemLeft" align="right" valign="top">Sprite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#ae2c5a4c6e83fa6265428b7f12d72a218">graczSprite</a></td></tr>
+<tr class="memdesc:ae2c5a4c6e83fa6265428b7f12d72a218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na obiekt klasy Sprite.  <a href="class_gracz.html#ae2c5a4c6e83fa6265428b7f12d72a218">Więcej...</a><br /></td></tr>
+<tr class="separator:ae2c5a4c6e83fa6265428b7f12d72a218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af134c02cae93e4387f35b2b0e7984327"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#af134c02cae93e4387f35b2b0e7984327">tablicaStringCialoTekstura</a> [3][8]</td></tr>
+<tr class="memdesc:af134c02cae93e4387f35b2b0e7984327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tablica dwuwymiarowa obiektow klasy String(sf::String).  <a href="class_gracz.html#af134c02cae93e4387f35b2b0e7984327">Więcej...</a><br /></td></tr>
+<tr class="separator:af134c02cae93e4387f35b2b0e7984327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac463d0291cf657801de7f1bfa84c67"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a3ac463d0291cf657801de7f1bfa84c67">tablicaKroki</a> [3]</td></tr>
+<tr class="memdesc:a3ac463d0291cf657801de7f1bfa84c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tablica jednowymiarowa obiektow klasy String(sf::String).  <a href="class_gracz.html#a3ac463d0291cf657801de7f1bfa84c67">Więcej...</a><br /></td></tr>
+<tr class="separator:a3ac463d0291cf657801de7f1bfa84c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f405d8beeb36aa362018f9d7e474b15"><td class="memItemLeft" align="right" valign="top"><a id="a9f405d8beeb36aa362018f9d7e474b15"></a>
+Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a9f405d8beeb36aa362018f9d7e474b15">dzwiekTeleport</a></td></tr>
+<tr class="memdesc:a9f405d8beeb36aa362018f9d7e474b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Sound przechowujacy dzwiek przemieszczania sie przez dziury. <br /></td></tr>
+<tr class="separator:a9f405d8beeb36aa362018f9d7e474b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ecafbd55e4eb888946275078db3919d"><td class="memItemLeft" align="right" valign="top"><a id="a6ecafbd55e4eb888946275078db3919d"></a>
+Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a6ecafbd55e4eb888946275078db3919d">dzwiekWalnieciePrzeszkody</a></td></tr>
+<tr class="memdesc:a6ecafbd55e4eb888946275078db3919d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Sound przechowujacy dzwiek uderzenia w przeszkode. <br /></td></tr>
+<tr class="separator:a6ecafbd55e4eb888946275078db3919d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ee551eece40fd3549b790b29ef2671"><td class="memItemLeft" align="right" valign="top"><a id="a06ee551eece40fd3549b790b29ef2671"></a>
+Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a06ee551eece40fd3549b790b29ef2671">dzwiekWalniecieSiebie</a></td></tr>
+<tr class="memdesc:a06ee551eece40fd3549b790b29ef2671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Sound przechowujacy dzwiek uderzenia w samego siebie. <br /></td></tr>
+<tr class="separator:a06ee551eece40fd3549b790b29ef2671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf1ce12b61068221d213e4e91e8d3dd"><td class="memItemLeft" align="right" valign="top"><a id="abbf1ce12b61068221d213e4e91e8d3dd"></a>
+Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#abbf1ce12b61068221d213e4e91e8d3dd">dzwiekKroki</a></td></tr>
+<tr class="memdesc:abbf1ce12b61068221d213e4e91e8d3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Sound przechowujacy dzwiek krokow gracza. <br /></td></tr>
+<tr class="separator:abbf1ce12b61068221d213e4e91e8d3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6b4c2da19ae05f480f42566c4f0beb"><td class="memItemLeft" align="right" valign="top"><a id="a5d6b4c2da19ae05f480f42566c4f0beb"></a>
+SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a5d6b4c2da19ae05f480f42566c4f0beb">buforTeleport</a></td></tr>
+<tr class="memdesc:a5d6b4c2da19ae05f480f42566c4f0beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy SoundBuffer przechowujacy bufor dzwieku przemieszczania sie przez dziury. <br /></td></tr>
+<tr class="separator:a5d6b4c2da19ae05f480f42566c4f0beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5c1a20ca659d23e91eda0d3e50b80d"><td class="memItemLeft" align="right" valign="top"><a id="acf5c1a20ca659d23e91eda0d3e50b80d"></a>
+SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#acf5c1a20ca659d23e91eda0d3e50b80d">buforPrzeszkoda</a></td></tr>
+<tr class="memdesc:acf5c1a20ca659d23e91eda0d3e50b80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy SoundBuffer przechowujacy bufor dzwieku uderzenia w przeszkode. <br /></td></tr>
+<tr class="separator:acf5c1a20ca659d23e91eda0d3e50b80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546ef05d8c56cf7370e18058f32577d5"><td class="memItemLeft" align="right" valign="top"><a id="a546ef05d8c56cf7370e18058f32577d5"></a>
+SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a546ef05d8c56cf7370e18058f32577d5">buforWaz</a></td></tr>
+<tr class="memdesc:a546ef05d8c56cf7370e18058f32577d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy SoundBuffer przechowujacy bufor dzwieku uderzenia w samego siebie. <br /></td></tr>
+<tr class="separator:a546ef05d8c56cf7370e18058f32577d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90242afe9d152e9b37f346359401afef"><td class="memItemLeft" align="right" valign="top"><a id="a90242afe9d152e9b37f346359401afef"></a>
+SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a90242afe9d152e9b37f346359401afef">buforKroki</a></td></tr>
+<tr class="memdesc:a90242afe9d152e9b37f346359401afef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy SoundBuffer przechowujacy bufor dzwieku krokow gracza. <br /></td></tr>
+<tr class="separator:a90242afe9d152e9b37f346359401afef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e68042cbe4045fceb390b1424031cd"><td class="memItemLeft" align="right" valign="top"><a id="a66e68042cbe4045fceb390b1424031cd"></a>
+<a class="el" href="class_animacja.html">Animacja</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a66e68042cbe4045fceb390b1424031cd">animacjaCiala</a></td></tr>
+<tr class="memdesc:a66e68042cbe4045fceb390b1424031cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na obiekt klasy <a class="el" href="class_animacja.html" title="Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza.">Animacja</a> przechowujacy odpowiednie wywolania do animacji ciala weza. <br /></td></tr>
+<tr class="separator:a66e68042cbe4045fceb390b1424031cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c62fd64b23495380c01ebacd8b96827"><td class="memItemLeft" align="right" valign="top"><a id="a3c62fd64b23495380c01ebacd8b96827"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a3c62fd64b23495380c01ebacd8b96827">kierunek</a></td></tr>
+<tr class="memdesc:a3c62fd64b23495380c01ebacd8b96827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu int okreslajaca kierunek, w ktorym porusza sie gracz. <br /></td></tr>
+<tr class="separator:a3c62fd64b23495380c01ebacd8b96827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa odpowiedzialna za obsluge gracza. </p>
+<p>Znajduja sie w niej funkcje tjk.:<br  />
+</p><ul>
+<li>ruch gracza<br  />
+</li>
+<li>obsluga dynamicznej listy dwukierunkowej<br  />
+</li>
+<li>obsluga zegarow<br  />
+</li>
+<li>obsluga tekstur oraz animacji<br  />
+</li>
+<li>detekcja kolizji dziura - waz<br  />
+</li>
+<li>detekcja kolizji przeszkoda - waz<br  />
+</li>
+<li>detekcja kolizji waz - waz<br  />
+</li>
+</ul>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a23fa357432f5b1b4e5f4c58b52066b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fa357432f5b1b4e5f4c58b52066b72">&#9670;&nbsp;</a></span>Gracz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gracz::Gracz </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>poziom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor klasy <a class="el" href="class_gracz.html" title="Klasa odpowiedzialna za obsluge gracza.">Gracz</a>. </p>
+<ul>
+<li>inicjalizuje wszystkie zmienne potrzebne do obslugi gracz<br  />
+</li>
+<li>laduje tekstury z plikow oraz przypisuje je do sprite'ow<br  />
+</li>
+<li>laduje dzwieki z plikow oraz przypisuje je do buforow<br  />
+</li>
+<li>tworzy liste dwukierunkowa<br  />
+ <dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">poziom</td><td>Zmienna typu int okresla poziom gracza. Dzieki niej konstruktor dopasowywuje odpowiednie ustawienia do poziomu rozgrywki. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a63c5a9875059377a7d2023823f813c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c5a9875059377a7d2023823f813c54">&#9670;&nbsp;</a></span>dodajElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::dodajElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za obsluge listy dwukierunkowej; dodaje nowy element do listy. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych parametrow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="adc57b3e39bab2c2417d728dd0250c821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc57b3e39bab2c2417d728dd0250c821">&#9670;&nbsp;</a></span>obsluguj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::obsluguj </td>
+          <td>(</td>
+          <td class="paramtype">Sprite *&#160;</td>
+          <td class="paramname"><em>dziuraSprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>liczbaDziur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Sprite *&#160;</td>
+          <td class="paramname"><em>przeszkodaSprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>liczbaPrzeszkod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda zwiazana z ruchem gracza. </p>
+<p>Zawarte sa w niej prywatne metody zwiazane z ruchem oraz sterowaniem gracza.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*dziuraSprite</td><td>Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna dwuelementowa. Przechowuje sprite'y dziur.</td></tr>
+    <tr><td class="paramname">liczbaDziur</td><td>Zmienna typu int okreslajaca ilosc dziur w tablicy.</td></tr>
+    <tr><td class="paramname">*przeszkodaSprite</td><td>Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna. Przechowuje sprite'y przeszkod.</td></tr>
+    <tr><td class="paramname">liczbaPrzeszkod</td><td>Zmienna typu int okreslajaca ilosc przeszkod w tablicy.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a802fb16960a55dea2c7df3f5bc88a964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a802fb16960a55dea2c7df3f5bc88a964">&#9670;&nbsp;</a></span>ochronaKolizji()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::ochronaKolizji </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za dopasowanie tekstur podczas bonusu ochrony przed kolizja. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych argumentow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a6ef1a1d8cfbb18f829e4961527365f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef1a1d8cfbb18f829e4961527365f61">&#9670;&nbsp;</a></span>przejdzNaKoniecListy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::przejdzNaKoniecListy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_lista.html">Lista</a> **&#160;</td>
+          <td class="paramname"><em>wskaznik</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za obsluge listy dwukierunkowej; przechodzi na koniec listy. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**wskaznik</td><td>Podwojny wskaznik na liste.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a30430ffc063e03e88b13b9e66c2cc79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30430ffc063e03e88b13b9e66c2cc79f">&#9670;&nbsp;</a></span>przejdzPrzezDziure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::przejdzPrzezDziure </td>
+          <td>(</td>
+          <td class="paramtype">Sprite *&#160;</td>
+          <td class="paramname"><em>dziuraSprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>liczbaDziur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za przenoszenie weza przez tunel w inne miejsce planszy (druga dziura). </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*dziuraSprite</td><td>Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna dwuelementowa. Przechowuje sprite'y dziur.</td></tr>
+    <tr><td class="paramname">liczbaDziur</td><td>Zmienna typu int okreslajaca ilosc dziur w tablicy.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a2e3cdff502e155cba45573eed75703cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3cdff502e155cba45573eed75703cb">&#9670;&nbsp;</a></span>przejdzPrzezSciane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::przejdzPrzezSciane </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za przejscie weza przez sciane. </p>
+<p>Np. waz przechodzi przez lewa sciane i wychodzi prawa.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych argumentow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="aef8dd7a0482a29e22d0b7d10b24c9fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8dd7a0482a29e22d0b7d10b24c9fa1">&#9670;&nbsp;</a></span>ruchGracza()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::ruchGracza </td>
+          <td>(</td>
+          <td class="paramtype">Sprite *&#160;</td>
+          <td class="paramname"><em>dziuraSprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>liczbaDziur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Sprite *&#160;</td>
+          <td class="paramname"><em>przeszkodaSprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>liczbaPrzeszkod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiadajaca za poruszanie sie weza. </p>
+<p>Kontroluje wszystkie ruchy weza np.:<br  />
+</p><ul>
+<li>przejscie przez sciane<br  />
+</li>
+<li>przejscie przez dziure<br  />
+</li>
+<li>wejscie w przeszkode</li>
+</ul>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*dziuraSprite</td><td>Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna dwuelementowa. Przechowuje sprite'y dziur.</td></tr>
+    <tr><td class="paramname">liczbaDziur</td><td>Zmienna typu int okreslajaca ilosc dziur w tablicy.</td></tr>
+    <tr><td class="paramname">*przeszkodaSprite</td><td>Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna. Przechowuje sprite'y przeszkod.</td></tr>
+    <tr><td class="paramname">liczbaPrzeszkod</td><td>Zmienna typu int okreslajaca ilosc przeszkod w tablicy.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="ab2f744cbb7b8c9ccf82953a83eac9b1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f744cbb7b8c9ccf82953a83eac9b1a">&#9670;&nbsp;</a></span>rysuj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::rysuj </td>
+          <td>(</td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>okno</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda rysujaca elementy gracza. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;okno</td><td>Referencja na obiekt klasy RenderWindow wykorzystywana do rysowania gracza w glownym oknie.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a993358b919df0e9ab7cb533a6fe664a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993358b919df0e9ab7cb533a6fe664a2">&#9670;&nbsp;</a></span>samoUkaszenie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gracz::samoUkaszenie </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda sprawdzajaca czy gracz znajduje sie na swoim ciele. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych argumentow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>bool</dd></dl>
+<p>Metoda zwraca wartosc bool. </p>
+
+</div>
+</div>
+<a id="af4a2ea408e77b7cfa99d1a8aef74f636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4a2ea408e77b7cfa99d1a8aef74f636">&#9670;&nbsp;</a></span>sterowanie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::sterowanie </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za odczytywanie klawiszy strzalek w celu ustaleniu kierunku poruszania sie gracza. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych argumentow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="aa712bceef0d8934cdb0842651629ed23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa712bceef0d8934cdb0842651629ed23">&#9670;&nbsp;</a></span>ustawNowaTeksture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::ustawNowaTeksture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia nowa tekstura odpowiednio do uzyskanego wyniku. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych argumentow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a356c030eded72d9a2b00dc1cf8c02def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356c030eded72d9a2b00dc1cf8c02def">&#9670;&nbsp;</a></span>ustawTeksture100()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::ustawTeksture100 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda, ktora ustawia teksture nieprzezroczysta po bonusie ochorony przed kolizja. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych argumentow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a208d03389287bbf70cde35b415fc690d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208d03389287bbf70cde35b415fc690d">&#9670;&nbsp;</a></span>walnijPrzeszkode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gracz::walnijPrzeszkode </td>
+          <td>(</td>
+          <td class="paramtype">Sprite *&#160;</td>
+          <td class="paramname"><em>przeszkodaSprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>liczbaPrzeszkod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda sprawdzajaca czy gracz znajduje sie na przeszkodzie. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*przeszkodaSprite</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna. Przechowuje sprite'y przeszkod.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">liczbaPrzeszkod</td><td>Zmienna typu int okreslajaca ilosc przeszkod w tablicy.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>bool</dd></dl>
+<p>Metoda zwraca wartosc bool. </p>
+
+</div>
+</div>
+<a id="a6f69704472be7bd40318b263b395ae50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f69704472be7bd40318b263b395ae50">&#9670;&nbsp;</a></span>zerujAnimacje()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::zerujAnimacje </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za ustawienie animacji na start. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych argumentow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="ae2c5a4c6e83fa6265428b7f12d72a218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c5a4c6e83fa6265428b7f12d72a218">&#9670;&nbsp;</a></span>graczSprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite * Gracz::graczSprite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wskaznik na obiekt klasy Sprite. </p>
+<p>Stosowany jest do dynamicznej tablicy dwuelementowej. Przechowuje ona sprite'y glowy i ciala weza. </p>
+
+</div>
+</div>
+<a id="a60dcc0eb659322ab50fc73f63a1a378e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60dcc0eb659322ab50fc73f63a1a378e">&#9670;&nbsp;</a></span>mnoznikCzasu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Gracz::mnoznikCzasu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna typu float, przechowujaca mnoznik. </p>
+<p>Zaleznie od poziomu zwieksza sie ona, powodujac szybkie poruszanie sie weza. </p>
+
+</div>
+</div>
+<a id="afa45b7cdd7541705dc36d20b03b4faec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa45b7cdd7541705dc36d20b03b4faec">&#9670;&nbsp;</a></span>opoznienie</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Gracz::opoznienie</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna typu float, przechowujaca wartosc opoznienia ruchu weza. </p>
+<p>Stosowana w opoznianiu ruchu. </p>
+
+</div>
+</div>
+<a id="a52ec114b71f0b5032ef9472c1c9cb6da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ec114b71f0b5032ef9472c1c9cb6da">&#9670;&nbsp;</a></span>rozmiar_weza</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Gracz::rozmiar_weza</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zmienna typu float przechowujaca rozmiar weza. </p>
+<p>Stosowana w ruchu weza. Dzieki niej waz dopasowany jest do planszy. </p>
+
+</div>
+</div>
+<a id="a3ac463d0291cf657801de7f1bfa84c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac463d0291cf657801de7f1bfa84c67">&#9670;&nbsp;</a></span>tablicaKroki</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Gracz::tablicaKroki[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tablica jednowymiarowa obiektow klasy String(sf::String). </p>
+<p>Zawarte sa w niej sciezki do dzwiekow chodu weza. </p>
+
+</div>
+</div>
+<a id="af134c02cae93e4387f35b2b0e7984327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af134c02cae93e4387f35b2b0e7984327">&#9670;&nbsp;</a></span>tablicaStringCialoTekstura</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Gracz::tablicaStringCialoTekstura[3][8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tablica dwuwymiarowa obiektow klasy String(sf::String). </p>
+<p>Zawarte sa w niej sciezki do tekstur weza. </p>
+
+</div>
+</div>
+<a id="ac1b254d2fe7fe86d9a0b8a039a1b5847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b254d2fe7fe86d9a0b8a039a1b5847">&#9670;&nbsp;</a></span>ustawTeksture</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gracz::ustawTeksture</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pomocnicza zmienna typu bool. </p>
+<p>Jesli ma wartosc true to pozwala zatrzymac animacje ochrony przed kolizja oraz ustawic teksture nieprzezroczysta. </p>
+
+</div>
+</div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li><a class="el" href="_gracz_8h_source.html">Gracz.h</a></li>
-<li>Gracz.cpp</li>
+<li>C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/<a class="el" href="_gracz_8h_source.html">Gracz.h</a></li>
+<li>C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/<a class="el" href="_gracz_8cpp.html">Gracz.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

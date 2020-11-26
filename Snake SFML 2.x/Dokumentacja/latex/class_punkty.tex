@@ -1,5 +1,14 @@
 \hypertarget{class_punkty}{}\doxysection{Dokumentacja klasy Punkty}
 \label{class_punkty}\index{Punkty@{Punkty}}
+
+
+Klasa ta ma za zadanie przechowywac wynik oraz kombo i je animowac.  
+
+
+
+
+{\ttfamily \#include $<$Punkty.\+h$>$}
+
 Diagram dziedziczenia dla Punkty\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,48 +18,140 @@ Diagram dziedziczenia dla Punkty\begin{figure}[H]
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_punkty_a5893b314499667e4e00ec88d52063492}\label{class_punkty_a5893b314499667e4e00ec88d52063492}} 
-void {\bfseries dodaj\+Punkty} (int parametr)
-\item 
-\mbox{\Hypertarget{class_punkty_ac96347a0c58f7aa788000da250e00cfa}\label{class_punkty_ac96347a0c58f7aa788000da250e00cfa}} 
-void {\bfseries zmien\+Kombo} (float nowe\+Kombo)
-\item 
-\mbox{\Hypertarget{class_punkty_a996f1827211db29dabf37773590fac58}\label{class_punkty_a996f1827211db29dabf37773590fac58}} 
-int {\bfseries sprawdz\+Wynik} ()
-\item 
-\mbox{\Hypertarget{class_punkty_abb50f1ffa14c7d0f9dda0a2134f20e7a}\label{class_punkty_abb50f1ffa14c7d0f9dda0a2134f20e7a}} 
-void {\bfseries animuj\+Punkty} (int tryb)
-\item 
-\mbox{\Hypertarget{class_punkty_a258184ec192e488896cf198929a0bbce}\label{class_punkty_a258184ec192e488896cf198929a0bbce}} 
-void {\bfseries animuj\+Kombo} (int tryb)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_punkty_a500f25e5e76970d80f06e752537337dd}\label{class_punkty_a500f25e5e76970d80f06e752537337dd}} 
+\mbox{\hyperlink{class_punkty_a500f25e5e76970d80f06e752537337dd}{Punkty}} ()
+\begin{DoxyCompactList}\small\item\em Jest to konstruktor obiektu klasy \mbox{\hyperlink{class_punkty}{Punkty}} Jego zadaniem jest inicjalizowanie zmiennych oraz pozycji obiektow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_punkty_a26566f5dbf1959c84548c0718be4ef6e}\label{class_punkty_a26566f5dbf1959c84548c0718be4ef6e}} 
+\mbox{\hyperlink{class_punkty_a26566f5dbf1959c84548c0718be4ef6e}{$\sim$\+Punkty}} ()
+\begin{DoxyCompactList}\small\item\em Jest to dekonstruktor obiektu klasy \mbox{\hyperlink{class_punkty}{Punkty}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_punkty_a5893b314499667e4e00ec88d52063492}{dodaj\+Punkty}} (int parametr)
+\begin{DoxyCompactList}\small\item\em Ta metoda ma za zadanie dodanie punktow do wartosci przechowywanej jako wartosc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_punkty_ac96347a0c58f7aa788000da250e00cfa}{zmien\+Kombo}} (float nowe\+Kombo)
+\begin{DoxyCompactList}\small\item\em Ta metoda ma za zadanie dodanie kombo do wartosci przechowywanej jako kombo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_punkty_a996f1827211db29dabf37773590fac58}{sprawdz\+Wynik}} ()
+\begin{DoxyCompactList}\small\item\em Ta metoda ma za zadanie sprawdzic aktualny wynik i go zwrocic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_punkty_abb50f1ffa14c7d0f9dda0a2134f20e7a}{animuj\+Punkty}} (int tryb)
+\begin{DoxyCompactList}\small\item\em Ta metoda ma za zadanie animowac wyswietlany wynik. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_punkty_a258184ec192e488896cf198929a0bbce}{animuj\+Kombo}} (int tryb)
+\begin{DoxyCompactList}\small\item\em Ta metoda ma za zadanie animowac wyswietlane kombo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty chronione}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_punkty_abc8807d9da28b63cfe9368066b1178dd}\label{class_punkty_abc8807d9da28b63cfe9368066b1178dd}} 
-int {\bfseries wartosc}
-\item 
+int \mbox{\hyperlink{class_punkty_abc8807d9da28b63cfe9368066b1178dd}{wartosc}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca wynik liczbowy gracza. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_punkty_ae3481ef66cbb64082ca8293f68f9f4d7}\label{class_punkty_ae3481ef66cbb64082ca8293f68f9f4d7}} 
-float {\bfseries kombo}
-\item 
+float \mbox{\hyperlink{class_punkty_ae3481ef66cbb64082ca8293f68f9f4d7}{kombo}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca kombo nabijanych punktow. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_punkty_aeeb032043a7de0d473088a9c8472caa1}\label{class_punkty_aeeb032043a7de0d473088a9c8472caa1}} 
-Text {\bfseries wyswietl\+Punkty}
-\item 
+Text \mbox{\hyperlink{class_punkty_aeeb032043a7de0d473088a9c8472caa1}{wyswietl\+Punkty}}
+\begin{DoxyCompactList}\small\item\em Obiekt typu Text do wyswietlania punktow w formie tekstu na ekranie. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_punkty_a2bf1b52431fd8fb66c9b90998b59a565}\label{class_punkty_a2bf1b52431fd8fb66c9b90998b59a565}} 
-Text {\bfseries wyswietl\+Kombo}
-\item 
+Text \mbox{\hyperlink{class_punkty_a2bf1b52431fd8fb66c9b90998b59a565}{wyswietl\+Kombo}}
+\begin{DoxyCompactList}\small\item\em Obiekt typu Text do wyswietlania kombo w formie tekstu na ekranie. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_punkty_a945e1407cf170d255ee3397c21901438}\label{class_punkty_a945e1407cf170d255ee3397c21901438}} 
-string {\bfseries string\+Punktow}
-\item 
+string \mbox{\hyperlink{class_punkty_a945e1407cf170d255ee3397c21901438}{string\+Punktow}}
+\begin{DoxyCompactList}\small\item\em Zmienna lancuchowa przechowujaca liczbe punktow w formie tekstu. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_punkty_a063c9b61d6abc57d9149e760b6b6dfe9}\label{class_punkty_a063c9b61d6abc57d9149e760b6b6dfe9}} 
-string {\bfseries string\+Kombo}
-\item 
+string \mbox{\hyperlink{class_punkty_a063c9b61d6abc57d9149e760b6b6dfe9}{string\+Kombo}}
+\begin{DoxyCompactList}\small\item\em Zmienna lancuchowa przechowujaca kombo w formie tekstu. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_punkty_aa14adb7411b989fa149fa9a783dcc7b0}\label{class_punkty_aa14adb7411b989fa149fa9a783dcc7b0}} 
-Font {\bfseries czcionka}
-\end{DoxyCompactItemize}
+Font \mbox{\hyperlink{class_punkty_aa14adb7411b989fa149fa9a783dcc7b0}{czcionka}}
+\begin{DoxyCompactList}\small\item\em Obiekt typu Font przechowujacy typ czcionki tekstu punktow i kombo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa ta ma za zadanie przechowywac wynik oraz kombo i je animowac. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_punkty_a258184ec192e488896cf198929a0bbce}\label{class_punkty_a258184ec192e488896cf198929a0bbce}} 
+\index{Punkty@{Punkty}!animujKombo@{animujKombo}}
+\index{animujKombo@{animujKombo}!Punkty@{Punkty}}
+\doxysubsubsection{\texorpdfstring{animujKombo()}{animujKombo()}}
+{\footnotesize\ttfamily void Punkty\+::animuj\+Kombo (\begin{DoxyParamCaption}\item[{int}]{tryb }\end{DoxyParamCaption})}
+
+
+
+Ta metoda ma za zadanie animowac wyswietlane kombo. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tryb} & Metoda otrzymuje 0 lub 1 i na tej podstawie animuje odpowiednio tekst kombo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_punkty_abb50f1ffa14c7d0f9dda0a2134f20e7a}\label{class_punkty_abb50f1ffa14c7d0f9dda0a2134f20e7a}} 
+\index{Punkty@{Punkty}!animujPunkty@{animujPunkty}}
+\index{animujPunkty@{animujPunkty}!Punkty@{Punkty}}
+\doxysubsubsection{\texorpdfstring{animujPunkty()}{animujPunkty()}}
+{\footnotesize\ttfamily void Punkty\+::animuj\+Punkty (\begin{DoxyParamCaption}\item[{int}]{tryb }\end{DoxyParamCaption})}
+
+
+
+Ta metoda ma za zadanie animowac wyswietlany wynik. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tryb} & Metoda otrzymuje 0 lub 1 i na tej podstawie animuje odpowiednio tekst wyniku \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_punkty_a5893b314499667e4e00ec88d52063492}\label{class_punkty_a5893b314499667e4e00ec88d52063492}} 
+\index{Punkty@{Punkty}!dodajPunkty@{dodajPunkty}}
+\index{dodajPunkty@{dodajPunkty}!Punkty@{Punkty}}
+\doxysubsubsection{\texorpdfstring{dodajPunkty()}{dodajPunkty()}}
+{\footnotesize\ttfamily void Punkty\+::dodaj\+Punkty (\begin{DoxyParamCaption}\item[{int}]{parametr }\end{DoxyParamCaption})}
+
+
+
+Ta metoda ma za zadanie dodanie punktow do wartosci przechowywanej jako wartosc. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em parametr} & Ta zmienna przechowuje wartosc do dodania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_punkty_a996f1827211db29dabf37773590fac58}\label{class_punkty_a996f1827211db29dabf37773590fac58}} 
+\index{Punkty@{Punkty}!sprawdzWynik@{sprawdzWynik}}
+\index{sprawdzWynik@{sprawdzWynik}!Punkty@{Punkty}}
+\doxysubsubsection{\texorpdfstring{sprawdzWynik()}{sprawdzWynik()}}
+{\footnotesize\ttfamily int Punkty\+::sprawdz\+Wynik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ta metoda ma za zadanie sprawdzic aktualny wynik i go zwrocic. 
+
+\begin{DoxyReturn}{Zwraca}
+int
+\end{DoxyReturn}
+Zwraca wartosc wyniku jako liczbe \mbox{\Hypertarget{class_punkty_ac96347a0c58f7aa788000da250e00cfa}\label{class_punkty_ac96347a0c58f7aa788000da250e00cfa}} 
+\index{Punkty@{Punkty}!zmienKombo@{zmienKombo}}
+\index{zmienKombo@{zmienKombo}!Punkty@{Punkty}}
+\doxysubsubsection{\texorpdfstring{zmienKombo()}{zmienKombo()}}
+{\footnotesize\ttfamily void Punkty\+::zmien\+Kombo (\begin{DoxyParamCaption}\item[{float}]{nowe\+Kombo }\end{DoxyParamCaption})}
+
+
+
+Ta metoda ma za zadanie dodanie kombo do wartosci przechowywanej jako kombo. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nowe\+Kombo} & Ta zmienna przechowuje wartosc do dodania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 
-Punkty.\+h\item 
-Punkty.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_punkty_8h}{Punkty.\+h}}\item 
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_punkty_8cpp}{Punkty.\+cpp}}\end{DoxyCompactItemize}

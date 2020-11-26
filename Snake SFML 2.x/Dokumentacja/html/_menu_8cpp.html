@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Snake SFML: Dokumentacja pliku C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/Menu.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logoSnake2.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Snake SFML
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Wyliczenia</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku Menu.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Plik ten zawiera ciala metod, konstruktorow , inicjalizacje zmiennych ,enumeratorow , tworzenie obiektow etc.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_menu_8h_source.html">Menu.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Wyliczenia</h2></td></tr>
+<tr class="memitem:adf2581be751d88d3a3f382530665bfc8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_menu_8cpp.html#adf2581be751d88d3a3f382530665bfc8">wyborMenu</a> { <br />
+&#160;&#160;<b>START</b>, 
+<b>OPCJE</b>, 
+<b>WYNIKI</b>, 
+<b>TWORCY</b>, 
+<br />
+&#160;&#160;<b>WYJSCIE</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:adf2581be751d88d3a3f382530665bfc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach.  <a href="_menu_8cpp.html#adf2581be751d88d3a3f382530665bfc8">Więcej...</a><br /></td></tr>
+<tr class="separator:adf2581be751d88d3a3f382530665bfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae273b54e12d2cc54afc1f9dd7bafd6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_menu_8cpp.html#a6ae273b54e12d2cc54afc1f9dd7bafd6">wyborPodstronyMenu</a> { <br />
+&#160;&#160;<b>GLOWNA</b>, 
+<b>POSTART</b>, 
+<b>POOPCJE</b>, 
+<b>POWYNIKI</b>, 
+<br />
+&#160;&#160;<b>POTWORCY</b>, 
+<b>PRZEDGRA</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a6ae273b54e12d2cc54afc1f9dd7bafd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach.  <a href="_menu_8cpp.html#a6ae273b54e12d2cc54afc1f9dd7bafd6">Więcej...</a><br /></td></tr>
+<tr class="separator:a6ae273b54e12d2cc54afc1f9dd7bafd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413200a9779641bd5e740c47e9663661"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_menu_8cpp.html#a413200a9779641bd5e740c47e9663661">wyborPoStart</a> { <b>DALEJ</b>, 
+<b>WSTECZ</b>
+ }</td></tr>
+<tr class="memdesc:a413200a9779641bd5e740c47e9663661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach.  <a href="_menu_8cpp.html#a413200a9779641bd5e740c47e9663661">Więcej...</a><br /></td></tr>
+<tr class="separator:a413200a9779641bd5e740c47e9663661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7b2a17e0a1b91768a7a48af0bd5b7b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_menu_8cpp.html#abd7b2a17e0a1b91768a7a48af0bd5b7b">wyborPoWynikiPoTworcy</a> { <b>POWROT</b>
+ }</td></tr>
+<tr class="memdesc:abd7b2a17e0a1b91768a7a48af0bd5b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach.  <a href="_menu_8cpp.html#abd7b2a17e0a1b91768a7a48af0bd5b7b">Więcej...</a><br /></td></tr>
+<tr class="separator:abd7b2a17e0a1b91768a7a48af0bd5b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3179d66dc0a5586c51caac0837770ea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_menu_8cpp.html#aa3179d66dc0a5586c51caac0837770ea">opcjeTekst</a> { <br />
+&#160;&#160;<b>STEROWANIE</b>, 
+<b>GORA</b>, 
+<b>DOL</b>, 
+<b>PRAWO</b>, 
+<br />
+&#160;&#160;<b>LEWO</b>, 
+<b>USTAWIENIA</b>, 
+<b>MUZYKA</b>, 
+<b>EKRAN</b>, 
+<br />
+&#160;&#160;<b>PELNY</b>, 
+<b>RAMKA</b>, 
+<b>WSTEC</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:aa3179d66dc0a5586c51caac0837770ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator ten ulatwia orientowanie sie po tablicy tekstow.  <a href="_menu_8cpp.html#aa3179d66dc0a5586c51caac0837770ea">Więcej...</a><br /></td></tr>
+<tr class="separator:aa3179d66dc0a5586c51caac0837770ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Plik ten zawiera ciala metod, konstruktorow , inicjalizacje zmiennych ,enumeratorow , tworzenie obiektow etc. </p>
+</div><h2 class="groupheader">Dokumentacja typów wyliczanych</h2>
+<a id="aa3179d66dc0a5586c51caac0837770ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3179d66dc0a5586c51caac0837770ea">&#9670;&nbsp;</a></span>opcjeTekst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_menu_8cpp.html#aa3179d66dc0a5586c51caac0837770ea">opcjeTekst</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerator ten ulatwia orientowanie sie po tablicy tekstow. </p>
+<p>{STEROWANIE,GORA,DOL,PRAWO,LEWO,USTAWIENIA,MUZYKA,EKRAN,PELNY,RAMKA,WSTEC} </p>
+
+</div>
+</div>
+<a id="adf2581be751d88d3a3f382530665bfc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2581be751d88d3a3f382530665bfc8">&#9670;&nbsp;</a></span>wyborMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_menu_8cpp.html#adf2581be751d88d3a3f382530665bfc8">wyborMenu</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach. </p>
+<p>{START,OPCJE,WYNIKI,TWORCY,WYJSCIE} </p>
+
+</div>
+</div>
+<a id="a6ae273b54e12d2cc54afc1f9dd7bafd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae273b54e12d2cc54afc1f9dd7bafd6">&#9670;&nbsp;</a></span>wyborPodstronyMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_menu_8cpp.html#a6ae273b54e12d2cc54afc1f9dd7bafd6">wyborPodstronyMenu</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach. </p>
+<p>{GLOWNA,POSTART,POOPCJE,POWYNIKI,POTWORCY,PRZEDGRA} </p>
+
+</div>
+</div>
+<a id="a413200a9779641bd5e740c47e9663661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413200a9779641bd5e740c47e9663661">&#9670;&nbsp;</a></span>wyborPoStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_menu_8cpp.html#a413200a9779641bd5e740c47e9663661">wyborPoStart</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach. </p>
+<p>{DALEJ,WSTECZ} </p>
+
+</div>
+</div>
+<a id="abd7b2a17e0a1b91768a7a48af0bd5b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd7b2a17e0a1b91768a7a48af0bd5b7b">&#9670;&nbsp;</a></span>wyborPoWynikiPoTworcy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_menu_8cpp.html#abd7b2a17e0a1b91768a7a48af0bd5b7b">wyborPoWynikiPoTworcy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerator ten ulatwia orientowanie sie w menu po przyjaznych nazwach. </p>
+<p>{POWROT} </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

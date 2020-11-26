@@ -1,59 +1,546 @@
 \hypertarget{class_gracz}{}\doxysection{Dokumentacja klasy Gracz}
 \label{class_gracz}\index{Gracz@{Gracz}}
+
+
+Klasa odpowiedzialna za obsluge gracza.  
+
+
+
+
+{\ttfamily \#include $<$Gracz.\+h$>$}
+
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_gracz_a23fa357432f5b1b4e5f4c58b52066b72}\label{class_gracz_a23fa357432f5b1b4e5f4c58b52066b72}} 
-{\bfseries Gracz} (int poziom)
-\item 
-\mbox{\Hypertarget{class_gracz_a63c5a9875059377a7d2023823f813c54}\label{class_gracz_a63c5a9875059377a7d2023823f813c54}} 
-void {\bfseries dodaj\+Element} ()
-\item 
-\mbox{\Hypertarget{class_gracz_ab2f744cbb7b8c9ccf82953a83eac9b1a}\label{class_gracz_ab2f744cbb7b8c9ccf82953a83eac9b1a}} 
-void {\bfseries rysuj} (Render\+Window \&okno)
-\item 
-\mbox{\Hypertarget{class_gracz_adc57b3e39bab2c2417d728dd0250c821}\label{class_gracz_adc57b3e39bab2c2417d728dd0250c821}} 
-void {\bfseries obsluguj} (Sprite $\ast$dziura\+Sprite, int liczba\+Dziur, Sprite $\ast$przeszkoda\+Sprite, int liczba\+Przeszkod)
-\item 
-\mbox{\Hypertarget{class_gracz_a208d03389287bbf70cde35b415fc690d}\label{class_gracz_a208d03389287bbf70cde35b415fc690d}} 
-bool {\bfseries walnij\+Przeszkode} (Sprite $\ast$przeszkoda\+Sprite, int liczba\+Przeszkod)
-\item 
-\mbox{\Hypertarget{class_gracz_a993358b919df0e9ab7cb533a6fe664a2}\label{class_gracz_a993358b919df0e9ab7cb533a6fe664a2}} 
-bool {\bfseries samo\+Ukaszenie} ()
-\item 
-\mbox{\Hypertarget{class_gracz_a6f69704472be7bd40318b263b395ae50}\label{class_gracz_a6f69704472be7bd40318b263b395ae50}} 
-void {\bfseries zeruj\+Animacje} ()
-\item 
-\mbox{\Hypertarget{class_gracz_a802fb16960a55dea2c7df3f5bc88a964}\label{class_gracz_a802fb16960a55dea2c7df3f5bc88a964}} 
-void {\bfseries ochrona\+Kolizji} ()
-\item 
-\mbox{\Hypertarget{class_gracz_aa712bceef0d8934cdb0842651629ed23}\label{class_gracz_aa712bceef0d8934cdb0842651629ed23}} 
-void {\bfseries ustaw\+Nowa\+Teksture} ()
-\item 
-\mbox{\Hypertarget{class_gracz_a356c030eded72d9a2b00dc1cf8c02def}\label{class_gracz_a356c030eded72d9a2b00dc1cf8c02def}} 
-void {\bfseries ustaw\+Teksture100} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_gracz_a23fa357432f5b1b4e5f4c58b52066b72}{Gracz}} (int poziom)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \mbox{\hyperlink{class_gracz}{Gracz}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_abdad0e2d01ae6c1acaa0cd43d0787fc0}\label{class_gracz_abdad0e2d01ae6c1acaa0cd43d0787fc0}} 
+\mbox{\hyperlink{class_gracz_abdad0e2d01ae6c1acaa0cd43d0787fc0}{$\sim$\+Gracz}} ()
+\begin{DoxyCompactList}\small\item\em Dekonstruktor klasy \mbox{\hyperlink{class_gracz}{Gracz}} usuwajacy zmienne dynamiczne oraz liste dwukierunkowa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_a63c5a9875059377a7d2023823f813c54}{dodaj\+Element}} ()
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za obsluge listy dwukierunkowej; dodaje nowy element do listy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_ab2f744cbb7b8c9ccf82953a83eac9b1a}{rysuj}} (Render\+Window \&okno)
+\begin{DoxyCompactList}\small\item\em Metoda rysujaca elementy gracza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_adc57b3e39bab2c2417d728dd0250c821}{obsluguj}} (Sprite $\ast$dziura\+Sprite, int liczba\+Dziur, Sprite $\ast$przeszkoda\+Sprite, int liczba\+Przeszkod)
+\begin{DoxyCompactList}\small\item\em Metoda zwiazana z ruchem gracza. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gracz_a208d03389287bbf70cde35b415fc690d}{walnij\+Przeszkode}} (Sprite $\ast$przeszkoda\+Sprite, int liczba\+Przeszkod)
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzajaca czy gracz znajduje sie na przeszkodzie. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gracz_a993358b919df0e9ab7cb533a6fe664a2}{samo\+Ukaszenie}} ()
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzajaca czy gracz znajduje sie na swoim ciele. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_a6f69704472be7bd40318b263b395ae50}{zeruj\+Animacje}} ()
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za ustawienie animacji na start. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_a802fb16960a55dea2c7df3f5bc88a964}{ochrona\+Kolizji}} ()
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za dopasowanie tekstur podczas bonusu ochrony przed kolizja. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_aa712bceef0d8934cdb0842651629ed23}{ustaw\+Nowa\+Teksture}} ()
+\begin{DoxyCompactList}\small\item\em Ustawia nowa tekstura odpowiednio do uzyskanego wyniku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_a356c030eded72d9a2b00dc1cf8c02def}{ustaw\+Teksture100}} ()
+\begin{DoxyCompactList}\small\item\em Metoda, ktora ustawia teksture nieprzezroczysta po bonusie ochorony przed kolizja. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_gracz_a9760f54da7ef4a939f9f13f77f08cddb}\label{class_gracz_a9760f54da7ef4a939f9f13f77f08cddb}} 
-Clock {\bfseries zegar}
-\item 
+Clock \mbox{\hyperlink{class_gracz_a9760f54da7ef4a939f9f13f77f08cddb}{zegar}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Clock odpowiadajacy za spowolnienie ruchu weza. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_gracz_a36912cf765ebdbd05785891fa4236f3c}\label{class_gracz_a36912cf765ebdbd05785891fa4236f3c}} 
-Clock {\bfseries zegar\+Dzwieki}
-\item 
+Clock \mbox{\hyperlink{class_gracz_a36912cf765ebdbd05785891fa4236f3c}{zegar\+Dzwieki}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Clock odpowiadajacy za czestotliwosc odtwarzania dzwieku krokow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a2679b8c1651804d7c29d4c34b3b997cb}\label{class_gracz_a2679b8c1651804d7c29d4c34b3b997cb}} 
+Clock \mbox{\hyperlink{class_gracz_a2679b8c1651804d7c29d4c34b3b997cb}{zegar\+Sterowania}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Clock odpowiadajacy za czestotliwosc zmiany kierunku weza. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_gracz_a8b56745f1d340708b5b746405508baba}\label{class_gracz_a8b56745f1d340708b5b746405508baba}} 
-float {\bfseries czasomierz}
-\item 
-\mbox{\Hypertarget{class_gracz_ae80aa5f94fd8c6cc9497ef1bdd48d6e6}\label{class_gracz_ae80aa5f94fd8c6cc9497ef1bdd48d6e6}} 
-struct \mbox{\hyperlink{struct_lista}{Lista}} $\ast$ {\bfseries wsk\+\_\+listy}
-\item 
+float \mbox{\hyperlink{class_gracz_a8b56745f1d340708b5b746405508baba}{czasomierz}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu float przechowujaca krotki odcinek czasu, nastepnie jest zerowana. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_aa67fd231eb0b9368a2567a2e07ed3e38}\label{class_gracz_aa67fd231eb0b9368a2567a2e07ed3e38}} 
+struct \mbox{\hyperlink{struct_lista}{Lista}} $\ast$ \mbox{\hyperlink{class_gracz_aa67fd231eb0b9368a2567a2e07ed3e38}{wsk\+\_\+listy}}
+\begin{DoxyCompactList}\small\item\em Wskaznik na poczatek listy dwukierunkowej. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_gracz_addbd77e72fbd98e4c02425791d024598}\label{class_gracz_addbd77e72fbd98e4c02425791d024598}} 
-int {\bfseries tekstura}
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{class_gracz_addbd77e72fbd98e4c02425791d024598}{tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu int odpowiadajaca za aktualny numer tekstury weza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gracz_af4a2ea408e77b7cfa99d1a8aef74f636}{sterowanie}} ()
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za odczytywanie klawiszy strzalek w celu ustaleniu kierunku poruszania sie gracza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_a30430ffc063e03e88b13b9e66c2cc79f}{przejdz\+Przez\+Dziure}} (Sprite $\ast$dziura\+Sprite, int liczba\+Dziur)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za przenoszenie weza przez tunel w inne miejsce planszy (druga dziura). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_aef8dd7a0482a29e22d0b7d10b24c9fa1}{ruch\+Gracza}} (Sprite $\ast$dziura\+Sprite, int liczba\+Dziur, Sprite $\ast$przeszkoda\+Sprite, int liczba\+Przeszkod)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadajaca za poruszanie sie weza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_a6ef1a1d8cfbb18f829e4961527365f61}{przejdz\+Na\+Koniec\+Listy}} (\mbox{\hyperlink{struct_lista}{Lista}} $\ast$$\ast$wskaznik)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za obsluge listy dwukierunkowej; przechodzi na koniec listy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gracz_a2e3cdff502e155cba45573eed75703cb}{przejdz\+Przez\+Sciane}} ()
+\begin{DoxyCompactList}\small\item\em Metoda odpowiedzialna za przejscie weza przez sciane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gracz_a0c2743fe08aa413f5e54cde9e8cbddeb}\label{class_gracz_a0c2743fe08aa413f5e54cde9e8cbddeb}} 
+int \mbox{\hyperlink{class_gracz_a0c2743fe08aa413f5e54cde9e8cbddeb}{Poziom}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu int informujaca o aktualnym poziomie rozgrywki. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_gracz_a52ec114b71f0b5032ef9472c1c9cb6da}{rozmiar\+\_\+weza}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu float przechowujaca rozmiar weza. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_gracz_afa45b7cdd7541705dc36d20b03b4faec}{opoznienie}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu float, przechowujaca wartosc opoznienia ruchu weza. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_gracz_a60dcc0eb659322ab50fc73f63a1a378e}{mnoznik\+Czasu}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu float, przechowujaca mnoznik. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gracz_ac1b254d2fe7fe86d9a0b8a039a1b5847}{ustaw\+Teksture}}
+\begin{DoxyCompactList}\small\item\em Pomocnicza zmienna typu bool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a6f26c85c826892b361f5d20f96943b54}\label{class_gracz_a6f26c85c826892b361f5d20f96943b54}} 
+Texture \mbox{\hyperlink{class_gracz_a6f26c85c826892b361f5d20f96943b54}{gracz\+Cialo\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Texture, przechowujacy teksture ciala weza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_ab8324774aff9f1918ca30f93177fd835}\label{class_gracz_ab8324774aff9f1918ca30f93177fd835}} 
+Texture \mbox{\hyperlink{class_gracz_ab8324774aff9f1918ca30f93177fd835}{gracz\+Glowa\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Texture, przechowujacy teksture glowy weza. \end{DoxyCompactList}\item 
+Sprite $\ast$ \mbox{\hyperlink{class_gracz_ae2c5a4c6e83fa6265428b7f12d72a218}{gracz\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Wskaznik na obiekt klasy Sprite. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_gracz_af134c02cae93e4387f35b2b0e7984327}{tablica\+String\+Cialo\+Tekstura}} \mbox{[}3\mbox{]}\mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica dwuwymiarowa obiektow klasy String(sf\+::\+String). \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_gracz_a3ac463d0291cf657801de7f1bfa84c67}{tablica\+Kroki}} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica jednowymiarowa obiektow klasy String(sf\+::\+String). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a9f405d8beeb36aa362018f9d7e474b15}\label{class_gracz_a9f405d8beeb36aa362018f9d7e474b15}} 
+Sound \mbox{\hyperlink{class_gracz_a9f405d8beeb36aa362018f9d7e474b15}{dzwiek\+Teleport}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sound przechowujacy dzwiek przemieszczania sie przez dziury. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a6ecafbd55e4eb888946275078db3919d}\label{class_gracz_a6ecafbd55e4eb888946275078db3919d}} 
+Sound \mbox{\hyperlink{class_gracz_a6ecafbd55e4eb888946275078db3919d}{dzwiek\+Walniecie\+Przeszkody}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sound przechowujacy dzwiek uderzenia w przeszkode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a06ee551eece40fd3549b790b29ef2671}\label{class_gracz_a06ee551eece40fd3549b790b29ef2671}} 
+Sound \mbox{\hyperlink{class_gracz_a06ee551eece40fd3549b790b29ef2671}{dzwiek\+Walniecie\+Siebie}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sound przechowujacy dzwiek uderzenia w samego siebie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_abbf1ce12b61068221d213e4e91e8d3dd}\label{class_gracz_abbf1ce12b61068221d213e4e91e8d3dd}} 
+Sound \mbox{\hyperlink{class_gracz_abbf1ce12b61068221d213e4e91e8d3dd}{dzwiek\+Kroki}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sound przechowujacy dzwiek krokow gracza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a5d6b4c2da19ae05f480f42566c4f0beb}\label{class_gracz_a5d6b4c2da19ae05f480f42566c4f0beb}} 
+Sound\+Buffer \mbox{\hyperlink{class_gracz_a5d6b4c2da19ae05f480f42566c4f0beb}{bufor\+Teleport}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sound\+Buffer przechowujacy bufor dzwieku przemieszczania sie przez dziury. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_acf5c1a20ca659d23e91eda0d3e50b80d}\label{class_gracz_acf5c1a20ca659d23e91eda0d3e50b80d}} 
+Sound\+Buffer \mbox{\hyperlink{class_gracz_acf5c1a20ca659d23e91eda0d3e50b80d}{bufor\+Przeszkoda}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sound\+Buffer przechowujacy bufor dzwieku uderzenia w przeszkode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a546ef05d8c56cf7370e18058f32577d5}\label{class_gracz_a546ef05d8c56cf7370e18058f32577d5}} 
+Sound\+Buffer \mbox{\hyperlink{class_gracz_a546ef05d8c56cf7370e18058f32577d5}{bufor\+Waz}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sound\+Buffer przechowujacy bufor dzwieku uderzenia w samego siebie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a90242afe9d152e9b37f346359401afef}\label{class_gracz_a90242afe9d152e9b37f346359401afef}} 
+Sound\+Buffer \mbox{\hyperlink{class_gracz_a90242afe9d152e9b37f346359401afef}{bufor\+Kroki}}
+\begin{DoxyCompactList}\small\item\em Obiekt klasy Sound\+Buffer przechowujacy bufor dzwieku krokow gracza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a66e68042cbe4045fceb390b1424031cd}\label{class_gracz_a66e68042cbe4045fceb390b1424031cd}} 
+\mbox{\hyperlink{class_animacja}{Animacja}} $\ast$ \mbox{\hyperlink{class_gracz_a66e68042cbe4045fceb390b1424031cd}{animacja\+Ciala}}
+\begin{DoxyCompactList}\small\item\em Wskaznik na obiekt klasy \mbox{\hyperlink{class_animacja}{Animacja}} przechowujacy odpowiednie wywolania do animacji ciala weza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gracz_a3c62fd64b23495380c01ebacd8b96827}\label{class_gracz_a3c62fd64b23495380c01ebacd8b96827}} 
+int \mbox{\hyperlink{class_gracz_a3c62fd64b23495380c01ebacd8b96827}{kierunek}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu int okreslajaca kierunek, w ktorym porusza sie gracz. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa odpowiedzialna za obsluge gracza. 
+
+Znajduja sie w niej funkcje tjk.\+:~\newline
+
+\begin{DoxyItemize}
+\item ruch gracza~\newline
+
+\item obsluga dynamicznej listy dwukierunkowej~\newline
+
+\item obsluga zegarow~\newline
+
+\item obsluga tekstur oraz animacji~\newline
+
+\item detekcja kolizji dziura -\/ waz~\newline
+
+\item detekcja kolizji przeszkoda -\/ waz~\newline
+
+\item detekcja kolizji waz -\/ waz~\newline
+
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_gracz_a23fa357432f5b1b4e5f4c58b52066b72}\label{class_gracz_a23fa357432f5b1b4e5f4c58b52066b72}} 
+\index{Gracz@{Gracz}!Gracz@{Gracz}}
+\index{Gracz@{Gracz}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{Gracz()}{Gracz()}}
+{\footnotesize\ttfamily Gracz\+::\+Gracz (\begin{DoxyParamCaption}\item[{int}]{poziom }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \mbox{\hyperlink{class_gracz}{Gracz}}. 
+
+
+\begin{DoxyItemize}
+\item inicjalizuje wszystkie zmienne potrzebne do obslugi gracz~\newline
+
+\item laduje tekstury z plikow oraz przypisuje je do sprite\textquotesingle{}ow~\newline
+
+\item laduje dzwieki z plikow oraz przypisuje je do buforow~\newline
+
+\item tworzy liste dwukierunkowa~\newline
+ 
+\begin{DoxyParams}{Parametry}
+{\em poziom} & Zmienna typu int okresla poziom gracza. Dzieki niej konstruktor dopasowywuje odpowiednie ustawienia do poziomu rozgrywki. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_gracz_a63c5a9875059377a7d2023823f813c54}\label{class_gracz_a63c5a9875059377a7d2023823f813c54}} 
+\index{Gracz@{Gracz}!dodajElement@{dodajElement}}
+\index{dodajElement@{dodajElement}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{dodajElement()}{dodajElement()}}
+{\footnotesize\ttfamily void Gracz\+::dodaj\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za obsluge listy dwukierunkowej; dodaje nowy element do listy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych parametrow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_adc57b3e39bab2c2417d728dd0250c821}\label{class_gracz_adc57b3e39bab2c2417d728dd0250c821}} 
+\index{Gracz@{Gracz}!obsluguj@{obsluguj}}
+\index{obsluguj@{obsluguj}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{obsluguj()}{obsluguj()}}
+{\footnotesize\ttfamily void Gracz\+::obsluguj (\begin{DoxyParamCaption}\item[{Sprite $\ast$}]{dziura\+Sprite,  }\item[{int}]{liczba\+Dziur,  }\item[{Sprite $\ast$}]{przeszkoda\+Sprite,  }\item[{int}]{liczba\+Przeszkod }\end{DoxyParamCaption})}
+
+
+
+Metoda zwiazana z ruchem gracza. 
+
+Zawarte sa w niej prywatne metody zwiazane z ruchem oraz sterowaniem gracza.
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$dziura\+Sprite} & Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna dwuelementowa. Przechowuje sprite\textquotesingle{}y dziur.\\
+\hline
+{\em liczba\+Dziur} & Zmienna typu int okreslajaca ilosc dziur w tablicy.\\
+\hline
+{\em $\ast$przeszkoda\+Sprite} & Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna. Przechowuje sprite\textquotesingle{}y przeszkod.\\
+\hline
+{\em liczba\+Przeszkod} & Zmienna typu int okreslajaca ilosc przeszkod w tablicy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_a802fb16960a55dea2c7df3f5bc88a964}\label{class_gracz_a802fb16960a55dea2c7df3f5bc88a964}} 
+\index{Gracz@{Gracz}!ochronaKolizji@{ochronaKolizji}}
+\index{ochronaKolizji@{ochronaKolizji}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{ochronaKolizji()}{ochronaKolizji()}}
+{\footnotesize\ttfamily void Gracz\+::ochrona\+Kolizji (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za dopasowanie tekstur podczas bonusu ochrony przed kolizja. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych argumentow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_a6ef1a1d8cfbb18f829e4961527365f61}\label{class_gracz_a6ef1a1d8cfbb18f829e4961527365f61}} 
+\index{Gracz@{Gracz}!przejdzNaKoniecListy@{przejdzNaKoniecListy}}
+\index{przejdzNaKoniecListy@{przejdzNaKoniecListy}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{przejdzNaKoniecListy()}{przejdzNaKoniecListy()}}
+{\footnotesize\ttfamily void Gracz\+::przejdz\+Na\+Koniec\+Listy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_lista}{Lista}} $\ast$$\ast$}]{wskaznik }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda odpowiedzialna za obsluge listy dwukierunkowej; przechodzi na koniec listy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$$\ast$wskaznik} & Podwojny wskaznik na liste.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_a30430ffc063e03e88b13b9e66c2cc79f}\label{class_gracz_a30430ffc063e03e88b13b9e66c2cc79f}} 
+\index{Gracz@{Gracz}!przejdzPrzezDziure@{przejdzPrzezDziure}}
+\index{przejdzPrzezDziure@{przejdzPrzezDziure}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{przejdzPrzezDziure()}{przejdzPrzezDziure()}}
+{\footnotesize\ttfamily void Gracz\+::przejdz\+Przez\+Dziure (\begin{DoxyParamCaption}\item[{Sprite $\ast$}]{dziura\+Sprite,  }\item[{int}]{liczba\+Dziur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda odpowiedzialna za przenoszenie weza przez tunel w inne miejsce planszy (druga dziura). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$dziura\+Sprite} & Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna dwuelementowa. Przechowuje sprite\textquotesingle{}y dziur.\\
+\hline
+{\em liczba\+Dziur} & Zmienna typu int okreslajaca ilosc dziur w tablicy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_a2e3cdff502e155cba45573eed75703cb}\label{class_gracz_a2e3cdff502e155cba45573eed75703cb}} 
+\index{Gracz@{Gracz}!przejdzPrzezSciane@{przejdzPrzezSciane}}
+\index{przejdzPrzezSciane@{przejdzPrzezSciane}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{przejdzPrzezSciane()}{przejdzPrzezSciane()}}
+{\footnotesize\ttfamily void Gracz\+::przejdz\+Przez\+Sciane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda odpowiedzialna za przejscie weza przez sciane. 
+
+Np. waz przechodzi przez lewa sciane i wychodzi prawa.
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych argumentow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_aef8dd7a0482a29e22d0b7d10b24c9fa1}\label{class_gracz_aef8dd7a0482a29e22d0b7d10b24c9fa1}} 
+\index{Gracz@{Gracz}!ruchGracza@{ruchGracza}}
+\index{ruchGracza@{ruchGracza}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{ruchGracza()}{ruchGracza()}}
+{\footnotesize\ttfamily void Gracz\+::ruch\+Gracza (\begin{DoxyParamCaption}\item[{Sprite $\ast$}]{dziura\+Sprite,  }\item[{int}]{liczba\+Dziur,  }\item[{Sprite $\ast$}]{przeszkoda\+Sprite,  }\item[{int}]{liczba\+Przeszkod }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda odpowiadajaca za poruszanie sie weza. 
+
+Kontroluje wszystkie ruchy weza np.\+:~\newline
+
+\begin{DoxyItemize}
+\item przejscie przez sciane~\newline
+
+\item przejscie przez dziure~\newline
+
+\item wejscie w przeszkode
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$dziura\+Sprite} & Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna dwuelementowa. Przechowuje sprite\textquotesingle{}y dziur.\\
+\hline
+{\em liczba\+Dziur} & Zmienna typu int okreslajaca ilosc dziur w tablicy.\\
+\hline
+{\em $\ast$przeszkoda\+Sprite} & Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna. Przechowuje sprite\textquotesingle{}y przeszkod.\\
+\hline
+{\em liczba\+Przeszkod} & Zmienna typu int okreslajaca ilosc przeszkod w tablicy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_ab2f744cbb7b8c9ccf82953a83eac9b1a}\label{class_gracz_ab2f744cbb7b8c9ccf82953a83eac9b1a}} 
+\index{Gracz@{Gracz}!rysuj@{rysuj}}
+\index{rysuj@{rysuj}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{rysuj()}{rysuj()}}
+{\footnotesize\ttfamily void Gracz\+::rysuj (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{okno }\end{DoxyParamCaption})}
+
+
+
+Metoda rysujaca elementy gracza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \&okno} & Referencja na obiekt klasy Render\+Window wykorzystywana do rysowania gracza w glownym oknie.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_a993358b919df0e9ab7cb533a6fe664a2}\label{class_gracz_a993358b919df0e9ab7cb533a6fe664a2}} 
+\index{Gracz@{Gracz}!samoUkaszenie@{samoUkaszenie}}
+\index{samoUkaszenie@{samoUkaszenie}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{samoUkaszenie()}{samoUkaszenie()}}
+{\footnotesize\ttfamily bool Gracz\+::samo\+Ukaszenie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda sprawdzajaca czy gracz znajduje sie na swoim ciele. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych argumentow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+bool
+\end{DoxyReturn}
+Metoda zwraca wartosc bool. \mbox{\Hypertarget{class_gracz_af4a2ea408e77b7cfa99d1a8aef74f636}\label{class_gracz_af4a2ea408e77b7cfa99d1a8aef74f636}} 
+\index{Gracz@{Gracz}!sterowanie@{sterowanie}}
+\index{sterowanie@{sterowanie}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{sterowanie()}{sterowanie()}}
+{\footnotesize\ttfamily void Gracz\+::sterowanie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda odpowiedzialna za odczytywanie klawiszy strzalek w celu ustaleniu kierunku poruszania sie gracza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych argumentow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_aa712bceef0d8934cdb0842651629ed23}\label{class_gracz_aa712bceef0d8934cdb0842651629ed23}} 
+\index{Gracz@{Gracz}!ustawNowaTeksture@{ustawNowaTeksture}}
+\index{ustawNowaTeksture@{ustawNowaTeksture}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{ustawNowaTeksture()}{ustawNowaTeksture()}}
+{\footnotesize\ttfamily void Gracz\+::ustaw\+Nowa\+Teksture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ustawia nowa tekstura odpowiednio do uzyskanego wyniku. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych argumentow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_a356c030eded72d9a2b00dc1cf8c02def}\label{class_gracz_a356c030eded72d9a2b00dc1cf8c02def}} 
+\index{Gracz@{Gracz}!ustawTeksture100@{ustawTeksture100}}
+\index{ustawTeksture100@{ustawTeksture100}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{ustawTeksture100()}{ustawTeksture100()}}
+{\footnotesize\ttfamily void Gracz\+::ustaw\+Teksture100 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda, ktora ustawia teksture nieprzezroczysta po bonusie ochorony przed kolizja. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych argumentow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gracz_a208d03389287bbf70cde35b415fc690d}\label{class_gracz_a208d03389287bbf70cde35b415fc690d}} 
+\index{Gracz@{Gracz}!walnijPrzeszkode@{walnijPrzeszkode}}
+\index{walnijPrzeszkode@{walnijPrzeszkode}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{walnijPrzeszkode()}{walnijPrzeszkode()}}
+{\footnotesize\ttfamily bool Gracz\+::walnij\+Przeszkode (\begin{DoxyParamCaption}\item[{Sprite $\ast$}]{przeszkoda\+Sprite,  }\item[{int}]{liczba\+Przeszkod }\end{DoxyParamCaption})}
+
+
+
+Metoda sprawdzajaca czy gracz znajduje sie na przeszkodzie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em $\ast$przeszkoda\+Sprite} & \\
+\hline
+\end{DoxyParams}
+Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna. Przechowuje sprite\textquotesingle{}y przeszkod.
+
+
+\begin{DoxyParams}{Parametry}
+{\em liczba\+Przeszkod} & Zmienna typu int okreslajaca ilosc przeszkod w tablicy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+bool
+\end{DoxyReturn}
+Metoda zwraca wartosc bool. \mbox{\Hypertarget{class_gracz_a6f69704472be7bd40318b263b395ae50}\label{class_gracz_a6f69704472be7bd40318b263b395ae50}} 
+\index{Gracz@{Gracz}!zerujAnimacje@{zerujAnimacje}}
+\index{zerujAnimacje@{zerujAnimacje}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{zerujAnimacje()}{zerujAnimacje()}}
+{\footnotesize\ttfamily void Gracz\+::zeruj\+Animacje (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda odpowiedzialna za ustawienie animacji na start. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em void} & Metoda nie przyjmuje zadnych argumentow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Metoda nie zwraca zadnej wartosci. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_gracz_ae2c5a4c6e83fa6265428b7f12d72a218}\label{class_gracz_ae2c5a4c6e83fa6265428b7f12d72a218}} 
+\index{Gracz@{Gracz}!graczSprite@{graczSprite}}
+\index{graczSprite@{graczSprite}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{graczSprite}{graczSprite}}
+{\footnotesize\ttfamily Sprite $\ast$ Gracz\+::gracz\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wskaznik na obiekt klasy Sprite. 
+
+Stosowany jest do dynamicznej tablicy dwuelementowej. Przechowuje ona sprite\textquotesingle{}y glowy i ciala weza. \mbox{\Hypertarget{class_gracz_a60dcc0eb659322ab50fc73f63a1a378e}\label{class_gracz_a60dcc0eb659322ab50fc73f63a1a378e}} 
+\index{Gracz@{Gracz}!mnoznikCzasu@{mnoznikCzasu}}
+\index{mnoznikCzasu@{mnoznikCzasu}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{mnoznikCzasu}{mnoznikCzasu}}
+{\footnotesize\ttfamily float Gracz\+::mnoznik\+Czasu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zmienna typu float, przechowujaca mnoznik. 
+
+Zaleznie od poziomu zwieksza sie ona, powodujac szybkie poruszanie sie weza. \mbox{\Hypertarget{class_gracz_afa45b7cdd7541705dc36d20b03b4faec}\label{class_gracz_afa45b7cdd7541705dc36d20b03b4faec}} 
+\index{Gracz@{Gracz}!opoznienie@{opoznienie}}
+\index{opoznienie@{opoznienie}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{opoznienie}{opoznienie}}
+{\footnotesize\ttfamily float Gracz\+::opoznienie\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zmienna typu float, przechowujaca wartosc opoznienia ruchu weza. 
+
+Stosowana w opoznianiu ruchu. \mbox{\Hypertarget{class_gracz_a52ec114b71f0b5032ef9472c1c9cb6da}\label{class_gracz_a52ec114b71f0b5032ef9472c1c9cb6da}} 
+\index{Gracz@{Gracz}!rozmiar\_weza@{rozmiar\_weza}}
+\index{rozmiar\_weza@{rozmiar\_weza}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{rozmiar\_weza}{rozmiar\_weza}}
+{\footnotesize\ttfamily float Gracz\+::rozmiar\+\_\+weza\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zmienna typu float przechowujaca rozmiar weza. 
+
+Stosowana w ruchu weza. Dzieki niej waz dopasowany jest do planszy. \mbox{\Hypertarget{class_gracz_a3ac463d0291cf657801de7f1bfa84c67}\label{class_gracz_a3ac463d0291cf657801de7f1bfa84c67}} 
+\index{Gracz@{Gracz}!tablicaKroki@{tablicaKroki}}
+\index{tablicaKroki@{tablicaKroki}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{tablicaKroki}{tablicaKroki}}
+{\footnotesize\ttfamily String Gracz\+::tablica\+Kroki\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tablica jednowymiarowa obiektow klasy String(sf\+::\+String). 
+
+Zawarte sa w niej sciezki do dzwiekow chodu weza. \mbox{\Hypertarget{class_gracz_af134c02cae93e4387f35b2b0e7984327}\label{class_gracz_af134c02cae93e4387f35b2b0e7984327}} 
+\index{Gracz@{Gracz}!tablicaStringCialoTekstura@{tablicaStringCialoTekstura}}
+\index{tablicaStringCialoTekstura@{tablicaStringCialoTekstura}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{tablicaStringCialoTekstura}{tablicaStringCialoTekstura}}
+{\footnotesize\ttfamily String Gracz\+::tablica\+String\+Cialo\+Tekstura\mbox{[}3\mbox{]}\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tablica dwuwymiarowa obiektow klasy String(sf\+::\+String). 
+
+Zawarte sa w niej sciezki do tekstur weza. \mbox{\Hypertarget{class_gracz_ac1b254d2fe7fe86d9a0b8a039a1b5847}\label{class_gracz_ac1b254d2fe7fe86d9a0b8a039a1b5847}} 
+\index{Gracz@{Gracz}!ustawTeksture@{ustawTeksture}}
+\index{ustawTeksture@{ustawTeksture}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{ustawTeksture}{ustawTeksture}}
+{\footnotesize\ttfamily bool Gracz\+::ustaw\+Teksture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pomocnicza zmienna typu bool. 
+
+Jesli ma wartosc true to pozwala zatrzymac animacje ochrony przed kolizja oraz ustawic teksture nieprzezroczysta. 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 
-Gracz.\+h\item 
-Gracz.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_gracz_8h}{Gracz.\+h}}\item 
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_gracz_8cpp}{Gracz.\+cpp}}\end{DoxyCompactItemize}

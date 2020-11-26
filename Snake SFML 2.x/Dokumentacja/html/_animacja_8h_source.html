@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Snake SFML: Plik źródłowy Animacja.h</title>
+<title>Snake SFML: Plik źródłowy C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/Animacja.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -47,7 +47,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,34 +61,47 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Animacja.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Biblioteki.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span><a class="code" href="class_gracz.html">Gracz</a>;</div>
+<a href="_animacja_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_animacja.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_animacja.html">Animacja</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">float</span> czasZmiany, deltaCzas;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    Vector2u aktualnyObraz, liczbaObrazow;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">float</span> x = 0.0f, y = 0.0f;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    IntRect obszar;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Clock zegar;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">float</span> calkowityCzas;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_animacja.html">Animacja</a>(Texture&amp; spriteTekstura, Vector2u liczbaObrazow, <span class="keywordtype">float</span> czasZmiany);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> aktualizuj(<span class="keywordtype">int</span> wiersz);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_biblioteki_8h.html">Biblioteki.h</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">class </span><a class="code" href="class_gracz.html">Gracz</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_animacja.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_animacja.html">Animacja</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_animacja.html#a64f29312e919e27b30006971b638e0f4">   61</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_animacja.html#a75a3cef1f309f2fd7fc0fc0141f0c614">czasZmiany</a>, <a class="code" href="class_animacja.html#a64f29312e919e27b30006971b638e0f4">deltaCzas</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_animacja.html#a398daac7a4793893c89b678cb08a15ef">   62</a></span>&#160;    Vector2u <a class="code" href="class_animacja.html#af6316e05c443734dd0cb0140362333aa">aktualnyObraz</a>, <a class="code" href="class_animacja.html#a398daac7a4793893c89b678cb08a15ef">liczbaObrazow</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_animacja.html#adfb6e8a1979e2cf1ddbee8afb5bfbaa3">   65</a></span>&#160;    IntRect <a class="code" href="class_animacja.html#adfb6e8a1979e2cf1ddbee8afb5bfbaa3">obszar</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_animacja.html#ae9e2eaee8413128ca7212fb9baf40b15">   66</a></span>&#160;    Clock <a class="code" href="class_animacja.html#ae9e2eaee8413128ca7212fb9baf40b15">zegar</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_animacja.html#aba5ba7be2307313e01f0ab25d0942d47">   67</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_animacja.html#aba5ba7be2307313e01f0ab25d0942d47">calkowityCzas</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_animacja.html#af8d08832c4b7ccb0d3fc70b558c4580a">Animacja</a>(Texture&amp; spriteTekstura, Vector2u <a class="code" href="class_animacja.html#a398daac7a4793893c89b678cb08a15ef">liczbaObrazow</a>, <span class="keywordtype">float</span> <a class="code" href="class_animacja.html#a75a3cef1f309f2fd7fc0fc0141f0c614">czasZmiany</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_animacja.html#aeeebaca3717628c632d8c5ee6664afbc">aktualizuj</a>(<span class="keywordtype">int</span> wiersz);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_animacja_html"><div class="ttname"><a href="class_animacja.html">Animacja</a></div><div class="ttdef"><b>Definition:</b> Animacja.h:7</div></div>
-<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdef"><b>Definition:</b> Gracz.h:20</div></div>
+<div class="ttc" id="aclass_animacja_html"><div class="ttname"><a href="class_animacja.html">Animacja</a></div><div class="ttdoc">Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza.</div><div class="ttdef"><b>Definition:</b> Animacja.h:60</div></div>
+<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdoc">Klasa odpowiedzialna za obsluge gracza.</div><div class="ttdef"><b>Definition:</b> Gracz.h:335</div></div>
+<div class="ttc" id="aclass_animacja_html_a398daac7a4793893c89b678cb08a15ef"><div class="ttname"><a href="class_animacja.html#a398daac7a4793893c89b678cb08a15ef">Animacja::liczbaObrazow</a></div><div class="ttdeci">Vector2u liczbaObrazow</div><div class="ttdoc">Zmienna przechowujaca ilosc obrazkow animacji.</div><div class="ttdef"><b>Definition:</b> Animacja.h:62</div></div>
+<div class="ttc" id="aclass_animacja_html_ae9e2eaee8413128ca7212fb9baf40b15"><div class="ttname"><a href="class_animacja.html#ae9e2eaee8413128ca7212fb9baf40b15">Animacja::zegar</a></div><div class="ttdeci">Clock zegar</div><div class="ttdoc">Zegar do pilnowania czasu miedzy animacjami.</div><div class="ttdef"><b>Definition:</b> Animacja.h:66</div></div>
+<div class="ttc" id="aclass_animacja_html_a64f29312e919e27b30006971b638e0f4"><div class="ttname"><a href="class_animacja.html#a64f29312e919e27b30006971b638e0f4">Animacja::deltaCzas</a></div><div class="ttdeci">float deltaCzas</div><div class="ttdoc">Zmienna przechowujaca uplyniety czas zegara.</div><div class="ttdef"><b>Definition:</b> Animacja.h:61</div></div>
+<div class="ttc" id="aclass_animacja_html_af8d08832c4b7ccb0d3fc70b558c4580a"><div class="ttname"><a href="class_animacja.html#af8d08832c4b7ccb0d3fc70b558c4580a">Animacja::Animacja</a></div><div class="ttdeci">Animacja(Texture &amp;spriteTekstura, Vector2u liczbaObrazow, float czasZmiany)</div><div class="ttdoc">Konstruktor obiektu klasy Animacja.</div><div class="ttdef"><b>Definition:</b> Animacja.cpp:6</div></div>
+<div class="ttc" id="a_biblioteki_8h_html"><div class="ttname"><a href="_biblioteki_8h.html">Biblioteki.h</a></div><div class="ttdoc">Plik zawierajacy wszystkie potrzebne stale , pliki naglowkowe oraz globalne zmienne i funkcje .</div></div>
+<div class="ttc" id="aclass_animacja_html_a75a3cef1f309f2fd7fc0fc0141f0c614"><div class="ttname"><a href="class_animacja.html#a75a3cef1f309f2fd7fc0fc0141f0c614">Animacja::czasZmiany</a></div><div class="ttdeci">float czasZmiany</div><div class="ttdoc">Zmienna przechowujaca czas do zmiany obrazkow animacji.</div><div class="ttdef"><b>Definition:</b> Animacja.h:61</div></div>
+<div class="ttc" id="aclass_animacja_html_aeeebaca3717628c632d8c5ee6664afbc"><div class="ttname"><a href="class_animacja.html#aeeebaca3717628c632d8c5ee6664afbc">Animacja::aktualizuj</a></div><div class="ttdeci">int aktualizuj(int wiersz)</div><div class="ttdoc">Metoda klasy Animacja aktualizujaca animacje.</div><div class="ttdef"><b>Definition:</b> Animacja.cpp:17</div></div>
+<div class="ttc" id="aclass_animacja_html_af6316e05c443734dd0cb0140362333aa"><div class="ttname"><a href="class_animacja.html#af6316e05c443734dd0cb0140362333aa">Animacja::aktualnyObraz</a></div><div class="ttdeci">Vector2u aktualnyObraz</div><div class="ttdoc">Zmienna przechowujaca wpolrzedne x , y aktualnego obrazku animacji.</div><div class="ttdef"><b>Definition:</b> Animacja.h:62</div></div>
+<div class="ttc" id="aclass_animacja_html_aba5ba7be2307313e01f0ab25d0942d47"><div class="ttname"><a href="class_animacja.html#aba5ba7be2307313e01f0ab25d0942d47">Animacja::calkowityCzas</a></div><div class="ttdeci">float calkowityCzas</div><div class="ttdoc">Zmienna pomocnicza przy animowaniu obrazkow.</div><div class="ttdef"><b>Definition:</b> Animacja.h:67</div></div>
+<div class="ttc" id="aclass_animacja_html_adfb6e8a1979e2cf1ddbee8afb5bfbaa3"><div class="ttname"><a href="class_animacja.html#adfb6e8a1979e2cf1ddbee8afb5bfbaa3">Animacja::obszar</a></div><div class="ttdeci">IntRect obszar</div><div class="ttdoc">Obiekt przechowujacy aktualny obrazek animacji.</div><div class="ttdef"><b>Definition:</b> Animacja.h:65</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">

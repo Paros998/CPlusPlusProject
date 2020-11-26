@@ -1,0 +1,144 @@
+\hypertarget{_biblioteki_8h}{}\doxysection{Dokumentacja pliku C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+ML 2.x — kopia/src/\+Biblioteki.h}
+\label{_biblioteki_8h}\index{C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/Biblioteki.h@{C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/Biblioteki.h}}
+
+
+Plik zawierajacy wszystkie potrzebne stale , pliki naglowkowe oraz globalne zmienne i funkcje .  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$S\+F\+M\+L/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$S\+F\+M\+L/\+Audio.\+hpp$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Punkty.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Koniec.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Animacja.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Gracz.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pokarm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Gra.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Poziom3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Poziom2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Poziom1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Aplikacja.\+h\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_biblioteki_8h_a4b407067c065ce83d5177b469c8a305d}\label{_biblioteki_8h_a4b407067c065ce83d5177b469c8a305d}} 
+\#define \mbox{\hyperlink{_biblioteki_8h_a4b407067c065ce83d5177b469c8a305d}{W\+Y\+S\+O\+K\+O\+S\+C\+\_\+\+P\+L\+A\+N\+S\+ZY}}~12
+\begin{DoxyCompactList}\small\item\em Stala przechowujaca wysokosc planszy w kwadratach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_ae98964b5716a665817a5e3be1729d164}\label{_biblioteki_8h_ae98964b5716a665817a5e3be1729d164}} 
+\#define \mbox{\hyperlink{_biblioteki_8h_ae98964b5716a665817a5e3be1729d164}{D\+L\+U\+G\+O\+S\+C\+\_\+\+P\+L\+A\+N\+S\+ZY}}~24
+\begin{DoxyCompactList}\small\item\em Stala przechowujaca dlugosc planszy w kwadratach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_aa7f8bac4ff85ad501e926167631749bb}\label{_biblioteki_8h_aa7f8bac4ff85ad501e926167631749bb}} 
+\#define \mbox{\hyperlink{_biblioteki_8h_aa7f8bac4ff85ad501e926167631749bb}{S\+T\+A\+R\+T\+\_\+X}}~200
+\begin{DoxyCompactList}\small\item\em Stala przechowujaca pozycje x poczatku mapy w pixelach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_ae28b1a95ee25def272409b9b8ce57f73}\label{_biblioteki_8h_ae28b1a95ee25def272409b9b8ce57f73}} 
+\#define \mbox{\hyperlink{_biblioteki_8h_ae28b1a95ee25def272409b9b8ce57f73}{S\+T\+A\+R\+T\+\_\+Y}}~120
+\begin{DoxyCompactList}\small\item\em Stala przechowujaca pozycje y poczatku mapy w pixelach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_ab37e058fd117fce495c2e725f5332aad}\label{_biblioteki_8h_ab37e058fd117fce495c2e725f5332aad}} 
+\#define \mbox{\hyperlink{_biblioteki_8h_ab37e058fd117fce495c2e725f5332aad}{K\+O\+N\+I\+E\+C\+\_\+X}}~\mbox{\hyperlink{_biblioteki_8h_aa7f8bac4ff85ad501e926167631749bb}{S\+T\+A\+R\+T\+\_\+X}} + (64 $\ast$ (\mbox{\hyperlink{_biblioteki_8h_ae98964b5716a665817a5e3be1729d164}{D\+L\+U\+G\+O\+S\+C\+\_\+\+P\+L\+A\+N\+S\+ZY}} -\/ 1))
+\begin{DoxyCompactList}\small\item\em Stala przechowujaca pozycje x konca mapy w pixelach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_a3dc3aeb15d56a8c884848bf96b335304}\label{_biblioteki_8h_a3dc3aeb15d56a8c884848bf96b335304}} 
+\#define \mbox{\hyperlink{_biblioteki_8h_a3dc3aeb15d56a8c884848bf96b335304}{K\+O\+N\+I\+E\+C\+\_\+Y}}~\mbox{\hyperlink{_biblioteki_8h_ae28b1a95ee25def272409b9b8ce57f73}{S\+T\+A\+R\+T\+\_\+Y}} + (64 $\ast$ (\mbox{\hyperlink{_biblioteki_8h_a4b407067c065ce83d5177b469c8a305d}{W\+Y\+S\+O\+K\+O\+S\+C\+\_\+\+P\+L\+A\+N\+S\+ZY}} -\/ 1))
+\begin{DoxyCompactList}\small\item\em Stala przechowujaca pozycje y konca mapy w pixelach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_a41eee4de417f8e3a5067c9a75ca7c2c9}\label{_biblioteki_8h_a41eee4de417f8e3a5067c9a75ca7c2c9}} 
+\#define \mbox{\hyperlink{_biblioteki_8h_a41eee4de417f8e3a5067c9a75ca7c2c9}{O\+D\+S\+T\+EP}}~64.\+0
+\begin{DoxyCompactList}\small\item\em Stala przechowujaca odstep miedzy kwadratami mapy w pixelach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_ac1ef1d7f86309d938b4000bb94f95b4c}\label{_biblioteki_8h_ac1ef1d7f86309d938b4000bb94f95b4c}} 
+\#define \mbox{\hyperlink{_biblioteki_8h_ac1ef1d7f86309d938b4000bb94f95b4c}{Z\+L\+O\+TY}}~255, 215, 0, 255
+\begin{DoxyCompactList}\small\item\em Stala przechowujaca kolor zloty w formie R\+GB i A. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_biblioteki_8h_a3aaa8d15e14fa29e942fee18d449486c}{losuj}} (float \&zmienna, int parametr)
+\begin{DoxyCompactList}\small\item\em Funkcja do losowania. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_biblioteki_8h_a3b89d002b50a9390b7c5e7b35861840b}{kolizja}} (Sprite s1, Sprite s2)
+\begin{DoxyCompactList}\small\item\em Funkcja sprawdzajaca kolizje obiektow. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_biblioteki_8h_ab638cc3eb1ef5f332b7198a911abae7c}{losuj}} (int parametr)
+\begin{DoxyCompactList}\small\item\em Funkcja do losowania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_biblioteki_8h_afd3adf73e2d5572a112c7c0d947346c1}\label{_biblioteki_8h_afd3adf73e2d5572a112c7c0d947346c1}} 
+int \mbox{\hyperlink{_biblioteki_8h_afd3adf73e2d5572a112c7c0d947346c1}{skin\+Weza}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca numer tekstury weza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_ae4aa6b4ceb560e61ea872cdf4a6dc9b2}\label{_biblioteki_8h_ae4aa6b4ceb560e61ea872cdf4a6dc9b2}} 
+int \mbox{\hyperlink{_biblioteki_8h_ae4aa6b4ceb560e61ea872cdf4a6dc9b2}{Wynik}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca wynik gracza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_biblioteki_8h_a4ad51d9645c04a35acf1fc405e97275f}\label{_biblioteki_8h_a4ad51d9645c04a35acf1fc405e97275f}} 
+float \mbox{\hyperlink{_biblioteki_8h_a4ad51d9645c04a35acf1fc405e97275f}{glosnosc\+Muzyki}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowujaca poziom muzyki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik zawierajacy wszystkie potrzebne stale , pliki naglowkowe oraz globalne zmienne i funkcje . 
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{_biblioteki_8h_a3b89d002b50a9390b7c5e7b35861840b}\label{_biblioteki_8h_a3b89d002b50a9390b7c5e7b35861840b}} 
+\index{Biblioteki.h@{Biblioteki.h}!kolizja@{kolizja}}
+\index{kolizja@{kolizja}!Biblioteki.h@{Biblioteki.h}}
+\doxysubsubsection{\texorpdfstring{kolizja()}{kolizja()}}
+{\footnotesize\ttfamily bool kolizja (\begin{DoxyParamCaption}\item[{Sprite}]{s1,  }\item[{Sprite}]{s2 }\end{DoxyParamCaption})}
+
+
+
+Funkcja sprawdzajaca kolizje obiektow. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em s1} & \\
+\hline
+\end{DoxyParams}
+Obiekt 1 do sprawdzenia kolizji miedzy obiektami. 
+\begin{DoxyParams}{Parametry}
+{\em s2} & \\
+\hline
+\end{DoxyParams}
+Obiekt 2 do sprawdzenia kolizji miedzy obiektami. \begin{DoxyReturn}{Zwraca}
+bool
+\end{DoxyReturn}
+Zwraca true jesli wystapi kolizja, false jesli nie. \mbox{\Hypertarget{_biblioteki_8h_a3aaa8d15e14fa29e942fee18d449486c}\label{_biblioteki_8h_a3aaa8d15e14fa29e942fee18d449486c}} 
+\index{Biblioteki.h@{Biblioteki.h}!losuj@{losuj}}
+\index{losuj@{losuj}!Biblioteki.h@{Biblioteki.h}}
+\doxysubsubsection{\texorpdfstring{losuj()}{losuj()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void losuj (\begin{DoxyParamCaption}\item[{float \&}]{zmienna,  }\item[{int}]{parametr }\end{DoxyParamCaption})}
+
+
+
+Funkcja do losowania. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em zmienna} & Zmienna do ktorej przypisywany jest wynik losowania. \\
+\hline
+{\em parametr} & Zmienna ustalajaca zakres losowania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_biblioteki_8h_ab638cc3eb1ef5f332b7198a911abae7c}\label{_biblioteki_8h_ab638cc3eb1ef5f332b7198a911abae7c}} 
+\index{Biblioteki.h@{Biblioteki.h}!losuj@{losuj}}
+\index{losuj@{losuj}!Biblioteki.h@{Biblioteki.h}}
+\doxysubsubsection{\texorpdfstring{losuj()}{losuj()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int losuj (\begin{DoxyParamCaption}\item[{int}]{parametr }\end{DoxyParamCaption})}
+
+
+
+Funkcja do losowania. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em parametr} & Zmienna ustalajaca zakres losowania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+int
+\end{DoxyReturn}
+Zwraca wylosowana liczbe typu integer 

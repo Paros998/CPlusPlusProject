@@ -66,42 +66,335 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
 <a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_pokarm-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Pokarm</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Klasa odpowiedzialna za obsluge pokarmu dla weza.  
+ <a href="class_pokarm.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_pokarm_8h_source.html">Pokarm.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a05d6018f8d7f67b82ca4c61a163283cc"><td class="memItemLeft" align="right" valign="top"><a id="a05d6018f8d7f67b82ca4c61a163283cc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Pokarm</b> (string sciezkaPliku, string sciezkaPlikuEfektu, Vector2u klatkiEfektu)</td></tr>
+<tr class="memitem:a05d6018f8d7f67b82ca4c61a163283cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a05d6018f8d7f67b82ca4c61a163283cc">Pokarm</a> (string sciezkaPliku, string sciezkaPlikuEfektu, Vector2u <a class="el" href="class_pokarm.html#ad8343ab864f6f761d072b129d0a50230">klatkiEfektu</a>)</td></tr>
+<tr class="memdesc:a05d6018f8d7f67b82ca4c61a163283cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="class_pokarm.html" title="Klasa odpowiedzialna za obsluge pokarmu dla weza.">Pokarm</a>.  <a href="class_pokarm.html#a05d6018f8d7f67b82ca4c61a163283cc">Więcej...</a><br /></td></tr>
 <tr class="separator:a05d6018f8d7f67b82ca4c61a163283cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84256134090ea334db72c64967edf826"><td class="memItemLeft" align="right" valign="top"><a id="a84256134090ea334db72c64967edf826"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>sprawdzCzyZjedzony</b> (<a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
+<tr class="memitem:a5ff624e2d44a757b5d59c336ab5768b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a5ff624e2d44a757b5d59c336ab5768b0">~Pokarm</a> ()</td></tr>
+<tr class="memdesc:a5ff624e2d44a757b5d59c336ab5768b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dekonstruktor klasy <a class="el" href="class_pokarm.html" title="Klasa odpowiedzialna za obsluge pokarmu dla weza.">Pokarm</a>.  <a href="class_pokarm.html#a5ff624e2d44a757b5d59c336ab5768b0">Więcej...</a><br /></td></tr>
+<tr class="separator:a5ff624e2d44a757b5d59c336ab5768b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84256134090ea334db72c64967edf826"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a84256134090ea334db72c64967edf826">sprawdzCzyZjedzony</a> (<a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
+<tr class="memdesc:a84256134090ea334db72c64967edf826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda sprawdzajaca czy gracz wszedl w kolizje z pokarmem.  <a href="class_pokarm.html#a84256134090ea334db72c64967edf826">Więcej...</a><br /></td></tr>
 <tr class="separator:a84256134090ea334db72c64967edf826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0afd3d8604b3c86a97ad85fac2b207aa"><td class="memItemLeft" align="right" valign="top"><a id="a0afd3d8604b3c86a97ad85fac2b207aa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ustawPokarm</b> (<a class="el" href="class_gracz.html">Gracz</a> &amp;gracz, Sprite **plansza, Sprite *przeszkody, int liczbaprzeszkod)</td></tr>
+<tr class="memitem:a0afd3d8604b3c86a97ad85fac2b207aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a0afd3d8604b3c86a97ad85fac2b207aa">ustawPokarm</a> (<a class="el" href="class_gracz.html">Gracz</a> &amp;gracz, Sprite **plansza, Sprite *przeszkody, int liczbaprzeszkod)</td></tr>
+<tr class="memdesc:a0afd3d8604b3c86a97ad85fac2b207aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda poszukujaca nowego polozenia dla pokarmu.  <a href="class_pokarm.html#a0afd3d8604b3c86a97ad85fac2b207aa">Więcej...</a><br /></td></tr>
 <tr class="separator:a0afd3d8604b3c86a97ad85fac2b207aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19875923930a9a0a8dc69c2d0296fba6"><td class="memItemLeft" align="right" valign="top"><a id="a19875923930a9a0a8dc69c2d0296fba6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rysuj</b> (RenderWindow &amp;okno)</td></tr>
+<tr class="memitem:a19875923930a9a0a8dc69c2d0296fba6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a19875923930a9a0a8dc69c2d0296fba6">rysuj</a> (RenderWindow &amp;okno)</td></tr>
+<tr class="memdesc:a19875923930a9a0a8dc69c2d0296fba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za rysowanie animacji pokarmu oraz efektu pojawiania sie go na planszy.  <a href="class_pokarm.html#a19875923930a9a0a8dc69c2d0296fba6">Więcej...</a><br /></td></tr>
 <tr class="separator:a19875923930a9a0a8dc69c2d0296fba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f5fd62259ebe018bb572702bf1743f"><td class="memItemLeft" align="right" valign="top"><a id="a81f5fd62259ebe018bb572702bf1743f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>wyzerujAnimacje</b> ()</td></tr>
+<tr class="memitem:a81f5fd62259ebe018bb572702bf1743f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a81f5fd62259ebe018bb572702bf1743f">wyzerujAnimacje</a> ()</td></tr>
+<tr class="memdesc:a81f5fd62259ebe018bb572702bf1743f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiedzialna za ustawienie animacji na start.  <a href="class_pokarm.html#a81f5fd62259ebe018bb572702bf1743f">Więcej...</a><br /></td></tr>
 <tr class="separator:a81f5fd62259ebe018bb572702bf1743f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atrybuty publiczne</h2></td></tr>
 <tr class="memitem:abc09e3f09977e9d1cc48ccf9dbcce541"><td class="memItemLeft" align="right" valign="top"><a id="abc09e3f09977e9d1cc48ccf9dbcce541"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>wartoscPunktow</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#abc09e3f09977e9d1cc48ccf9dbcce541">wartoscPunktow</a></td></tr>
+<tr class="memdesc:abc09e3f09977e9d1cc48ccf9dbcce541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu int przechowujaca informacje ile punktow mozna uzyskac za zjedzenie aktualnego pokarmu. <br /></td></tr>
 <tr class="separator:abc09e3f09977e9d1cc48ccf9dbcce541"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb7ac24f5cfa81e979425f6e1d9d5cf4"><td class="memItemLeft" align="right" valign="top"><a id="acb7ac24f5cfa81e979425f6e1d9d5cf4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bonus</b></td></tr>
+<tr class="memitem:acb7ac24f5cfa81e979425f6e1d9d5cf4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#acb7ac24f5cfa81e979425f6e1d9d5cf4">bonus</a></td></tr>
+<tr class="memdesc:acb7ac24f5cfa81e979425f6e1d9d5cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu int przyjmujaca wartosci binarane (0 lub 1).  <a href="class_pokarm.html#acb7ac24f5cfa81e979425f6e1d9d5cf4">Więcej...</a><br /></td></tr>
 <tr class="separator:acb7ac24f5cfa81e979425f6e1d9d5cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a0a2d4bd664a0a7bcd2c7ebd65a08fc3f"><td class="memItemLeft" align="right" valign="top"><a id="a0a2d4bd664a0a7bcd2c7ebd65a08fc3f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a0a2d4bd664a0a7bcd2c7ebd65a08fc3f">x</a></td></tr>
+<tr class="memdesc:a0a2d4bd664a0a7bcd2c7ebd65a08fc3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu float, ktora przechowuje kordynate x z okna glownego. Okresla polozenie pokarmu w osi x. <br /></td></tr>
+<tr class="separator:a0a2d4bd664a0a7bcd2c7ebd65a08fc3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9a43f2ef1684354c31761cff0946df"><td class="memItemLeft" align="right" valign="top"><a id="a7e9a43f2ef1684354c31761cff0946df"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a7e9a43f2ef1684354c31761cff0946df">y</a></td></tr>
+<tr class="memdesc:a7e9a43f2ef1684354c31761cff0946df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu float, ktora przechowuje kordynate y z okna glownego. Okresla polozenie pokarmu w osi y. <br /></td></tr>
+<tr class="separator:a7e9a43f2ef1684354c31761cff0946df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68e1978f3f20a6dc99e33382591aac88"><td class="memItemLeft" align="right" valign="top"><a id="a68e1978f3f20a6dc99e33382591aac88"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a68e1978f3f20a6dc99e33382591aac88">rysujEfekt</a></td></tr>
+<tr class="memdesc:a68e1978f3f20a6dc99e33382591aac88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu bool, ktora sprawdza czy nalezy wykonac animacje dla pojawienia sie pokarmu. <br /></td></tr>
+<tr class="separator:a68e1978f3f20a6dc99e33382591aac88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd1ffbbbc54d371d534d5333a0b0231"><td class="memItemLeft" align="right" valign="top"><a id="acbd1ffbbbc54d371d534d5333a0b0231"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#acbd1ffbbbc54d371d534d5333a0b0231">pokarmTekstura</a></td></tr>
+<tr class="memdesc:acbd1ffbbbc54d371d534d5333a0b0231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Texture posiadajacy sciezke pliku do animacji poruszania sie pokarmu. <br /></td></tr>
+<tr class="separator:acbd1ffbbbc54d371d534d5333a0b0231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a847ef9a61e3818036af296246fbb2d96"><td class="memItemLeft" align="right" valign="top"><a id="a847ef9a61e3818036af296246fbb2d96"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a847ef9a61e3818036af296246fbb2d96">efektTekstura</a></td></tr>
+<tr class="memdesc:a847ef9a61e3818036af296246fbb2d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Texture posiadajacy sciezke pliku do animacji pojawienia sie pokarmu. <br /></td></tr>
+<tr class="separator:a847ef9a61e3818036af296246fbb2d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66d4465b6a170b88e60e37987867af0"><td class="memItemLeft" align="right" valign="top"><a id="ac66d4465b6a170b88e60e37987867af0"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#ac66d4465b6a170b88e60e37987867af0">pokarmSprite</a></td></tr>
+<tr class="memdesc:ac66d4465b6a170b88e60e37987867af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Sprite przechowujacy sprite pokarmu. <br /></td></tr>
+<tr class="separator:ac66d4465b6a170b88e60e37987867af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a25d0c404d2c7c01927cd87bd95c8cd"><td class="memItemLeft" align="right" valign="top"><a id="a0a25d0c404d2c7c01927cd87bd95c8cd"></a>
+Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a0a25d0c404d2c7c01927cd87bd95c8cd">efektSprite</a></td></tr>
+<tr class="memdesc:a0a25d0c404d2c7c01927cd87bd95c8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Sprite przechowujacy sprite efektu pokarmu. <br /></td></tr>
+<tr class="separator:a0a25d0c404d2c7c01927cd87bd95c8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708b11260e2860f89931471f11d38bc8"><td class="memItemLeft" align="right" valign="top"><a id="a708b11260e2860f89931471f11d38bc8"></a>
+<a class="el" href="class_animacja.html">Animacja</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a708b11260e2860f89931471f11d38bc8">animacja</a></td></tr>
+<tr class="memdesc:a708b11260e2860f89931471f11d38bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na obiekt klasy <a class="el" href="class_animacja.html" title="Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza.">Animacja</a> przechowujacy animacje dla pokarmu. <br /></td></tr>
+<tr class="separator:a708b11260e2860f89931471f11d38bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96211a6de5fc6ebcc1981c86c9b73fad"><td class="memItemLeft" align="right" valign="top"><a id="a96211a6de5fc6ebcc1981c86c9b73fad"></a>
+<a class="el" href="class_animacja.html">Animacja</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#a96211a6de5fc6ebcc1981c86c9b73fad">efektSpecjalny</a></td></tr>
+<tr class="memdesc:a96211a6de5fc6ebcc1981c86c9b73fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na obiekt klasy <a class="el" href="class_animacja.html" title="Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza.">Animacja</a> przechowujacy animacje dla efektu pokarmu. <br /></td></tr>
+<tr class="separator:a96211a6de5fc6ebcc1981c86c9b73fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8343ab864f6f761d072b129d0a50230"><td class="memItemLeft" align="right" valign="top"><a id="ad8343ab864f6f761d072b129d0a50230"></a>
+Vector2u&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pokarm.html#ad8343ab864f6f761d072b129d0a50230">klatkiEfektu</a></td></tr>
+<tr class="memdesc:ad8343ab864f6f761d072b129d0a50230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt klasy Vector2u przechowujacy odpowiednie wartosci dla tworzenia animacji w klasie <a class="el" href="class_animacja.html" title="Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza.">Animacja</a>. <br /></td></tr>
+<tr class="separator:ad8343ab864f6f761d072b129d0a50230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa odpowiedzialna za obsluge pokarmu dla weza. </p>
+<p>Znajduja sie w niej funkcje tjk.:<br  />
+</p><ul>
+<li>ustalanie dokladnej nowej pozycji pokarmu<br  />
+</li>
+<li>rysowanie pokarmu<br  />
+</li>
+<li>dodawanie punktow za zjedzenie pokarmu </li>
+</ul>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a05d6018f8d7f67b82ca4c61a163283cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05d6018f8d7f67b82ca4c61a163283cc">&#9670;&nbsp;</a></span>Pokarm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pokarm::Pokarm </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sciezkaPliku</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sciezkaPlikuEfektu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2u&#160;</td>
+          <td class="paramname"><em>klatkiEfektu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor klasy <a class="el" href="class_pokarm.html" title="Klasa odpowiedzialna za obsluge pokarmu dla weza.">Pokarm</a>. </p>
+<ul>
+<li>inicjalizuje wszystkie zmienne potrzebne do obslugi pokarmu<br  />
+</li>
+<li>laduje tekstury z plikow oraz przypisuje je do sprite'ow<br  />
+</li>
+<li>ustawia animacje</li>
+</ul>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sciezkaPliku</td><td>Obiekt klasy string (std::string) przechowujacy odpowiednia sciezke do pliku z tekstura pokarmu.</td></tr>
+    <tr><td class="paramname">sciezkaPlikuEfektu</td><td>Obiekt klasy string (std::string) przechowujacy odpowiednia sciezke do pliku z tekstura efektu pokarmu.</td></tr>
+    <tr><td class="paramname">klatkiEfektu</td><td>Obiekt klasy Vector2u przechowujacy odpowiednie wartosci dla tworzenia animacji w klasie <a class="el" href="class_animacja.html" title="Klasa Animacji Sprite odpowiadajaca za animacje sprite pokarmow i weza.">Animacja</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5ff624e2d44a757b5d59c336ab5768b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff624e2d44a757b5d59c336ab5768b0">&#9670;&nbsp;</a></span>~Pokarm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pokarm::~Pokarm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dekonstruktor klasy <a class="el" href="class_pokarm.html" title="Klasa odpowiedzialna za obsluge pokarmu dla weza.">Pokarm</a>. </p>
+<p>Usuwa efekt i animacje pokarmu. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a19875923930a9a0a8dc69c2d0296fba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19875923930a9a0a8dc69c2d0296fba6">&#9670;&nbsp;</a></span>rysuj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pokarm::rysuj </td>
+          <td>(</td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>okno</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za rysowanie animacji pokarmu oraz efektu pojawiania sie go na planszy. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;okno</td><td>Referencja na obiekt klasy RenderWindow wykorzystywana do rysowania gracza w glownym oknie.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a84256134090ea334db72c64967edf826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84256134090ea334db72c64967edf826">&#9670;&nbsp;</a></span>sprawdzCzyZjedzony()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Pokarm::sprawdzCzyZjedzony </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_gracz.html">Gracz</a> &amp;&#160;</td>
+          <td class="paramname"><em>gracz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda sprawdzajaca czy gracz wszedl w kolizje z pokarmem. </p>
+<p>Nastepnie ustalane jest kolejne polozenie pokarmu. Brane sa pod uwage przeszkody oraz cialo weza.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;gracz</td><td>Referencja na obiekt klasy <a class="el" href="class_gracz.html" title="Klasa odpowiedzialna za obsluge gracza.">Gracz</a>. Przechowuje informacje na temat gracza.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>bool</dd></dl>
+<p>Metoda zwraca wartosc bool. </p>
+
+</div>
+</div>
+<a id="a0afd3d8604b3c86a97ad85fac2b207aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0afd3d8604b3c86a97ad85fac2b207aa">&#9670;&nbsp;</a></span>ustawPokarm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pokarm::ustawPokarm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_gracz.html">Gracz</a> &amp;&#160;</td>
+          <td class="paramname"><em>gracz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Sprite **&#160;</td>
+          <td class="paramname"><em>plansza</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Sprite *&#160;</td>
+          <td class="paramname"><em>przeszkody</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>liczbaprzeszkod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda poszukujaca nowego polozenia dla pokarmu. </p>
+<p>Brane sa w niej pod uwage przeszkody oraz cialo weza.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;gracz</td><td>Referencja na obiekt klasy <a class="el" href="class_gracz.html" title="Klasa odpowiedzialna za obsluge gracza.">Gracz</a>. Przechowuje informacje na temat gracza.</td></tr>
+    <tr><td class="paramname">**plansza</td><td>Podwojny wskaznik na dynamiczna tablice dwuwymiarowa klasy Sprite, przechowujacy pola planszy(sprite'y).</td></tr>
+    <tr><td class="paramname">*przeszkody</td><td>Wskaznik na obiekt klasy Sprite. Jest tablica dynamiczna. Przechowuje sprite'y przeszkod.</td></tr>
+    <tr><td class="paramname">liczbaprzeszkod</td><td>Zmienna typu int okreslajaca ilosc przeszkod w tablicy.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<a id="a81f5fd62259ebe018bb572702bf1743f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f5fd62259ebe018bb572702bf1743f">&#9670;&nbsp;</a></span>wyzerujAnimacje()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pokarm::wyzerujAnimacje </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiedzialna za ustawienie animacji na start. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>Metoda nie przyjmuje zadnych argumentow.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Metoda nie zwraca zadnej wartosci. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="acb7ac24f5cfa81e979425f6e1d9d5cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb7ac24f5cfa81e979425f6e1d9d5cf4">&#9670;&nbsp;</a></span>bonus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pokarm::bonus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zmienna typu int przyjmujaca wartosci binarane (0 lub 1). </p>
+<ul>
+<li>jesli jest rowna 1 to zaliczany jest bonus w postaci zlotego jablka<br  />
+</li>
+<li>jesli jest rowna 0 to zaliczana jest normalna wartosc w postaci czerownego jablka. </li>
+</ul>
+
+</div>
+</div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li><a class="el" href="_pokarm_8h_source.html">Pokarm.h</a></li>
-<li>Pokarm.cpp</li>
+<li>C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/<a class="el" href="_pokarm_8h_source.html">Pokarm.h</a></li>
+<li>C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/<a class="el" href="_pokarm_8cpp.html">Pokarm.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

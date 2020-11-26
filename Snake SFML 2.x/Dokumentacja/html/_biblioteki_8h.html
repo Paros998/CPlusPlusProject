@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Snake SFML: Dokumentacja pliku C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/Biblioteki.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logoSnake2.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Snake SFML
+   &#160;<span id="projectnumber">v1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku Biblioteki.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Plik zawierajacy wszystkie potrzebne stale , pliki naglowkowe oraz globalne zmienne i funkcje .  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
+<code>#include &lt;SFML/Audio.hpp&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_punkty_8h_source.html">Punkty.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_koniec_8h_source.html">Koniec.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_animacja_8h_source.html">Animacja.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_gracz_8h_source.html">Gracz.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_pokarm_8h_source.html">Pokarm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_gra_8h_source.html">Gra.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_poziom3_8h_source.html">Poziom3.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_poziom2_8h_source.html">Poziom2.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_poziom1_8h_source.html">Poziom1.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_menu_8h_source.html">Menu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_aplikacja_8h_source.html">Aplikacja.h</a>&quot;</code><br />
+</div>
+<p><a href="_biblioteki_8h_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:a4b407067c065ce83d5177b469c8a305d"><td class="memItemLeft" align="right" valign="top"><a id="a4b407067c065ce83d5177b469c8a305d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#a4b407067c065ce83d5177b469c8a305d">WYSOKOSC_PLANSZY</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memdesc:a4b407067c065ce83d5177b469c8a305d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stala przechowujaca wysokosc planszy w kwadratach. <br /></td></tr>
+<tr class="separator:a4b407067c065ce83d5177b469c8a305d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98964b5716a665817a5e3be1729d164"><td class="memItemLeft" align="right" valign="top"><a id="ae98964b5716a665817a5e3be1729d164"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#ae98964b5716a665817a5e3be1729d164">DLUGOSC_PLANSZY</a>&#160;&#160;&#160;24</td></tr>
+<tr class="memdesc:ae98964b5716a665817a5e3be1729d164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stala przechowujaca dlugosc planszy w kwadratach. <br /></td></tr>
+<tr class="separator:ae98964b5716a665817a5e3be1729d164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f8bac4ff85ad501e926167631749bb"><td class="memItemLeft" align="right" valign="top"><a id="aa7f8bac4ff85ad501e926167631749bb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#aa7f8bac4ff85ad501e926167631749bb">START_X</a>&#160;&#160;&#160;200</td></tr>
+<tr class="memdesc:aa7f8bac4ff85ad501e926167631749bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stala przechowujaca pozycje x poczatku mapy w pixelach. <br /></td></tr>
+<tr class="separator:aa7f8bac4ff85ad501e926167631749bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28b1a95ee25def272409b9b8ce57f73"><td class="memItemLeft" align="right" valign="top"><a id="ae28b1a95ee25def272409b9b8ce57f73"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#ae28b1a95ee25def272409b9b8ce57f73">START_Y</a>&#160;&#160;&#160;120</td></tr>
+<tr class="memdesc:ae28b1a95ee25def272409b9b8ce57f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stala przechowujaca pozycje y poczatku mapy w pixelach. <br /></td></tr>
+<tr class="separator:ae28b1a95ee25def272409b9b8ce57f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37e058fd117fce495c2e725f5332aad"><td class="memItemLeft" align="right" valign="top"><a id="ab37e058fd117fce495c2e725f5332aad"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#ab37e058fd117fce495c2e725f5332aad">KONIEC_X</a>&#160;&#160;&#160;<a class="el" href="_biblioteki_8h.html#aa7f8bac4ff85ad501e926167631749bb">START_X</a> + (64 * (<a class="el" href="_biblioteki_8h.html#ae98964b5716a665817a5e3be1729d164">DLUGOSC_PLANSZY</a> - 1))</td></tr>
+<tr class="memdesc:ab37e058fd117fce495c2e725f5332aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stala przechowujaca pozycje x konca mapy w pixelach. <br /></td></tr>
+<tr class="separator:ab37e058fd117fce495c2e725f5332aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc3aeb15d56a8c884848bf96b335304"><td class="memItemLeft" align="right" valign="top"><a id="a3dc3aeb15d56a8c884848bf96b335304"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#a3dc3aeb15d56a8c884848bf96b335304">KONIEC_Y</a>&#160;&#160;&#160;<a class="el" href="_biblioteki_8h.html#ae28b1a95ee25def272409b9b8ce57f73">START_Y</a> + (64 * (<a class="el" href="_biblioteki_8h.html#a4b407067c065ce83d5177b469c8a305d">WYSOKOSC_PLANSZY</a> - 1))</td></tr>
+<tr class="memdesc:a3dc3aeb15d56a8c884848bf96b335304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stala przechowujaca pozycje y konca mapy w pixelach. <br /></td></tr>
+<tr class="separator:a3dc3aeb15d56a8c884848bf96b335304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41eee4de417f8e3a5067c9a75ca7c2c9"><td class="memItemLeft" align="right" valign="top"><a id="a41eee4de417f8e3a5067c9a75ca7c2c9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#a41eee4de417f8e3a5067c9a75ca7c2c9">ODSTEP</a>&#160;&#160;&#160;64.0</td></tr>
+<tr class="memdesc:a41eee4de417f8e3a5067c9a75ca7c2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stala przechowujaca odstep miedzy kwadratami mapy w pixelach. <br /></td></tr>
+<tr class="separator:a41eee4de417f8e3a5067c9a75ca7c2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ef1d7f86309d938b4000bb94f95b4c"><td class="memItemLeft" align="right" valign="top"><a id="ac1ef1d7f86309d938b4000bb94f95b4c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#ac1ef1d7f86309d938b4000bb94f95b4c">ZLOTY</a>&#160;&#160;&#160;255, 215, 0, 255</td></tr>
+<tr class="memdesc:ac1ef1d7f86309d938b4000bb94f95b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stala przechowujaca kolor zloty w formie RGB i A. <br /></td></tr>
+<tr class="separator:ac1ef1d7f86309d938b4000bb94f95b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a3aaa8d15e14fa29e942fee18d449486c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#a3aaa8d15e14fa29e942fee18d449486c">losuj</a> (float &amp;zmienna, int parametr)</td></tr>
+<tr class="memdesc:a3aaa8d15e14fa29e942fee18d449486c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja do losowania.  <a href="_biblioteki_8h.html#a3aaa8d15e14fa29e942fee18d449486c">Więcej...</a><br /></td></tr>
+<tr class="separator:a3aaa8d15e14fa29e942fee18d449486c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b89d002b50a9390b7c5e7b35861840b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#a3b89d002b50a9390b7c5e7b35861840b">kolizja</a> (Sprite s1, Sprite s2)</td></tr>
+<tr class="memdesc:a3b89d002b50a9390b7c5e7b35861840b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja sprawdzajaca kolizje obiektow.  <a href="_biblioteki_8h.html#a3b89d002b50a9390b7c5e7b35861840b">Więcej...</a><br /></td></tr>
+<tr class="separator:a3b89d002b50a9390b7c5e7b35861840b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab638cc3eb1ef5f332b7198a911abae7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#ab638cc3eb1ef5f332b7198a911abae7c">losuj</a> (int parametr)</td></tr>
+<tr class="memdesc:ab638cc3eb1ef5f332b7198a911abae7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja do losowania.  <a href="_biblioteki_8h.html#ab638cc3eb1ef5f332b7198a911abae7c">Więcej...</a><br /></td></tr>
+<tr class="separator:ab638cc3eb1ef5f332b7198a911abae7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:afd3adf73e2d5572a112c7c0d947346c1"><td class="memItemLeft" align="right" valign="top"><a id="afd3adf73e2d5572a112c7c0d947346c1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#afd3adf73e2d5572a112c7c0d947346c1">skinWeza</a></td></tr>
+<tr class="memdesc:afd3adf73e2d5572a112c7c0d947346c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca numer tekstury weza. <br /></td></tr>
+<tr class="separator:afd3adf73e2d5572a112c7c0d947346c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4aa6b4ceb560e61ea872cdf4a6dc9b2"><td class="memItemLeft" align="right" valign="top"><a id="ae4aa6b4ceb560e61ea872cdf4a6dc9b2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#ae4aa6b4ceb560e61ea872cdf4a6dc9b2">Wynik</a></td></tr>
+<tr class="memdesc:ae4aa6b4ceb560e61ea872cdf4a6dc9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca wynik gracza. <br /></td></tr>
+<tr class="separator:ae4aa6b4ceb560e61ea872cdf4a6dc9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad51d9645c04a35acf1fc405e97275f"><td class="memItemLeft" align="right" valign="top"><a id="a4ad51d9645c04a35acf1fc405e97275f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_biblioteki_8h.html#a4ad51d9645c04a35acf1fc405e97275f">glosnoscMuzyki</a></td></tr>
+<tr class="memdesc:a4ad51d9645c04a35acf1fc405e97275f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowujaca poziom muzyki. <br /></td></tr>
+<tr class="separator:a4ad51d9645c04a35acf1fc405e97275f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Plik zawierajacy wszystkie potrzebne stale , pliki naglowkowe oraz globalne zmienne i funkcje . </p>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a3b89d002b50a9390b7c5e7b35861840b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b89d002b50a9390b7c5e7b35861840b">&#9670;&nbsp;</a></span>kolizja()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kolizja </td>
+          <td>(</td>
+          <td class="paramtype">Sprite&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Sprite&#160;</td>
+          <td class="paramname"><em>s2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja sprawdzajaca kolizje obiektow. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s1</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Obiekt 1 do sprawdzenia kolizji miedzy obiektami. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Obiekt 2 do sprawdzenia kolizji miedzy obiektami. </p><dl class="section return"><dt>Zwraca</dt><dd>bool</dd></dl>
+<p>Zwraca true jesli wystapi kolizja, false jesli nie. </p>
+
+</div>
+</div>
+<a id="a3aaa8d15e14fa29e942fee18d449486c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aaa8d15e14fa29e942fee18d449486c">&#9670;&nbsp;</a></span>losuj() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void losuj </td>
+          <td>(</td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>zmienna</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>parametr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja do losowania. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zmienna</td><td>Zmienna do ktorej przypisywany jest wynik losowania. </td></tr>
+    <tr><td class="paramname">parametr</td><td>Zmienna ustalajaca zakres losowania. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ab638cc3eb1ef5f332b7198a911abae7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab638cc3eb1ef5f332b7198a911abae7c">&#9670;&nbsp;</a></span>losuj() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int losuj </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>parametr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja do losowania. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parametr</td><td>Zmienna ustalajaca zakres losowania. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>int</dd></dl>
+<p>Zwraca wylosowana liczbe typu integer </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

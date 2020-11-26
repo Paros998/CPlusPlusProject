@@ -1,14 +1,321 @@
 \hypertarget{class_menu}{}\doxysection{Dokumentacja klasy Menu}
 \label{class_menu}\index{Menu@{Menu}}
+
+
+Klasa ta odpowiada za dzialanie menu glownego gry.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_menu_addfae49eabcf14f1e9fa3d88bf19cd59}\label{class_menu_addfae49eabcf14f1e9fa3d88bf19cd59}} 
-int {\bfseries start} (Render\+Window \&okno)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_menu_ad466dd83355124a6ed958430450bfe94}\label{class_menu_ad466dd83355124a6ed958430450bfe94}} 
+\mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}} ()
+\begin{DoxyCompactList}\small\item\em Jest to konstruktor obiektu klasy \mbox{\hyperlink{class_menu}{Menu}} Inicjalizuje on zmienne,obiekty ,tablice itd. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a831387f51358cfb88cd018e1777bc980}\label{class_menu_a831387f51358cfb88cd018e1777bc980}} 
+\mbox{\hyperlink{class_menu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Jest to dekonstruktor obiektu klasy \mbox{\hyperlink{class_menu}{Menu}} Niszczy on dynamicznie utworzone tablice w konstruktorze. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_menu_addfae49eabcf14f1e9fa3d88bf19cd59}{start}} (Render\+Window \&okno)
+\begin{DoxyCompactList}\small\item\em okno to referencja na obiekt typu Render\+Window sluzacy do rysowania elementow 2d w tym oknie \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_menu_a2db63e0559ed6f4df2c54743a0e164a8}{poruszaj\+Tlo}} ()
+\begin{DoxyCompactList}\small\item\em Metoda ta ma za zadanie poruszac tlem menu glownego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a6ca93cb64d461b8e6d6485754bb75109}{rysuj}} (Render\+Window \&okno)
+\begin{DoxyCompactList}\small\item\em Metoda ta ma za zadanie rysowanie odpowiedniego podmenu menu glownego . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a04bb0c4f93310e1092b220658ea6ad9f}{przygotuj\+Strone}} ()
+\begin{DoxyCompactList}\small\item\em Metoda ta przygotowuje odpowiednie zasoby do rysowania dla danej podstrony i wyboru uzytkownika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_ad8d3e739eac97ee7eb16aac1b531419d}{aktualizacja\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Metoda ta ma za zadanie odpowiednio aktualizowac widok wyboru uzytkownika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_acddcd89fd3f0aaae63175e1664e9c6d7}{ruch\+Myszka}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Metoda ta oblicza czy myszka najechala na ktorys interaktywny element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a2dbe614520087c5ea76096ba11d4596e}{klik\+Myszka}} (int x, int y, Render\+Window \&okno)
+\begin{DoxyCompactList}\small\item\em Metoda ta oblicza czy myszka najechala na ktorys interaktywny element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a6ffac228f003fd430d4c601c0d75c447}{enter}} (Render\+Window \&okno)
+\begin{DoxyCompactList}\small\item\em Metoda ta ma za zadanie zmieniac podtstrony menu lub uruchamiac poziom czy tez konczyc dzialanie aplikacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_menu_a3fa7483af0648af794922eaf51a52068}\label{class_menu_a3fa7483af0648af794922eaf51a52068}} 
+Texture \mbox{\hyperlink{class_menu_a3fa7483af0648af794922eaf51a52068}{menu\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture tla menu glownego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_aee9f9dba1c131dd185eb59a6a54eca28}\label{class_menu_aee9f9dba1c131dd185eb59a6a54eca28}} 
+Texture \mbox{\hyperlink{class_menu_aee9f9dba1c131dd185eb59a6a54eca28}{logo\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture logo menu glownego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_af198edca68e964f3c5e75f14b6dac919}\label{class_menu_af198edca68e964f3c5e75f14b6dac919}} 
+Texture \mbox{\hyperlink{class_menu_af198edca68e964f3c5e75f14b6dac919}{strzalka\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture strzalki menu glownego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_af71ce5b02c7e59ade2a1905ad09776b6}\label{class_menu_af71ce5b02c7e59ade2a1905ad09776b6}} 
+Texture \mbox{\hyperlink{class_menu_af71ce5b02c7e59ade2a1905ad09776b6}{plus\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture plusa do zmiany glosnosci muzyki w opcjach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a6256f197529493cfa667906316e1ef72}\label{class_menu_a6256f197529493cfa667906316e1ef72}} 
+Texture \mbox{\hyperlink{class_menu_a6256f197529493cfa667906316e1ef72}{minus\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture minusa do zmiany glosnosci muzyki w opcjach. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a7112a53b28caf8eddeeecad945233a36}\label{class_menu_a7112a53b28caf8eddeeecad945233a36}} 
+Texture \mbox{\hyperlink{class_menu_a7112a53b28caf8eddeeecad945233a36}{opcje\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture znaczka opcji. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_ae2e3e907ae9cee5ea1a0b854a0a4f29b}\label{class_menu_ae2e3e907ae9cee5ea1a0b854a0a4f29b}} 
+Texture \mbox{\hyperlink{class_menu_ae2e3e907ae9cee5ea1a0b854a0a4f29b}{ludziki\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture znaczka osob. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a352eaa8ab863457a0d6c1831f8b8c9b2}\label{class_menu_a352eaa8ab863457a0d6c1831f8b8c9b2}} 
+Texture \mbox{\hyperlink{class_menu_a352eaa8ab863457a0d6c1831f8b8c9b2}{kontroler\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture znaczka kontrolera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_acd3eef59a8559215843859de438357f4}\label{class_menu_acd3eef59a8559215843859de438357f4}} 
+Texture \mbox{\hyperlink{class_menu_acd3eef59a8559215843859de438357f4}{dol\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture znaczka strzalki w dol. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_ac0aeaca7401a2cedecaf227348064b8f}\label{class_menu_ac0aeaca7401a2cedecaf227348064b8f}} 
+Texture \mbox{\hyperlink{class_menu_ac0aeaca7401a2cedecaf227348064b8f}{gora\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture znaczka strzalki w gore. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a367107e909720126732de1d577e15455}\label{class_menu_a367107e909720126732de1d577e15455}} 
+Texture \mbox{\hyperlink{class_menu_a367107e909720126732de1d577e15455}{lewo\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture znaczka strzalki w lewo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a5fbec43b4ded1999415f58ddfd53d961}\label{class_menu_a5fbec43b4ded1999415f58ddfd53d961}} 
+Texture \mbox{\hyperlink{class_menu_a5fbec43b4ded1999415f58ddfd53d961}{prawo\+Tekstura}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Texture przechowujaca teksture znaczka strzalki w prawo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a6d391348e88f794370b0778b3565530a}\label{class_menu_a6d391348e88f794370b0778b3565530a}} 
+Sprite \mbox{\hyperlink{class_menu_a6d391348e88f794370b0778b3565530a}{menu\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca tlo menu glownego gry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_aefa26c459347d9a97289a5a1cc0defa6}\label{class_menu_aefa26c459347d9a97289a5a1cc0defa6}} 
+Sprite \mbox{\hyperlink{class_menu_aefa26c459347d9a97289a5a1cc0defa6}{logo\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca logo menu glownego gry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a2d586b71de27ace5e2697d028fdfeda7}\label{class_menu_a2d586b71de27ace5e2697d028fdfeda7}} 
+Sprite \mbox{\hyperlink{class_menu_a2d586b71de27ace5e2697d028fdfeda7}{strzalka\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca strzalke menu glownego gry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a900f65133b68eb6e4bcfcdc555b34f04}\label{class_menu_a900f65133b68eb6e4bcfcdc555b34f04}} 
+Sprite \mbox{\hyperlink{class_menu_a900f65133b68eb6e4bcfcdc555b34f04}{plus\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca plus w opcjach gry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a3b9e57c9396486c2d497c52be88b9265}\label{class_menu_a3b9e57c9396486c2d497c52be88b9265}} 
+Sprite \mbox{\hyperlink{class_menu_a3b9e57c9396486c2d497c52be88b9265}{minus\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca minus w opcjach gry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a273b65b789a09f530d40de2b96b19521}\label{class_menu_a273b65b789a09f530d40de2b96b19521}} 
+Sprite \mbox{\hyperlink{class_menu_a273b65b789a09f530d40de2b96b19521}{opcje\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca znaczek opcje. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a79e02fd8a99337f3742741d4f6c8441e}\label{class_menu_a79e02fd8a99337f3742741d4f6c8441e}} 
+Sprite \mbox{\hyperlink{class_menu_a79e02fd8a99337f3742741d4f6c8441e}{ludziki\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca znaczek osob. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a7902c6c5cb326db337c470d024fd5bd2}\label{class_menu_a7902c6c5cb326db337c470d024fd5bd2}} 
+Sprite \mbox{\hyperlink{class_menu_a7902c6c5cb326db337c470d024fd5bd2}{kontroler\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca znaczek kontrolera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a64a8128aafa79eeabbf0277978c35e27}\label{class_menu_a64a8128aafa79eeabbf0277978c35e27}} 
+Sprite \mbox{\hyperlink{class_menu_a64a8128aafa79eeabbf0277978c35e27}{dol\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca znaczek strzalki w dol. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_aa8d555036d96b4bf67ec4944d7ae3d39}\label{class_menu_aa8d555036d96b4bf67ec4944d7ae3d39}} 
+Sprite \mbox{\hyperlink{class_menu_aa8d555036d96b4bf67ec4944d7ae3d39}{gora\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca znaczek strzalki w gore. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_aed68da829dd539673f2a8679d0185614}\label{class_menu_aed68da829dd539673f2a8679d0185614}} 
+Sprite \mbox{\hyperlink{class_menu_aed68da829dd539673f2a8679d0185614}{lewo\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca znaczek strzalki w lewo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a5adcefca6ae1d18cb83c291c0dab505f}\label{class_menu_a5adcefca6ae1d18cb83c291c0dab505f}} 
+Sprite \mbox{\hyperlink{class_menu_a5adcefca6ae1d18cb83c291c0dab505f}{prawo\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu Sprite przechowujaca znaczek strzalki w prawo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_ad51f21570305eda72e0b0e3f3b688b59}\label{class_menu_ad51f21570305eda72e0b0e3f3b688b59}} 
+Sprite $\ast$ \mbox{\hyperlink{class_menu_ad51f21570305eda72e0b0e3f3b688b59}{tablica\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna wskaznikowa przechowujaca wskaznik na tablice sprite do menu postartowego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_ad7bf9f1579ba2dbcae45629cb03c567e}\label{class_menu_ad7bf9f1579ba2dbcae45629cb03c567e}} 
+Texture $\ast$ \mbox{\hyperlink{class_menu_ad7bf9f1579ba2dbcae45629cb03c567e}{tekstura\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Zmienna wskaznikowa przechowujaca wskaznik na tablice tekstur do menu postartowego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a12821bb695954760a1f96fc12334ba45}\label{class_menu_a12821bb695954760a1f96fc12334ba45}} 
+Text $\ast$ \mbox{\hyperlink{class_menu_a12821bb695954760a1f96fc12334ba45}{tablica\+Text}}
+\begin{DoxyCompactList}\small\item\em Zmienna wskaznikowa przechowujaca wskaznik na tablice tekstu do menu glownego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a0ee51721824f8e844254ddc9f2332a57}\label{class_menu_a0ee51721824f8e844254ddc9f2332a57}} 
+Text $\ast$ \mbox{\hyperlink{class_menu_a0ee51721824f8e844254ddc9f2332a57}{opcje\+Text}}
+\begin{DoxyCompactList}\small\item\em Zmienna wskaznikowa przechowujaca wskaznik na tablice tekstu do opcji. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a77f24135dd3a61f6c25b4422eb2bf07b}\label{class_menu_a77f24135dd3a61f6c25b4422eb2bf07b}} 
+Text $\ast$ \mbox{\hyperlink{class_menu_a77f24135dd3a61f6c25b4422eb2bf07b}{wyniki\+Text}}
+\begin{DoxyCompactList}\small\item\em Zmienna wskaznikowa przechowujaca wskaznik na tablice tekstu do wynikow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a112a025d1c23bbcb5d0433ee893c0d3c}\label{class_menu_a112a025d1c23bbcb5d0433ee893c0d3c}} 
+ifstream \mbox{\hyperlink{class_menu_a112a025d1c23bbcb5d0433ee893c0d3c}{wyniki\+Plik}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu ifstream do zczytywania danych z pliku wynikowego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_aad70d0363b356346759d1c8d90a5c9ea}\label{class_menu_aad70d0363b356346759d1c8d90a5c9ea}} 
+string \mbox{\hyperlink{class_menu_aad70d0363b356346759d1c8d90a5c9ea}{linia}}
+\begin{DoxyCompactList}\small\item\em Zmienna pomocnicza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a8f8983489d479050bc9630aca836cb38}\label{class_menu_a8f8983489d479050bc9630aca836cb38}} 
+Music $\ast$ \mbox{\hyperlink{class_menu_a8f8983489d479050bc9630aca836cb38}{menu\+Muzyka}}
+\begin{DoxyCompactList}\small\item\em Zmienna wskaznikowa na tablice obiektow typu Music do streamowania muzyki w menu glownym. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a04cdde37a9eaa3486273c66991eb475f}\label{class_menu_a04cdde37a9eaa3486273c66991eb475f}} 
+Sound \mbox{\hyperlink{class_menu_a04cdde37a9eaa3486273c66991eb475f}{menu\+Dzwiek\+Zatwierdz\+Menu}}
+\begin{DoxyCompactList}\small\item\em Obiekt typu Sound umozliwiajacy wlaczanie dzwieku przekazanego mu przez bufor2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_aedc15ffbfa4bc2a286d18c610df96927}\label{class_menu_aedc15ffbfa4bc2a286d18c610df96927}} 
+Sound\+Buffer \mbox{\hyperlink{class_menu_aedc15ffbfa4bc2a286d18c610df96927}{bufor2}}
+\begin{DoxyCompactList}\small\item\em Obiekt typu Sound\+Buffer umozliwiajacy zczytywanie z dysku dzwieku. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a15af447edf4379bd80d62dc2f9de756d}\label{class_menu_a15af447edf4379bd80d62dc2f9de756d}} 
+Font \mbox{\hyperlink{class_menu_a15af447edf4379bd80d62dc2f9de756d}{czcionka}}
+\begin{DoxyCompactList}\small\item\em Obiekt typu Font przechowujacy typ czcionki tekstu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a9763c7f36cd949f968e332449cb0d49e}\label{class_menu_a9763c7f36cd949f968e332449cb0d49e}} 
+Int\+Rect \mbox{\hyperlink{class_menu_a9763c7f36cd949f968e332449cb0d49e}{obszar}}
+\begin{DoxyCompactList}\small\item\em Obiekt typu Int\+Rect pozwalajacy na dokladne sprawdzanie klikniec myszki w menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_aa35df12c48628e9779fdfd32e273a3e6}\label{class_menu_aa35df12c48628e9779fdfd32e273a3e6}} 
+int \mbox{\hyperlink{class_menu_aa35df12c48628e9779fdfd32e273a3e6}{kierunek\+Tla}}
+\begin{DoxyCompactList}\small\item\em Zmienna nadajaca kierunek ruchu tla. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a406cd0bee4615c4b4a7ecbe466ed8482}\label{class_menu_a406cd0bee4615c4b4a7ecbe466ed8482}} 
+int \mbox{\hyperlink{class_menu_a406cd0bee4615c4b4a7ecbe466ed8482}{aktualny\+Wybor\+Menu}}
+\begin{DoxyCompactList}\small\item\em Zmienna okreslajaca wybor w menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a48d208c99454fdfe7dd717b424208800}\label{class_menu_a48d208c99454fdfe7dd717b424208800}} 
+int \mbox{\hyperlink{class_menu_a48d208c99454fdfe7dd717b424208800}{podstrona\+Menu}}
+\begin{DoxyCompactList}\small\item\em Zmienna okreslajaca podstrone w menu glownym. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a5d3e71cba034ee725613eec4ae713151}\label{class_menu_a5d3e71cba034ee725613eec4ae713151}} 
+int \mbox{\hyperlink{class_menu_a5d3e71cba034ee725613eec4ae713151}{ilosc\+Wynikow}}
+\begin{DoxyCompactList}\small\item\em Zmienna pomocnicza przy wypisywaniu wynikow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a76c5d323952594a35ea10462a455ca16}\label{class_menu_a76c5d323952594a35ea10462a455ca16}} 
+int \mbox{\hyperlink{class_menu_a76c5d323952594a35ea10462a455ca16}{numer\+Muzyki}}
+\begin{DoxyCompactList}\small\item\em Zmienna okreslajaca ktora muzyka jest grana. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a0ac0c6e0dbb15c1b570c4908f40471b8}\label{class_menu_a0ac0c6e0dbb15c1b570c4908f40471b8}} 
+double \mbox{\hyperlink{class_menu_a0ac0c6e0dbb15c1b570c4908f40471b8}{procX}}
+\begin{DoxyCompactList}\small\item\em Zmienna okreslajaca procentowy rozmiar okna w poziomie od wartosci 1920. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_menu_a4e31bab36f29fc3745c187f9ecdbcb28}\label{class_menu_a4e31bab36f29fc3745c187f9ecdbcb28}} 
+double \mbox{\hyperlink{class_menu_a4e31bab36f29fc3745c187f9ecdbcb28}{procY}}
+\begin{DoxyCompactList}\small\item\em Zmienna okreslajaca procentowy rozmiar okna w pionie od wartosci 1080. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa ta odpowiada za dzialanie menu glownego gry. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_menu_ad8d3e739eac97ee7eb16aac1b531419d}\label{class_menu_ad8d3e739eac97ee7eb16aac1b531419d}} 
+\index{Menu@{Menu}!aktualizacjaMenu@{aktualizacjaMenu}}
+\index{aktualizacjaMenu@{aktualizacjaMenu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{aktualizacjaMenu()}{aktualizacjaMenu()}}
+{\footnotesize\ttfamily void Menu\+::aktualizacja\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda ta ma za zadanie odpowiednio aktualizowac widok wyboru uzytkownika. 
+
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_menu_a6ffac228f003fd430d4c601c0d75c447}\label{class_menu_a6ffac228f003fd430d4c601c0d75c447}} 
+\index{Menu@{Menu}!enter@{enter}}
+\index{enter@{enter}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily void Menu\+::enter (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{okno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda ta ma za zadanie zmieniac podtstrony menu lub uruchamiac poziom czy tez konczyc dzialanie aplikacji. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em okno} & okno to referencja na obiekt typu Render\+Window sluzacy do rysowania elementow 2d w tym oknie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_menu_a2dbe614520087c5ea76096ba11d4596e}\label{class_menu_a2dbe614520087c5ea76096ba11d4596e}} 
+\index{Menu@{Menu}!klikMyszka@{klikMyszka}}
+\index{klikMyszka@{klikMyszka}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{klikMyszka()}{klikMyszka()}}
+{\footnotesize\ttfamily void Menu\+::klik\+Myszka (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{Render\+Window \&}]{okno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda ta oblicza czy myszka najechala na ktorys interaktywny element. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em x} & miejsce myszki w poziomie na ekranie w pixelach od lewego gornego rogu okna \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+miejsce myszki w pionie na ekranie w pixelach od lewego gornego rogu okna 
+\begin{DoxyParams}{Parametry}
+{\em okno} & okno to referencja na obiekt typu Render\+Window sluzacy do rysowania elementow 2d w tym oknie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_menu_a2db63e0559ed6f4df2c54743a0e164a8}\label{class_menu_a2db63e0559ed6f4df2c54743a0e164a8}} 
+\index{Menu@{Menu}!poruszajTlo@{poruszajTlo}}
+\index{poruszajTlo@{poruszajTlo}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{poruszajTlo()}{poruszajTlo()}}
+{\footnotesize\ttfamily void Menu\+::poruszaj\+Tlo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda ta ma za zadanie poruszac tlem menu glownego. 
+
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_menu_a04bb0c4f93310e1092b220658ea6ad9f}\label{class_menu_a04bb0c4f93310e1092b220658ea6ad9f}} 
+\index{Menu@{Menu}!przygotujStrone@{przygotujStrone}}
+\index{przygotujStrone@{przygotujStrone}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{przygotujStrone()}{przygotujStrone()}}
+{\footnotesize\ttfamily void Menu\+::przygotuj\+Strone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda ta przygotowuje odpowiednie zasoby do rysowania dla danej podstrony i wyboru uzytkownika. 
+
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_menu_acddcd89fd3f0aaae63175e1664e9c6d7}\label{class_menu_acddcd89fd3f0aaae63175e1664e9c6d7}} 
+\index{Menu@{Menu}!ruchMyszka@{ruchMyszka}}
+\index{ruchMyszka@{ruchMyszka}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{ruchMyszka()}{ruchMyszka()}}
+{\footnotesize\ttfamily void Menu\+::ruch\+Myszka (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda ta oblicza czy myszka najechala na ktorys interaktywny element. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em x} & miejsce myszki w poziomie na ekranie w pixelach od lewego gornego rogu okna \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+miejsce myszki w pionie na ekranie w pixelach od lewego gornego rogu okna \begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_menu_a6ca93cb64d461b8e6d6485754bb75109}\label{class_menu_a6ca93cb64d461b8e6d6485754bb75109}} 
+\index{Menu@{Menu}!rysuj@{rysuj}}
+\index{rysuj@{rysuj}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{rysuj()}{rysuj()}}
+{\footnotesize\ttfamily void Menu\+::rysuj (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{okno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda ta ma za zadanie rysowanie odpowiedniego podmenu menu glownego . 
+
+
+\begin{DoxyParams}{Parametry}
+{\em okno} & okno to referencja na obiekt typu Render\+Window sluzacy do rysowania elementow 2d w tym oknie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void
+\end{DoxyReturn}
+Nic nie zwraca \mbox{\Hypertarget{class_menu_addfae49eabcf14f1e9fa3d88bf19cd59}\label{class_menu_addfae49eabcf14f1e9fa3d88bf19cd59}} 
+\index{Menu@{Menu}!start@{start}}
+\index{start@{start}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily int Menu\+::start (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{okno }\end{DoxyParamCaption})}
+
+
+
+okno to referencja na obiekt typu Render\+Window sluzacy do rysowania elementow 2d w tym oknie 
+
+
+\begin{DoxyParams}{Parametry}
+{\em okno} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+int
+\end{DoxyReturn}
+Metoda ta zwraca 0 lub 1 Zwraca 1 gdy uzytkownik rozpocznie granie a 0 gdy chce wyjsc z gry 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 
-Menu.\+h\item 
-Menu.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_menu_8h}{Menu.\+h}}\item 
+C\+:/\+Users/part4/\+Desktop/programowanie w C2/\+Snake S\+F\+M\+L 2.\+x — kopia/src/\mbox{\hyperlink{_menu_8cpp}{Menu.\+cpp}}\end{DoxyCompactItemize}

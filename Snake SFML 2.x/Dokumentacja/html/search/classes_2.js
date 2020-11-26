@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['koniec_17',['Koniec',['../class_koniec.html',1,'']]]
+  ['koniec_246',['Koniec',['../class_koniec.html',1,'']]]
 ];

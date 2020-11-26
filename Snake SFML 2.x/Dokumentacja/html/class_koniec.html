@@ -71,25 +71,112 @@ $(function() {
 <div class="title">Dokumentacja klasy Koniec</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Klasa do wprowadzania nicku gracza oraz manipulacji lista wynikow.  
+ <a href="class_koniec.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_koniec_8h_source.html">Koniec.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:abb72ba0455c1bc202b9ce010d4cfac54"><td class="memItemLeft" align="right" valign="top"><a id="abb72ba0455c1bc202b9ce010d4cfac54"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>wpiszNick</b> (RenderWindow &amp;okno, Font &amp;czcionka, Sprite &amp;tloMapySprite)</td></tr>
+<tr class="memitem:a459ce8a42c06b3eb674348b809c7a2cc"><td class="memItemLeft" align="right" valign="top"><a id="a459ce8a42c06b3eb674348b809c7a2cc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_koniec.html#a459ce8a42c06b3eb674348b809c7a2cc">Koniec</a> ()</td></tr>
+<tr class="memdesc:a459ce8a42c06b3eb674348b809c7a2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jest to konstrukto obiektu typu <a class="el" href="class_koniec.html" title="Klasa do wprowadzania nicku gracza oraz manipulacji lista wynikow.">Koniec</a> Ustawia wskaznik zmiennej wskaznikowej wsk_wyniki na NULL. <br /></td></tr>
+<tr class="separator:a459ce8a42c06b3eb674348b809c7a2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb72ba0455c1bc202b9ce010d4cfac54"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_koniec.html#abb72ba0455c1bc202b9ce010d4cfac54">wpiszNick</a> (RenderWindow &amp;okno, Font &amp;czcionka, Sprite &amp;tloMapySprite)</td></tr>
+<tr class="memdesc:abb72ba0455c1bc202b9ce010d4cfac54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta odpowiada za umozliwienie graczowi wpisanie swojego nicku/pseudonimu.  <a href="class_koniec.html#abb72ba0455c1bc202b9ce010d4cfac54">Więcej...</a><br /></td></tr>
 <tr class="separator:abb72ba0455c1bc202b9ce010d4cfac54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83af98ec3a744265dc16ec6f193843d8"><td class="memItemLeft" align="right" valign="top"><a id="a83af98ec3a744265dc16ec6f193843d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>wynikiTXT</b> (string &amp;pseudonim)</td></tr>
+<tr class="memitem:a83af98ec3a744265dc16ec6f193843d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_koniec.html#a83af98ec3a744265dc16ec6f193843d8">wynikiTXT</a> (string &amp;pseudonim)</td></tr>
+<tr class="memdesc:a83af98ec3a744265dc16ec6f193843d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ta umozliwia znalezienie odpowiedniego miejsca w liscie wynikow. Oraz wpisuje 5 najlepszych wynikow do pliku wynikowego gry.  <a href="class_koniec.html#a83af98ec3a744265dc16ec6f193843d8">Więcej...</a><br /></td></tr>
 <tr class="separator:a83af98ec3a744265dc16ec6f193843d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atrybuty publiczne</h2></td></tr>
-<tr class="memitem:aa3ad879eacebf0a3f5853d5bc3040910"><td class="memItemLeft" align="right" valign="top"><a id="aa3ad879eacebf0a3f5853d5bc3040910"></a>
-struct <a class="el" href="struct_lista_wynikow.html">ListaWynikow</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>wsk_wyniki</b></td></tr>
-<tr class="separator:aa3ad879eacebf0a3f5853d5bc3040910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19754aa45c73f2aa7b93e5c309479b0a"><td class="memItemLeft" align="right" valign="top"><a id="a19754aa45c73f2aa7b93e5c309479b0a"></a>
+struct <a class="el" href="struct_lista_wynikow.html">ListaWynikow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_koniec.html#a19754aa45c73f2aa7b93e5c309479b0a">wsk_wyniki</a></td></tr>
+<tr class="memdesc:a19754aa45c73f2aa7b93e5c309479b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna ta przechowuje wskaznik na 1 poprawnie wypelniony element w liscie wynikow. <br /></td></tr>
+<tr class="separator:a19754aa45c73f2aa7b93e5c309479b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa do wprowadzania nicku gracza oraz manipulacji lista wynikow. </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="abb72ba0455c1bc202b9ce010d4cfac54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb72ba0455c1bc202b9ce010d4cfac54">&#9670;&nbsp;</a></span>wpiszNick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Koniec::wpiszNick </td>
+          <td>(</td>
+          <td class="paramtype">RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>okno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Font &amp;&#160;</td>
+          <td class="paramname"><em>czcionka</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Sprite &amp;&#160;</td>
+          <td class="paramname"><em>tloMapySprite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda ta odpowiada za umozliwienie graczowi wpisanie swojego nicku/pseudonimu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">okno</td><td>okno to referencja na obiekt typu RenderWindow glownego okna aplikacji </td></tr>
+    <tr><td class="paramname">czcionka</td><td>czcionka to referencja na obiekty typu Font przechowujacy typ czcionki dla wyswietlanego tekstu </td></tr>
+    <tr><td class="paramname">tloMapySprite</td><td>tloMapySprite jest to referencja na obiekt typu Sprite przechowujaca tlo danego poziomu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>string</dd></dl>
+<p>Metoda ta zwraca pseudonim gracza </p>
+
+</div>
+</div>
+<a id="a83af98ec3a744265dc16ec6f193843d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83af98ec3a744265dc16ec6f193843d8">&#9670;&nbsp;</a></span>wynikiTXT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Koniec::wynikiTXT </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>pseudonim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda ta umozliwia znalezienie odpowiedniego miejsca w liscie wynikow. Oraz wpisuje 5 najlepszych wynikow do pliku wynikowego gry. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pseudonim</td><td>pseudonim jest to referencja na zmienna lancuchowo znakow odpowiadajaca za przechowywanie nicku/pseudonimu gracza. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void</dd></dl>
+<p>Metoda nic nie zwraca </p>
+
+</div>
+</div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li><a class="el" href="_koniec_8h_source.html">Koniec.h</a></li>
-<li>Koniec.cpp</li>
+<li>C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/<a class="el" href="_koniec_8h_source.html">Koniec.h</a></li>
+<li>C:/Users/part4/Desktop/programowanie w C2/Snake SFML 2.x — kopia/src/<a class="el" href="_koniec_8cpp.html">Koniec.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
