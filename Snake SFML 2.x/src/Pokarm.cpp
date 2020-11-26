@@ -1,3 +1,15 @@
+/*! \file Pokarm.cpp
+	\brief Plik zawierajacy metody klasy Pokarm.
+*/
+
+/*! \def STALA
+	\brief Stala ktora przechowuje wspolrzedna Y poczatkowego pola planszy.
+*/
+/*! \enum ktorybonus {Brak, Ochrona}
+	\brief Typ wyliczeniowy od 0 do 1
+
+	Jego oznaczenia definiuja czy tryb bonusu(czy jest wlaczony czy nie).
+*/
 #include "Pokarm.h"
 #define STALA START_Y
 
@@ -17,8 +29,6 @@ Pokarm::Pokarm(string sciezkaPliku, string sciezkaPlikuEfektu, Vector2u klatkiEf
 	efektTekstura.loadFromFile(sciezkaPlikuEfektu);
 	efektTekstura.setSmooth(true);
 	efektSprite.setTexture(efektTekstura);
-	//Rect<float> obszarEfektu = efektSprite.getGlobalBounds();
-	//efektSprite.setOrigin(Vector2f(obszarEfektu.width / 2.0f, obszarEfektu.height / 2.0f));
 
 	x = 200.0f, y = 120.0f;
 	pokarmSprite.setPosition(x , y);
@@ -87,7 +97,7 @@ void Pokarm::rysuj(RenderWindow& okno)
 
 	if (rysujEfekt)
 	{
-		if (efektSpecjalny->aktualizuj(0) >(int)( klatkiEfektu.x - 2))
+		if (efektSpecjalny->aktualizuj(0) > (int)klatkiEfektu.x - 2)
 			rysujEfekt = false;
 		efektSprite.setTextureRect(efektSpecjalny->obszar);
 		okno.draw(efektSprite);

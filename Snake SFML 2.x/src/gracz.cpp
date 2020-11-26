@@ -1,3 +1,10 @@
+/*! \file Gracz.cpp
+	\brief Plik zawierajacy metody klasy gracza.
+*/
+/*! \enum opis_gracz {GLOWA, CIALO, TRANS}
+	\brief Typ wyliczeniowy do 2.
+	Okresla symbole w tablicy spriteow gracza.
+*/
 #include "Gracz.h"
 
 enum opis_gracz {GLOWA, CIALO, TRANS};
@@ -103,11 +110,10 @@ Gracz::Gracz(int poziom)
 	if (Poziom + 1 == 3)
 		mnoznikCzasu = 0.8f;
 
+	rozmiar_weza = (float)graczGlowaTekstura.getSize().x;
 	czasomierz = 0.0f;
 	kierunek = 0;
 	opoznienie = 0.1f;
-	szybkosc = (float)graczGlowaTekstura.getSize().x;
-	cout << szybkosc;
 
 	// Tworzenie listy
 	wsk_listy = new Lista;
@@ -184,22 +190,22 @@ void Gracz::przejdzPrzezDziure(Sprite* dziuraSprite, int liczbaDziur)
 			int k;
 			if (i == 0) k = 1;
 			else if (i == 1) k = 0;
-			if (kierunek == 0)
+			if (kierunek == 0) // DOL
 			{
 				wsk_listy->x = dziuraSprite[k].getPosition().x;
 				wsk_listy->y = dziuraSprite[k].getPosition().y + 64.0f;
 			}
-			if (kierunek == 1)
+			if (kierunek == 1) // LEWO
 			{
 				wsk_listy->x = dziuraSprite[k].getPosition().x - 64.0f;
 				wsk_listy->y = dziuraSprite[k].getPosition().y;
 			}
-			if (kierunek == 2)
+			if (kierunek == 2) // PRAWO
 			{
 				wsk_listy->x = dziuraSprite[k].getPosition().x + 64.0f;
 				wsk_listy->y = dziuraSprite[k].getPosition().y;
 			}
-			if (kierunek == 3)
+			if (kierunek == 3) // GORA
 			{
 				wsk_listy->x = dziuraSprite[k].getPosition().x;
 				wsk_listy->y = dziuraSprite[k].getPosition().y - 64.0f;
@@ -233,19 +239,19 @@ void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkoda
 	switch (kierunek)
 	{
 	case 0:
-		wsk_listy->y += szybkosc;
+		wsk_listy->y += rozmiar_weza;
 		break;
 
 	case 1:
-		wsk_listy->x -= szybkosc;
+		wsk_listy->x -= rozmiar_weza;
 		break;
 
 	case 2:
-		wsk_listy->x += szybkosc;
+		wsk_listy->x += rozmiar_weza;
 		break;
 
 	case 3:
-		wsk_listy->y -= szybkosc;
+		wsk_listy->y -= rozmiar_weza;
 		break;
 	}
 
@@ -255,29 +261,36 @@ void Gracz::ruchGracza(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkoda
 
 void Gracz::sterowanie()
 {
-	if (Keyboard::isKeyPressed(Keyboard::Left))
+	float czas = zegarSterowania.getElapsedTime().asSeconds();
+	float opoz = 0.2f;
+	
+	if (Keyboard::isKeyPressed(Keyboard::Left) && czas >= opoz)
 	{
 		if (kierunek == 2)return;
 		kierunek = 1;
 		wsk_listy->sprite.setRotation(90.0f);
+		zegarSterowania.restart();
 	}
-	if (Keyboard::isKeyPressed(Keyboard::Right))
+	if (Keyboard::isKeyPressed(Keyboard::Right) && czas >= opoz)
 	{
 		if (kierunek == 1)return;
 		kierunek = 2;
 		wsk_listy->sprite.setRotation(-90.0f);
+		zegarSterowania.restart();
 	}
-	if (Keyboard::isKeyPressed(Keyboard::Up))
+	if (Keyboard::isKeyPressed(Keyboard::Up) && czas >= opoz)
 	{
 		if (kierunek == 0)return;
 		kierunek = 3;
 		wsk_listy->sprite.setRotation(180.0f);
+		zegarSterowania.restart();
 	}
-	if (Keyboard::isKeyPressed(Keyboard::Down))
+	if (Keyboard::isKeyPressed(Keyboard::Down) && czas >= opoz)
 	{
 		if (kierunek == 3)return;
 		kierunek = 0;
 		wsk_listy->sprite.setRotation(0.0f);
+		zegarSterowania.restart();
 	}
 }
 
@@ -286,8 +299,8 @@ void Gracz::obsluguj(Sprite* dziuraSprite, int liczbaDziur, Sprite* przeszkodaSp
 	float czas = zegar.getElapsedTime().asSeconds() * mnoznikCzasu;
 	zegar.restart();
 	czasomierz += czas;
-	sterowanie();
 
+	sterowanie();
 	if (czasomierz >= opoznienie)
 	{
 		czasomierz = 0;
