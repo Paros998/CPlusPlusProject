@@ -110,8 +110,9 @@ Gra::Gra(int liczbaprzeszkod,int poziom,int warunek)
 	tablicaY = new int[liczbaPrzeszkod];
 	tablicaJ = new int[liczbaPrzeszkod];
 
-	RdzenPlansza = thread([&]() {obliczPozycje(); });
-	RdzenPlansza.join();
+	//RdzenPlansza = thread([&]() {obliczPozycje(); });
+	//RdzenPlansza.join();
+	obliczPozycje();
 
 	for (int i = 0; i < 2; i++)
 	{

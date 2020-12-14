@@ -251,8 +251,8 @@ public:
 	~Gra();
 	double procX, procY;
 	float czasZloteJablko;
-public:
-	thread RdzenPlansza;
+//public:
+	//thread RdzenPlansza;
 protected:
 	void rysujPlansze(RenderWindow& okno);
 	int pauza(RenderWindow& okno, Gracz& gracz,Pokarm* pokarm);
