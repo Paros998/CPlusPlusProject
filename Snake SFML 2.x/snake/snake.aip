@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="17.6" version="17.6" Modules="simple" RootPath="." Language="en" Id="{1BD5D80B-E97A-4844-AC00-400F742A588A}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:7"/>
+    <ROW Property="Manufacturer" Value="SPO"/>
+    <ROW Property="ProductCode" Value="1033:{171DCB92-FDD2-4523-BBCD-C2B53B21C7FF} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Snake"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{6A45384E-343C-4F99-8DF0-1F740C0AC905}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Czcionki_Dir" Directory_Parent="data_Dir" DefaultDir="Czcionki"/>
+    <ROW Directory="Gracziprzedmioty_Dir" Directory_Parent="Spritydogry_Dir" DefaultDir="GRACZI~1|Gracz i przedmioty"/>
+    <ROW Directory="Klawisze_Dir" Directory_Parent="data_Dir" DefaultDir="Klawisze"/>
+    <ROW Directory="MuzykaDzwiekiGra_Dir" Directory_Parent="data_Dir" DefaultDir="MUZYKA~1|MuzykaDzwiekiGra"/>
+    <ROW Directory="Muzyka_Dir" Directory_Parent="data_Dir" DefaultDir="Muzyka"/>
+    <ROW Directory="Obrazymenu_Dir" Directory_Parent="data_Dir" DefaultDir="OBRAZY~1|Obrazy menu"/>
+    <ROW Directory="Plansza_Dir" Directory_Parent="Spritydogry_Dir" DefaultDir="Plansza"/>
+    <ROW Directory="Puchary_Dir" Directory_Parent="Plansza_Dir" DefaultDir="Puchary"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="Spritydogry_Dir" Directory_Parent="data_Dir" DefaultDir="SPRITY~1|Sprity do gry"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="animacjagracz_Dir" Directory_Parent="Gracziprzedmioty_Dir" DefaultDir="ANIMAC~1|animacja gracz"/>
+    <ROW Directory="cialo20_Dir" Directory_Parent="Gracziprzedmioty_Dir" DefaultDir="cialo20"/>
+    <ROW Directory="cialo40_Dir" Directory_Parent="Gracziprzedmioty_Dir" DefaultDir="cialo40"/>
+    <ROW Directory="cialo60_Dir" Directory_Parent="Gracziprzedmioty_Dir" DefaultDir="cialo60"/>
+    <ROW Directory="cialo80_Dir" Directory_Parent="Gracziprzedmioty_Dir" DefaultDir="cialo80"/>
+    <ROW Directory="cialo_Dir" Directory_Parent="Gracziprzedmioty_Dir" DefaultDir="cialo"/>
+    <ROW Directory="cialocyan_Dir" Directory_Parent="animacjagracz_Dir" DefaultDir="CIALOC~1|cialo cyan"/>
+    <ROW Directory="cialoczerwo_Dir" Directory_Parent="animacjagracz_Dir" DefaultDir="CIALOC~2|cialo czerwo"/>
+    <ROW Directory="cialofiolet_Dir" Directory_Parent="animacjagracz_Dir" DefaultDir="CIALOF~1|cialo fiolet"/>
+    <ROW Directory="cialoniebieski_Dir" Directory_Parent="animacjagracz_Dir" DefaultDir="CIALON~1|cialo niebieski"/>
+    <ROW Directory="cialoroz_Dir" Directory_Parent="animacjagracz_Dir" DefaultDir="CIALOR~1|cialo roz"/>
+    <ROW Directory="cialoszary_Dir" Directory_Parent="animacjagracz_Dir" DefaultDir="CIALOS~1|cialo szary"/>
+    <ROW Directory="cialozielony_Dir" Directory_Parent="animacjagracz_Dir" DefaultDir="CIALOZ~1|cialo zielony"/>
+    <ROW Directory="cialozolty_Dir" Directory_Parent="animacjagracz_Dir" DefaultDir="CIALOZ~2|cialo zolty"/>
+    <ROW Directory="data_Dir" Directory_Parent="APPDIR" DefaultDir="data"/>
+    <ROW Directory="glowa_Dir" Directory_Parent="Gracziprzedmioty_Dir" DefaultDir="glowa"/>
+    <ROW Directory="snap_Dir" Directory_Parent="Czcionki_Dir" DefaultDir="snap"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{FF2991A3-621E-4C51-AA8C-DF5E2149BC89}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="ProductInformation" ComponentId="{C5B54179-133F-4ED3-B062-1ADA4ADB8E5F}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SnakeSFML.exe" ComponentId="{161430E7-17DA-424D-8CD7-7F2DB8194A56}" Directory_="APPDIR" Attributes="0" KeyPath="SnakeSFML.exe"/>
+    <ROW Component="SnakeSFML.exe_1" ComponentId="{77F6B657-828F-4A31-8A39-588AF5793E49}" Directory_="SHORTCUTDIR" Attributes="0" KeyPath="SnakeSFML.exe_1"/>
+    <ROW Component="advapi32.dll" ComponentId="{2CAAC06B-AB42-4F75-8B45-3A70847FB1D9}" Directory_="APPDIR" Attributes="0" KeyPath="advapi32.dll"/>
+    <ROW Component="design.graffiti.SNAP____.ttf" ComponentId="{3DA2553F-2438-45DF-AB4E-9A019C0B21D6}" Directory_="snap_Dir" Attributes="0" Type="0"/>
+    <ROW Component="deska.png" ComponentId="{AB19B81F-6C98-4668-87B9-1ACFD7C0E060}" Directory_="Obrazymenu_Dir" Attributes="0" KeyPath="deska.png" Type="0"/>
+    <ROW Component="dziura.png" ComponentId="{D2827630-A4BE-4A58-82B3-9B9AE87EC734}" Directory_="Plansza_Dir" Attributes="0" KeyPath="dziura.png" Type="0"/>
+    <ROW Component="free_button_08.png" ComponentId="{18AD662B-BD71-4AE5-B403-C874D11D1B02}" Directory_="Klawisze_Dir" Attributes="0" KeyPath="free_button_08.png" Type="0"/>
+    <ROW Component="gdi32.dll" ComponentId="{119E9662-768D-4E85-B21F-9B34D4970313}" Directory_="APPDIR" Attributes="0" KeyPath="gdi32.dll"/>
+    <ROW Component="inkfreenormal.ttf" ComponentId="{E78588EE-EF82-4F9A-9843-0C4232D86E9E}" Directory_="Czcionki_Dir" Attributes="0" Type="0"/>
+    <ROW Component="jablko_animacja2gold.png" ComponentId="{CB3C2B0F-FBE0-4404-8712-6D5AD8151CD5}" Directory_="Gracziprzedmioty_Dir" Attributes="0" KeyPath="jablko_animacja2gold.png_1" Type="0"/>
+    <ROW Component="jedzenieJablko.wav" ComponentId="{F6FAE808-519F-4D11-BC89-85BDF3C63B95}" Directory_="MuzykaDzwiekiGra_Dir" Attributes="0" KeyPath="jedzenieJablko.wav" Type="0"/>
+    <ROW Component="kernel32.dll" ComponentId="{3C549336-32A2-45C4-B687-F6162D2BFDB1}" Directory_="APPDIR" Attributes="0" KeyPath="kernel32.dll"/>
+    <ROW Component="mainMenu.wav" ComponentId="{FF6BA1C8-1A10-4054-85AE-30BBE6A85EA0}" Directory_="Muzyka_Dir" Attributes="0" KeyPath="mainMenu.wav" Type="0"/>
+    <ROW Component="msvcp140d.dll" ComponentId="{4D688683-6A3A-4DB6-9321-397493DE2897}" Directory_="APPDIR" Attributes="0" KeyPath="msvcp140d.dll"/>
+    <ROW Component="openal32.dll" ComponentId="{132989F6-4D5F-4989-8C53-38F9EBAD8239}" Directory_="APPDIR" Attributes="0" KeyPath="openal32.dll"/>
+    <ROW Component="opengl32.dll" ComponentId="{7237D5C3-C746-4C0F-B482-8A0F64CA8AAA}" Directory_="APPDIR" Attributes="0" KeyPath="opengl32.dll"/>
+    <ROW Component="puchar1.png" ComponentId="{0CA1A4C0-91A6-4290-A29F-EEF29AA4991D}" Directory_="Puchary_Dir" Attributes="0" KeyPath="puchar1.png" Type="0"/>
+    <ROW Component="sfmlaudio2.dll" ComponentId="{5A039EAE-B552-48D7-A6DA-D8C1C8E41E0A}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlaudio2.dll"/>
+    <ROW Component="sfmlaudiod2.dll" ComponentId="{D46AA374-01E8-45EF-A486-03F5826A9252}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlaudiod2.dll"/>
+    <ROW Component="sfmlgraphics2.dll" ComponentId="{7DB09A88-B32C-4493-8E35-9377C42DD765}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlgraphics2.dll"/>
+    <ROW Component="sfmlgraphicsd2.dll" ComponentId="{39F1C468-63F9-4B56-8F30-D0C6415C2A6C}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlgraphicsd2.dll"/>
+    <ROW Component="sfmlnetwork2.dll" ComponentId="{9EE94D52-1373-4ECD-82E1-2E2C692DC991}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlnetwork2.dll"/>
+    <ROW Component="sfmlnetworkd2.dll" ComponentId="{AF5D29E5-8790-48B8-8D2F-8A6E2E764761}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlnetworkd2.dll"/>
+    <ROW Component="sfmlsystem2.dll" ComponentId="{517AC861-5FD2-4462-86A1-693881A58692}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlsystem2.dll"/>
+    <ROW Component="sfmlsystemd2.dll" ComponentId="{5B54F394-EEFB-4DCB-ADF7-757112CACA6E}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlsystemd2.dll"/>
+    <ROW Component="sfmlwindow2.dll" ComponentId="{88E8E58C-9193-4540-B87B-6A5855536974}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlwindow2.dll"/>
+    <ROW Component="sfmlwindowd2.dll" ComponentId="{419E63B6-DB35-40DF-A40B-D3F2C5C04669}" Directory_="APPDIR" Attributes="0" KeyPath="sfmlwindowd2.dll"/>
+    <ROW Component="snake_blue_trans.png" ComponentId="{0FBEC611-F734-4ED5-BF58-C36620CE2061}" Directory_="animacjagracz_Dir" Attributes="0" KeyPath="snake_blue_trans.png" Type="0"/>
+    <ROW Component="snake_cialo_blue.png" ComponentId="{8F0269D9-4F85-4223-929F-407F760069E8}" Directory_="cialo_Dir" Attributes="0" KeyPath="snake_cialo_blue.png" Type="0"/>
+    <ROW Component="snake_cialo_blue.png_1" ComponentId="{775EEB71-38A0-4425-81B0-C88ECFA98D3F}" Directory_="cialo20_Dir" Attributes="0" KeyPath="snake_cialo_blue.png_1" Type="0"/>
+    <ROW Component="snake_cialo_blue.png_2" ComponentId="{702EAD9C-1E29-4FAF-9698-088520E6DCCE}" Directory_="cialo40_Dir" Attributes="0" KeyPath="snake_cialo_blue.png_2" Type="0"/>
+    <ROW Component="snake_cialo_blue.png_3" ComponentId="{37260C06-6774-4F20-8693-B3B3211B7582}" Directory_="cialo60_Dir" Attributes="0" KeyPath="snake_cialo_blue.png_3" Type="0"/>
+    <ROW Component="snake_cialo_blue.png_4" ComponentId="{5AC1C43B-8172-4DB8-81D5-ED2725080803}" Directory_="cialo80_Dir" Attributes="0" KeyPath="snake_cialo_blue.png_4" Type="0"/>
+    <ROW Component="snake_cialo_blue20.png" ComponentId="{701399EF-4500-4D3D-9723-95EC29CBC83F}" Directory_="cialoniebieski_Dir" Attributes="0" KeyPath="snake_cialo_blue20.png" Type="0"/>
+    <ROW Component="snake_cialo_cyan20.png" ComponentId="{4CBD019A-9233-4124-9762-3690AD8AE67D}" Directory_="cialocyan_Dir" Attributes="0" KeyPath="snake_cialo_cyan20.png" Type="0"/>
+    <ROW Component="snake_cialo_green20.png" ComponentId="{0309BB2F-FCF2-4D13-9728-C6628BAB78EC}" Directory_="cialozielony_Dir" Attributes="0" KeyPath="snake_cialo_green20.png" Type="0"/>
+    <ROW Component="snake_cialo_grey20.png" ComponentId="{8FB781F8-8143-4398-8AAD-B7A122F10204}" Directory_="cialoszary_Dir" Attributes="0" KeyPath="snake_cialo_grey20.png" Type="0"/>
+    <ROW Component="snake_cialo_pink20.png" ComponentId="{DF8236D6-528E-4F56-81D5-93835C1F3E29}" Directory_="cialoroz_Dir" Attributes="0" KeyPath="snake_cialo_pink20.png" Type="0"/>
+    <ROW Component="snake_cialo_purple20.png" ComponentId="{99D82580-2B64-48C9-AE92-0FD8D48CC77B}" Directory_="cialofiolet_Dir" Attributes="0" KeyPath="snake_cialo_purple20.png" Type="0"/>
+    <ROW Component="snake_cialo_red20.png" ComponentId="{FE4F668B-5FD8-429A-B48F-A16FCBEB2B83}" Directory_="cialoczerwo_Dir" Attributes="0" KeyPath="snake_cialo_red20.png" Type="0"/>
+    <ROW Component="snake_cialo_yellow20.png" ComponentId="{0E1E4181-BE5E-4820-AC62-F69586EB02B4}" Directory_="cialozolty_Dir" Attributes="0" KeyPath="snake_cialo_yellow20.png" Type="0"/>
+    <ROW Component="snake_glowa_blue.png" ComponentId="{FF007084-6D53-4015-9BDC-742ACE3EB464}" Directory_="glowa_Dir" Attributes="0" KeyPath="snake_glowa_blue.png" Type="0"/>
+    <ROW Component="ucrtbased.dll" ComponentId="{4659C94C-B9B1-4E1E-B24D-2CFE21D74A76}" Directory_="APPDIR" Attributes="0" KeyPath="ucrtbased.dll"/>
+    <ROW Component="user32.dll" ComponentId="{4F2A13A8-0DA7-4FF6-A420-ED1A05472343}" Directory_="APPDIR" Attributes="0" KeyPath="user32.dll"/>
+    <ROW Component="vcruntime140d.dll" ComponentId="{8DF7A2D3-2A5C-4E42-A54B-B5625B9DE0DE}" Directory_="APPDIR" Attributes="0" KeyPath="vcruntime140d.dll"/>
+    <ROW Component="winmm.dll" ComponentId="{4B20C5D3-2CB5-43D6-8BC6-AE7EFC9183DC}" Directory_="APPDIR" Attributes="0" KeyPath="winmm.dll"/>
+    <ROW Component="wyniki.txt" ComponentId="{C38AB594-A8FF-4868-B969-6B93FBAE1ED8}" Directory_="data_Dir" Attributes="0" KeyPath="wyniki.txt" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="inkfreenormal.ttf" Component_="inkfreenormal.ttf" FileName="INK-FR~1.TTF|ink-free-normal.ttf" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Czcionki\ink-free-normal.ttf" SelfReg="false"/>
+    <ROW File="design.graffiti.SNAP____.ttf" Component_="design.graffiti.SNAP____.ttf" FileName="DESIGN~1.TTF|design.graffiti.SNAP____.ttf" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Czcionki\snap\design.graffiti.SNAP____.ttf" SelfReg="false"/>
+    <ROW File="freefontsdownload.txt" Component_="design.graffiti.SNAP____.ttf" FileName="FREEFO~1.TXT|freefontsdownload.txt" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Czcionki\snap\freefontsdownload.txt" SelfReg="false"/>
+    <ROW File="snapitc.ttf" Component_="design.graffiti.SNAP____.ttf" FileName="SNAPIT~1.TTF|snap itc.ttf" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Czcionki\snap\snap itc.ttf" SelfReg="false"/>
+    <ROW File="snapitc.png" Component_="design.graffiti.SNAP____.ttf" FileName="snap-itc.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Czcionki\snap\snap-itc.png" SelfReg="false"/>
+    <ROW File="Snap.ttf" Component_="design.graffiti.SNAP____.ttf" FileName="Snap.ttf" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Czcionki\snap\Snap.ttf" SelfReg="false"/>
+    <ROW File="snap_itc.ttf" Component_="design.graffiti.SNAP____.ttf" FileName="snap_itc.ttf" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Czcionki\snap\snap_itc.ttf" SelfReg="false"/>
+    <ROW File="www.freefontsdownload.net.url" Component_="design.graffiti.SNAP____.ttf" FileName="WWWFRE~1.URL|www.freefontsdownload.net.url" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Czcionki\snap\www.freefontsdownload.net.url" SelfReg="false"/>
+    <ROW File="free_button_08.png" Component_="free_button_08.png" FileName="FREE_B~1.PNG|free_button_08.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_08.png" SelfReg="false"/>
+    <ROW File="free_button_09.png" Component_="free_button_08.png" FileName="FREE_B~2.PNG|free_button_09.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_09.png" SelfReg="false"/>
+    <ROW File="free_button_10.png" Component_="free_button_08.png" FileName="FREE_B~3.PNG|free_button_10.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_10.png" SelfReg="false"/>
+    <ROW File="free_button_11.png" Component_="free_button_08.png" FileName="FREE_B~4.PNG|free_button_11.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_11.png" SelfReg="false"/>
+    <ROW File="free_button_12.png" Component_="free_button_08.png" FileName="FREE_B~5.PNG|free_button_12.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_12.png" SelfReg="false"/>
+    <ROW File="free_button_27.png" Component_="free_button_08.png" FileName="FREE_B~6.PNG|free_button_27.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_27.png" SelfReg="false"/>
+    <ROW File="free_button_31.png" Component_="free_button_08.png" FileName="FREE_B~7.PNG|free_button_31.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_31.png" SelfReg="false"/>
+    <ROW File="free_button_32.png" Component_="free_button_08.png" FileName="FREE_B~8.PNG|free_button_32.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_32.png" SelfReg="false"/>
+    <ROW File="free_button_33.png" Component_="free_button_08.png" FileName="FREE_B~9.PNG|free_button_33.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_33.png" SelfReg="false"/>
+    <ROW File="free_button_34.png" Component_="free_button_08.png" FileName="FREE_~10.PNG|free_button_34.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Klawisze\free_button_34.png" SelfReg="false"/>
+    <ROW File="mainMenu.wav" Component_="mainMenu.wav" FileName="mainMenu.wav" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Muzyka\mainMenu.wav" SelfReg="false"/>
+    <ROW File="menuAmbient.ogg" Component_="mainMenu.wav" FileName="MENUAM~1.OGG|menuAmbient.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Muzyka\menuAmbient.ogg" SelfReg="false"/>
+    <ROW File="misc_menu.wav" Component_="mainMenu.wav" FileName="MISC_M~1.WAV|misc_menu.wav" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Muzyka\misc_menu.wav" SelfReg="false"/>
+    <ROW File="misc_menu_2.wav" Component_="mainMenu.wav" FileName="MISC_M~2.WAV|misc_menu_2.wav" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Muzyka\misc_menu_2.wav" SelfReg="false"/>
+    <ROW File="NoMoreMagic.ogg" Component_="mainMenu.wav" FileName="NOMORE~1.OGG|No More Magic.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Muzyka\No More Magic.ogg" SelfReg="false"/>
+    <ROW File="PathtoLakeLand.ogg" Component_="mainMenu.wav" FileName="PATHTO~1.OGG|Path to Lake Land.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Muzyka\Path to Lake Land.ogg" SelfReg="false"/>
+    <ROW File="WindsOfStories.ogg" Component_="mainMenu.wav" FileName="WINDSO~1.OGG|Winds Of Stories.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Muzyka\Winds Of Stories.ogg" SelfReg="false"/>
+    <ROW File="jedzenieJablko.wav" Component_="jedzenieJablko.wav" FileName="JEDZEN~1.WAV|jedzenieJablko.wav" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\jedzenieJablko.wav" SelfReg="false"/>
+    <ROW File="muzykaPoziom1.ogg" Component_="jedzenieJablko.wav" FileName="MUZYKA~1.OGG|muzykaPoziom1.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\muzykaPoziom1.ogg" SelfReg="false"/>
+    <ROW File="muzykaPoziom2.ogg" Component_="jedzenieJablko.wav" FileName="MUZYKA~2.OGG|muzykaPoziom2.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\muzykaPoziom2.ogg" SelfReg="false"/>
+    <ROW File="muzykaPoziom3.ogg" Component_="jedzenieJablko.wav" FileName="MUZYKA~3.OGG|muzykaPoziom3.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\muzykaPoziom3.ogg" SelfReg="false"/>
+    <ROW File="stepdirt_1.wav" Component_="jedzenieJablko.wav" FileName="STEPDI~1.WAV|stepdirt_1.wav" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\stepdirt_1.wav" SelfReg="false"/>
+    <ROW File="stepsnow_1.wav" Component_="jedzenieJablko.wav" FileName="STEPSN~1.WAV|stepsnow_1.wav" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\stepsnow_1.wav" SelfReg="false"/>
+    <ROW File="stepstone_1.wav" Component_="jedzenieJablko.wav" FileName="STEPST~1.WAV|stepstone_1.wav" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\stepstone_1.wav" SelfReg="false"/>
+    <ROW File="teleport.wav" Component_="jedzenieJablko.wav" FileName="teleport.wav" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\teleport.wav" SelfReg="false"/>
+    <ROW File="wazWkamien.ogg" Component_="jedzenieJablko.wav" FileName="WAZWKA~1.OGG|wazWkamien.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\wazWkamien.ogg" SelfReg="false"/>
+    <ROW File="wazWsiebie.ogg" Component_="jedzenieJablko.wav" FileName="WAZWSI~1.OGG|wazWsiebie.ogg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\MuzykaDzwiekiGra\wazWsiebie.ogg" SelfReg="false"/>
+    <ROW File="deska.png" Component_="deska.png" FileName="deska.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Obrazy menu\deska.png" SelfReg="false"/>
+    <ROW File="jablko_animacja2gold.png" Component_="deska.png" FileName="JABLKO~1.PNG|jablko_animacja2-gold.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Obrazy menu\jablko_animacja2-gold.png" SelfReg="false"/>
+    <ROW File="jablko_animacja2.png" Component_="deska.png" FileName="JABLKO~2.PNG|jablko_animacja2.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Obrazy menu\jablko_animacja2.png" SelfReg="false"/>
+    <ROW File="logoSnake.png" Component_="deska.png" FileName="LOGOSN~1.PNG|logoSnake.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Obrazy menu\logoSnake.png" SelfReg="false"/>
+    <ROW File="logoSnake2.png" Component_="deska.png" FileName="LOGOSN~2.PNG|logoSnake2.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Obrazy menu\logoSnake2.png" SelfReg="false"/>
+    <ROW File="menuSnake.png" Component_="deska.png" FileName="MENUSN~1.PNG|menuSnake.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Obrazy menu\menuSnake.png" SelfReg="false"/>
+    <ROW File="snake_glowa.png" Component_="deska.png" FileName="SNAKE_~1.PNG|snake_glowa.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Obrazy menu\snake_glowa.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan20.png" Component_="snake_cialo_cyan20.png" FileName="SNAKE_~1.PNG|snake_cialo_cyan20.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo cyan\snake_cialo_cyan20.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan40.png" Component_="snake_cialo_cyan20.png" FileName="SNAKE_~2.PNG|snake_cialo_cyan40.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo cyan\snake_cialo_cyan40.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan60.png" Component_="snake_cialo_cyan20.png" FileName="SNAKE_~3.PNG|snake_cialo_cyan60.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo cyan\snake_cialo_cyan60.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan80.png" Component_="snake_cialo_cyan20.png" FileName="SNAKE_~4.PNG|snake_cialo_cyan80.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo cyan\snake_cialo_cyan80.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red20.png" Component_="snake_cialo_red20.png" FileName="SNAKE_~1.PNG|snake_cialo_red20.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo czerwo\snake_cialo_red20.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red40.png" Component_="snake_cialo_red20.png" FileName="SNAKE_~2.PNG|snake_cialo_red40.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo czerwo\snake_cialo_red40.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red60.png" Component_="snake_cialo_red20.png" FileName="SNAKE_~3.PNG|snake_cialo_red60.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo czerwo\snake_cialo_red60.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red80.png" Component_="snake_cialo_red20.png" FileName="SNAKE_~4.PNG|snake_cialo_red80.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo czerwo\snake_cialo_red80.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple20.png" Component_="snake_cialo_purple20.png" FileName="SNAKE_~1.PNG|snake_cialo_purple20.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo fiolet\snake_cialo_purple20.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple40.png" Component_="snake_cialo_purple20.png" FileName="SNAKE_~2.PNG|snake_cialo_purple40.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo fiolet\snake_cialo_purple40.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple60.png" Component_="snake_cialo_purple20.png" FileName="SNAKE_~3.PNG|snake_cialo_purple60.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo fiolet\snake_cialo_purple60.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple80.png" Component_="snake_cialo_purple20.png" FileName="SNAKE_~4.PNG|snake_cialo_purple80.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo fiolet\snake_cialo_purple80.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue20.png" Component_="snake_cialo_blue20.png" FileName="SNAKE_~1.PNG|snake_cialo_blue20.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo niebieski\snake_cialo_blue20.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue40.png" Component_="snake_cialo_blue20.png" FileName="SNAKE_~2.PNG|snake_cialo_blue40.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo niebieski\snake_cialo_blue40.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue60.png" Component_="snake_cialo_blue20.png" FileName="SNAKE_~3.PNG|snake_cialo_blue60.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo niebieski\snake_cialo_blue60.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue80.png" Component_="snake_cialo_blue20.png" FileName="SNAKE_~4.PNG|snake_cialo_blue80.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo niebieski\snake_cialo_blue80.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink20.png" Component_="snake_cialo_pink20.png" FileName="SNAKE_~1.PNG|snake_cialo_pink20.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo roz\snake_cialo_pink20.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink40.png" Component_="snake_cialo_pink20.png" FileName="SNAKE_~2.PNG|snake_cialo_pink40.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo roz\snake_cialo_pink40.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink60.png" Component_="snake_cialo_pink20.png" FileName="SNAKE_~3.PNG|snake_cialo_pink60.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo roz\snake_cialo_pink60.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink80.png" Component_="snake_cialo_pink20.png" FileName="SNAKE_~4.PNG|snake_cialo_pink80.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo roz\snake_cialo_pink80.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey20.png" Component_="snake_cialo_grey20.png" FileName="SNAKE_~1.PNG|snake_cialo_grey20.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo szary\snake_cialo_grey20.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey40.png" Component_="snake_cialo_grey20.png" FileName="SNAKE_~2.PNG|snake_cialo_grey40.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo szary\snake_cialo_grey40.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey60.png" Component_="snake_cialo_grey20.png" FileName="SNAKE_~3.PNG|snake_cialo_grey60.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo szary\snake_cialo_grey60.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey80.png" Component_="snake_cialo_grey20.png" FileName="SNAKE_~4.PNG|snake_cialo_grey80.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo szary\snake_cialo_grey80.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green20.png" Component_="snake_cialo_green20.png" FileName="SNAKE_~1.PNG|snake_cialo_green20.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo zielony\snake_cialo_green20.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green40.png" Component_="snake_cialo_green20.png" FileName="SNAKE_~2.PNG|snake_cialo_green40.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo zielony\snake_cialo_green40.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green60.png" Component_="snake_cialo_green20.png" FileName="SNAKE_~3.PNG|snake_cialo_green60.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo zielony\snake_cialo_green60.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green80.png" Component_="snake_cialo_green20.png" FileName="SNAKE_~4.PNG|snake_cialo_green80.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo zielony\snake_cialo_green80.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow20.png" Component_="snake_cialo_yellow20.png" FileName="SNAKE_~1.PNG|snake_cialo_yellow20.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo zolty\snake_cialo_yellow20.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow40.png" Component_="snake_cialo_yellow20.png" FileName="SNAKE_~2.PNG|snake_cialo_yellow40.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo zolty\snake_cialo_yellow40.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow60.png" Component_="snake_cialo_yellow20.png" FileName="SNAKE_~3.PNG|snake_cialo_yellow60.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo zolty\snake_cialo_yellow60.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow80.png" Component_="snake_cialo_yellow20.png" FileName="SNAKE_~4.PNG|snake_cialo_yellow80.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\cialo zolty\snake_cialo_yellow80.png" SelfReg="false"/>
+    <ROW File="snake_blue_trans.png" Component_="snake_blue_trans.png" FileName="SNAKE_~1.PNG|snake_blue_trans.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\snake_blue_trans.png" SelfReg="false"/>
+    <ROW File="snake_cyan_trans.png" Component_="snake_blue_trans.png" FileName="SNAKE_~2.PNG|snake_cyan_trans.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\snake_cyan_trans.png" SelfReg="false"/>
+    <ROW File="snake_green_trans.png" Component_="snake_blue_trans.png" FileName="SNAKE_~3.PNG|snake_green_trans.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\snake_green_trans.png" SelfReg="false"/>
+    <ROW File="snake_grey_trans.png" Component_="snake_blue_trans.png" FileName="SNAKE_~4.PNG|snake_grey_trans.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\snake_grey_trans.png" SelfReg="false"/>
+    <ROW File="snake_pink_trans.png" Component_="snake_blue_trans.png" FileName="SNAKE_~5.PNG|snake_pink_trans.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\snake_pink_trans.png" SelfReg="false"/>
+    <ROW File="snake_purple_trans.png" Component_="snake_blue_trans.png" FileName="SNAKE_~6.PNG|snake_purple_trans.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\snake_purple_trans.png" SelfReg="false"/>
+    <ROW File="snake_red_trans.png" Component_="snake_blue_trans.png" FileName="SNAKE_~7.PNG|snake_red_trans.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\snake_red_trans.png" SelfReg="false"/>
+    <ROW File="snake_yellow_trans.png" Component_="snake_blue_trans.png" FileName="SNAKE_~8.PNG|snake_yellow_trans.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\animacja gracz\snake_yellow_trans.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue.png" Component_="snake_cialo_blue.png" FileName="SNAKE_~1.PNG|snake_cialo_blue.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_blue.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan.png" Component_="snake_cialo_blue.png" FileName="SNAKE_~2.PNG|snake_cialo_cyan.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_cyan.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green.png" Component_="snake_cialo_blue.png" FileName="SNAKE_~3.PNG|snake_cialo_green.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_green.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey.png" Component_="snake_cialo_blue.png" FileName="SNAKE_~4.PNG|snake_cialo_grey.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_grey.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink.png" Component_="snake_cialo_blue.png" FileName="SNAKE_~5.PNG|snake_cialo_pink.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_pink.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple.png" Component_="snake_cialo_blue.png" FileName="SNAKE_~6.PNG|snake_cialo_purple .png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_purple .png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple.png_1" Component_="snake_cialo_blue.png" FileName="SNAKE_~7.PNG|snake_cialo_purple.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_purple.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red.png" Component_="snake_cialo_blue.png" FileName="SNAKE_~8.PNG|snake_cialo_red.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_red.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow.png" Component_="snake_cialo_blue.png" FileName="SNAKE_~9.PNG|snake_cialo_yellow.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo\snake_cialo_yellow.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue.png_1" Component_="snake_cialo_blue.png_1" FileName="SNAKE_~1.PNG|snake_cialo_blue.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo20\snake_cialo_blue.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan.png_1" Component_="snake_cialo_blue.png_1" FileName="SNAKE_~2.PNG|snake_cialo_cyan.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo20\snake_cialo_cyan.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green.png_1" Component_="snake_cialo_blue.png_1" FileName="SNAKE_~3.PNG|snake_cialo_green.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo20\snake_cialo_green.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey.png_1" Component_="snake_cialo_blue.png_1" FileName="SNAKE_~4.PNG|snake_cialo_grey.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo20\snake_cialo_grey.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink.png_1" Component_="snake_cialo_blue.png_1" FileName="SNAKE_~5.PNG|snake_cialo_pink.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo20\snake_cialo_pink.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple.png_2" Component_="snake_cialo_blue.png_1" FileName="SNAKE_~6.PNG|snake_cialo_purple.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo20\snake_cialo_purple.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red.png_1" Component_="snake_cialo_blue.png_1" FileName="SNAKE_~7.PNG|snake_cialo_red.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo20\snake_cialo_red.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow.png_1" Component_="snake_cialo_blue.png_1" FileName="SNAKE_~8.PNG|snake_cialo_yellow.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo20\snake_cialo_yellow.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue.png_2" Component_="snake_cialo_blue.png_2" FileName="SNAKE_~1.PNG|snake_cialo_blue.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo40\snake_cialo_blue.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan.png_2" Component_="snake_cialo_blue.png_2" FileName="SNAKE_~2.PNG|snake_cialo_cyan.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo40\snake_cialo_cyan.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green.png_2" Component_="snake_cialo_blue.png_2" FileName="SNAKE_~3.PNG|snake_cialo_green.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo40\snake_cialo_green.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey.png_2" Component_="snake_cialo_blue.png_2" FileName="SNAKE_~4.PNG|snake_cialo_grey.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo40\snake_cialo_grey.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink.png_2" Component_="snake_cialo_blue.png_2" FileName="SNAKE_~5.PNG|snake_cialo_pink.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo40\snake_cialo_pink.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple.png_3" Component_="snake_cialo_blue.png_2" FileName="SNAKE_~6.PNG|snake_cialo_purple.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo40\snake_cialo_purple.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red.png_2" Component_="snake_cialo_blue.png_2" FileName="SNAKE_~7.PNG|snake_cialo_red.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo40\snake_cialo_red.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow.png_2" Component_="snake_cialo_blue.png_2" FileName="SNAKE_~8.PNG|snake_cialo_yellow.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo40\snake_cialo_yellow.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue.png_3" Component_="snake_cialo_blue.png_3" FileName="SNAKE_~1.PNG|snake_cialo_blue.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo60\snake_cialo_blue.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan.png_3" Component_="snake_cialo_blue.png_3" FileName="SNAKE_~2.PNG|snake_cialo_cyan.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo60\snake_cialo_cyan.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green.png_3" Component_="snake_cialo_blue.png_3" FileName="SNAKE_~3.PNG|snake_cialo_green.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo60\snake_cialo_green.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey.png_3" Component_="snake_cialo_blue.png_3" FileName="SNAKE_~4.PNG|snake_cialo_grey.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo60\snake_cialo_grey.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink.png_3" Component_="snake_cialo_blue.png_3" FileName="SNAKE_~5.PNG|snake_cialo_pink.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo60\snake_cialo_pink.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple.png_4" Component_="snake_cialo_blue.png_3" FileName="SNAKE_~6.PNG|snake_cialo_purple.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo60\snake_cialo_purple.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red.png_3" Component_="snake_cialo_blue.png_3" FileName="SNAKE_~7.PNG|snake_cialo_red.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo60\snake_cialo_red.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow.png_3" Component_="snake_cialo_blue.png_3" FileName="SNAKE_~8.PNG|snake_cialo_yellow.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo60\snake_cialo_yellow.png" SelfReg="false"/>
+    <ROW File="snake_cialo_blue.png_4" Component_="snake_cialo_blue.png_4" FileName="SNAKE_~1.PNG|snake_cialo_blue.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo80\snake_cialo_blue.png" SelfReg="false"/>
+    <ROW File="snake_cialo_cyan.png_4" Component_="snake_cialo_blue.png_4" FileName="SNAKE_~2.PNG|snake_cialo_cyan.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo80\snake_cialo_cyan.png" SelfReg="false"/>
+    <ROW File="snake_cialo_green.png_4" Component_="snake_cialo_blue.png_4" FileName="SNAKE_~3.PNG|snake_cialo_green.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo80\snake_cialo_green.png" SelfReg="false"/>
+    <ROW File="snake_cialo_grey.png_4" Component_="snake_cialo_blue.png_4" FileName="SNAKE_~4.PNG|snake_cialo_grey.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo80\snake_cialo_grey.png" SelfReg="false"/>
+    <ROW File="snake_cialo_pink.png_4" Component_="snake_cialo_blue.png_4" FileName="SNAKE_~5.PNG|snake_cialo_pink.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo80\snake_cialo_pink.png" SelfReg="false"/>
+    <ROW File="snake_cialo_purple.png_5" Component_="snake_cialo_blue.png_4" FileName="SNAKE_~6.PNG|snake_cialo_purple.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo80\snake_cialo_purple.png" SelfReg="false"/>
+    <ROW File="snake_cialo_red.png_4" Component_="snake_cialo_blue.png_4" FileName="SNAKE_~7.PNG|snake_cialo_red.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo80\snake_cialo_red.png" SelfReg="false"/>
+    <ROW File="snake_cialo_yellow.png_4" Component_="snake_cialo_blue.png_4" FileName="SNAKE_~8.PNG|snake_cialo_yellow.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\cialo80\snake_cialo_yellow.png" SelfReg="false"/>
+    <ROW File="snake_glowa_blue.png" Component_="snake_glowa_blue.png" FileName="SNAKE_~1.PNG|snake_glowa_blue.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\glowa\snake_glowa_blue.png" SelfReg="false"/>
+    <ROW File="snake_glowa_cyan.png" Component_="snake_glowa_blue.png" FileName="SNAKE_~2.PNG|snake_glowa_cyan.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\glowa\snake_glowa_cyan.png" SelfReg="false"/>
+    <ROW File="snake_glowa_green.png" Component_="snake_glowa_blue.png" FileName="SNAKE_~3.PNG|snake_glowa_green.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\glowa\snake_glowa_green.png" SelfReg="false"/>
+    <ROW File="snake_glowa_grey.png" Component_="snake_glowa_blue.png" FileName="SNAKE_~4.PNG|snake_glowa_grey.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\glowa\snake_glowa_grey.png" SelfReg="false"/>
+    <ROW File="snake_glowa_pink.png" Component_="snake_glowa_blue.png" FileName="SNAKE_~5.PNG|snake_glowa_pink.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\glowa\snake_glowa_pink.png" SelfReg="false"/>
+    <ROW File="snake_glowa_purple.png" Component_="snake_glowa_blue.png" FileName="SNAKE_~6.PNG|snake_glowa_purple.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\glowa\snake_glowa_purple.png" SelfReg="false"/>
+    <ROW File="snake_glowa_red.png" Component_="snake_glowa_blue.png" FileName="SNAKE_~7.PNG|snake_glowa_red.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\glowa\snake_glowa_red.png" SelfReg="false"/>
+    <ROW File="snake_glowa_yellow.png" Component_="snake_glowa_blue.png" FileName="SNAKE_~8.PNG|snake_glowa_yellow.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\glowa\snake_glowa_yellow.png" SelfReg="false"/>
+    <ROW File="jablko_animacja2gold.png_1" Component_="jablko_animacja2gold.png" FileName="JABLKO~1.PNG|jablko_animacja2-gold.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\jablko_animacja2-gold.png" SelfReg="false"/>
+    <ROW File="jablko_animacja2.png_1" Component_="jablko_animacja2gold.png" FileName="JABLKO~2.PNG|jablko_animacja2.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\jablko_animacja2.png" SelfReg="false"/>
+    <ROW File="snake_glowa.png_1" Component_="jablko_animacja2gold.png" FileName="SNAKE_~1.PNG|snake_glowa.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\snake_glowa.png" SelfReg="false"/>
+    <ROW File="snake_glowa12.png" Component_="jablko_animacja2gold.png" FileName="SNAKE_~2.PNG|snake_glowa12.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\snake_glowa12.png" SelfReg="false"/>
+    <ROW File="snake_glowa_was.png" Component_="jablko_animacja2gold.png" FileName="SNAKE_~3.PNG|snake_glowa_was.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\snake_glowa_was.png" SelfReg="false"/>
+    <ROW File="zjedz_jablko_animacja.png" Component_="jablko_animacja2gold.png" FileName="ZJEDZ_~1.PNG|zjedz_jablko_animacja.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\zjedz_jablko_animacja.png" SelfReg="false"/>
+    <ROW File="zlote_jablko_efekt.png" Component_="jablko_animacja2gold.png" FileName="ZLOTE_~1.PNG|zlote_jablko_efekt.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\zlote_jablko_efekt.png" SelfReg="false"/>
+    <ROW File="zote_jabko_efekt.png" Component_="jablko_animacja2gold.png" FileName="ZŁOTE_~1.PNG|złote_jabłko_efekt.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Gracz i przedmioty\złote_jabłko_efekt.png" SelfReg="false"/>
+    <ROW File="dziura.png" Component_="dziura.png" FileName="dziura.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\dziura.png" SelfReg="false"/>
+    <ROW File="kamien1.png" Component_="dziura.png" FileName="kamien1.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\kamien1.png" SelfReg="false"/>
+    <ROW File="kamien2.png" Component_="dziura.png" FileName="kamien2.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\kamien2.png" SelfReg="false"/>
+    <ROW File="kamien3.png" Component_="dziura.png" FileName="kamien3.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\kamien3.png" SelfReg="false"/>
+    <ROW File="kamien4.png" Component_="dziura.png" FileName="kamien4.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\kamien4.png" SelfReg="false"/>
+    <ROW File="przeszkoda.png" Component_="dziura.png" FileName="PRZESZ~1.PNG|przeszkoda.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\przeszkoda.png" SelfReg="false"/>
+    <ROW File="przeszkoda1.png" Component_="dziura.png" FileName="PRZESZ~2.PNG|przeszkoda1.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\przeszkoda1.png" SelfReg="false"/>
+    <ROW File="przeszkoda2.png" Component_="dziura.png" FileName="PRZESZ~3.PNG|przeszkoda2.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\przeszkoda2.png" SelfReg="false"/>
+    <ROW File="puchar1.png" Component_="puchar1.png" FileName="puchar1.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\Puchary\puchar1.png" SelfReg="false"/>
+    <ROW File="puchar2.png" Component_="puchar1.png" FileName="puchar2.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\Puchary\puchar2.png" SelfReg="false"/>
+    <ROW File="puchar3.png" Component_="puchar1.png" FileName="puchar3.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\Puchary\puchar3.png" SelfReg="false"/>
+    <ROW File="snieg1.png" Component_="dziura.png" FileName="snieg1.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\snieg1.png" SelfReg="false"/>
+    <ROW File="tlo_1.jpg" Component_="dziura.png" FileName="tlo_1.jpg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\tlo_1.jpg" SelfReg="false"/>
+    <ROW File="tlo_2.jpg" Component_="dziura.png" FileName="tlo_2.jpg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\tlo_2.jpg" SelfReg="false"/>
+    <ROW File="tlo_3.jpg" Component_="dziura.png" FileName="tlo_3.jpg" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\tlo_3.jpg" SelfReg="false"/>
+    <ROW File="trawa1.png" Component_="dziura.png" FileName="trawa1.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\trawa1.png" SelfReg="false"/>
+    <ROW File="trawa2.png" Component_="dziura.png" FileName="trawa2.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\trawa2.png" SelfReg="false"/>
+    <ROW File="trawa3.png" Component_="dziura.png" FileName="trawa3.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\trawa3.png" SelfReg="false"/>
+    <ROW File="trawa_ciemna.png" Component_="dziura.png" FileName="TRAWA_~1.PNG|trawa_ciemna.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\trawa_ciemna.png" SelfReg="false"/>
+    <ROW File="trawa_jasna.png" Component_="dziura.png" FileName="TRAWA_~2.PNG|trawa_jasna.png" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\Sprity do gry\Plansza\trawa_jasna.png" SelfReg="false"/>
+    <ROW File="wyniki.txt" Component_="wyniki.txt" FileName="wyniki.txt" Attributes="0" SourcePath="..\Snake SFML 2.x — kopia\data\wyniki.txt" SelfReg="false"/>
+    <ROW File="advapi32.dll" Component_="advapi32.dll" FileName="advapi32.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\advapi32.dll" SelfReg="false"/>
+    <ROW File="gdi32.dll" Component_="gdi32.dll" FileName="gdi32.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\gdi32.dll" SelfReg="false"/>
+    <ROW File="kernel32.dll" Component_="kernel32.dll" FileName="kernel32.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\kernel32.dll" SelfReg="false"/>
+    <ROW File="msvcp140d.dll" Component_="msvcp140d.dll" FileName="MSVCP1~1.DLL|msvcp140d.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\msvcp140d.dll" SelfReg="false"/>
+    <ROW File="openal32.dll" Component_="openal32.dll" FileName="openal32.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\openal32.dll" SelfReg="false"/>
+    <ROW File="opengl32.dll" Component_="opengl32.dll" FileName="opengl32.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\opengl32.dll" SelfReg="false"/>
+    <ROW File="sfmlaudio2.dll" Component_="sfmlaudio2.dll" FileName="SFML-A~1.DLL|sfml-audio-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-audio-2.dll" SelfReg="false"/>
+    <ROW File="sfmlaudiod2.dll" Component_="sfmlaudiod2.dll" FileName="SFML-A~2.DLL|sfml-audio-d-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-audio-d-2.dll" SelfReg="false"/>
+    <ROW File="sfmlgraphics2.dll" Component_="sfmlgraphics2.dll" FileName="SFML-G~1.DLL|sfml-graphics-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-graphics-2.dll" SelfReg="false"/>
+    <ROW File="sfmlgraphicsd2.dll" Component_="sfmlgraphicsd2.dll" FileName="SFML-G~2.DLL|sfml-graphics-d-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-graphics-d-2.dll" SelfReg="false"/>
+    <ROW File="sfmlnetwork2.dll" Component_="sfmlnetwork2.dll" FileName="SFML-N~1.DLL|sfml-network-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-network-2.dll" SelfReg="false"/>
+    <ROW File="sfmlnetworkd2.dll" Component_="sfmlnetworkd2.dll" FileName="SFML-N~2.DLL|sfml-network-d-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-network-d-2.dll" SelfReg="false"/>
+    <ROW File="sfmlsystem2.dll" Component_="sfmlsystem2.dll" FileName="SFML-S~1.DLL|sfml-system-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-system-2.dll" SelfReg="false"/>
+    <ROW File="sfmlsystemd2.dll" Component_="sfmlsystemd2.dll" FileName="SFML-S~2.DLL|sfml-system-d-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-system-d-2.dll" SelfReg="false"/>
+    <ROW File="sfmlwindow2.dll" Component_="sfmlwindow2.dll" FileName="SFML-W~1.DLL|sfml-window-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-window-2.dll" SelfReg="false"/>
+    <ROW File="sfmlwindowd2.dll" Component_="sfmlwindowd2.dll" FileName="SFML-W~2.DLL|sfml-window-d-2.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\sfml-window-d-2.dll" SelfReg="false"/>
+    <ROW File="SnakeSFML.exe" Component_="SnakeSFML.exe" FileName="SNAKES~1.EXE|Snake SFML.exe" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\Snake SFML.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="ucrtbased.dll" Component_="ucrtbased.dll" FileName="UCRTBA~1.DLL|ucrtbased.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\ucrtbased.dll" SelfReg="false"/>
+    <ROW File="user32.dll" Component_="user32.dll" FileName="user32.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\user32.dll" SelfReg="false"/>
+    <ROW File="vcruntime140d.dll" Component_="vcruntime140d.dll" FileName="VCRUNT~1.DLL|vcruntime140d.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\vcruntime140d.dll" SelfReg="false"/>
+    <ROW File="winmm.dll" Component_="winmm.dll" FileName="winmm.dll" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\winmm.dll" SelfReg="false"/>
+    <ROW File="SnakeSFML.exe_1" Component_="SnakeSFML.exe_1" FileName="SNAKES~1.EXE|Snake SFML.exe" Attributes="0" SourcePath="..\..\..\..\..\Program Files (x86)\SPO\SNAKE\Snake SFML\Snake SFML.exe" SelfReg="false" DigSign="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#SnakeSFML.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="inkfreenormal.ttf"/>
+    <ROW Feature_="MainFeature" Component_="design.graffiti.SNAP____.ttf"/>
+    <ROW Feature_="MainFeature" Component_="free_button_08.png"/>
+    <ROW Feature_="MainFeature" Component_="mainMenu.wav"/>
+    <ROW Feature_="MainFeature" Component_="jedzenieJablko.wav"/>
+    <ROW Feature_="MainFeature" Component_="deska.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_cyan20.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_red20.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_purple20.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_blue20.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_pink20.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_grey20.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_green20.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_yellow20.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_blue_trans.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_blue.png"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_blue.png_1"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_blue.png_2"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_blue.png_3"/>
+    <ROW Feature_="MainFeature" Component_="snake_cialo_blue.png_4"/>
+    <ROW Feature_="MainFeature" Component_="snake_glowa_blue.png"/>
+    <ROW Feature_="MainFeature" Component_="jablko_animacja2gold.png"/>
+    <ROW Feature_="MainFeature" Component_="dziura.png"/>
+    <ROW Feature_="MainFeature" Component_="puchar1.png"/>
+    <ROW Feature_="MainFeature" Component_="wyniki.txt"/>
+    <ROW Feature_="MainFeature" Component_="advapi32.dll"/>
+    <ROW Feature_="MainFeature" Component_="gdi32.dll"/>
+    <ROW Feature_="MainFeature" Component_="kernel32.dll"/>
+    <ROW Feature_="MainFeature" Component_="msvcp140d.dll"/>
+    <ROW Feature_="MainFeature" Component_="openal32.dll"/>
+    <ROW Feature_="MainFeature" Component_="opengl32.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlaudio2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlaudiod2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlgraphics2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlgraphicsd2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlnetwork2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlnetworkd2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlsystem2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlsystemd2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlwindow2.dll"/>
+    <ROW Feature_="MainFeature" Component_="sfmlwindowd2.dll"/>
+    <ROW Feature_="MainFeature" Component_="SnakeSFML.exe"/>
+    <ROW Feature_="MainFeature" Component_="ucrtbased.dll"/>
+    <ROW Feature_="MainFeature" Component_="user32.dll"/>
+    <ROW Feature_="MainFeature" Component_="vcruntime140d.dll"/>
+    <ROW Feature_="MainFeature" Component_="winmm.dll"/>
+    <ROW Feature_="MainFeature" Component_="SnakeSFML.exe_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
