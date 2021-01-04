@@ -96,10 +96,14 @@ void Koniec::wynikiTXT(string& pseudonimGracza)
 
 	//Wczytywanie wyników z pliku do listy
 	if (wynikiPlik)
-	{
+	{	
 		while (i < 5 && wynikiPlik.eof() == false)
 		{
 			wynikiPlik >> pseudonim >> wynik;
+			if (pseudonim == "")
+			{
+				break;
+			}
 			ListaWynikow* new_node = new ListaWynikow;
 			new_node->pseudonim = pseudonim;
 			new_node->wynikGracza = wynik;
@@ -109,7 +113,7 @@ void Koniec::wynikiTXT(string& pseudonimGracza)
 				wsk_wyniki = new_node;
 				head->next = wsk_wyniki;
 			}
-			if (head->next != NULL)
+			else
 			{
 				wsk_wyniki->next = new_node;
 				wsk_wyniki = wsk_wyniki->next;
@@ -181,13 +185,22 @@ void Koniec::wynikiTXT(string& pseudonimGracza)
 
 	//Wstawianie z listy do pliku
 	i = 0;
-	if (wynikiPlik)
+	if (wynikiPlik2)
 	{
 		while (i < 5 && wsk_wyniki != NULL)
 		{
-			wynikiPlik2 << wsk_wyniki->pseudonim << "  " << wsk_wyniki->wynikGracza << endl;
-			wsk_wyniki = wsk_wyniki->next;
-			i++;
+			if (i == 4 || (wsk_wyniki->next == NULL))
+			{
+				wynikiPlik2 << wsk_wyniki->pseudonim << "  " << wsk_wyniki->wynikGracza ;
+				wsk_wyniki = wsk_wyniki->next;
+				i++;
+			}
+			else
+			{
+				wynikiPlik2 << wsk_wyniki->pseudonim << "  " << wsk_wyniki->wynikGracza << endl;
+				wsk_wyniki = wsk_wyniki->next;
+				i++;
+			}
 		}
 	}
 	wynikiPlik2.close();

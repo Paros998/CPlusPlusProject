@@ -159,6 +159,7 @@
 */
 
 /*!	\fn int Menu::start(RenderWindow& okno)
+*	\brief Metoda ktora uruchamia menu glowne
 *	\param okno
 *	\brief okno to referencja na obiekt typu RenderWindow sluzacy do rysowania elementow 2d w tym oknie
 *	\return int
